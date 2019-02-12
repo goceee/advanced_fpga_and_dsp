@@ -1,0 +1,214 @@
+11:00:56 **** Incremental Build of configuration Release for project lab1 ****
+make pre-build main-build 
+sdsoc_make_clean Release
+Could Not Find C:\Users\gd14470\sdsoc_workspace\lab1\Release\*.elf
+' '
+'Building file: ../src/madd.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/madd.o" -MMD -MP -MF"src/madd.d" -MT"src/madd.o" -o "src/madd.o" "../src/madd.cpp" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Processing -sds-hw block for madd
+Create data motion intermediate representation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/src/madd.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+Performing accelerator source linting for madd
+Performing pragma generation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Users/gd14470/sdsoc_workspace/lab1/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/gd14470/sdsoc_workspace/lab1/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/madd_pp.cpp 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/madd.tcl
+Moving function madd to Programmable Logic
+sds++ log file saved as C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/reports/sds_madd.log
+
+'Finished building: ../src/madd.cpp'
+' '
+'Building file: ../src/mmult.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/mmult.o" -MMD -MP -MF"src/mmult.d" -MT"src/mmult.o" -o "src/mmult.o" "../src/mmult.cpp" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Processing -sds-hw block for mmult
+Create data motion intermediate representation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/src/mmult.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+Performing accelerator source linting for mmult
+Performing pragma generation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Users/gd14470/sdsoc_workspace/lab1/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/gd14470/sdsoc_workspace/lab1/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/mmult_pp.cpp 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/mmult.tcl
+Moving function mmult to Programmable Logic
+sds++ log file saved as C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/reports/sds_mmult.log
+
+'Finished building: ../src/mmult.cpp'
+' '
+'Building target: lab1.elf'
+'Invoking: SDS++ Linker'
+sds++ --remote_ip_cache C:/Users/gd14470/sdsoc_workspace/ip_cache -o "lab1.elf"  ./src/madd.o ./src/main.o ./src/mmult.o    -dmclkid 2  -mno-boot-files  -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Removing implementation files from previous run
+Analyzing object files
+... C:/Users/gd14470/sdsoc_workspace/lab1/Release/src/madd.o
+... C:/Users/gd14470/sdsoc_workspace/lab1/Release/src/main.o
+... C:/Users/gd14470/sdsoc_workspace/lab1/Release/src/mmult.o
+Generating data motion network
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/sds_all.o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/./src/madd.s C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/./src/main.s C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/./src/mmult.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --platform zed --dmclkid 2 --repo C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.2/data/DM.db -os standalone -processor cortex-a9 -partition 0  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+Removing implementation files from previous run C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vivado
+Removing implementation files from previous run C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vpl
+Creating block diagram (BD)
+Creating top.bd.tcl
+Rewrite caller functions
+Compile caller rewrite file C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/swstubs/main.cpp
+Prepare hardware access API functions
+Create accelerator stub functions
+Compile hardware access API functions
+Compile accelerator stub functions
+Create board support package library
+Command canceled
+11:03:56 **** Clean-only build of configuration Release for project lab1 ****
+make clean 
+rm -rf _sds sd_card  ./src/madd.o ./src/main.o ./src/mmult.o  ./src/madd.d ./src/main.d ./src/mmult.d  lab1.elf
+' '
+11:03:58 **** Clean-only build of configuration Debug for project lab1_system ****
+make clean 
+rm -rf sd_card
+11:03:59 **** Build of configuration Release for project lab1 ****
+make pre-build main-build 
+sdsoc_make_clean Release
+' '
+'Building file: ../src/madd.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/madd.o" -MMD -MP -MF"src/madd.d" -MT"src/madd.o" -o "src/madd.o" "../src/madd.cpp" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Processing -sds-hw block for madd
+Create data motion intermediate representation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/src/madd.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+Performing accelerator source linting for madd
+Performing pragma generation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Users/gd14470/sdsoc_workspace/lab1/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/gd14470/sdsoc_workspace/lab1/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/madd_pp.cpp 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/madd.tcl
+Moving function madd to Programmable Logic
+sds++ log file saved as C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/reports/sds_madd.log
+
+'Finished building: ../src/madd.cpp'
+' '
+'Building file: ../src/main.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Create data motion intermediate representation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/gd14470/sdsoc_workspace/lab1/src/main.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/src/main.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+Compiling C:/Users/gd14470/sdsoc_workspace/lab1/src/main.cpp
+sds++ log file saved as C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/reports/sds_main.log
+
+'Finished building: ../src/main.cpp'
+' '
+'Building file: ../src/mmult.cpp'
+'Invoking: SDS++ Compiler'
+sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"src/mmult.o" -MMD -MP -MF"src/mmult.d" -MT"src/mmult.o" -o "src/mmult.o" "../src/mmult.cpp" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Processing -sds-hw block for mmult
+Create data motion intermediate representation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/src/mmult.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+Performing accelerator source linting for mmult
+Performing pragma generation
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Users/gd14470/sdsoc_workspace/lab1/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/gd14470/sdsoc_workspace/lab1/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/mmult_pp.cpp 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/vhls/mmult.tcl
+Moving function mmult to Programmable Logic
+sds++ log file saved as C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/reports/sds_mmult.log
+
+'Finished building: ../src/mmult.cpp'
+' '
+'Building target: lab1.elf'
+'Invoking: SDS++ Linker'
+sds++ --remote_ip_cache C:/Users/gd14470/sdsoc_workspace/ip_cache -o "lab1.elf"  ./src/madd.o ./src/main.o ./src/mmult.o    -dmclkid 2  -mno-boot-files  -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+Analyzing object files
+... C:/Users/gd14470/sdsoc_workspace/lab1/Release/src/madd.o
+... C:/Users/gd14470/sdsoc_workspace/lab1/Release/src/main.o
+... C:/Users/gd14470/sdsoc_workspace/lab1/Release/src/mmult.o
+Generating data motion network
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/sds_all.o C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/./src/madd.s C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/./src/main.s C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.llvm/./src/mmult.s 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release>exit /b 0 
+
+C:\Users\gd14470\sdsoc_workspace\lab1\Release\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --platform zed --dmclkid 2 --repo C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.2/data/DM.db -os standalone -processor cortex-a9 -partition 0  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+Creating block diagram (BD)
+Creating top.bd.tcl
+Rewrite caller functions
+Compile caller rewrite file C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/swstubs/main.cpp
+Prepare hardware access API functions
+Create accelerator stub functions
+Compile hardware access API functions
+Compile accelerator stub functions
+Create board support package library
+Preliminary link application ELF
+Enable generation of hardware programming files
+Calling VPL
+
+****** vpl v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+Attempting to get a license: ap_opencl
+WARNING: [VPL 17-301] Failed to get a license for 'ap_opencl'. Explanation: The license feature ap_opencl could not be found.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+Attempting to get a license: ap_sdsoc
+Feature available: ap_sdsoc
+INFO: [VPL 60-895]   Target platform: C:/Xilinx/SDx/2018.2/platforms/zed\zed.xpfm
+INFO: [VPL 60-423]   Target device: zed
+INFO: [VPL 60-1032] Extracting DSA to C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vivado/.local/dsa
+INFO: [VPL 60-251]   Hardware accelerator integration...
+
+INFO: [VPL 60-841] Created output file: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vpl/address_map.xml
+INFO: [VPL 60-841] Created output file: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vpl/system.bit
+INFO: [VPL 60-841] Created output file: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vpl/system.hdf
+INFO: [VPL 60-841] Created output file: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vpl/_new_clk_freq
+Software tracing enabled
+Compile hardware access API functions
+Create board support package library
+Link application ELF file
+All user specified timing constraints are met.
+sds++ log file saved as C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/reports/sds.log
+
+'Finished building target: lab1.elf'
+' '
+11:31:33 **** Build of configuration Debug for project lab1_system ****
+make all 
+sdx_sdcard --xpfm C:/Xilinx/SDx/2018.2/platforms\zed\zed.xpfm --sys_config standalone --bitstream ..\..\lab1\Release/lab1.elf.bit --elf ..\..\lab1\Release\lab1.elf 
+No input directory specified, searching current directory for SD card files
+No output directory specified, creating sd_card folder in current directory
+creating BOOT.BIN using C:/Users/gd14470/sdsoc_workspace/lab1/Release/lab1.elf.bit

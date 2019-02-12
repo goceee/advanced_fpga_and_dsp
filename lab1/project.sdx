@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="lab1" location="C:/Users/nh15775/workspace/lab1" platform="C:/Xilinx/SDx/2018.2/platforms\zed\zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" systemProject="lab1_system" sysConfig="standalone" runtime="C/C++" cpu="standalone" cpuInstance="ps7_cortexa9_0" os="standalone" ConfigType="Debug">
-  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.1656547736" dirty="true">
+<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="lab1" location="C:/Users/gd14470/sdsoc_workspace/lab1" platform="C:/Xilinx/SDx/2018.2/platforms\zed\zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" systemProject="lab1_system" sysConfig="standalone" runtime="C/C++" cpu="standalone" cpuInstance="ps7_cortexa9_0" os="standalone" ConfigType="Debug">
+  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.1983122809">
     <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="1" location="C:/Users/nh15775/workspace/lab1/src/madd.cpp"/>
-      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="1" location="C:/Users/nh15775/workspace/lab1/src/mmult.cpp"/>
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="1" location="C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp"/>
+      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="1" location="C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp"/>
     </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false"/>
   </configuration>
-  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.2121302516" dirty="true">
-    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false"/>
+  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1714150189">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp"/>
+      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="2" location="C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/gd14470/sdsoc_workspace/lab1/src/madd.cpp"/>
+      <accelerator name="mmult" filepath="src/mmult.cpp" clkid="2" location="C:/Users/gd14470/sdsoc_workspace/lab1/src/mmult.cpp"/>
+    </lastBuildOptions>
   </configuration>
 </sdsproject:SDSProject>

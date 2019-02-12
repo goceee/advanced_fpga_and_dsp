@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Feb 12 10:45:50 UTC 2019
+VLNV: xilinx.com:hls:mmult:1.0
+SynthRuntime: 76

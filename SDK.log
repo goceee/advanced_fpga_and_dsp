@@ -1,0 +1,11 @@
+09:57:55 INFO  : Registering command handlers for SDx TCF services
+09:57:55 INFO  : Registering command handlers for SDK TCF services
+09:57:56 INFO  : Launching XSCT server: xsct.bat -n -sdx -interactive C:\Users\gd14470\sdsoc_workspace\temp_xsdb_launch_script.tcl
+09:57:57 INFO  : Validating SDSoC License...
+09:57:57 INFO  : License available for SDSoC
+09:57:57 INFO  : Validating SDAccel License...
+09:57:57 INFO  : License for SDAccel is unavailable
+09:58:01 INFO  : XSCT server has started successfully.
+09:58:01 INFO  : plnx-install-location is set to ''
+09:58:01 INFO  : Successfully done setting XSCT server connection channel  
+09:58:02 INFO  : Successfully done setting SDK workspace  

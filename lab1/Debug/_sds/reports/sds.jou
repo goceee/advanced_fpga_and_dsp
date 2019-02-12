@@ -1,0 +1,70 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.2 SW Build 2258646 on Thu Jun 14 20:04:27 MDT 2018
+# Start time    : Tue Feb 12 10:08:52 +0000 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/gd14470/sdsoc_workspace/ip_cache -o lab1.elf ./src/madd.o ./src/main.o ./src/mmult.o -dmclkid 2 -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/reports/sds.log
+# Journal file  : C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/reports/sds.jou
+# Report file   : C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Analyzing object files
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/madd.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/madd.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/madd.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/madd.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/main.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/main.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/main.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/main.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/mmult.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/mmult.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/mmult.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.data/mmult.o.xml
+C:/Xilinx/SDx/2018.2/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/gd14470/sdsoc_workspace/lab1/Debug/.Xil/zed.hpfm    -o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/.cdb/xd_ip_db.xml  
+# Using prebuilt hardware
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+# Skipping block diagram (BD), address map, port information and device registration for partition 0
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+# Prepare hardware access API functions
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+# Create accelerator stub functions
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+# Compile hardware access API functions
+arm-none-eabi-gcc   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -c  C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -c  C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/cf_stub.c
+arm-none-eabi-ar crs C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/cf_stub.o
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+# Compile accelerator stub functions
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+arm-none-eabi-ar crs C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/liblab1.a C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/cf_stub.o 
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+# Enable generation of boot files
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+# Compile hardware access API functions
+arm-none-eabi-gcc   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -c  C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -c  C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/cf_stub.c
+arm-none-eabi-ar crs C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/cf_stub.o
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+arm-none-eabi-ar crs C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/liblab1.a C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/cf_stub.o 
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp
+C:/Xilinx/SDK/2018.2/bin/hsi  -mode batch -notrace -quiet -source C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Create board support package library
+C:/Xilinx/SDK/2018.2/bin/hsi  -mode batch -notrace -quiet -source C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+cd C:/Users/gd14470/sdsoc_workspace/lab1/Debug
+# Link application ELF file
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.2/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.2/platforms/zed/sw/standalone/standalone/lscript.ld   C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/madd.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/main.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/src/mmult.o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/portinfo.o  -L C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib  -L C:/Xilinx/SDx/2018.2/target/aarch32-none/lib -LC:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs -Wl,--start-group -lxilffs -lgcc -lc -lstdc++ -Wl,--end-group -Wl,--start-group   -lxilffs -lxil  -lgcc -lc  -lsds_lib -lxlnk_stub -lgcc -lc -Wl,--end-group -o C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/lab1.elf
+arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/lab1.elf
+# sds++ completed at Tue Feb 12 10:11:04 +0000 2019

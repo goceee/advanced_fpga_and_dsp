@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# hsi v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# 
+# Start of session at: Tue Feb 12 10:09:29 2019
+# Process ID: 3788
+# Current directory: C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp
+# Command line: hsi.exe -mode batch -notrace -quiet -source C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Log file: C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp/hsi.log
+# Journal file: C:/Users/gd14470/sdsoc_workspace/lab1/Debug/_sds/swstubs/standalone_bsp\hsi.jou
+#-----------------------------------------------------------
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+generate_bsp: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 172.887 ; gain = 2.023

@@ -1,0 +1,2 @@
+Compiling (bitstream) accelerator binary: bin
+Log file: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vivado/prj/prj.runs/impl_1/runme.log
