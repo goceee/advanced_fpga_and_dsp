@@ -1,0 +1,2 @@
+Compiling (synthesis checkpoint) kernel/IP: zed_madd_1_0
+Log file: C:/Xilinx/workspace_sdx/lab_1/Release/_sds/p0/vivado/prj/prj.runs/zed_madd_1_0_synth_1/runme.log

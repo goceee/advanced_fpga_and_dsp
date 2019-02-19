@@ -1,0 +1,22 @@
+digraph hw {
+zed [label = "zed", shape = box, style = filled, fillcolor = green];
+dm_0 [label = "dm_0\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+dm_1 [label = "dm_1\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+dm_2 [label = "dm_2\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+dm_3 [label = "dm_3\ndsps:0, bram:8, luts:4207, FFs:5598", shape = box, style = filled, fillcolor = yellow];
+madd_1 [label = "madd_1\ndsps:2, bram:0, luts:533, FFs:388\nestimated latency: 6880", shape = box, style = filled, fillcolor = yellow];
+mmult_1 [label = "mmult_1\ndsps:10, bram:2, luts:5485, FFs:5010\nestimated latency: 117080", shape = box, style = filled, fillcolor = yellow];
+
+zed -> madd_1 [label = "cmd_madd"]
+zed -> dm_0 [label = "B"]
+dm_0 -> madd_1 [label = "B"]
+madd_1 -> dm_3 [label = "C"]
+dm_3 -> zed [label = "C"]
+zed -> mmult_1 [label = "cmd_mmult"]
+zed -> dm_1 [label = "A"]
+dm_1 -> mmult_1 [label = "A"]
+zed -> dm_2 [label = "B"]
+dm_2 -> mmult_1 [label = "B"]
+mmult_1 -> madd_1 [label = "C -> A"]
+graph [label = "Total Resources: dsps:12/220, bram:34/140, luts:22846/53200, FFs:27790/106400\nFor graph with functions: madd:main.cpp:139 mmult:main.cpp:138, estimated hardware latency =  125476\n"];
+}

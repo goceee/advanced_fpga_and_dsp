@@ -1,0 +1,134 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "bram",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "A",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "A",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "bram",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "B",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "B",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "bram",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "C",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "RESOURCE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "C",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "core",
+                "value": "RAM_1P"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "madd",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LATENCY",
+            "option": [{
+                "name": "min",
+                "value": "1"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,18 @@
+ADDRESS_MAP:=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/p0/.cf_work/address_map.xml
+
+OUTPUT:=lab_1.elf
+
+.PHONY: relink clean
+
+relink: portinfo.o
+	arm-none-eabi-ar crs libxlnk_stub.a portinfo.o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/cf_stub.o
+	arm-none-eabi-g++ -L./ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.3/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.3/platforms/zed/sw/standalone/standalone/lscript.ld  C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/madd.o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/main.o  -L C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib   -LC:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs -Wl,--start-group -lxilffs -lgcc -lc -lstdc++ -Wl,--end-group -Wl,--start-group   -lxilffs -lxil  -lgcc -lc  -L C:/Xilinx/SDx/2018.3/target/aarch32-none/lib -lsds_lib -lxlnk_stub -lgcc -lc -Wl,--end-group -o lab_1.elf
+	arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx lab_1.elf
+	rm libxlnk_stub.a portinfo.o portinfo.h portinfo.c
+
+portinfo.o: ${ADDRESS_MAP} 
+	C:/Xilinx/SDx/2018.3/bin/cf2sw -i C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/apsys_0.xml -r C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.cdb/xd_ip_db.xml -a ${ADDRESS_MAP} -pollMode 0 -mc 
+	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c portinfo.c
+
+clean:
+	rm -f portinfo.o portinfo.h portinfo.c ${OUTPUT} libxlnk_stub.a

@@ -1,0 +1,8 @@
+OUTPUT=lab_2.elf
+.PHONY: relink clean
+
+relink:
+	cp lab_2.elf ${OUTPUT}
+
+clean:
+	rm -f ${OUTPUT}

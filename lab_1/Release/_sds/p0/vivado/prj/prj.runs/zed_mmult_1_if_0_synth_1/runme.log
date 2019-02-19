@@ -1,0 +1,22 @@
+
+*** Running vivado
+    with args -log zed_mmult_1_if_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zed_mmult_1_if_0.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source zed_mmult_1_if_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/workspace_sdx/lab_1/Release/_sds/iprepo/repo'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'c:/Xilinx/SDx/2018.3/data/ip/xilinx'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/SDx/2018.3/data/cache/xilinx'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/workspace_sdx/lab_1/Release/_sds/p0/vivado/.local/dsa/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/SDx/2018.3/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 439.352 ; gain = 176.406
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP zed_mmult_1_if_0, cache-ID = d6d23a6b81902922.
+config_ip_cache: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 704.070 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 12 17:48:46 2019...

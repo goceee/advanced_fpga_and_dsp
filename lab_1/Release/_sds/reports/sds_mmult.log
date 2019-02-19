@@ -1,0 +1,141 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Tue Feb 12 17:29:16 +0000 2019
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/mmult.o -MMD -MP -MFsrc/mmult.d -MTsrc/mmult.o -o src/mmult.o ../src/mmult.cpp -sds-hw madd madd.cpp -clkid 2 -sds-end -sds-hw mmult mmult.cpp -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Xilinx/workspace_sdx/lab_1/Release/_sds/reports/sds_mmult.log
+# Journal file  : C:/Xilinx/workspace_sdx/lab_1/Release/_sds/reports/sds_mmult.jou
+# Report file   : C:/Xilinx/workspace_sdx/lab_1/Release/_sds/reports/sds_mmult.rpt
+#-----------------------------------------------------------
+
+Analyzing source for RTL template usage
+C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp  -save-query C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/src/mmult.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11  -emit-llvm -S C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp -o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/src/mmult.s
+
+C:\Xilinx\workspace_sdx\lab_1\Release>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp -o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/src/mmult.s 
+
+C:\Xilinx\workspace_sdx\lab_1\Release>exit /b 0 
+Performing accelerator source linting for mmult
+C:/Xilinx/SDx/2018.3/bin/sdslint -target cortex-a9 -func "mmult" C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+arm-none-eabi-g++ -c C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.cpp -o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+arm-none-eabi-objcopy --add-section .xdinfo=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o.xml C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+Performing pragma generation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper -E -IC:/Xilinx/workspace_sdx/lab_1/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -IC:/Xilinx/workspace_sdx/lab_1/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11 C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp -o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult_pp.cpp
+
+C:\Xilinx\workspace_sdx\lab_1\Release>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Xilinx/workspace_sdx/lab_1/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -IC:/Xilinx/workspace_sdx/lab_1/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp -o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult_pp.cpp 
+
+C:\Xilinx\workspace_sdx\lab_1\Release>exit /b 0 
+C:/Xilinx/SDx/2018.3/bin/pragma_gen  -func "mmult"   -tcl C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult.tcl   C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -IC:/Xilinx/workspace_sdx/lab_1/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -IC:/Xilinx/workspace_sdx/lab_1/src  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult.tcl
+Moving function mmult to Programmable Logic
+C:/Xilinx/Vivado/2018.3/bin/vivado_hls C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult_run.tcl -l mmult_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Naimul Hoque' on host 'desktop-mv6occk' (Windows NT_amd64 version 6.2) on Tue Feb 12 17:29:32 +0000 2019
+INFO: [HLS 200-10] In directory 'C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult'.
+INFO: [HLS 200-10] Adding design file 'C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xc7z020clg484-1 '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-10] Analyzing design file 'C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 104.414 ; gain = 18.047
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 104.414 ; gain = 18.047
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 105.641 ; gain = 19.273
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 105.898 ; gain = 19.531
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 127.758 ; gain = 41.391
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 127.758 ; gain = 41.391
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-71] Latency directive discarded for region mmult since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.032 seconds; current allocated memory: 77.365 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 5 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.134 seconds; current allocated memory: 77.704 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/A' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/B' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/C' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mmult' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'mmult_fadd_32ns_32ns_32_5_full_dsp_1' to 'mmult_fadd_32ns_3bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'mmult_fmul_32ns_32ns_32_4_max_dsp_1' to 'mmult_fmul_32ns_3cud' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult/A_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult/A_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult/B_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult/B_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mmult_fadd_32ns_3bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mmult_fmul_32ns_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult'.
+INFO: [HLS 200-111]  Elapsed time: 0.264 seconds; current allocated memory: 78.337 MB.
+INFO: [RTMG 210-278] Implementing memory 'a1_mmult_Abuf_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 129.398 ; gain = 43.031
+INFO: [SYSC 207-301] Generating SystemC RTL for mmult with prefix a1_.
+INFO: [VHDL 208-304] Generating VHDL RTL for mmult with prefix a1_.
+INFO: [VLOG 209-307] Generating Verilog RTL for mmult with prefix a1_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'a1_mmult_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a1_mmult_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a1_mmult_ap_fadd_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a1_mmult_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a1_mmult_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a1_mmult_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 12 17:30:00 2019...
+INFO: [HLS 200-112] Total elapsed time: 28.743 seconds; peak allocated memory: 78.337 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Tue Feb 12 17:30:00 2019...
+C:/Xilinx/SDK/2018.3/gnuwin/bin/sed.exe -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult/solution/impl/ip/auxiliary.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapRenameAttr.xsl  C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult_auxiliary.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.hlsmap.xml  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapAdapter.xsl  C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.hlsmap1.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc    --output C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.fcnmap.xml  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapAxi4.xsl  C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.hlsmap.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsAdapterComp.xsl  C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.fcnmap.xml
+arm-none-eabi-objcopy --add-section .xddata=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.xml C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+arm-none-eabi-objcopy --add-section .xdasm=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/src/mmult.s C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+arm-none-eabi-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Xilinx/workspace_sdx/lab_1/Release/src/mmult.o -MFC:/Xilinx/workspace_sdx/lab_1/Release/src/mmult.d -MTC:/Xilinx/workspace_sdx/lab_1/Release/src/mmult.o -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include C:/Xilinx/workspace_sdx/lab_1/src/mmult.cpp -o C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.pp/mmult.iix
+arm-none-eabi-objcopy --add-section .xdpp=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.pp/mmult.ii C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+arm-none-eabi-objcopy --add-section .xdfcnmap=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult.fcnmap.xml C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+arm-none-eabi-objcopy --add-section .xdhlscore=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/vhls/mmult/solution/impl/ip/xilinx_com_hls_mmult_1_0.zip C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+arm-none-eabi-objcopy --add-section .xdif=C:/Xilinx/workspace_sdx/lab_1/Release/_sds/.llvm/mmult_if.xml C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/mmult.o
+sds++ log file saved as C:/Xilinx/workspace_sdx/lab_1/Release/_sds/reports/sds_mmult.log
+sds++ completed at Tue Feb 12 17:30:01 +0000 2019

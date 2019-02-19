@@ -1,0 +1,101 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Tue Feb 12 20:03:37 +0000 2019
+# Command line  : sds++ --remote_ip_cache C:/Xilinx/workspace_sdx/ip_cache -o lab_2.elf ./src/madd.o ./src/main.o ./src/mmult.o -dmclkid 2 -mno-boot-files -perf-root main -perf-est swdata.xml -perf-funcs madd,mmult -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.log
+# Journal file  : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.jou
+# Report file   : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Removing implementation files from previous run
+# Analyzing object files
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/madd.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/main.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/mmult.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Xilinx/workspace_sdx/lab_2/Release/.Xil/zed.hpfm    -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  
+# Using prebuilt hardware
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+# Skipping block diagram (BD), address map, port information and device registration for partition 0
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+# Prepare hardware access API functions
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+# Create accelerator stub functions
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+# Compile hardware access API functions
+arm-none-eabi-gcc  -DPERF_EST -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.c
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.c -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.o
+arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+# Compile accelerator stub functions
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/liblab_2.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o 
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+# Compile hardware access API functions
+arm-none-eabi-gcc  -DPERF_EST -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.c
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.c -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.o
+arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/liblab_2.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o 
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp
+C:/Xilinx/SDK/2018.3/bin/hsi  -mode batch -notrace -quiet -source C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Create board support package library
+C:/Xilinx/SDx/2018.3/bin/xsct  -sdx -quiet C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+# Link application ELF file
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.3/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.3/platforms/zed/sw/standalone/standalone/lscript.ld C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.o  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o  -L C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib   -LC:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs -Wl,--start-group -lstdc++ -Wl,--end-group -Wl,--start-group     -LC:/Xilinx/SDx/2018.3/target/aarch32-none/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/lab_2.elf -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+
+arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/lab_2.elf
+# Analyzing object files
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.rtlx/madd.rtlx
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/madd.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.pp/madd.ii
+arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/madd.madd.fcnmap.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip -d C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/madd_if.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/main.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.rtlx/mmult.rtlx
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/mmult.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.pp/mmult.ii
+arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/mmult.mmult.fcnmap.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip -d C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/mmult_if.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Xilinx/workspace_sdx/lab_2/Release/.Xil/zed.hpfm  -ip C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0 -ip C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0  -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/sds_all.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/madd.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/main.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/mmult.s
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm
+cd C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os standalone -processor cortex-a9 -partition 0   -perfest
+cd C:/Xilinx/workspace_sdx/lab_2/Release
+C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/hw_perf_est.xml  -r C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est  -apsys C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/apsys_0.xml
+# sds++ completed at Tue Feb 12 20:05:07 +0000 2019

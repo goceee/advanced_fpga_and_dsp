@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="project_aes" location="C:/Xilinx/workspace_sdx/project_aes" platform="C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" systemProject="project_aes_system" sysConfig="standalone" runtime="C/C++" cpu="standalone" cpuInstance="ps7_cortexa9_0" os="standalone" ConfigType="Debug">
+  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.1430496969" dirty="true">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="aes_enc" filepath="src/aes_enc.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/project_aes/src/aes_enc.cpp">
+        <args name="state"/>
+        <args name="cipher"/>
+        <args name="ekey"/>
+        <args name="block_size"/>
+      </accelerator>
+      <accelerator name="array2stream" filepath="src/aes_enc.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/project_aes/src/aes_enc.cpp">
+        <args name="state"/>
+        <args name="result"/>
+        <args name="byte_count"/>
+      </accelerator>
+      <accelerator name="stream2array" filepath="src/aes_enc.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/project_aes/src/aes_enc.cpp">
+        <args name="state"/>
+        <args name="result"/>
+        <args name="byte_count"/>
+      </accelerator>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.644658418" dirty="true">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="aes_enc" filepath="src/aes_enc.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/project_aes/src/aes_enc.cpp">
+        <args name="state"/>
+        <args name="cipher"/>
+        <args name="ekey"/>
+        <args name="block_size"/>
+      </accelerator>
+      <accelerator name="array2stream" filepath="src/aes_enc.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/project_aes/src/aes_enc.cpp">
+        <args name="state"/>
+        <args name="result"/>
+        <args name="byte_count"/>
+      </accelerator>
+      <accelerator name="stream2array" filepath="src/aes_enc.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/project_aes/src/aes_enc.cpp">
+        <args name="state"/>
+        <args name="result"/>
+        <args name="byte_count"/>
+      </accelerator>
+    </configBuildOptions>
+  </configuration>
+</sdsproject:SDSProject>

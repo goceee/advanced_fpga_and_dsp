@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# hsi v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Tue Feb 12 17:31:20 2019
+# Process ID: 20660
+# Current directory: C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/standalone_bsp
+# Command line: hsi.exe -mode batch -notrace -quiet -source C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Log file: C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/standalone_bsp/hsi.log
+# Journal file: C:/Xilinx/workspace_sdx/lab_1/Release/_sds/swstubs/standalone_bsp\hsi.jou
+#-----------------------------------------------------------
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+open_hw_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 189.832 ; gain = 125.621
+generate_bsp: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 192.000 ; gain = 2.168
