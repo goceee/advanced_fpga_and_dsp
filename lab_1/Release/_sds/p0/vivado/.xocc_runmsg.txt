@@ -1,2 +1,0 @@
-creating FPGA bitstream.
-Log file: C:/Xilinx/workspace_sdx/lab_1/Release/_sds/p0/vivado/vivado.log
