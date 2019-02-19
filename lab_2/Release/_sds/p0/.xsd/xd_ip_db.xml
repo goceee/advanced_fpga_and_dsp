@@ -5130,14 +5130,18 @@
 <xd:busInterface xd:name="AP_AXIMM_127" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="acc_aclk" xd:resetRef="acc_aresetn"/>
 <xd:busInterface xd:name="M_AXIMM_127" xd:busTypeRef="aximm" xd:mode="master" xd:clockRef="acc_aclk" xd:resetRef="acc_aresetn"/>
 </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="axis_data_fifo" xd:version="2.0">
+  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="axis_data_fifo" xd:version="1.1">
         <xd:busInterface xd:name="S_AXIS" xd:busTypeRef="axis" xd:mode="slave" xd:direction="in" xd:hasTlast="true" xd:clockRef="S_CLKIF" xd:resetRef="S_RSTIF" xd:dataWidth="0"/>
-        <xd:busInterface xd:name="M_AXIS" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="true" xd:clockRef="M_CLKIF" xd:resetRef="S_RSTIF" xd:dataWidth="0"/>
+        <xd:busInterface xd:name="M_AXIS" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="true" xd:clockRef="M_CLKIF" xd:resetRef="M_RSTIF" xd:dataWidth="0"/>
         <xd:busInterface xd:name="S_RSTIF" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="s_axis_aresetn"/>
+        <xd:busInterface xd:name="M_RSTIF" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="m_axis_aresetn"/>
         <xd:busInterface xd:name="S_CLKIF" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="s_axis_aclk"/>
         <xd:busInterface xd:name="M_CLKIF" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="m_axis_aclk"/>
-	<xd:port xd:name="axis_wr_data_count" xd:direction="out" xd:size="32"/>
-	<xd:port xd:name="axis_rd_data_count" xd:direction="out" xd:size="32"/>
+        <xd:busInterface xd:name="S_CLKENIF" xd:busTypeRef="clockenable" xd:mode="slave"/>
+        <xd:busInterface xd:name="M_CLKENIF" xd:busTypeRef="clockenable" xd:mode="slave"/>
+        <xd:port xd:name="axis_data_count" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="axis_wr_data_count" xd:direction="out" xd:size="32"/>
+        <xd:port xd:name="axis_rd_data_count" xd:direction="out" xd:size="32"/>
     </xd:component>
   <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="axis_dwidth_converter" xd:version="1.1">
         <xd:busInterface xd:name="S_AXIS" xd:busTypeRef="axis" xd:mode="slave" xd:hasTlast="true" xd:direction="in"/>
@@ -5240,7 +5244,7 @@
         <xd:busInterface xd:name="s2mm_introut" xd:busTypeRef="interrupt" xd:mode="master" xd:direction="out" xd:library="signal"/>
         <xd:resourceEstimates xd:type="axi_dma_sg" xd:channel="1:1" xd:axi_width="64" xd:channel_width="64:64" xd:LUT="4207" xd:FF="5598" xd:BRAM="8" xd:DSP="0"/>
     </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="axi_fifo_mm_s" xd:version="4.2" xd:type="datamover">
+  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="axi_fifo_mm_s" xd:version="4.1" xd:type="datamover">
         <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:regionSize="0x1000" xd:dataWidth="32" xd:clockRef="s_axi_aclk" xd:resetRef="s_axi_aresetn"/>
         <xd:busInterface xd:name="AXI_STR_TXD" xd:busTypeRef="axis" xd:mode="master" xd:hasTlast="true" xd:direction="out" xd:clockRef="s_axi_aclk" xd:resetRef="mm2s_prmry_reset_out_n"/>
         <xd:busInterface xd:name="AXI_STR_RXD" xd:busTypeRef="axis" xd:mode="slave" xd:hasTlast="true" xd:direction="in" xd:clockRef="s_axi_aclk" xd:resetRef="s2mm_prmry_reset_out_n"/>
@@ -5699,32 +5703,6 @@
         <xd:port xd:name="bscan_ext_drck" xd:direction="in"/>
         <xd:port xd:name="bscan_ext_tdo" xd:direction="out"/>
     </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="user" xd:name="mem_sink" xd:version="1.0" xd:type="datamover">
-        <xd:busInterface xd:name="stream" xd:busTypeRef="axis" xd:mode="slave" xd:direction="in" xd:hasTlast="true" xd:clockRef="async_clk" xd:resetRef="async_reset_n"/>
-        <xd:busInterface xd:name="memory" xd:busTypeRef="aximm" xd:mode="master" xd:clockRef="memory_clk" xd:resetRef="memory_reset_n"/>
-        <xd:busInterface xd:name="reg_bus" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="reg_bus_clk" xd:resetRef="reg_bus_reset_n"/>
-        <xd:busInterface xd:name="reg_bus_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="reg_bus_clk" xd:resetRef="reg_bus_reset_n"/>
-        <xd:busInterface xd:name="reg_bus_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="reg_bus_clk" xd:library="signal" xd:port="reg_bus_reset_n" xd:activeLevel="low"/>
-        <xd:busInterface xd:name="memory_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="memory_clk" xd:resetRef="memory_reset_n"/>
-        <xd:busInterface xd:name="memory_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="memory_clk" xd:library="signal" xd:port="memory_reset_n" xd:activeLevel="low"/>
-        <xd:busInterface xd:name="async_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="async_clk" xd:resetRef="async_reset_n"/>
-        <xd:busInterface xd:name="async_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="async_reset_n" xd:activeLevel="low"/>
-        <xd:port xd:name="irq_ap_ready" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
-        <xd:port xd:name="irq_ap_done" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
-    </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="user" xd:name="mem_source" xd:version="1.0" xd:type="datamover">
-        <xd:busInterface xd:name="stream" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="true" xd:clockRef="async_clk" xd:resetRef="async_reset_n"/>
-        <xd:busInterface xd:name="memory" xd:busTypeRef="aximm" xd:mode="master" xd:clockRef="memory_clk" xd:resetRef="memory_reset_n"/>
-        <xd:busInterface xd:name="reg_bus" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="reg_bus_clk" xd:resetRef="reg_bus_reset_n"/>
-        <xd:busInterface xd:name="async_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="async_clk" xd:resetRef="async_reset_n"/>
-        <xd:busInterface xd:name="memory_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="memory_clk" xd:resetRef="memory_reset_n"/>
-        <xd:busInterface xd:name="reg_bus_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="reg_bus_clk" xd:resetRef="reg_bus_reset_n"/>
-        <xd:busInterface xd:name="reg_bus_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="reg_bus_reset_n" xd:activeLevel="low"/>
-        <xd:busInterface xd:name="memory_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="memory_reset_n" xd:activeLevel="low"/>
-        <xd:busInterface xd:name="async_reset_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="async_reset_n" xd:activeLevel="low"/>
-        <xd:port xd:name="irq_ap_ready" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
-        <xd:port xd:name="irq_ap_done" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
-    </xd:component>
   <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="processing_system7" xd:version="5.5">
     
     <!-- always define clock frequencies -->
@@ -5801,40 +5779,11 @@
     </xd:port>
     
   </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="sdx_accel_monitor" xd:version="1.1">
-        <xd:busInterface xd:name="mon_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="mon_clk"/>
-        <xd:busInterface xd:name="mon_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="mon_clk" xd:library="signal" xd:port="mon_resetn"/>
-        <xd:busInterface xd:name="trace_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="trace_clk"/>
-        <xd:busInterface xd:name="trace_rst" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="trace_clk" xd:library="signal" xd:port="trace_rst"/>
-        <xd:busInterface xd:name="MON_AP_CTRL" xd:busTypeRef="acc_handshake" xd:mode="slave" xd:direction="in"/>
-        <xd:busInterface xd:name="TRACE_OUT" xd:busTypeRef="sdsoc_trace" xd:mode="master" xd:clockPort="trace_clk"/>
-    </xd:component>
   <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="sdx_memory_subsystem" xd:version="1.0" xd:type="interconnect">
         <xd:busInterface xd:name="DDR4_MEM0" xd:busTypeRef="aximm" xd:mode="slave"/>
         <xd:busInterface xd:name="DDR4_MEM1" xd:busTypeRef="aximm" xd:mode="slave"/>
         <xd:busInterface xd:name="DDR4_MEM2" xd:busTypeRef="aximm" xd:mode="slave"/>
         <xd:busInterface xd:name="DDR4_MEM3" xd:busTypeRef="aximm" xd:mode="slave"/>
-    </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="Monitor_AXI_Master" xd:version="1.0">
-        <xd:busInterface xd:name="trace_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="trace_clk"/>
-        <xd:busInterface xd:name="trace_rst" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="trace_clk" xd:library="signal" xd:port="trace_rst"/>
-        <xd:busInterface xd:name="mon_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="mon_clk"/>
-        <xd:busInterface xd:name="mon_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="mon_clk" xd:library="signal" xd:port="mon_resetn"/>
-        <xd:busInterface xd:name="MON_M_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="mon_clk" xd:resetRef=""/>
-        <xd:busInterface xd:name="MON_AP_CTRL" xd:busTypeRef="acc_handshake" xd:mode="slave" xd:direction="in"/>
-        <xd:busInterface xd:name="TRACE_OUT_0" xd:busTypeRef="sdsoc_trace" xd:mode="master"/>
-        <xd:busInterface xd:name="TRACE_OUT_1" xd:busTypeRef="sdsoc_trace" xd:mode="master"/>
-    </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="SDx_Monitor_AXI_Stream" xd:version="1.0">
-        <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="axi_lite_clk" xd:resetRef=""/>
-        <xd:busInterface xd:name="MON_AXIS" xd:busTypeRef="axis" xd:mode="slave" xd:direction="in" xd:hasTlast="true" xd:clockRef="mon_clk" xd:resetRef="mon_resetn"/>
-        <xd:busInterface xd:name="mon_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="mon_clk" xd:library="signal" xd:port="mon_resetn"/>
-        <xd:busInterface xd:name="mon_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="mon_clk"/>
-        <xd:busInterface xd:name="trace_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="trace_clk"/>
-        <xd:busInterface xd:name="trace_rst" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="trace_clk" xd:library="signal" xd:port="trace_rst"/>
-        <xd:busInterface xd:name="axi_lite_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="axi_lite_clk"/>
-        <xd:busInterface xd:name="axi_lite_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="axi_lite_clk" xd:library="signal" xd:port="axi_lite_resetn"/>
-        <xd:busInterface xd:name="TRACE_OUT" xd:busTypeRef="sdsoc_trace" xd:mode="master" xd:clockPort="trace_clk"/>
     </xd:component>
   <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="sgdma2axis_ic" xd:version="1.0">
         <xd:busInterface xd:name="clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="clk"/>
@@ -5988,80 +5937,6 @@
         <xd:busInterface xd:name="M2_AXI" xd:busTypeRef="aximm" xd:mode="master" xd:dataWidth="32" xd:clockRef="ACLK" xd:resetRef="ARESETN"/>
         <xd:busInterface xd:name="M3_AXI" xd:busTypeRef="aximm" xd:mode="master" xd:dataWidth="32" xd:clockRef="ACLK" xd:resetRef="ARESETN"/>
         <xd:busInterface xd:name="M0_ACE" xd:busTypeRef="acemm" xd:mode="master" xd:clockPort="ACLK"/>
-    </xd:component>
-  <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="Trace_Integrator" xd:version="1.0">
-        <xd:busInterface xd:name="trace_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="trace_clk" xd:library="signal" xd:port="trace_resetn"/>
-        <xd:busInterface xd:name="mon_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="mon_clk" xd:library="signal" xd:port="mon_resetn"/>
-        <xd:busInterface xd:name="axi_lite_resetn" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:clockPort="axi_lite_clk" xd:library="signal" xd:port="axi_lite_resetn"/>
-        <xd:busInterface xd:name="trace_rst" xd:busTypeRef="reset" xd:mode="master" xd:direction="out" xd:library="signal" xd:port="trace_rstn"/>
-        <xd:busInterface xd:name="trace_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="trace_clk"/>
-        <xd:busInterface xd:name="mon_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="mon_clk"/>
-        <xd:busInterface xd:name="axi_lite_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="axi_lite_clk"/>
-        <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="axi_lite_clk" xd:resetRef="axi_lite_resetn"/>
-        <xd:busInterface xd:name="M_AXIS" xd:busTypeRef="axis" xd:mode="master" xd:direction="out" xd:hasTlast="false" xd:clockRef="trace_clk" xd:resetRef="trace_resetn"/>
-        <xd:busInterface xd:name="TRACE_0" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_1" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_2" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_3" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_4" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_5" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_6" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_7" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_8" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_9" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_10" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_11" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_12" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_13" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_14" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_15" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_16" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_17" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_18" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_19" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_20" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_21" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_22" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_23" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_24" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_25" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_26" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_27" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_28" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_29" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_30" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_31" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_32" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_33" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_34" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_35" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_36" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_37" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_38" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_39" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_40" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_41" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_42" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_43" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_44" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_45" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_46" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_47" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_48" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_49" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_50" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_51" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_52" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_53" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_54" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_55" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_56" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_57" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_58" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_59" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_60" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_61" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
-        <xd:busInterface xd:name="TRACE_62" xd:busTypeRef="sdsoc_trace" xd:mode="slave"/>
     </xd:component>
   <xd:component xd:vendor="xilinx.com" xd:library="ip" xd:name="Trace_Monitor_Accelerator" xd:version="3.0">
         <xd:busInterface xd:name="mon_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="mon_clk"/>
@@ -6298,8 +6173,6 @@
         <xd:clock xd:name="clk_wiz_0_clk_out2" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:id="1" xd:frequency="142.857142" xd:period="7.000000" xd:normalizedPeriod="4.666667" xd:clkDomain="/clk_wiz_0_clk_out1" xd:status="changeable"/>
         <xd:clock xd:name="clk_wiz_0_clk_out3" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:id="0" xd:frequency="166.666666" xd:period="6.000000" xd:normalizedPeriod="4.000000" xd:clkDomain="/clk_wiz_0_clk_out1" xd:status="changeable"/>
         <xd:clock xd:name="clk_wiz_0_clk_out4" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:id="3" xd:frequency="200.000000" xd:period="5.000000" xd:normalizedPeriod="3.333333" xd:clkDomain="/clk_wiz_0_clk_out1" xd:status="changeable"/>
-        <xd:clock xd:name="clk_wiz_0_clk_out5" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:id="4" xd:frequency="50.000000" xd:period="20.000000" xd:normalizedPeriod="13.333334" xd:clkDomain="/clk_wiz_0_clk_out1" xd:status="changeable"/>
-        <xd:clock xd:name="clk_wiz_0_clk_out6" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:id="5" xd:frequency="41.666666" xd:period="24.000000" xd:normalizedPeriod="16.000001" xd:clkDomain="/clk_wiz_0_clk_out1" xd:status="changeable"/>
       </xd:systemClocks>
     </xd:platformInfo>
     <xd:parameter xd:name="PCW_USE_M_AXI_GP0" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:isValid="count($designComponent/xd:connection/xd:busInterface[@xd:instanceRef=$instance and @xd:name='ps7_M_AXI_GP0'])&gt;0" xd:value="1"/>
@@ -6311,13 +6184,13 @@
     <xd:parameter xd:name="PCW_USE_S_AXI_HP2" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:isValid="count($designComponent/xd:connection/xd:busInterface[@xd:instanceRef=$instance and @xd:name='ps7_S_AXI_HP2'])&gt;0" xd:value="1"/>
     <xd:parameter xd:name="PCW_USE_S_AXI_HP3" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:isValid="count($designComponent/xd:connection/xd:busInterface[@xd:instanceRef=$instance and @xd:name='ps7_S_AXI_HP3'])&gt;0" xd:value="1"/>
     <xd:parameter xd:name="NUM_PORTS" xd:instanceRef="xlconcat_0" xd:componentRef="xlconcat" xd:isValid="'true'" xd:value="number(count($designComponent/xd:connection/xd:port[@xd:instanceRef=$instance and starts-with(@xd:name,'xlconcat_0_In')])+0)"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_M_AXI_GP0" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="master" xd:dataWidth="32" xd:clockRef="ps7_M_AXI_GP0_ACLK" xd:busInterfaceRef="M_AXI_GP0" xd:memport="M_AXI_GP" xd:sptag="GP" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_M_AXI_GP1" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="master" xd:dataWidth="32" xd:clockRef="ps7_M_AXI_GP1_ACLK" xd:busInterfaceRef="M_AXI_GP1" xd:memport="M_AXI_GP" xd:sptag="GP" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_ACP" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_ACP_ACLK" xd:busInterfaceRef="S_AXI_ACP" xd:memport="S_AXI_ACP" xd:sptag="ACP" xd:slr="default" xd:cacheCoherent="true" xd:memoryInstance="ps7" xd:addressSegment="ACP_DDR_LOWOCM"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP0" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP0_ACLK" xd:busInterfaceRef="S_AXI_HP0" xd:memport="S_AXI_HP" xd:sptag="HP" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP0_DDR_LOWOCM"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP1" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP1_ACLK" xd:busInterfaceRef="S_AXI_HP1" xd:memport="S_AXI_HP" xd:sptag="HP" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP1_DDR_LOWOCM"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP2" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP2_ACLK" xd:busInterfaceRef="S_AXI_HP2" xd:memport="S_AXI_HP" xd:sptag="HP" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP2_DDR_LOWOCM"/>
-    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP3" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP3_ACLK" xd:busInterfaceRef="S_AXI_HP3" xd:memport="S_AXI_HP" xd:sptag="HP" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP3_DDR_LOWOCM"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_M_AXI_GP0" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="master" xd:dataWidth="32" xd:clockRef="ps7_M_AXI_GP0_ACLK" xd:busInterfaceRef="M_AXI_GP0" xd:memport="M_AXI_GP" xd:sptag="default" xd:slr="default"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_M_AXI_GP1" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="master" xd:dataWidth="32" xd:clockRef="ps7_M_AXI_GP1_ACLK" xd:busInterfaceRef="M_AXI_GP1" xd:memport="M_AXI_GP" xd:sptag="default" xd:slr="default"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_ACP" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="32" xd:clockRef="ps7_S_AXI_ACP_ACLK" xd:busInterfaceRef="S_AXI_ACP" xd:memport="S_AXI_ACP" xd:sptag="ACP" xd:slr="default" xd:cacheCoherent="true" xd:memoryInstance="ps7" xd:addressSegment="ACP_DDR_LOWOCM"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP0" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP0_ACLK" xd:busInterfaceRef="S_AXI_HP0" xd:memport="S_AXI_HP" xd:sptag="HP0" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP0_DDR_LOWOCM"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP1" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP1_ACLK" xd:busInterfaceRef="S_AXI_HP1" xd:memport="S_AXI_HP" xd:sptag="HP1" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP1_DDR_LOWOCM"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP2" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP2_ACLK" xd:busInterfaceRef="S_AXI_HP2" xd:memport="S_AXI_HP" xd:sptag="HP2" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP2_DDR_LOWOCM"/>
+    <xd:busInterface xd:busTypeRef="aximm" xd:name="ps7_S_AXI_HP3" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:dataWidth="64" xd:clockRef="ps7_S_AXI_HP3_ACLK" xd:busInterfaceRef="S_AXI_HP3" xd:memport="S_AXI_HP" xd:sptag="HP3" xd:slr="default" xd:memoryInstance="ps7" xd:addressSegment="HP3_DDR_LOWOCM"/>
     <xd:busInterface xd:busTypeRef="interrupt" xd:name="xlconcat_0_In0" xd:instanceRef="xlconcat_0" xd:componentRef="xlconcat" xd:direction="in" xd:irq="61" xd:busInterfaceRef="In0"/>
     <xd:busInterface xd:busTypeRef="interrupt" xd:name="xlconcat_0_In1" xd:instanceRef="xlconcat_0" xd:componentRef="xlconcat" xd:direction="in" xd:irq="62" xd:busInterfaceRef="In1"/>
     <xd:busInterface xd:busTypeRef="interrupt" xd:name="xlconcat_0_In2" xd:instanceRef="xlconcat_0" xd:componentRef="xlconcat" xd:direction="in" xd:irq="63" xd:busInterfaceRef="In2"/>
@@ -6338,8 +6211,6 @@
     <xd:busInterface xd:busTypeRef="clock" xd:name="clk_wiz_0_clk_out2" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:mode="master" xd:busInterfaceRef="clk_out2"/>
     <xd:busInterface xd:busTypeRef="clock" xd:name="clk_wiz_0_clk_out3" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:mode="master" xd:busInterfaceRef="clk_out3"/>
     <xd:busInterface xd:busTypeRef="clock" xd:name="clk_wiz_0_clk_out4" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:mode="master" xd:busInterfaceRef="clk_out4"/>
-    <xd:busInterface xd:busTypeRef="clock" xd:name="clk_wiz_0_clk_out5" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:mode="master" xd:busInterfaceRef="clk_out5"/>
-    <xd:busInterface xd:busTypeRef="clock" xd:name="clk_wiz_0_clk_out6" xd:instanceRef="clk_wiz_0" xd:componentRef="clk_wiz" xd:mode="master" xd:busInterfaceRef="clk_out6"/>
     <xd:busInterface xd:busTypeRef="clock" xd:name="ps7_M_AXI_GP0_ACLK" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:busInterfaceRef="M_AXI_GP0_ACLK"/>
     <xd:busInterface xd:busTypeRef="clock" xd:name="ps7_M_AXI_GP1_ACLK" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:busInterfaceRef="M_AXI_GP1_ACLK"/>
     <xd:busInterface xd:busTypeRef="clock" xd:name="ps7_S_AXI_ACP_ACLK" xd:instanceRef="ps7" xd:componentRef="processing_system7" xd:mode="slave" xd:busInterfaceRef="S_AXI_ACP_ACLK"/>
@@ -6359,12 +6230,76 @@
     <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_3_peripheral_reset" xd:instanceRef="proc_sys_reset_3" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out4" xd:busInterfaceRef="peripheral_reset" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
     <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_3_interconnect_aresetn" xd:instanceRef="proc_sys_reset_3" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out4" xd:busInterfaceRef="interconnect_aresetn" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
     <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_3_peripheral_aresetn" xd:instanceRef="proc_sys_reset_3" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out4" xd:busInterfaceRef="peripheral_aresetn" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_4_peripheral_reset" xd:instanceRef="proc_sys_reset_4" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out5" xd:busInterfaceRef="peripheral_reset" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_4_interconnect_aresetn" xd:instanceRef="proc_sys_reset_4" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out5" xd:busInterfaceRef="interconnect_aresetn" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_4_peripheral_aresetn" xd:instanceRef="proc_sys_reset_4" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out5" xd:busInterfaceRef="peripheral_aresetn" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_5_peripheral_reset" xd:instanceRef="proc_sys_reset_5" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out6" xd:busInterfaceRef="peripheral_reset" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_5_interconnect_aresetn" xd:instanceRef="proc_sys_reset_5" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out6" xd:busInterfaceRef="interconnect_aresetn" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
-    <xd:busInterface xd:busTypeRef="reset" xd:name="proc_sys_reset_5_peripheral_aresetn" xd:instanceRef="proc_sys_reset_5" xd:componentRef="proc_sys_reset" xd:mode="master" xd:clockRef="clk_wiz_0_clk_out6" xd:busInterfaceRef="peripheral_aresetn" xd:clkDomain="/clk_wiz_0_clk_out1" xd:slr="default"/>
     <xd:resourceEstimates xd:BRAM="0" xd:DSP="0" xd:FF="0" xd:LUT="0"/>
   </xd:component>
+  <xd:component xd:vendor="xilinx.com" xd:library="hls" xd:name="madd" xd:version="1.0" xd:type="accelerator" xd:adapterCompRef="madd_if">
+        <xd:busInterface xd:name="ap_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_clk" xd:resetRef="ap_rst_n"/>
+        <xd:busInterface xd:name="ap_rst_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_rst_n" xd:activeLevel="low"/>
+        <xd:busInterface xd:name="ap_ctrl" xd:busTypeRef="acc_handshake" xd:mode="slave" xd:offset="0x8" xd:dataWidth="4" xd:direction="in"/>
+        <xd:busInterface xd:name="A" xd:busTypeRef="acc_fifo_read" xd:mode="master" xd:direction="in" xd:arraySize="1024" xd:bufferDepth="1024" xd:dataWidth="32"/>
+        <xd:busInterface xd:name="B" xd:busTypeRef="acc_fifo_read" xd:mode="master" xd:direction="in" xd:arraySize="1024" xd:bufferDepth="1024" xd:dataWidth="32"/>
+        <xd:busInterface xd:name="C" xd:busTypeRef="acc_fifo_write" xd:mode="master" xd:direction="out" xd:arraySize="1024" xd:bufferDepth="1024" xd:dataWidth="32"/>
+    </xd:component>
+  <xd:component xd:vendor="xilinx.com" xd:library="xd" xd:name="madd_if" xd:version="1.0" xd:componentRef="adapter_v3_0" xd:adapteeCompRef="madd" xd:type="accelerator">
+    <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="s_axi_aclk" xd:resetRef="s_axi_aresetn" xd:dataWidth="32">
+       <xd:reg xd:name="ap_ctrl" xd:offset="0x8" xd:dataWidth="4"/>
+    </xd:busInterface>
+    <xd:busInterface xd:name="s_axi_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="s_axi_aclk"/>
+    <xd:busInterface xd:name="acc_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="acc_aclk"/>
+    <xd:busInterface xd:name="s_axi_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="s_axi_aresetn"/>
+    <xd:busInterface xd:name="acc_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="acc_aresetn"/>
+    <xd:busInterface xd:name="S_AXIS_FIFO_0" xd:busTypeRef="axis" xd:portInterfaceType="fifo" xd:direction="in" xd:mode="master" xd:hasTlast="true" xd:clockRef="s_axis_fifo_0_aclk" xd:resetRef="s_axis_fifo0_aresetn" xd:dataWidth="32" xd:hlsname="A"/>
+    <xd:busInterface xd:name="S_axis_fifo_0_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_0_aclk"/>
+    <xd:busInterface xd:name="S_axis_fifo_0_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_0_aresetn"/>
+    <xd:busInterface xd:name="S_AXIS_FIFO_1" xd:busTypeRef="axis" xd:portInterfaceType="fifo" xd:direction="in" xd:mode="master" xd:hasTlast="true" xd:clockRef="s_axis_fifo_1_aclk" xd:resetRef="s_axis_fifo1_aresetn" xd:dataWidth="32" xd:hlsname="B"/>
+    <xd:busInterface xd:name="S_axis_fifo_1_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_1_aclk"/>
+    <xd:busInterface xd:name="S_axis_fifo_1_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_1_aresetn"/>
+    <xd:busInterface xd:name="M_AXIS_FIFO_0" xd:busTypeRef="axis" xd:portInterfaceType="fifo" xd:direction="out" xd:mode="master" xd:hasTlast="true" xd:clockRef="m_axis_fifo_0_aclk" xd:resetRef="m_axis_fifo0_aresetn" xd:dataWidth="32" xd:hlsname="C"/>
+    <xd:busInterface xd:name="M_axis_fifo_0_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="M_axis_fifo_0_aclk"/>
+    <xd:busInterface xd:name="M_axis_fifo_0_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="M_axis_fifo_0_aresetn"/>
+  </xd:component>
+  <xd:fcnMap xd:fcnName="madd" xd:type="hls_adapter" xd:adapterCompRef="madd_if" xd:clockId="2" xd:templateInstantiation="__NA__" xd:componentRef="madd" xd:initiationInterval="7234" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+    <xd:ctrlReg xd:name="control" xd:busInterfaceRef="ap_ctrl" xd:portInterfaceType="acc_handshake" xd:type="axis_acc_adapter" xd:offset="0x8" xd:bufferDepth="16" xd:dataWidth="4"/>
+    <xd:arg xd:name="A" xd:swRootName="A" xd:direction="in" xd:busInterfaceRef="A" xd:hwName="A" xd:portInterfaceType="fifo" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="madd_if" xd:bufferDepth="1024"/>
+    <xd:arg xd:name="B" xd:swRootName="B" xd:direction="in" xd:busInterfaceRef="B" xd:hwName="B" xd:portInterfaceType="fifo" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="1" xd:instanceRef="madd_if" xd:bufferDepth="1024"/>
+    <xd:arg xd:name="C" xd:swRootName="C" xd:direction="out" xd:busInterfaceRef="C" xd:hwName="C" xd:portInterfaceType="fifo" xd:firstOut="8" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="madd_if" xd:bufferDepth="1024"/>
+    <xd:latencyEstimates xd:best-case="7233" xd:worst-case="7233" xd:average-case="7233"/>
+    <xd:resourceEstimates xd:LUT="536" xd:FF="334" xd:BRAM="0" xd:DSP="2"/>
+  </xd:fcnMap>
+  <xd:fcnMap xd:fcnName="mmult" xd:type="hls_adapter" xd:adapterCompRef="mmult_if" xd:clockId="2" xd:templateInstantiation="__NA__" xd:componentRef="mmult" xd:initiationInterval="2218" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+    <xd:ctrlReg xd:name="control" xd:busInterfaceRef="ap_ctrl" xd:portInterfaceType="acc_handshake" xd:type="axis_acc_adapter" xd:offset="0x8" xd:bufferDepth="16" xd:dataWidth="4"/>
+    <xd:arg xd:name="A" xd:swRootName="A" xd:direction="in" xd:busInterfaceRef="A" xd:hwName="A" xd:portInterfaceType="fifo" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="mmult_if" xd:bufferDepth="1024"/>
+    <xd:arg xd:name="B" xd:swRootName="B" xd:direction="in" xd:busInterfaceRef="B" xd:hwName="B" xd:portInterfaceType="fifo" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="1" xd:instanceRef="mmult_if" xd:bufferDepth="1024"/>
+    <xd:arg xd:name="C" xd:swRootName="C" xd:direction="out" xd:busInterfaceRef="C" xd:hwName="C" xd:portInterfaceType="fifo" xd:firstOut="169" xd:arraySize="1024" xd:dataWidth="32" xd:mode="master" xd:index="0" xd:instanceRef="mmult_if" xd:bufferDepth="1024"/>
+    <xd:latencyEstimates xd:best-case="2217" xd:worst-case="2217" xd:average-case="2217"/>
+    <xd:resourceEstimates xd:LUT="24381" xd:FF="16020" xd:BRAM="32" xd:DSP="160"/>
+  </xd:fcnMap>
+  <xd:component xd:vendor="xilinx.com" xd:library="hls" xd:name="mmult" xd:version="1.0" xd:type="accelerator" xd:adapterCompRef="mmult_if">
+        <xd:busInterface xd:name="ap_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_clk" xd:resetRef="ap_rst_n"/>
+        <xd:busInterface xd:name="ap_rst_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_rst_n" xd:activeLevel="low"/>
+        <xd:busInterface xd:name="ap_ctrl" xd:busTypeRef="acc_handshake" xd:mode="slave" xd:offset="0x8" xd:dataWidth="4" xd:direction="in"/>
+        <xd:busInterface xd:name="A" xd:busTypeRef="acc_fifo_read" xd:mode="master" xd:direction="in" xd:arraySize="1024" xd:bufferDepth="1024" xd:dataWidth="32"/>
+        <xd:busInterface xd:name="B" xd:busTypeRef="acc_fifo_read" xd:mode="master" xd:direction="in" xd:arraySize="1024" xd:bufferDepth="1024" xd:dataWidth="32"/>
+        <xd:busInterface xd:name="C" xd:busTypeRef="acc_fifo_write" xd:mode="master" xd:direction="out" xd:arraySize="1024" xd:bufferDepth="1024" xd:dataWidth="32"/>
+    </xd:component>
+  <xd:component xd:vendor="xilinx.com" xd:library="xd" xd:name="mmult_if" xd:version="1.0" xd:componentRef="adapter_v3_0" xd:adapteeCompRef="mmult" xd:type="accelerator">
+    <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="s_axi_aclk" xd:resetRef="s_axi_aresetn" xd:dataWidth="32">
+       <xd:reg xd:name="ap_ctrl" xd:offset="0x8" xd:dataWidth="4"/>
+    </xd:busInterface>
+    <xd:busInterface xd:name="s_axi_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="s_axi_aclk"/>
+    <xd:busInterface xd:name="acc_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="acc_aclk"/>
+    <xd:busInterface xd:name="s_axi_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="s_axi_aresetn"/>
+    <xd:busInterface xd:name="acc_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="acc_aresetn"/>
+    <xd:busInterface xd:name="S_AXIS_FIFO_0" xd:busTypeRef="axis" xd:portInterfaceType="fifo" xd:direction="in" xd:mode="master" xd:hasTlast="true" xd:clockRef="s_axis_fifo_0_aclk" xd:resetRef="s_axis_fifo0_aresetn" xd:dataWidth="32" xd:hlsname="A"/>
+    <xd:busInterface xd:name="S_axis_fifo_0_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_0_aclk"/>
+    <xd:busInterface xd:name="S_axis_fifo_0_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_0_aresetn"/>
+    <xd:busInterface xd:name="S_AXIS_FIFO_1" xd:busTypeRef="axis" xd:portInterfaceType="fifo" xd:direction="in" xd:mode="master" xd:hasTlast="true" xd:clockRef="s_axis_fifo_1_aclk" xd:resetRef="s_axis_fifo1_aresetn" xd:dataWidth="32" xd:hlsname="B"/>
+    <xd:busInterface xd:name="S_axis_fifo_1_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_1_aclk"/>
+    <xd:busInterface xd:name="S_axis_fifo_1_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="S_axis_fifo_1_aresetn"/>
+    <xd:busInterface xd:name="M_AXIS_FIFO_0" xd:busTypeRef="axis" xd:portInterfaceType="fifo" xd:direction="out" xd:mode="master" xd:hasTlast="true" xd:clockRef="m_axis_fifo_0_aclk" xd:resetRef="m_axis_fifo0_aresetn" xd:dataWidth="32" xd:hlsname="C"/>
+    <xd:busInterface xd:name="M_axis_fifo_0_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="M_axis_fifo_0_aclk"/>
+    <xd:busInterface xd:name="M_axis_fifo_0_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="M_axis_fifo_0_aresetn"/>
+  </xd:component>
+  
+  
 </xd:repository>

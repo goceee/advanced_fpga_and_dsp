@@ -1231,9 +1231,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
   using ::ldiv_t;
 
   using ::abort;
-
-
-
   using ::atexit;
 
 
@@ -1373,38 +1370,32 @@ using std::wcstombs;
 using std::wctomb;
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
 
-void mmult(float A[32 * 32], float B[32 * 32], float C[32 * 32]);
+void mmult (float A[32*32], float B[32*32], float C[32*32]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void madd(float A[32 * 32], float B[32 * 32], float C[32 * 32]);
-void mmult(float A[32 * 32], float B[32 * 32], float C[32 * 32])
+void madd(float A[32*32], float B[32*32], float C[32*32]);
+void mmult (float A[32*32], float B[32*32], float C[32*32])
 {
-    float Abuf[32][32], Bbuf[32][32];
-#pragma HLS array_partition variable = Abuf block factor = 1 dim = 2
-#pragma HLS array_partition variable = Bbuf block factor = 1 dim = 1
-
-    for (int i = 0; i < 32; i++)
-    {
-        for (int j = 0; j < 32; j++)
-        {
+     float Abuf[32][32], Bbuf[32][32];
+#pragma HLS array_partition variable=Abuf block factor=16 dim=2
+#pragma HLS array_partition variable=Bbuf block factor=16 dim=1
+     for(int i=0; i<32; i++) {
+          for(int j=0; j<32; j++) {
 #pragma HLS PIPELINE
-            Abuf[i][j] = A[i * 32 + j];
-            Bbuf[i][j] = B[i * 32 + j];
-        }
-    }
+               Abuf[i][j] = A[i * 32 + j];
+               Bbuf[i][j] = B[i * 32 + j];
+          }
+     }
 
-    for (int i = 0; i < 32; i++)
-    {
-        for (int j = 0; j < 32; j++)
-        {
+     for (int i = 0; i < 32; i++) {
+          for (int j = 0; j < 32; j++) {
 #pragma HLS PIPELINE
-            float result = 0;
-            for (int k = 0; k < 32; k++)
-            {
-                float term = Abuf[i][k] * Bbuf[k][j];
-                result += term;
-            }
-            C[i * 32 + j] = result;
-        }
-    }
+               float result = 0;
+               for (int k = 0; k < 32; k++) {
+                    float term = Abuf[i][k] * Bbuf[k][j];
+                    result += term;
+               }
+               C[i * 32 + j] = result;
+          }
+     }
 }

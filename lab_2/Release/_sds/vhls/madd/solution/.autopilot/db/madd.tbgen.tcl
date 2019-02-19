@@ -1,3 +1,6 @@
+set C_TypeInfoList {{ 
+"madd" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"A": [[], {"array": [ {"scalar": "float"}, [1024]]}] }, {"B": [[], {"array": [ {"scalar": "float"}, [1024]]}] }, {"C": [[], {"array": [ {"scalar": "float"}, [1024]]}] }],[],""]
+}}
 set moduleName madd
 set isTaskLevelControl 1
 set isCombinational 0
@@ -63,7 +66,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1032", "EstimateLatencyMax" : "1032",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "7233", "EstimateLatencyMax" : "7233",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -92,12 +95,11 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1032", "Max" : "1032"}
-	, {"Name" : "Interval", "Min" : "1033", "Max" : "1033"}
+	{"Name" : "Latency", "Min" : "7233", "Max" : "7233"}
+	, {"Name" : "Interval", "Min" : "7234", "Max" : "7234"}
 ]}
 
 set PipelineEnableSignalInfo {[
-	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 
@@ -111,9 +113,9 @@ set busDeadlockParameterList {
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 
-	A { fifo_read 1024 no_conditional }
-	B { fifo_read 1024 no_conditional }
-	C { fifo_write 1024 no_conditional }
+	A { fifo_read 32 no_conditional }
+	B { fifo_read 32 no_conditional }
+	C { fifo_write 32 no_conditional }
 }
 
 # RTL bus port read request latency information:

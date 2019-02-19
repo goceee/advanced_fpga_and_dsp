@@ -1,99 +1,75 @@
 (c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
-# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
-# Start time    : Tue Feb 12 19:29:02 +0000 2019
-# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/madd.o -MMD -MP -MFsrc/madd.d -MTsrc/madd.o -o src/madd.o ../src/madd.cpp -sds-hw madd madd.cpp -clkid 2 -sds-end -sds-hw mmult mmult.cpp -clkid 2 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs madd,mmult -sds-sys-config standalone -sds-proc standalone -sds-pf zed
-# Log file      : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds_madd.log
-# Journal file  : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds_madd.jou
-# Report file   : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds_madd.rpt
+# Tool version  : sds++ 2018.2 SW Build 2258646 on Thu Jun 14 20:04:27 MDT 2018
+# Start time    : Tue Feb 19 11:48:55 +0000 2019
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/madd.o -MMD -MP -MFsrc/madd.d -MTsrc/madd.o -o src/madd.o ../src/madd.cpp -sds-hw madd madd.cpp -clkid 2 -sds-end -sds-hw mmult mmult.cpp -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds_madd.log
+# Journal file  : C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds_madd.jou
+# Report file   : C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds_madd.rpt
 #-----------------------------------------------------------
 
-C:/Xilinx/SDx/2018.3/bin/perf_instrumenter  -r main  -funclist madd,mmult  -tempfunclist madd;mmult  -w C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est  -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.cpp  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/unix_madd.cpp  --  -c  -I C:/Xilinx/workspace_sdx/lab_2/src  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
-Analyzing source for RTL template usage
-C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp  -save-query C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
-    -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
 Create data motion intermediate representation
-C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11  -emit-llvm -S C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.s
+C:/Xilinx/SDx/2018.2/bin/clang_wrapper -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g     -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11 -emit-llvm -S C:/Users/nh15775/workspace/lab_2/src/madd.cpp -o C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/src/madd.s
 
-C:\Xilinx\workspace_sdx\lab_2\Release>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.s 
+C:\Users\nh15775\workspace\lab_2\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/nh15775/workspace/lab_2/src/madd.cpp -o C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/src/madd.s 
 
-C:\Xilinx\workspace_sdx\lab_2\Release>exit /b 0 
-Compiling C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp
-arm-none-eabi-g++ -c -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Xilinx/workspace_sdx/lab_2/Release/src/madd.o -MFC:/Xilinx/workspace_sdx/lab_2/Release/src/madd.d -MTC:/Xilinx/workspace_sdx/lab_2/Release/src/madd.o -I C:/Xilinx/workspace_sdx/lab_2/src -I C:/Xilinx/workspace_sdx/lab_2/Release -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.cpp -o src/madd.o
-Analyzing source for RTL template usage
-C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp  -save-query C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.rtlx  --  -c  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  
-    -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
-Create data motion intermediate representation
-C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11  -emit-llvm -S C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.s
-
-C:\Xilinx\workspace_sdx\lab_2\Release>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 -emit-llvm -S C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.s 
-
-C:\Xilinx\workspace_sdx\lab_2\Release>exit /b 0 
+C:\Users\nh15775\workspace\lab_2\Release>exit /b 0 
 Performing accelerator source linting for madd
-C:/Xilinx/SDx/2018.3/bin/sdslint -target cortex-a9 -func "madd" C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
-arm-none-eabi-g++ -c C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-arm-none-eabi-objcopy --add-section .xdinfo=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o.xml C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
+C:/Xilinx/SDx/2018.2/bin/sdslint -target cortex-a9 -func "madd" C:/Users/nh15775/workspace/lab_2/src/madd.cpp -- -c -I../src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+arm-none-eabi-g++ -c C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.cpp -o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+arm-none-eabi-objcopy --add-section .xdinfo=C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o.xml C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
 Performing pragma generation
-C:/Xilinx/SDx/2018.3/bin/clang_wrapper -E -IC:/Xilinx/workspace_sdx/lab_2/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -IC:/Xilinx/workspace_sdx/lab_2/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11 C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd_pp.cpp
+C:/Xilinx/SDx/2018.2/bin/clang_wrapper -E -IC:/Users/nh15775/workspace/lab_2/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/nh15775/workspace/lab_2/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11 C:/Users/nh15775/workspace/lab_2/src/madd.cpp -o C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd_pp.cpp
 
-C:\Xilinx\workspace_sdx\lab_2\Release>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Xilinx/workspace_sdx/lab_2/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -IC:/Xilinx/workspace_sdx/lab_2/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd_pp.cpp 
+C:\Users\nh15775\workspace\lab_2\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Users/nh15775/workspace/lab_2/src -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/nh15775/workspace/lab_2/src -D __SDSVHLS__ -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.2/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include -std=c++11 C:/Users/nh15775/workspace/lab_2/src/madd.cpp -o C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd_pp.cpp 
 
-C:\Xilinx\workspace_sdx\lab_2\Release>exit /b 0 
-C:/Xilinx/SDx/2018.3/bin/pragma_gen  -func "madd"   -tcl C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd.tcl   C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -IC:/Xilinx/workspace_sdx/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include -IC:/Xilinx/workspace_sdx/lab_2/src  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
-INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd.tcl
+C:\Users\nh15775\workspace\lab_2\Release>exit /b 0 
+C:/Xilinx/SDx/2018.2/bin/pragma_gen  -func "madd"   -tcl C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd.tcl   C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32    -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include -IC:/Users/nh15775/workspace/lab_2/src  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd.tcl
 Moving function madd to Programmable Logic
-C:/Xilinx/Vivado/2018.3/bin/vivado_hls C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd_run.tcl -l madd_vivado_hls.log
+C:/Xilinx/Vivado/2018.2/bin/vivado_hls C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd_run.tcl -l madd_vivado_hls.log
 
-****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source C:/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
-INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'Naimul Hoque' on host 'desktop-mv6occk' (Windows NT_amd64 version 6.2) on Tue Feb 12 19:29:19 +0000 2019
-INFO: [HLS 200-10] In directory 'C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls'
-INFO: [HLS 200-10] Creating and opening project 'C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd'.
-INFO: [HLS 200-10] Adding design file 'C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp' to the project
-INFO: [HLS 200-10] Creating and opening solution 'C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd/solution'.
+source C:/Xilinx/Vivado/2018.2/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'nh15775' on host 'it063576' (Windows NT_amd64 version 6.2) on Tue Feb 19 11:49:28 +0000 2019
+INFO: [HLS 200-10] In directory 'C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd'.
+INFO: [HLS 200-10] Adding design file 'C:/Users/nh15775/workspace/lab_2/src/madd.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd/solution'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to ' xc7z020clg484-1 '
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
-INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
-INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
-INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
-INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
 INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
-INFO: [HLS 200-10] Analyzing design file 'C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 104.465 ; gain = 18.098
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 104.465 ; gain = 18.098
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/nh15775/workspace/lab_2/src/madd.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 103.293 ; gain = 45.434
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 103.293 ; gain = 45.434
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 105.164 ; gain = 18.797
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 104.285 ; gain = 46.426
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 105.418 ; gain = 19.051
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 127.000 ; gain = 40.633
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp:47:10) in function 'madd'.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 127.000 ; gain = 40.633
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 104.539 ; gain = 46.680
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 125.414 ; gain = 67.555
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 125.414 ; gain = 67.555
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'madd' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'madd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
 WARNING: [SCHED 204-71] Latency directive discarded for region madd since it contains subloops.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 6.369 seconds; current allocated memory: 76.600 MB.
+INFO: [HLS 200-111]  Elapsed time: 7.471 seconds; current allocated memory: 75.456 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 76.733 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.069 seconds; current allocated memory: 75.653 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'madd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -104,42 +80,42 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'madd' to 'ap_ctrl_hs'.
 INFO: [SYN 201-210] Renamed object name 'madd_fadd_32ns_32ns_32_5_full_dsp_1' to 'madd_fadd_32ns_32bkb' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'madd_fadd_32ns_32bkb': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'madd'.
-INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 77.076 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 127.000 ; gain = 40.633
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 75.927 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 125.414 ; gain = 67.555
 INFO: [SYSC 207-301] Generating SystemC RTL for madd with prefix a0_.
 INFO: [VHDL 208-304] Generating VHDL RTL for madd with prefix a0_.
 INFO: [VLOG 209-307] Generating Verilog RTL for madd with prefix a0_.
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
-****** Vivado v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'a0_madd_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_madd_ap_fadd_3_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_madd_ap_fadd_3_full_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 12 19:29:40 2019...
-INFO: [HLS 200-112] Total elapsed time: 22.262 seconds; peak allocated memory: 77.076 MB.
-INFO: [Common 17-206] Exiting vivado_hls at Tue Feb 12 19:29:41 2019...
-C:/Xilinx/SDK/2018.3/gnuwin/bin/sed.exe -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd/solution/impl/ip/auxiliary.xml
-C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapRenameAttr.xsl  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd_auxiliary.xml
-C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.hlsmap.xml  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapAdapter.xsl  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.hlsmap1.xml
-C:/Xilinx/SDx/2018.3/bin/xsltproc    --output C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.fcnmap.xml  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapAxi4.xsl  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.hlsmap.xml
-C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsAdapterComp.xsl  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.fcnmap.xml
-arm-none-eabi-objcopy --add-section .xddata=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.xml C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-arm-none-eabi-objcopy --add-section .xdasm=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/src/madd.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-arm-none-eabi-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Xilinx/workspace_sdx/lab_2/Release/src/madd.o -MFC:/Xilinx/workspace_sdx/lab_2/Release/src/madd.d -MTC:/Xilinx/workspace_sdx/lab_2/Release/src/madd.o -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.pp/madd.iix
-arm-none-eabi-objcopy --add-section .xdpp=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.pp/madd.ii C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-arm-none-eabi-objcopy --add-section .xdfcnmap=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd.fcnmap.xml C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-arm-none-eabi-objcopy --add-section .xdhlscore=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/vhls/madd/solution/impl/ip/xilinx_com_hls_madd_1_0.zip C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-arm-none-eabi-objcopy --add-section .xdif=C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/madd_if.xml C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/madd.o
-sds++ log file saved as C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds_madd.log
-sds++ completed at Tue Feb 12 19:29:42 +0000 2019
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 19 11:49:54 2019...
+INFO: [HLS 200-112] Total elapsed time: 25.997 seconds; peak allocated memory: 75.927 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Tue Feb 19 11:49:54 2019...
+C:/Xilinx/SDK/2018.2/gnuwin/bin/sed.exe -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd/solution/impl/ip/auxiliary.xml
+C:/Xilinx/SDx/2018.2/bin/xsltproc  --output C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   C:/Xilinx/SDx/2018.2/scripts/xsd/xdHlsmapRenameAttr.xsl  C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd_auxiliary.xml
+C:/Xilinx/SDx/2018.2/bin/xsltproc  --output C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.hlsmap.xml  C:/Xilinx/SDx/2018.2/scripts/xsd/xdHlsmapAdapter.xsl  C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.hlsmap1.xml
+C:/Xilinx/SDx/2018.2/bin/xsltproc    --output C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.fcnmap.xml  C:/Xilinx/SDx/2018.2/scripts/xsd/xdHlsmapAxi4.xsl  C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.hlsmap.xml
+C:/Xilinx/SDx/2018.2/bin/xsltproc  --output C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  C:/Xilinx/SDx/2018.2/scripts/xsd/xdHlsAdapterComp.xsl  C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.fcnmap.xml
+arm-none-eabi-objcopy --add-section .xddata=C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.xml C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+arm-none-eabi-objcopy --add-section .xdasm=C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/src/madd.s C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+arm-none-eabi-g++ -E -I../src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Users/nh15775/workspace/lab_2/Release/src/madd.o -MFC:/Users/nh15775/workspace/lab_2/Release/src/madd.d -MTC:/Users/nh15775/workspace/lab_2/Release/src/madd.o -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include C:/Users/nh15775/workspace/lab_2/src/madd.cpp -o C:/Users/nh15775/workspace/lab_2/Release/_sds/.pp/madd.iix
+arm-none-eabi-objcopy --add-section .xdpp=C:/Users/nh15775/workspace/lab_2/Release/_sds/.pp/madd.ii C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+arm-none-eabi-objcopy --add-section .xdfcnmap=C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.fcnmap.xml C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+arm-none-eabi-objcopy --add-section .xdhlscore=C:/Users/nh15775/workspace/lab_2/Release/_sds/vhls/madd/solution/impl/ip/xilinx_com_hls_madd_1_0.zip C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+arm-none-eabi-objcopy --add-section .xdif=C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd_if.xml C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o
+sds++ log file saved as C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds_madd.log
+sds++ completed at Tue Feb 19 11:49:55 +0000 2019

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xd:data xmlns:xd="http://www.xilinx.com/xd">
-  <xd:source name="main.cpp" compiler="g++" objfile="src/main.o" srcpath="C:/Xilinx/workspace_sdx/lab_2/src" flags="-IC:/Xilinx/workspace_sdx/lab_2/src -IC:/Xilinx/workspace_sdx/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" is_debug="0"/>
+  <xd:source name="main.cpp" compiler="g++" objfile="src/main.o" srcpath="C:/Users/nh15775/workspace/lab_2/src" flags="-IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" is_debug="0"/>
 </xd:data>

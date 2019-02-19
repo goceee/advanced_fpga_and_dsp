@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ASCII"?>
-<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="project_matmult" location="C:/Xilinx/workspace_sdx/project_matmult" platform="C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" systemProject="project_matmult_system" sysConfig="standalone" runtime="C/C++" cpu="standalone" cpuInstance="ps7_cortexa9_0" os="standalone" ConfigType="Debug">
-  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.866860538">
-    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false"/>
-  </configuration>
-  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1321268108">
-    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false"/>
-  </configuration>
-</sdsproject:SDSProject>

@@ -243,7 +243,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fd505e71</spirit:value>
+            <spirit:value>63b0cc5a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -262,7 +262,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>89dab865</spirit:value>
+            <spirit:value>c5d34bd1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -281,7 +281,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>aa418d13</spirit:value>
+            <spirit:value>4ba210e0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -300,7 +300,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7a315eae</spirit:value>
+            <spirit:value>da10b749</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -582,7 +582,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/a1_mmult_Abuf.v</spirit:name>
+        <spirit:name>hdl/verilog/a1_mmult_Abuf_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -611,7 +611,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/a1_mmult_Abuf.v</spirit:name>
+        <spirit:name>hdl/verilog/a1_mmult_Abuf_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -667,7 +667,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/a1_mmult_Abuf.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/a1_mmult_Abuf_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -681,7 +681,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
       <spirit:file>
         <spirit:name>hdl/vhdl/a1_mmult.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a8258fee</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1433f169</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -697,7 +697,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/a1_mmult_Abuf.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/a1_mmult_Abuf_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -789,7 +789,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">17562</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">2217</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -806,19 +806,19 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
       </xilinx:taxonomies>
       <xilinx:displayName>Mmult</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902122003</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-02-12T20:03:34Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1902191149</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-02-19T11:50:02Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
       </xilinx:sdxKernelAttributes>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="da1d2ffb"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="eedc47c0"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b3f440aa"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9cf281ee"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="9db7881b"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d20c5f86"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

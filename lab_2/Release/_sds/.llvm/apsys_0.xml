@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cf:model cf:cpu="cortex_a9" cf:partition="0" cf:prefix="p_0_" cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+<cf:model cf:cpu="cortex_a9" cf:partition="0" cf:prefix="_p0_" cf:name="top" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
   <cf:block cf:name="hwblk_madd">
     <cf:port cf:name="cmd_madd" cf:portType="stream" cf:direction="in"/>
     <cf:port cf:name="A" cf:portType="stream" cf:direction="in"/>
@@ -39,8 +39,8 @@
   </cf:instance>
   <cf:instance cf:name="swinst_madd_1" cf:blockName="swblk_madd" cf:compName="zed">
     <cf:portMap cf:blockPort="cmd_madd" cf:compPort="ps7_M_AXI_GP0"/>
-    <cf:portMap cf:blockPort="B" cf:compPort="ps7_S_AXI_ACP" cf:sptag="ACP"/>
-    <cf:portMap cf:blockPort="C" cf:compPort="ps7_S_AXI_ACP" cf:sptag="ACP"/>
+    <cf:portMap cf:blockPort="B" cf:compPort="ps7_S_AXI_ACP"/>
+    <cf:portMap cf:blockPort="C" cf:compPort="ps7_S_AXI_ACP"/>
   </cf:instance>
   <cf:instance cf:name="hwinst_mmult_1" cf:blockName="hwblk_mmult" cf:compName="mmult_1">
     <cf:portMap cf:blockPort="cmd_mmult" cf:compPort="ap_ctrl" xd:register="0x8"/>
@@ -50,8 +50,8 @@
   </cf:instance>
   <cf:instance cf:name="swinst_mmult_1" cf:blockName="swblk_mmult" cf:compName="zed">
     <cf:portMap cf:blockPort="cmd_mmult" cf:compPort="ps7_M_AXI_GP0"/>
-    <cf:portMap cf:blockPort="A" cf:compPort="ps7_S_AXI_ACP" cf:sptag="ACP"/>
-    <cf:portMap cf:blockPort="B" cf:compPort="ps7_S_AXI_ACP" cf:sptag="ACP"/>
+    <cf:portMap cf:blockPort="A" cf:compPort="ps7_S_AXI_ACP"/>
+    <cf:portMap cf:blockPort="B" cf:compPort="ps7_S_AXI_ACP"/>
   </cf:instance>
   <cf:connection cf:srcInst="swinst_madd_1" cf:srcPort="cmd_madd" cf:dstInst="hwinst_madd_1" cf:dstPort="cmd_madd">
     <cf:dataMover cf:compName="zed" cf:softwareLib="axi_lite"/>

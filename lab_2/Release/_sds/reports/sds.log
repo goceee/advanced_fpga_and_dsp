@@ -1,91 +1,157 @@
 (c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
 #-----------------------------------------------------------
-# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
-# Start time    : Tue Feb 12 20:03:37 +0000 2019
-# Command line  : sds++ --remote_ip_cache C:/Xilinx/workspace_sdx/ip_cache -o lab_2.elf ./src/madd.o ./src/main.o ./src/mmult.o -dmclkid 2 -mno-boot-files -perf-root main -perf-est swdata.xml -perf-funcs madd,mmult -sds-sys-config standalone -sds-proc standalone -sds-pf zed
-# Log file      : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.log
-# Journal file  : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.jou
-# Report file   : C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.rpt
+# Tool version  : sds++ 2018.2 SW Build 2258646 on Thu Jun 14 20:04:27 MDT 2018
+# Start time    : Tue Feb 19 11:50:05 +0000 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/nh15775/workspace/ip_cache -o lab_2.elf ./src/madd.o ./src/main.o ./src/mmult.o -dmclkid 2 -mno-boot-files -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds.log
+# Journal file  : C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds.jou
+# Report file   : C:/Users/nh15775/workspace/lab_2/Release/_sds/reports/sds.rpt
 #-----------------------------------------------------------
 
-Removing implementation files from previous run
 Libraries: 
 Library Paths {}
 Analyzing object files
-arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/madd.o.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/main.o.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/mmult.o.xml
-C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Xilinx/workspace_sdx/lab_2/Release/.Xil/zed.hpfm    -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  
-INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
-Using prebuilt hardware
-Skipping block diagram (BD), address map, port information and device registration for partition 0
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/nh15775/workspace/lab_2/Release/src/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/nh15775/workspace/lab_2/Release/src/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/madd.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/nh15775/workspace/lab_2/Release/src/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.pp/madd.ii
+arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/nh15775/workspace/lab_2/Release/src/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/madd.madd.fcnmap.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/nh15775/workspace/lab_2/Release/src/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+C:/Xilinx/SDx/2018.2/bin/unzip.bat -u -o C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip -d C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+Archive:  C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/component.xml  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/ip/a0_madd_ap_fadd_3_full_dsp_32.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/constraints/a0_madd_ooc.xdc  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/verilog/a0_madd_fadd_32ns_32bkb.v  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/verilog/a0_madd.v  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/vhdl/a0_madd_fadd_32ns_32bkb.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/vhdl/a0_madd.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/misc/logo.png  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xgui/madd_v1_0.tcl  
+arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/nh15775/workspace/lab_2/Release/src/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/madd_if.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/nh15775/workspace/lab_2/Release/src/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/nh15775/workspace/lab_2/Release/src/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/nh15775/workspace/lab_2/Release/src/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/main.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/nh15775/workspace/lab_2/Release/src/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/nh15775/workspace/lab_2/Release/src/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/mmult.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/nh15775/workspace/lab_2/Release/src/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.pp/mmult.ii
+arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/nh15775/workspace/lab_2/Release/src/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/mmult.mmult.fcnmap.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/nh15775/workspace/lab_2/Release/src/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
+C:/Xilinx/SDx/2018.2/bin/unzip.bat -u -o C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip -d C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+Archive:  C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/component.xml  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/ip/a1_mmult_ap_fadd_3_full_dsp_32.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/ip/a1_mmult_ap_fmul_2_max_dsp_32.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/constraints/a1_mmult_ooc.xdc  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult_Abuf_0.v  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult_fadd_32ns_3bkb.v  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult_fmul_32ns_3cud.v  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult.v  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult_Abuf_0.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult_fadd_32ns_3bkb.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult_fmul_32ns_3cud.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult.vhd  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/misc/logo.png  
+  inflating: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xgui/mmult_v1_0.tcl  
+arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/nh15775/workspace/lab_2/Release/src/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/mmult_if.xml
+C:/Xilinx/SDx/2018.2/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/nh15775/workspace/lab_2/Release/.Xil/zed.hpfm  -ip C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0 -ip C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0  -o C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.2
+processing accelerators: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+ip_dir: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+C:/Xilinx/SDx/2018.2/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.2/scripts/xdcc/xpathValueOf.xsl C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/component.xml
+ip_name: madd
+processing accelerators: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+ip_dir: C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
+C:/Xilinx/SDx/2018.2/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.2/scripts/xdcc/xpathValueOf.xsl C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/component.xml
+ip_name: mmult
+Generating data motion network
+C:/Xilinx/SDx/2018.2/bin/llvm-link -o C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/sds_all.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/./src/madd.s C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/./src/main.s C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/./src/mmult.s
+
+C:\Users\nh15775\workspace\lab_2\Release>C:\Xilinx\SDx\2018.2\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/sds_all.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/./src/madd.s C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/./src/main.s C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/./src/mmult.s 
+
+C:\Users\nh15775\workspace\lab_2\Release>exit /b 0 
+C:/Xilinx/SDx/2018.2/bin/XidanePass  --platform zed  --dmclkid 2  --repo C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.2/data/DM.db   -os standalone -processor cortex-a9 -partition 0  
+
+C:\Users\nh15775\workspace\lab_2\Release\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --platform zed --dmclkid 2 --repo C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.2/data/DM.db -os standalone -processor cortex-a9 -partition 0  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+Creating block diagram (BD)
+C:/Xilinx/SDx/2018.2/bin/sdx_link  -cf-system C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/apsys_0.xml  -cf-db  C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -xpfm C:/Xilinx/SDx/2018.2/platforms/zed/zed.xpfm   -multi-clks -trace-buffer 1024 -quiet
+Creating top.bd.tcl
+C:/Xilinx/SDx/2018.2/bin/cf2sw  -i C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/apsys_0.xml  -r C:/Users/nh15775/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -pollMode 0 -mc
+INFO: [CF2SW 83-2203] Adding accelerator adapters...
+INFO: [CF2SW 83-2200] Adding axi_interconnects...
+INFO: [CF2SW 83-2201] Adding axi_stream_router for scatter-gather DMAs...
+INFO: [CF2SW 83-2202] Adding axi_dwidth_converters...
+INFO: [CF2SW 83-2208] Adding bus connections for logical connections...
+INFO: [CF2SW 83-2205] Adding clock connections...
+INFO: [CF2SW 83-2206] Adding reset connections...
+INFO: [CF2SW 83-0] Adding axcache connections...
+INFO: [CF2SW 83-0] Adding dma axcache connections...
+INFO: [CF2SW 83-2213] Adding acc_axcache_connections...
+Rewrite caller functions
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/nh15775/workspace/lab_2/Release/src/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/nh15775/workspace/lab_2/Release/src/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/nh15775/workspace/lab_2/Release/src/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/.data/main.o.xml
+C:/Xilinx/SDx/2018.2/bin/caller_rewrite  -rewrite C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/caller0.cfrewrite  -o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/main.cpp  C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/unix_main.cpp  --  -c  -IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+Compile caller rewrite file C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/main.cpp
+arm-none-eabi-g++  -c C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/main.cpp  -IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include  -o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/main.o
 Prepare hardware access API functions
 Create accelerator stub functions
+C:/Xilinx/SDx/2018.2/bin/stub_gen  -func "madd" -stub C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/madd.cfrewrite  -o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.cpp  C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/unix_madd.cpp  --  -c  -IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+C:/Xilinx/SDx/2018.2/bin/stub_gen  -func "mmult" -stub C:/Users/nh15775/workspace/lab_2/Release/_sds/.llvm/mmult.cfrewrite  -o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/mmult.cpp  C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/unix_mmult.cpp  --  -c  -IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include   -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
 Compile hardware access API functions
-arm-none-eabi-gcc  -DPERF_EST -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c
-C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
-C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
-   apf_perf_estimation_exit();
-   ^~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.c
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.c -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.o
-arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o
+arm-none-eabi-gcc   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -c  C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -c  C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/cf_stub.c
+arm-none-eabi-ar crs C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/portinfo.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/cf_stub.o
 Compile accelerator stub functions
-arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/liblab_2.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o 
-Compile hardware access API functions
-arm-none-eabi-gcc  -DPERF_EST -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c
-C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
-C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
-   apf_perf_estimation_exit();
-   ^~~~~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.c
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.c -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.o
-arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o
-arm-none-eabi-ar crs C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/liblab_2.a C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/cf_stub.o 
-C:/Xilinx/SDK/2018.3/bin/hsi  -mode batch -notrace -quiet -source C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
-INFO: [Hsi 55-1698] elapsed time for repository loading 1 seconds
-Create board support package library
-C:/Xilinx/SDx/2018.3/bin/xsct  -sdx -quiet C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+arm-none-eabi-g++ -c madd.cpp  -IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -o madd.o
+arm-none-eabi-g++ -c mmult.cpp  -IC:/Users/nh15775/workspace/lab_2/src -IC:/Users/nh15775/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard    -I C:/Xilinx/SDx/2018.2/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.2/include -o mmult.o
+arm-none-eabi-ar crs C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/liblab_2.a C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/portinfo.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/cf_stub.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/mmult.o
+C:/Xilinx/SDK/2018.2/bin/hsi  -mode batch -notrace -quiet -source C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
 INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+Create board support package library
+C:/Xilinx/SDK/2018.2/bin/hsi  -mode batch -notrace -quiet -source C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+INFO: [Hsi 55-1698] elapsed time for repository loading 1 seconds
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
 
 "Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
 
 "Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
 
 "Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
 
 "Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_7/src"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
 
 "Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
 
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
 
 "Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_7/src"
 
@@ -95,7 +161,7 @@ INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
 
 arm-none-eabi-ar: creating ../../../lib/libxil.a
 
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
 
 "Compiling cpu_cortexa9"
 
@@ -107,23 +173,23 @@ arm-none-eabi-ar: creating ../../../lib/libxil.a
 
 "Compiling devcfg"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
 
 "Compiling dmaps"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
 
 "Compiling emacps"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
 
 "Compiling gpiops"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
 
 "Compiling qspips"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
 
 "Compiling scugic"
 
@@ -135,51 +201,51 @@ arm-none-eabi-ar: creating ../../../lib/libxil.a
 
 "Compiling scuwdt"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
 
 "Compiling sdps"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
 
 "Compiling standalone"
 
-In file included from usleep.c:56:0:
+In file included from sleep.c:57:0:
 
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
-
- #pragma message ("For the sleep routines, Global timer is being used")
-
-         ^~~~~~~
-
-In file included from xil_sleeptimer.c:51:0:
-
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
 
  #pragma message ("For the sleep routines, Global timer is being used")
 
          ^~~~~~~
 
-In file included from xtime_l.c:49:0:
+In file included from usleep.c:60:0:
 
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
-
- #pragma message ("For the sleep routines, Global timer is being used")
-
-         ^~~~~~~
-
-In file included from sleep.c:53:0:
-
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
 
  #pragma message ("For the sleep routines, Global timer is being used")
 
          ^~~~~~~
 
-"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_7/src"
+In file included from xil_sleeptimer.c:55:0:
+
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+
+ #pragma message ("For the sleep routines, Global timer is being used")
+
+         ^~~~~~~
+
+In file included from xtime_l.c:53:0:
+
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+
+ #pragma message ("For the sleep routines, Global timer is being used")
+
+         ^~~~~~~
+
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_6/src"
 
 "Compiling ttcps"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
 
 "Compiling uartps"
 
@@ -187,7 +253,7 @@ xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is b
 
 "Compiling usbps"
 
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
 
 "Compiling xadcps"
 
@@ -203,95 +269,10 @@ diskio.c:135:11: warning: 'ExtCsd' defined but not used [-Wunused-variable]
 
 'Finished building libraries'
 
-hsi::generate_bsp: Time (s): cpu = 00:00:00 ; elapsed = 00:00:36 . Memory (MB): peak = 162.418 ; gain = 4.852
-Link application ELF file
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.3/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.3/platforms/zed/sw/standalone/standalone/lscript.ld C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/sw_perf_est.o  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/portinfo.o  -L C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib   -LC:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs -Wl,--start-group -lstdc++ -Wl,--end-group -Wl,--start-group     -LC:/Xilinx/SDx/2018.3/target/aarch32-none/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/lab_2.elf -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-
-arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Xilinx/workspace_sdx/lab_2/Release/_sds/swstubs/lab_2.elf
-Libraries: 
-Library Paths {} {}
-Analyzing object files
-arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.rtlx/madd.rtlx
-arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/madd.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.pp/madd.ii
-arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/madd.madd.fcnmap.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
-C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip -d C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
-Archive:  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/component.xml  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/ip/a0_madd_ap_fadd_3_full_dsp_32.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/constraints/a0_madd_ooc.xdc  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/verilog/a0_madd_fadd_32ns_32bkb.v  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/verilog/a0_madd.v  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/vhdl/a0_madd_fadd_32ns_32bkb.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/hdl/vhdl/a0_madd.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/doc/ReleaseNotes.txt  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/misc/logo.png  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xgui/madd_v1_0.tcl  
-arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/madd.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/madd_if.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xddata.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/main.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/main.o.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/xdinfo.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.rtlx/mmult.rtlx
-arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.data/mmult.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.pp/mmult.ii
-arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/mmult.mmult.fcnmap.xml
-arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
-C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip -d C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
-Archive:  C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xilinx_com_hls_mmult_1_0.zip
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/component.xml  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/ip/a1_mmult_ap_fadd_3_full_dsp_32.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/ip/a1_mmult_ap_fmul_2_max_dsp_32.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/constraints/a1_mmult_ooc.xdc  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult_Abuf.v  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult_fadd_32ns_3bkb.v  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult_fmul_32ns_3cud.v  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/verilog/a1_mmult.v  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult_Abuf.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult_fadd_32ns_3bkb.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult_fmul_32ns_3cud.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/hdl/vhdl/a1_mmult.vhd  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/doc/ReleaseNotes.txt  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/misc/logo.png  
-  inflating: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/xgui/mmult_v1_0.tcl  
-arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est/.accdata/mmult.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/mmult_if.xml
-C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Xilinx/workspace_sdx/lab_2/Release/.Xil/zed.hpfm  -ip C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0 -ip C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0  -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  
-INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
-processing accelerators: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
-ip_dir: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
-C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/component.xml
-ip_name: madd
-processing accelerators: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
-ip_dir: C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0
-C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Xilinx/workspace_sdx/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_mmult_1_0/component.xml
-ip_name: mmult
-Generating data motion network
-C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/sds_all.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/madd.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/main.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/mmult.s
-
-C:\Xilinx\workspace_sdx\lab_2\Release>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/sds_all.o C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/madd.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/main.s C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/./src/mmult.s 
-
-C:\Xilinx\workspace_sdx\lab_2\Release>exit /b 0 
-C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os standalone -processor cortex-a9 -partition 0   -perfest
-
-C:\Xilinx\workspace_sdx\lab_2\Release\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --dmclkid 2 --repo C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.3/data/DM.db -os standalone -processor cortex-a9 -partition 0 -perfest  0<sds_all.o 
-INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
-INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
-INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
-INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
-INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
-INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
-INFO: [DMAnalysis 83-4452] Generating performance estimation for partition 0
-INFO: [DMAnalysis 83-4454] Rewriting caller code
-C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/hw_perf_est.xml  -r C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Xilinx/workspace_sdx/lab_2/Release/_sds/est  -apsys C:/Xilinx/workspace_sdx/lab_2/Release/_sds/.llvm/apsys_0.xml
-INFO: [PerfEst 83-3803] Software run information file swdata.xml not found. Continuing without comparison to software run data
-  For graph with functions: madd:main.cpp:139 mmult:main.cpp:138
-    Estimated hardware latency = 125476
-  Estimated resource usage:
-    dsps used = 12/220
-    bram used = 34/140
-    luts used = 22846/53200
-    FFs used = 27790/106400
-sds++ log file saved as C:/Xilinx/workspace_sdx/lab_2/Release/_sds/reports/sds.log
-sds++ completed at Tue Feb 12 20:05:07 +0000 2019
+generate_bsp: Time (s): cpu = 00:00:00 ; elapsed = 00:00:43 . Memory (MB): peak = 171.945 ; gain = 2.348
+Preliminary link application ELF
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.2/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.2/platforms/zed/sw/standalone/standalone/lscript.ld  C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/madd.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/mmult.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/main.o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/portinfo.o  -L C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib  -L C:/Xilinx/SDx/2018.2/target/aarch32-none/lib -LC:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs -Wl,--start-group -lxilffs -lgcc -lc -lstdc++ -Wl,--end-group -Wl,--start-group   -lxilffs -lxil -lsds_link -lgcc -lc  -lsds_lib -lxlnk_stub -lgcc -lc -Wl,--end-group -o C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/lab_2.elf
+arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp C:/Users/nh15775/workspace/lab_2/Release/_sds/swstubs/lab_2.elf
+Enable generation of hardware programming files
+Calling VPL
+C:/Xilinx/SDx/2018.2/bin/vpl   --iprepo C:/Users/nh15775/workspace/lab_2/Release/_sds/iprepo/repo  --iprepo C:/Xilinx/SDx/2018.2/data/ip/xilinx  --platform C:/Xilinx/SDx/2018.2/platforms/zed/zed.xpfm  --temp_dir C:/Users/nh1577

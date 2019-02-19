@@ -12,6 +12,10 @@
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
 *
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
@@ -29,7 +33,7 @@
 /**
 *
 * @file xsdps.h
-* @addtogroup sdps_v3_6
+* @addtogroup sdps_v3_5
 * @{
 * @details
 *
@@ -145,7 +149,6 @@
 *       mn     08/17/17 Enabled CCI support for A53 by adding cache coherency
 *                       information.
 *       mn     09/06/17 Resolved compilation errors with IAR toolchain
-* 3.6   mn     08/01/18 Add support for using 64Bit DMA with 32-Bit Processor
 *
 * </pre>
 *
@@ -194,7 +197,11 @@ typedef struct {
 typedef struct {
 	u16 Attribute;		/**< Attributes of descriptor */
 	u16 Length;		/**< Length of current dma transfer */
+#ifdef __aarch64__
 	u64 Address;		/**< Address of current dma transfer */
+#else
+	u32 Address;		/**< Address of current dma transfer */
+#endif
 #ifdef __ICCARM__
 #pragma data_alignment = 32
 } XSdPs_Adma2Descriptor;
@@ -235,7 +242,6 @@ typedef struct {
 #else
 	XSdPs_Adma2Descriptor Adma2_DescrTbl[32] __attribute__ ((aligned(32)));
 #endif
-	u64 Dma64BitAddr;	/**< 64 Bit DMA Address */
 } XSdPs;
 
 /***************** Macros (Inline Functions) Definitions *********************/

@@ -50,11 +50,12 @@ ALL TIMES.
  *    before starting HLS accelerator
  */
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void mmult(float A[N * N], float B[N * N], float C[N * N]);
+void mmult (float A[N*N], float B[N*N], float C[N*N]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void madd(float A[N * N], float B[N * N], float C[N * N]);
+void madd(float A[N*N], float B[N*N], float C[N*N]);
 
 #endif /* _MMULTADD_H_ */
+
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

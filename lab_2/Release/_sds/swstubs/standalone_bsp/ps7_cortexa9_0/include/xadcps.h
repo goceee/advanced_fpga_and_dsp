@@ -12,6 +12,10 @@
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
 *
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
@@ -29,7 +33,7 @@
 /**
 *
 * @file xadcps.h
-* @addtogroup xadcps_v2_3
+* @addtogroup xadcps_v2_2
 * @{
 * @details
 *
@@ -175,7 +179,6 @@
 *       ms     04/05/17 Modified Comment lines in functions of xadcps
 *                       examples to recognize it as documentation block
 *                       for doxygen generation.
-* 2.3   mn     07/09/18 Fix Doxygen warning
 *
 * </pre>
 *
@@ -452,7 +455,6 @@ typedef struct {
 * command FIFO.
 *
 * @param	InstancePtr is a pointer to the XAdcPs instance.
-* @param	Data is the value to be written to XADC register.
 *
 * @return	None.
 *

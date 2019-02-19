@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'madd'" level="0">
-<item name = "Date">Tue Feb 12 19:29:25 2019
+<item name = "Date">Tue Feb 19 11:49:35 2019
 </item>
-<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
 <item name = "Project">madd</item>
 <item name = "Solution">solution</item>
 <item name = "Product family">zynq</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1032, 1032, 1032, 1032, none</column>
+<column name="">7233, 7233, 7233, 7233, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">1030, 1030, 8, 1, 1, 1024, yes</column>
+<column name="- Loop 1">7232, 7232, 226, -, -, 32, no</column>
+<column name=" + Loop 1.1">224, 224, 7, -, -, 32, no</column>
 </table>
 </item>
 </section>

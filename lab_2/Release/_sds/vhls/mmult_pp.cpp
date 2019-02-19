@@ -1,43 +1,43 @@
-# 1 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp"
+# 1 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 350 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp" 2
-# 40 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 1
-# 29 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h" 1
-# 15 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\newlib.h" 1
-# 14 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\newlib.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\_newlib_version.h" 1
-# 15 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\newlib.h" 2
-# 16 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/config.h" 1
+# 1 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp" 2
+# 40 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 1
+# 29 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h" 1
+# 15 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\newlib.h" 1
+# 14 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\newlib.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\_newlib_version.h" 1
+# 15 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\newlib.h" 2
+# 16 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/config.h" 1
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/ieeefp.h" 1
-# 5 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/config.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/features.h" 1
-# 25 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/features.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/ieeefp.h" 1
+# 5 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/config.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/features.h" 1
+# 25 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/features.h"
 extern "C" {
-# 485 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/features.h"
+# 485 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/features.h"
 }
-# 6 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/config.h" 2
-# 17 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h" 2
-# 30 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 6 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/config.h" 2
+# 17 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include/_ansi.h" 2
+# 30 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
 
 
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h" 1
-# 43 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h" 1
-# 23 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h" 1
+# 43 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h" 1
+# 23 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 extern "C" {
 
 
@@ -45,55 +45,55 @@ extern "C" {
 typedef signed char __int8_t;
 
 typedef unsigned char __uint8_t;
-# 41 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 41 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef short __int16_t;
 
 typedef unsigned short __uint16_t;
-# 63 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 63 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef int __int32_t;
 
 typedef unsigned int __uint32_t;
-# 89 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 89 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef long long int __int64_t;
 
 typedef long long unsigned int __uint64_t;
-# 120 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 120 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef signed char __int_least8_t;
 
 typedef unsigned char __uint_least8_t;
-# 146 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 146 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef short __int_least16_t;
 
 typedef unsigned short __uint_least16_t;
-# 168 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 168 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef int __int_least32_t;
 
 typedef unsigned int __uint_least32_t;
-# 186 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 186 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef long long int __int_least64_t;
 
 typedef long long unsigned int __uint_least64_t;
-# 200 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 200 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 typedef long int __intptr_t;
 
 typedef long unsigned int __uintptr_t;
-# 217 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
+# 217 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_default_types.h"
 }
-# 44 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h" 2
+# 44 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h" 2
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h" 1
-# 216 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h" 1
+# 216 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h"
 typedef unsigned int size_t;
-# 46 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h" 2
-# 36 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h" 1
-# 149 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h"
+# 46 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/cdefs.h" 2
+# 36 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h" 1
+# 149 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h"
 typedef int ptrdiff_t;
-# 426 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h"
+# 426 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h"
 typedef struct {
   long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
   long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
-# 437 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h"
+# 437 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h"
 } max_align_t;
 
 
@@ -102,13 +102,13 @@ typedef struct {
 
 
   typedef decltype(nullptr) nullptr_t;
-# 37 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 37 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stdarg.h" 1
-# 40 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stdarg.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stdarg.h" 1
+# 40 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stdarg.h"
 typedef __builtin_va_list __gnuc_va_list;
-# 40 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 40 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
 
 
 
@@ -116,7 +116,7 @@ typedef __builtin_va_list __gnuc_va_list;
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h" 1
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h" 1
 
 
 
@@ -131,13 +131,13 @@ extern "C" {
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h" 1
-# 15 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 1
-# 12 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_types.h" 1
-# 13 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/lock.h" 1
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h" 1
+# 15 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 1
+# 12 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/_types.h" 1
+# 13 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/lock.h" 1
 
 
 
@@ -145,7 +145,7 @@ extern "C" {
 
 typedef int _LOCK_T;
 typedef int _LOCK_RECURSIVE_T;
-# 14 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 2
+# 14 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 2
 
 
 typedef long _off_t;
@@ -172,13 +172,13 @@ __extension__ typedef long long _off64_t;
 
 
 typedef long _fpos_t;
-# 55 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h"
+# 55 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h"
 typedef signed int _ssize_t;
-# 67 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h" 1
-# 357 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h"
+# 67 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h" 1
+# 357 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h"
 typedef int wint_t;
-# 68 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 2
+# 68 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_types.h" 2
 
 
 
@@ -200,7 +200,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-# 16 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h" 2
+# 16 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h" 2
 
 
 
@@ -208,7 +208,7 @@ typedef void *_iconv_t;
 
 
 typedef unsigned long __ULong;
-# 38 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 38 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 struct _reent;
 
 
@@ -252,7 +252,7 @@ struct _on_exit_args {
 
  __ULong _is_cxa;
 };
-# 91 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 91 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 struct _atexit {
  struct _atexit *_next;
  int _ind;
@@ -260,12 +260,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args _on_exit_args;
 };
-# 115 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 115 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 179 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 179 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -316,7 +316,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 285 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 285 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -327,7 +327,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 317 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 317 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -337,7 +337,7 @@ struct _rand48 {
 
 
 };
-# 568 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 568 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 struct _reent
 {
   int _errno;
@@ -417,16 +417,16 @@ struct _reent
   struct _glue __sglue;
   __FILE __sf[3];
 };
-# 765 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 765 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 extern struct _reent *_impure_ptr ;
 extern struct _reent *const _global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
-# 791 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
+# 791 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/reent.h"
 }
-# 48 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 1
-# 28 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
+# 48 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 1
+# 28 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
 typedef __uint8_t u_int8_t;
 
 
@@ -437,9 +437,9 @@ typedef __uint32_t u_int32_t;
 
 
 typedef __uint64_t u_int64_t;
-# 60 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_stdint.h" 1
-# 15 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_stdint.h"
+# 60 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_stdint.h" 1
+# 15 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/_stdint.h"
 extern "C" {
 
 
@@ -472,7 +472,7 @@ typedef __uintptr_t uintptr_t;
 
 
 }
-# 61 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 2
+# 61 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 2
 
 
 
@@ -480,10 +480,10 @@ typedef __uintptr_t uintptr_t;
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h" 1
-# 69 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/types.h" 1
-# 19 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/types.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h" 1
+# 69 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/types.h" 1
+# 19 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/types.h"
 typedef long int __off_t;
 typedef int __pid_t;
 
@@ -494,8 +494,8 @@ __extension__ typedef long long int __loff_t;
 
 
 typedef long __suseconds_t;
-# 70 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 2
-# 120 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
+# 70 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h" 2
+# 120 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
 typedef unsigned long clock_t;
 
 
@@ -511,9 +511,9 @@ typedef long daddr_t;
 
 
 typedef char * caddr_t;
-# 143 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
+# 143 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
 typedef unsigned short ino_t;
-# 172 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
+# 172 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
 typedef _off_t off_t;
 typedef __dev_t dev_t;
 typedef __uid_t uid_t;
@@ -536,7 +536,7 @@ typedef long key_t;
 
 
 typedef _ssize_t ssize_t;
-# 209 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
+# 209 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/types.h"
 typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
@@ -566,7 +566,7 @@ typedef __suseconds_t suseconds_t;
 
 
 typedef __int64_t sbintime_t;
-# 49 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 49 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
 
 extern "C" {
 
@@ -585,9 +585,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/stdio.h" 1
-# 67 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
-# 167 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\sys/stdio.h" 1
+# 67 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h" 2
+# 167 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -650,7 +650,7 @@ int sprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 
 
 int remove (const char *);
 int rename (const char *, const char *);
-# 247 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 247 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
 int snprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)));
 
 int vsnprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)));
@@ -660,7 +660,7 @@ int vfscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (_
 int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)));
 
 int vsscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)));
-# 374 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 374 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
 int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)));
 
 char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)));
@@ -798,10 +798,10 @@ int _vsscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __a
 int fpurge (FILE *);
 ssize_t __getdelim (char **, size_t *, int, FILE *);
 ssize_t __getline (char **, size_t *, FILE *);
-# 555 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 555 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 665 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 665 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
 extern __inline__ __attribute__ ((__always_inline__)) int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
 
 
@@ -812,16 +812,16 @@ extern __inline__ __attribute__ ((__always_inline__)) int __sputc_r(struct _reen
  else
   return (__swbuf_r(_ptr, _c, _p));
 }
-# 748 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
+# 748 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdio.h"
 }
-# 41 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp" 2
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\stdlib.h" 1
-# 36 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\stdlib.h"
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 1
-# 40 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 3
+# 41 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp" 2
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\stdlib.h" 1
+# 36 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\stdlib.h"
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 1
+# 40 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 3
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/c++config.h" 1 3
-# 229 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/c++config.h" 3
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/c++config.h" 1 3
+# 229 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/c++config.h" 3
 namespace std
 {
   typedef unsigned int size_t;
@@ -831,7 +831,7 @@ namespace std
   typedef decltype(nullptr) nullptr_t;
 
 }
-# 251 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/c++config.h" 3
+# 251 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/c++config.h" 3
 namespace std
 {
   inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
@@ -840,31 +840,31 @@ namespace __gnu_cxx
 {
   inline namespace __cxx11 __attribute__((__abi_tag__ ("cxx11"))) { }
 }
-# 533 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/c++config.h" 3
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/os_defines.h" 1 3
-# 534 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/c++config.h" 2 3
+# 533 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/c++config.h" 3
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/os_defines.h" 1 3
+# 534 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/c++config.h" 2 3
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/cpu_defines.h" 1 3
-# 537 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi\\bits/c++config.h" 2 3
-# 42 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 2 3
-# 75 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 3
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 1 3
-# 10 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/ieeefp.h" 1 3
-# 11 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 2 3
-
-
-
-
-
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include\\stddef.h" 1 3
-# 17 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 2 3
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/cpu_defines.h" 1 3
+# 537 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1/arm-none-eabi\\bits/c++config.h" 2 3
+# 42 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 2 3
+# 75 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 3
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 1 3
+# 10 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/ieeefp.h" 1 3
+# 11 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 2 3
 
 
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/stdlib.h" 1 3
-# 21 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 2 3
+
+
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.2.1/include\\stddef.h" 1 3
+# 17 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 2 3
+
+
+
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\machine/stdlib.h" 1 3
+# 21 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 2 3
 
 
 
@@ -955,7 +955,7 @@ size_t mbstowcs (wchar_t *, const char *, size_t);
 size_t _mbstowcs_r (struct _reent *, wchar_t *, const char *, size_t, _mbstate_t *);
 size_t wcstombs (char *, const wchar_t *, size_t);
 size_t _wcstombs_r (struct _reent *, char *, const wchar_t *, size_t, _mbstate_t *);
-# 129 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 129 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 char * _mkdtemp_r (struct _reent *, char *);
 int _mkostemp_r (struct _reent *, char *, int);
 int _mkostemps_r (struct _reent *, char *, int, int);
@@ -965,7 +965,7 @@ char * _mktemp_r (struct _reent *, char *) __attribute__ ((__deprecated__("the u
 void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
 void * realloc (void * __r, size_t __size) __attribute__ ((__nothrow__));
-# 147 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 147 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 void srand (unsigned __seed);
 double strtod (const char * __n, char ** __end_PTR);
 double _strtod_r (struct _reent *,const char * __n, char ** __end_PTR);
@@ -984,7 +984,7 @@ unsigned long strtoul (const char * __n, char ** __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char * __n, char ** __end_PTR, int __base);
 
 int system (const char *__string);
-# 175 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 175 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
@@ -996,10 +996,10 @@ void * _reallocf_r (struct _reent *, void *, size_t);
 
 
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 197 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 197 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
-# 236 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 236 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 long long atoll (const char *__nptr);
 
 long long _atoll_r (struct _reent *, const char *__nptr);
@@ -1013,7 +1013,7 @@ long long _strtoll_r (struct _reent *, const char * __n, char ** __end_PTR, int 
 unsigned long long strtoull (const char * __n, char ** __end_PTR, int __base);
 
 unsigned long long _strtoull_r (struct _reent *, const char * __n, char ** __end_PTR, int __base);
-# 257 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 257 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 int _unsetenv_r (struct _reent *, const char *__string);
 
 
@@ -1032,7 +1032,7 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-# 294 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
+# 294 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include\\stdlib.h" 3
 extern long double _strtold_r (struct _reent *, const char *, char **);
 
 extern long double strtold (const char *, char **);
@@ -1051,11 +1051,11 @@ int at_quick_exit(void (*)(void));
 
 
 }
-# 76 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 2 3
+# 76 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 2 3
 
-# 1 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\bits/std_abs.h" 1 3
-# 34 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\bits/std_abs.h" 3
-# 46 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\bits/std_abs.h" 3
+# 1 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\bits/std_abs.h" 1 3
+# 34 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\bits/std_abs.h" 3
+# 46 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\bits/std_abs.h" 3
 extern "C++"
 {
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -1090,11 +1090,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
   inline constexpr long double
   abs(long double __x)
   { return __builtin_fabsl(__x); }
-# 107 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\bits/std_abs.h" 3
+# 107 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\bits/std_abs.h" 3
 }
 }
-# 78 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 2 3
-# 121 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 3
+# 78 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 2 3
+# 118 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 3
 extern "C++"
 {
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -1105,9 +1105,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
   using ::ldiv_t;
 
   using ::abort;
-
-
-
   using ::atexit;
 
 
@@ -1157,7 +1154,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 195 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 3
+# 189 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 3
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
@@ -1180,7 +1177,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
   { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
 
   using ::lldiv;
-# 227 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\cstdlib" 3
+# 221 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\cstdlib" 3
   using ::atoll;
   using ::strtoll;
   using ::strtoull;
@@ -1212,12 +1209,12 @@ namespace std
 
 
 }
-# 37 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\stdlib.h" 2
+# 37 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\stdlib.h" 2
 
 using std::abort;
 using std::atexit;
 using std::exit;
-# 51 "C:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1\\stdlib.h"
+# 51 "C:/Xilinx/SDK/2018.2/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.2.1\\stdlib.h"
 using std::div_t;
 using std::ldiv_t;
 
@@ -1249,44 +1246,38 @@ using std::system;
 
 using std::wcstombs;
 using std::wctomb;
-# 42 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp" 2
-# 1 "C:/Xilinx/workspace_sdx/lab_2/src/mmultadd.h" 1
-# 52 "C:/Xilinx/workspace_sdx/lab_2/src/mmultadd.h"
+# 42 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp" 2
+# 1 "C:/Users/nh15775/workspace/lab_2/src/mmultadd.h" 1
+# 52 "C:/Users/nh15775/workspace/lab_2/src/mmultadd.h"
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void mmult(float A[32 * 32], float B[32 * 32], float C[32 * 32]);
+void mmult (float A[32*32], float B[32*32], float C[32*32]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void madd(float A[32 * 32], float B[32 * 32], float C[32 * 32]);
-# 43 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp" 2
-# 53 "C:/Xilinx/workspace_sdx/lab_2/src/mmult.cpp"
-void mmult(float A[32 * 32], float B[32 * 32], float C[32 * 32])
+void madd(float A[32*32], float B[32*32], float C[32*32]);
+# 43 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp" 2
+# 53 "C:/Users/nh15775/workspace/lab_2/src/mmult.cpp"
+void mmult (float A[32*32], float B[32*32], float C[32*32])
 {
-    float Abuf[32][32], Bbuf[32][32];
-#pragma HLS array_partition variable = Abuf block factor = 1 dim = 2
-#pragma HLS array_partition variable = Bbuf block factor = 1 dim = 1
-
- for (int i = 0; i < 32; i++)
-    {
-        for (int j = 0; j < 32; j++)
-        {
+     float Abuf[32][32], Bbuf[32][32];
+#pragma HLS array_partition variable=Abuf block factor=16 dim=2
+#pragma HLS array_partition variable=Bbuf block factor=16 dim=1
+ for(int i=0; i<32; i++) {
+          for(int j=0; j<32; j++) {
 #pragma HLS PIPELINE
  Abuf[i][j] = A[i * 32 + j];
-            Bbuf[i][j] = B[i * 32 + j];
-        }
-    }
+               Bbuf[i][j] = B[i * 32 + j];
+          }
+     }
 
-    for (int i = 0; i < 32; i++)
-    {
-        for (int j = 0; j < 32; j++)
-        {
+     for (int i = 0; i < 32; i++) {
+          for (int j = 0; j < 32; j++) {
 #pragma HLS PIPELINE
  float result = 0;
-            for (int k = 0; k < 32; k++)
-            {
-                float term = Abuf[i][k] * Bbuf[k][j];
-                result += term;
-            }
-            C[i * 32 + j] = result;
-        }
-    }
+               for (int k = 0; k < 32; k++) {
+                    float term = Abuf[i][k] * Bbuf[k][j];
+                    result += term;
+               }
+               C[i * 32 + j] = result;
+          }
+     }
 }

@@ -40,14 +40,15 @@ ALL TIMES.
 #include <stdlib.h>
 #include "mmultadd.h"
 
-void madd(float A[N * N], float B[N * N], float C[N * N])
+void madd(float A[N*N], float B[N*N], float C[N*N])
 {
-    int i, j;
+  int i, j;
 
-    for (i = 0; i < N; i++)
-        for (j = 0; j < N; j++)
-#pragma HLS PIPELINE II = 1
-            C[i * N + j] = A[i * N + j] + B[i * N + j];
+  for (i = 0; i < N; i++)
+    for (j = 0; j < N; j++)
+	  #pragma HLS_PIPELINE II=1
+      C[i*N+j] = A[i*N+j] + B[i*N+j];
+
 }
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

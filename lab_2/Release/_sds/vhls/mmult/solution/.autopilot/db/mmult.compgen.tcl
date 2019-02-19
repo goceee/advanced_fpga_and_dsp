@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 3
+set id 33
 set name a1_mmult_fmul_32ns_3cud
 set corename simcore_fmul
 set op fmul
@@ -183,14 +183,14 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 7
+set ID 67
 set hasByteEnable 0
-set MemName a1_mmult_Abuf
+set MemName a1_mmult_Abuf_0
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
 set DataWd 32
-set AddrRange 1024
-set AddrWd 10
+set AddrRange 64
+set AddrWd 6
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
@@ -277,7 +277,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 8 \
+    id 68 \
     name A \
     type fifo \
     dir I \
@@ -292,7 +292,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 69 \
     name B \
     type fifo \
     dir I \
@@ -307,7 +307,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 70 \
     name C \
     type fifo \
     dir O \

@@ -1,5 +1,9 @@
 <annotationInfo>
 <annotationInfo>
-<item  id="23" filename="C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp" linenumber="50" name="tmp_3" contextFuncName="madd" moduleName="madd" rtlName="madd_fadd_32ns_32bkb_U1" latency="4" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Xilinx\workspace_sdx\lab_2\Release"><\/item>
+<item  id="15" filename="C:/Users/nh15775/workspace/lab_2/src/madd.cpp" linenumber="47" name="exitcond1" contextFuncName="madd" moduleName="madd" rtlName="exitcond1_fu_85_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\nh15775\workspace\lab_2\Release"><\/item>
+<item  id="17" filename="C:/Users/nh15775/workspace/lab_2/src/madd.cpp" linenumber="47" name="i_1" contextFuncName="madd" moduleName="madd" rtlName="i_1_fu_91_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\nh15775\workspace\lab_2\Release"><\/item>
+<item  id="23" filename="C:/Users/nh15775/workspace/lab_2/src/madd.cpp" linenumber="48" name="exitcond" contextFuncName="madd" moduleName="madd" rtlName="exitcond_fu_97_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\nh15775\workspace\lab_2\Release"><\/item>
+<item  id="25" filename="C:/Users/nh15775/workspace/lab_2/src/madd.cpp" linenumber="48" name="j_1" contextFuncName="madd" moduleName="madd" rtlName="j_1_fu_103_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\nh15775\workspace\lab_2\Release"><\/item>
+<item  id="30" filename="C:/Users/nh15775/workspace/lab_2/src/madd.cpp" linenumber="50" name="tmp_3" contextFuncName="madd" moduleName="madd" rtlName="madd_fadd_32ns_32bkb_U1" latency="4" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\nh15775\workspace\lab_2\Release"><\/item>
 <\/annotationInfo>
 </annotationInfo>

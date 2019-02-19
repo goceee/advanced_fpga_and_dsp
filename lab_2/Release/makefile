@@ -44,7 +44,7 @@ main-build: lab_2.elf
 lab_2.elf: $(OBJS)  $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: SDS++ Linker'
-	sds++ --remote_ip_cache C:/Xilinx/workspace_sdx/ip_cache -o "lab_2.elf" $(OBJS) $(USER_OBJS) $(LIBS) -dmclkid 2  -mno-boot-files  -perf-root main -perf-est swdata.xml -perf-funcs madd,mmult -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+	sds++ --remote_ip_cache C:/Users/nh15775/workspace/ip_cache -o "lab_2.elf" $(OBJS) $(USER_OBJS) $(LIBS) -dmclkid 2  -mno-boot-files  -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -23,7 +23,7 @@ CPP_DEPS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: SDS++ Compiler'
-	sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs madd,mmult -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
+	sds++ -Wall -O3 -I"../src" -c -fmessage-length=0 -MT"$@" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<" -sds-hw madd madd.cpp  -clkid 2 -sds-end -sds-hw mmult mmult.cpp  -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf "zed"
 	@echo 'Finished building: $<'
 	@echo ' '
 

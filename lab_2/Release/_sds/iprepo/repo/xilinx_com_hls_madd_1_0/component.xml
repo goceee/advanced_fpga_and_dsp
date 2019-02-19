@@ -243,7 +243,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e0de46df</spirit:value>
+            <spirit:value>2e661cea</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -262,7 +262,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dac575e6</spirit:value>
+            <spirit:value>43bcda05</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -281,7 +281,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4d03d178</spirit:value>
+            <spirit:value>d68f873d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -300,7 +300,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>83e14044</spirit:value>
+            <spirit:value>79bf5d30</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -642,7 +642,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
       <spirit:file>
         <spirit:name>hdl/vhdl/a0_madd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_92bb2436</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_68403eba</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -735,7 +735,7 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">1032</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">7233</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -752,19 +752,19 @@ tribs {resolve_type immediate dependency {} format string minimum {} maximum {}}
       </xilinx:taxonomies>
       <xilinx:displayName>Madd</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902121929</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-02-12T19:29:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1902191149</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-02-19T11:49:53Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
       </xilinx:sdxKernelAttributes>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2018.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="da1d2ffb"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bd61f5e9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="44546acf"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9cf281ee"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="011ffdea"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7dc1adcf"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
