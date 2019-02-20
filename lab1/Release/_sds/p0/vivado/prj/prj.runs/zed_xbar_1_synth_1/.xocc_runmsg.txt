@@ -1,2 +1,0 @@
-Compiling (synthesis checkpoint) kernel/IP: zed_xbar_1
-Log file: C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vivado/prj/prj.runs/zed_xbar_1_synth_1/runme.log

@@ -1,5 +1,7 @@
-.metadata/
-ip_cache/
-RemoteSystemsTempFiles/
-webtalk/
+.metadata
+ip_cache
+RemoteSystemsTempFiles
+webtalk/**
 SDK.log
+**/Release
+**/Debug

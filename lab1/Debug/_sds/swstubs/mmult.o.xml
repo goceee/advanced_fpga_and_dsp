@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xd:data xmlns:xd="http://www.xilinx.com/xd">
-  <xd:source name="mmult.cpp" compiler="g++" objfile="src/mmult.o" srcpath="C:/Users/gd14470/sdsoc_workspace/lab1/src" flags="-IC:/Users/gd14470/sdsoc_workspace/lab1/src -IC:/Users/gd14470/sdsoc_workspace/lab1/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__" is_debug="1"/>
-</xd:data>

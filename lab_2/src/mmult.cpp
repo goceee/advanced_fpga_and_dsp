@@ -50,30 +50,35 @@ ALL TIMES.
  * 4. Separate multiply-accumulate in inner loop to force two FP operators
  *
  */
-void mmult (float A[N*N], float B[N*N], float C[N*N]) 
+void mmult(float A[N * N], float B[N * N], float C[N * N])
 {
-     float Abuf[N][N], Bbuf[N][N];
-	 #pragma HLS array_partition variable=Abuf block factor=16 dim=2
-	 #pragma HLS array_partition variable=Bbuf block factor=16 dim=1
-     for(int i=0; i<N; i++) {
-          for(int j=0; j<N; j++) {
-			   #pragma HLS PIPELINE
-               Abuf[i][j] = A[i * N + j];
-               Bbuf[i][j] = B[i * N + j];
-          }
-     }
-     
-     for (int i = 0; i < N; i++) {
-          for (int j = 0; j < N; j++) {
-   	   	   	   #pragma HLS PIPELINE
-               float result = 0;
-               for (int k = 0; k < N; k++) {
-                    float term = Abuf[i][k] * Bbuf[k][j];
-                    result += term;
-               }
-               C[i * N + j] = result;
-          }
-     }
+    float Abuf[N][N], Bbuf[N][N];
+#pragma HLS array_partition variable = Abuf block factor = 16 dim = 2
+#pragma HLS array_partition variable = Bbuf block factor = 16 dim = 1
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+#pragma HLS PIPELINE
+            Abuf[i][j] = A[i * N + j];
+            Bbuf[i][j] = B[i * N + j];
+        }
+    }
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+#pragma HLS PIPELINE
+            float result = 0;
+            for (int k = 0; k < N; k++)
+            {
+                float term = Abuf[i][k] * Bbuf[k][j];
+                result += term;
+            }
+            C[i * N + j] = result;
+        }
+    }
 }
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

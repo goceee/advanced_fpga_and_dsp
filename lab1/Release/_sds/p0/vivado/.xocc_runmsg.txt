@@ -1,2 +1,0 @@
-creating FPGA bitstream. 
-Log file:C:/Users/gd14470/sdsoc_workspace/lab1/Release/_sds/p0/vivado/vivado.log

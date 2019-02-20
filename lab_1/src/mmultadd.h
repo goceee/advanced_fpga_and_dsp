@@ -37,17 +37,25 @@ THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS PART OF THIS FILE AT
 ALL TIMES. 
 */
 
-#include <stdlib.h>
-#include "mmultadd.h"
+#ifndef _MMULTADD_H_
+#define _MMULTADD_H_
 
-void madd(float A[N * N], float B[N * N], float C[N * N])
-{
-    int i, j;
+#define N 32
 
-    for (i = 0; i < N; i++)
-        for (j = 0; j < N; j++)
-#pragma HLS PIPELINE II = 1
-            C[i * N + j] = A[i * N + j] + B[i * N + j];
-}
+/**
+ * Design principles to achieve best performance
+ *
+ * 1. Declare secquential access to stream data into accelerators via a hardware FIFO 
+ *    interface.  Otherwise, the default RAM interface requires all data to arrive
+ *    before starting HLS accelerator
+ */
+
+void mmult (float A[N*N], float B[N*N], float C[N*N]);
+
+
+void madd(float A[N*N], float B[N*N], float C[N*N]);
+
+#endif /* _MMULTADD_H_ */
+
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

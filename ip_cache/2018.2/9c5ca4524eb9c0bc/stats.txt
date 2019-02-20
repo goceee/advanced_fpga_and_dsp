@@ -1,4 +1,0 @@
-NumberHits:1
-Timestamp: Tue Feb 12 10:51:00 UTC 2019
-VLNV: xilinx.com:ip:adapter_v3_0:1.0
-SynthRuntime: 251
