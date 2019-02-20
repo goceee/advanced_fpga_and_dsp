@@ -1,7 +1,7 @@
 .metadata
 ip_cache
 RemoteSystemsTempFiles
-webtalk/**
+webtalk
 SDK.log
 **/Release
 **/Debug
