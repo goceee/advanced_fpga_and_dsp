@@ -58,7 +58,7 @@
 
 **3.3 Which is the acceleration factor (for example if the hardware is half the speed of the software then the acceleration factor is 0.5x if it is twice the speed is 2x ?**
 
-#Lab 2 Questions and Answers
+# Lab 2 Questions and Answers
 
 **1.1	What is the optimal partition factor? Why?**
 
