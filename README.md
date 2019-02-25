@@ -1,34 +1,44 @@
 # Lab 1 Questions and Answers
 
 **1.1 Xilinx has based their HLS tools around the C/C++ language. What is the language that Altera/Intel have chosen for their HLS efforts?**
+     
      Same C/C++. Xilinx also uses SystemC  ----- https://en.wikipedia.org/wiki/High-level_synthesis#Vendors
     
 **1.2 The current state-of-the-art devices from Xilinx are the Ultrascale family. What is the name of the state-of-the-art Altera FPGA devices?**
+    
     STRATIX 10 is latest.
     
 **1.3 Vivado is the name that Xilinx gives to their main set of implementation tools. What is the name that Altera/Intel gives to their main set of tools?**
-    Intel Quartus Prime
+   
+   Intel Quartus Prime
     
 **1.4 What is the name of the transistors that both Intel/Altera and Xilinx are using to create their latest very high-density FPGA chips?**
-    3D?? FinFET transistors??
+    
+   3D?? FinFET transistors??
     
 **2.1 What is the percentage of LUTs and Registers used by the design (round the number to the closest integer)?**
-    LUTs: 17% , Registers: 13% 
+   
+   LUTs: 17% , Registers: 13% 
     
 **2.2 What type of DMA IP is being used to move data in and out of the accelerators?**
-    AXIDMA_SIMPLE – AXI Direct Memory Access
+   
+   AXIDMA_SIMPLE – AXI Direct Memory Access
     
 **2.3 What Zynq port this IP is connected to?**
-    Re-check ....   PORT A OR B OR PS7 OR src or DST????
+   
+   Re-check ....   PORT A OR B OR PS7 OR src or DST????
     
 **2.4 How much data in bytes is being moved in and out of the accelerators?  Why?**
-    Uses 4096 bytes, because the variables are set as floats. 
+   
+   Uses 4096 bytes, because the variables are set as floats. 
     
 **2.5 How many input and output ports for control, data, reset and clock has the mmult accelerated block?**
-    1 Input Control, 1 Input Clock, 1 Input Reset, 2 Input Data (A and B) and 1 Output Data (C)
+   
+   1 Input Control, 1 Input Clock, 1 Input Reset, 2 Input Data (A and B) and 1 Output Data (C)
     
 **2.6 What is the polarity of the reset signal for the mmult block?**
-    Negative
+   
+   Negative
 
 **2.7 At what address position the mmult and mmad accelerators are mapped?**
     madd – 0x43C0,0000. mmult – 0x43C1,0000
