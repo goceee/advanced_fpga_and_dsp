@@ -1,7 +1,7 @@
-Lab 1 Questions and Answers
+# Lab 1 Questions and Answers
 
-1.1 Xilinx has based their HLS tools around the C/C++ language. What is the language that Altera/Intel have chosen for their HLS efforts?
-    Same C/C++. Xilinx also uses SystemC  ----- https://en.wikipedia.org/wiki/High-level_synthesis#Vendors
+## 1.1 Xilinx has based their HLS tools around the C/C++ language. What is the language that Altera/Intel have chosen for their HLS efforts?
+######     Same C/C++. Xilinx also uses SystemC  ----- https://en.wikipedia.org/wiki/High-level_synthesis#Vendors
     
 1.2 The current state-of-the-art devices from Xilinx are the Ultrascale family. What is the name of the state-of-the-art Altera FPGA devices?
     STRATIX 10 is latest.
@@ -45,7 +45,7 @@ Lab 1 Questions and Answers
 
 3.3 Which is the acceleration factor (for example if the hardware is half the speed of the software then the acceleration factor is 0.5x if it is twice the speed is 2x ?
 
-Lab 2 Questions and Answers
+#Lab 2 Questions and Answers
 
 1.1	What is the optimal partition factor? Why?
 
