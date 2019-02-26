@@ -14,7 +14,7 @@
     
 **1.4 What is the name of the transistors that both Intel/Altera and Xilinx are using to create their latest very high-density FPGA chips?**
     
-    3D?? FinFET transistors??
+    FinFET transistors
     
 **2.1 What is the percentage of LUTs and Registers used by the design (round the number to the closest integer)?**
    
@@ -30,7 +30,7 @@
     
 **2.4 How much data in bytes is being moved in and out of the accelerators?  Why?**
    
-    Uses 4096 bytes, because the variables are set as floats. 
+    Uses 4096 bytes, because the variables are set as floats (4B), and the matrix is of size 32 x 32 = 1024. 
     
 **2.5 How many input and output ports for control, data, reset and clock has the mmult accelerated block?**
    
@@ -68,7 +68,9 @@
 
 **1.1	What is the optimal partition factor? Why?**
 
-    For a matrix size N = 32, the optimal partition factor is N / 2 = 16. This is because the buffers can load an entire row and column from matrices B and A respectively. Note that this may not hold true for larger matrices due to the memory required to buffer a row and column.
+    For a matrix size N = 32, the optimal partition factor is N / 2 = 16. 
+    This is because the buffers can load an entire row and column from matrices B and A respectively. 
+    Note that this may not hold true for larger matrices due to the memory required to buffer a row and column.
 
 **1.2	How many clock cycles does the performance estimation report claim for the hardware?**
 
@@ -96,8 +98,10 @@
 
 **1.8 How many inputs do the LUTs have and, observing the internal architecture, what adder size could you implement in a single ZYNQ slice? For example, if you think the answer is a 2-bit adder then write 2.**
 
-    The LUTs either have 13 or 18 inputs, depending on which aspect of the LUT is being observed, the inner or outer part of the LUT. Assuming the outer part is simply an interface, then the inner part is the actual LUT, so the real LUT has 13 inputs. The carry adder architecture has 4 out bits and 4 carry out bits. If a single adder were to be used, then the size of the adder is 4.
+    The LUTs have 5 inputs.
+    The carry adder architecture has 4 out bits and 4 carry out bits. 
+    If a single adder were to be used, then the size of the adder is 4.
 
 **1.9 Observing the slice routing details, which output of the LUT will you use if you were trying to implement an adder and in which output of the slice will the sum result be available?**
 
-    No clue :P From observing the routing diagram, I can't tell if the A, B, C, and D outputs are meant to be used or not. The LUTs have two outputs, S5 and S6, which feed into the carry adder. 
+    The O6 output port of the LUT would be used. The AMUX output will have the sum.
