@@ -54,9 +54,15 @@
 
 **3.1 How many clock cycles the application takes on software?**
 
+     Average number of CPU cycles running mmultadd in software: 180082
+
 **3.2 How many clock cycles the application takes on hardware?**
+     
+     Average number of CPU cycles running mmultadd in hardware: 2514436
 
 **3.3 Which is the acceleration factor (for example if the hardware is half the speed of the software then the acceleration factor is 0.5x if it is twice the speed is 2x ?**
+
+     Speed up: 0.0716192
 
 # Lab 2 Questions and Answers
 
