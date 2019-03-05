@@ -68,7 +68,7 @@
 
 **1.1	What is the optimal partition factor? Why?**
 
-    16. It is because it has 16 BRAMs and each BRAM has 2 ports 
+  For a 32x32 matrix it is 16. It is because it has 16 BRAMs and each BRAM has 2 ports 
 
 **1.2	How many clock cycles does the performance estimation report claim for the hardware?**
 
