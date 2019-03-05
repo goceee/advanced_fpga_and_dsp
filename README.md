@@ -101,5 +101,5 @@
     If a single adder were to be used, then the size of the adder is 4.
 
 **1.9 Observing the slice routing details, which output of the LUT will you use if you were trying to implement an adder and in which output of the slice will the sum result be available?**
-
+    It is a carry propagate and you use O5 for the carry and O6 for the output. and A to D q is the sum and cout as well
     The O6 output port of the LUT would be used. The AMUX output will have the sum.
