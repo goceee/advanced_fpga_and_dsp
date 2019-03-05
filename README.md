@@ -68,9 +68,7 @@
 
 **1.1	What is the optimal partition factor? Why?**
 
-    For a matrix size N = 32, the optimal partition factor is N / 2 = 16. 
-    This is because the buffers can load an entire row and column from matrices B and A respectively. 
-    Note that this may not hold true for larger matrices due to the memory required to buffer a row and column.
+    16. It is because it has 16 BRAMs and each BRAM has 2 ports 
 
 **1.2	How many clock cycles does the performance estimation report claim for the hardware?**
 
