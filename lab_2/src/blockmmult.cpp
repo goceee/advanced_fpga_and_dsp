@@ -37,28 +37,52 @@ THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS PART OF THIS FILE AT
 ALL TIMES. 
 */
 
-#ifndef _MMULTADD_H_
-#define _MMULTADD_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include "mmultadd.h"
 
-#define N 32
-#define BL 16 // Block size. BL < N
+#define MIN(x, y) x < y ? x : y
 
-/**
- * Design principles to achieve best performance
- *
- * 1. Declare secquential access to stream data into accelerators via a hardware FIFO 
- *    interface. Otherwise, the default RAM interface requires all data to arrive
- *    before starting HLS accelerator
- */
-#pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void madd(float A[N * N], float B[N * N], float C[N * N]);
+void blockmmult(float A[N * N], float B[N * N], float C[N * N])
+{
+    for (int ii = 0; ii < N; ii += 16)
+    {
+        int minI = MIN(ii + 16, N);
+        for (int jj = 0; jj < N; jj += 16)
+        {
+            int minJ = MIN(jj + 16, N);
+            for (int kk = 0; kk < N; kk += 16)
+            {
+                int minK = MIN(kk + 16, N);
+                float Abuf[BL][BL], Bbuf[BL][BL];
+#pragma HLS array_partition variable = Abuf block factor = BL dim = 2
+#pragma HLS array_partition variable = Bbuf block factor = BL dim = 1
+                for (int i = 0; i < N; i++)
+                {
+                    for (int j = 0; j < N; j++)
+                    {
+                        Abuf[i][j] = A[i * N + j];
+                        Bbuf[i][j] = B[i * N + j];
+                    }
+                }
 
-#pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void mmult(float A[N * N], float B[N * N], float C[N * N]);
-
-#pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void blockmmult(float A[N * N], float B[N * N], float C[N * N]);
-
-#endif /* _MMULTADD_H_ */
+                for (int i = ii; i < minI; i++)
+                {
+                    for (int j = jj; j < minJ; j++)
+                    {
+#pragma HLS PIPELINE
+                        float result = 0;
+                        for (int k = kk; k < minK; k++)
+                        {
+                            float term = Abuf[i][k] * Bbuf[k][j];
+                            result += term;
+                        }
+                        C[i * N + j] = result;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
