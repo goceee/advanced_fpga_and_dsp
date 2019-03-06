@@ -83,43 +83,4 @@ void mmult(float A[N * N], float B[N * N], float C[N * N])
     }
 }
 
-void blockmmult(float A[N * N], float B[N * N], float C[N * N])
-{
-    for (int ii = 0; ii < N; ii += 16)
-    {
-        int minI = MIN(ii + 16, N);
-        for (int jj = 0; jj < N; jj += 16)
-        {
-            int minJ = MIN(jj + 16, N);
-            for (int kk = 0; kk < N; kk += 16)
-            {
-                int minK = MIN(kk + 16, N);
-                float Abuf[N][N], Bbuf[N][N];
-                for (int i = 0; i < N; i++)
-                {
-                    for (int j = 0; j < N; j++)
-                    {
-                        Abuf[i][j] = A[i * N + j];
-                        Bbuf[i][j] = B[i * N + j];
-                    }
-                }
-
-                for (int i = ii; i < minI; i++)
-                {
-                    for (int j = jj; j < minJ; j++)
-                    {
-                        float result = 0;
-                        for (int k = kk; k < minK; k++)
-                        {
-                            float term = Abuf[i][k] * Bbuf[k][j];
-                            result += term;
-                        }
-                        C[i * N + j] = result;
-                    }
-                }
-            }
-        }
-    }
-}
-
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
