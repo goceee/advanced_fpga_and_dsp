@@ -41,7 +41,6 @@ ALL TIMES.
 #define _MMULTADD_H_
 
 #define N 32
-#define BL 16 // Block size. BL < N
 
 /**
  * Design principles to achieve best performance

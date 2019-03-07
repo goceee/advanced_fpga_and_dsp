@@ -41,8 +41,6 @@ ALL TIMES.
 #include <stdlib.h>
 #include "mmultadd.h"
 
-#define MIN(x, y) x < y ? x : y
-
 /**
  *
  * Design principles to achieve II = 1
