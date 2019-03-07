@@ -43,13 +43,15 @@ ALL TIMES.
 
 #define BL 16 // Block size. BL < N
 
-#define MIN(x, y) x < y ? x : y
+// #define MIN(x, y) x < y ? x : y
 
 void blockmmult(float A[N * N], float B[N * N], float C[N * N])
 {
+	/*
 	float Abuf[BL][BL], Bbuf[BL][BL];
 #pragma HLS array_partition variable = Abuf block factor = 16 dim = 2
 #pragma HLS array_partition variable = Bbuf block factor = 16 dim = 1
+	*/
 
     for (int ii = 0; ii < N; ii += BL)
     {
@@ -58,26 +60,29 @@ void blockmmult(float A[N * N], float B[N * N], float C[N * N])
             for (int kk = 0; kk < N; kk += BL)
             {
             	// Load buffers A and B
-                for (int i = ii; i < MIN(ii + BL, N); i++)
+            	/*
+                for (int i = ii; i < ii + BL; i++)
                 {
-                    for (int j = jj; j < MIN(jj + BL, N); j++)
+                    for (int j = jj; j < jj + BL; j++)
                     {
-                        Abuf[i][j] = A[i * N + j];
-                        Bbuf[i][j] = B[i * N + j];
+                        Abuf[i - ii][j - jj] = A[i * N + j];
+                        Bbuf[i - ii][j - jj] = B[i * N + j];
                     }
                 }
+				*/
 
                 // Calculate block matrix multiplication
-                for (int i = ii; i < MIN(ii + BL, N); i++)
+                for (int i = ii; i < ii + BL; i++)
                 {
-                    for (int j = jj; j < MIN(jj + BL, N); j++)
+                    for (int j = jj; j < jj + BL; j++)
                     {
-#pragma HLS PIPELINE
+//#pragma HLS PIPELINE
                         float result = 0;
-                        for (int k = kk; k < MIN(kk + BL, N); k++)
+                        for (int k = kk; k < kk + BL; k++)
                         {
-                            float term = Abuf[i][k] * Bbuf[k][j];
-                            result += term;
+                            //float term = Abuf[i][k] * Bbuf[k][j];
+                            float term = A[i * N + k] * B[k * N + j];
+                        	result += term;
                         }
                         C[i * N + j] = result;
                     }
