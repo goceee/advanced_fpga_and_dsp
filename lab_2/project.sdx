@@ -14,7 +14,7 @@
       </accelerator>
     </configBuildOptions>
   </configuration>
-  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1785048982">
+  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1785048982" dirty="true">
     <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
       <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
         <args name="A"/>

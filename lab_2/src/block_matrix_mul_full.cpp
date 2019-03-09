@@ -44,8 +44,8 @@ ALL TIMES.
 void block_matrix_mul_full(float A[N*N], float B[N*N], float C[N*N])
 {
 	float Abuf[S][S], Bbuf[S][S];
-#pragma HLS array_partition variable = Abuf block factor = 16 dim = 2
-#pragma HLS array_partition variable = Bbuf block factor = 16 dim = 1
+#pragma HLS array_partition variable = Abuf block factor = 8 dim = 2
+#pragma HLS array_partition variable = Bbuf block factor = 8 dim = 1
 
 	int i, j, k, ii, jj, kk;
 	float term, result;
@@ -80,7 +80,7 @@ void block_matrix_mul_full(float A[N*N], float B[N*N], float C[N*N])
 						term = 0.0f;
 						for (k = kk; k < ((kk + S) > N ? N : kk + S); k++)
 						{
-#pragma HLS loop_tripcount max=64
+#pragma HLS loop_tripcount max=32
 							term += Abuf[i - ii][k - kk] * Bbuf[k - kk][j - jj];
 						}
 						result += term;

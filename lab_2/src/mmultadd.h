@@ -41,7 +41,7 @@ ALL TIMES.
 #define _MMULTADD_H_
 
 #define N 1024
-#define S 16
+#define S 32
 
 /**
  * Design principles to achieve best performance
