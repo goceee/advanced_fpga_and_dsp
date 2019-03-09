@@ -55,9 +55,11 @@ void mmult(float A[N * N], float B[N * N], float C[N * N])
     float Abuf[N][N], Bbuf[N][N];
 #pragma HLS array_partition variable = Abuf block factor = 16 dim = 2
 #pragma HLS array_partition variable = Bbuf block factor = 16 dim = 1
-    for (int i = 0; i < N; i++)
+
+    int i, j;
+    for (i = 0; i < N; i++)
     {
-        for (int j = 0; j < N; j++)
+        for (j = 0; j < N; j++)
         {
 #pragma HLS PIPELINE
             Abuf[i][j] = A[i * N + j];
@@ -65,9 +67,9 @@ void mmult(float A[N * N], float B[N * N], float C[N * N])
         }
     }
 
-    for (int i = 0; i < N; i++)
+    for (i = 0; i < N; i++)
     {
-        for (int j = 0; j < N; j++)
+        for (j = 0; j < N; j++)
         {
 #pragma HLS PIPELINE
             float result = 0;

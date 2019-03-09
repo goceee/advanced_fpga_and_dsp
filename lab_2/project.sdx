@@ -15,25 +15,25 @@
     </configBuildOptions>
   </configuration>
   <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1785048982">
-    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="blockmmult" filepath="src/blockmmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/blockmmult.cpp">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>
       </accelerator>
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
+      <accelerator name="block_matrix_mul_full" filepath="src/block_matrix_mul_full.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_matrix_mul_full.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>
       </accelerator>
     </configBuildOptions>
-    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="blockmmult" filepath="src/blockmmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/blockmmult.cpp">
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>
       </accelerator>
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
+      <accelerator name="block_matrix_mul_full" filepath="src/block_matrix_mul_full.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_matrix_mul_full.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>

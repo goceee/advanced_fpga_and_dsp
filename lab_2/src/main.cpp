@@ -135,7 +135,7 @@ int mmult_test(float *A, float *B, float *C, float *D, float *D_sw)
         sw_ctr.stop();
 
         hw_ctr.start();
-        blockmmult(A, B, tmp1);
+        block_matrix_mul_full(A, B, tmp1);
         //mmult(A, B, tmp1);
         madd(tmp1, C, D);
         hw_ctr.stop();

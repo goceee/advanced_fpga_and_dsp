@@ -41,56 +41,55 @@ ALL TIMES.
 #include <stdlib.h>
 #include "mmultadd.h"
 
-#define BL 16 // Block size. BL < N
-
-// #define MIN(x, y) x < y ? x : y
-
-void blockmmult(float A[N * N], float B[N * N], float C[N * N])
+void block_matrix_mul_full(float A[N*N], float B[N*N], float C[N*N])
 {
-	/*
-	float Abuf[BL][BL], Bbuf[BL][BL];
+	float Abuf[S][S], Bbuf[S][S];
 #pragma HLS array_partition variable = Abuf block factor = 16 dim = 2
 #pragma HLS array_partition variable = Bbuf block factor = 16 dim = 1
-	*/
 
-    for (int ii = 0; ii < N; ii += BL)
-    {
-        for (int jj = 0; jj < N; jj += BL)
-        {
-            for (int kk = 0; kk < N; kk += BL)
-            {
-            	// Load buffers A and B
-            	/*
-                for (int i = ii; i < ii + BL; i++)
-                {
-                    for (int j = jj; j < jj + BL; j++)
-                    {
-                        Abuf[i - ii][j - jj] = A[i * N + j];
-                        Bbuf[i - ii][j - jj] = B[i * N + j];
-                    }
-                }
-				*/
+	int i, j, k, ii, jj, kk;
+	float term, result;
 
-                // Calculate block matrix multiplication
-                for (int i = ii; i < ii + BL; i++)
-                {
-                    for (int j = jj; j < jj + BL; j++)
-                    {
-//#pragma HLS PIPELINE
-                        float result = 0;
-                        for (int k = kk; k < kk + BL; k++)
-                        {
-                            //float term = Abuf[i][k] * Bbuf[k][j];
-                            float term = A[i * N + k] * B[k * N + j];
-                        	result += term;
-                        }
-                        C[i * N + j] = result;
-                    }
-                }
+	for (ii = 0; ii < N; ii += S)
+	{
+		for (jj = 0; jj < N; jj += S)
+		{
+			for (i = ii; i < ((ii + S) > N ? N : ii + S); i++)
+			{
+#pragma HLS loop_tripcount max=32
+				for (j = jj; j < ((jj + S) > N ? N : jj + S); j++)
+				{
+#pragma HLS loop_tripcount max=32
+#pragma HLS PIPELINE
+					Abuf[i - ii][j - jj] = A[i * N + j];
+					Bbuf[i - ii][j - jj] = B[i * N + j];
+				}
+			}
 
-            }
-        }
-    }
+			for (i = ii; i < ((ii + S) > N ? N : ii + S); i++)
+			{
+#pragma HLS loop_tripcount max=32
+				for (j = jj; j < ((jj + S) > N ? N : jj + S); j++)
+				{
+#pragma HLS loop_tripcount max=32
+#pragma HLS PIPELINE
+					result = 0.0f;
+
+					for (kk = 0; kk < N; kk += S)
+					{
+						term = 0.0f;
+						for (k = kk; k < ((kk + S) > N ? N : kk + S); k++)
+						{
+#pragma HLS loop_tripcount max=64
+							term += Abuf[i - ii][k - kk] * Bbuf[k - kk][j - jj];
+						}
+						result += term;
+					}
+					C[i * N + j] = result;
+				}
+			}
+		}
+	}
 }
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

@@ -40,12 +40,13 @@ ALL TIMES.
 #ifndef _MMULTADD_H_
 #define _MMULTADD_H_
 
-#define N 32
+#define N 1024
+#define S 16
 
 /**
  * Design principles to achieve best performance
  *
- * 1. Declare secquential access to stream data into accelerators via a hardware FIFO 
+ * 1. Declare sequential access to stream data into accelerators via a hardware FIFO
  *    interface. Otherwise, the default RAM interface requires all data to arrive
  *    before starting HLS accelerator
  */
@@ -56,7 +57,7 @@ void madd(float A[N * N], float B[N * N], float C[N * N]);
 void mmult(float A[N * N], float B[N * N], float C[N * N]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void blockmmult(float A[N * N], float B[N * N], float C[N * N]);
+void block_matrix_mul_full(float A[N * N], float B[N * N], float C[N * N]);
 
 #endif /* _MMULTADD_H_ */
 
