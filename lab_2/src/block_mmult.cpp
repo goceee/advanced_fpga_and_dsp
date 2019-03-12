@@ -41,10 +41,18 @@ ALL TIMES.
 #include <stdlib.h>
 #include "mmultadd.h"
 
-void matxvec(float A[N], float C[S], float b[N][S])
+void matxvec(float A[N], float b[N][S], float C[S])
 {
+	float a[N];
     float c[S];
+#pragma HLS ARRAY_PARTITION variable = a block factor = 32 dim = 1
 #pragma HLS ARRAY_PARTITION variable = c complete dim = 1
+
+    for(int k = 0; k < N; k++)
+    {
+#pragma HLS UNROLL
+    	a[k] = A[k];
+    }
 
     for (int j = 0; j < S; j++)
     {
@@ -53,13 +61,13 @@ void matxvec(float A[N], float C[S], float b[N][S])
         c[j] = 0;
     }
 
-    for (int k = 0; k < N; k += 1)
+    for (int k = 0; k < N; k++)
     {
         for (int j = 0; j < S; j++)
         {
 #pragma HLS PIPELINE
 #pragma HLS UNROLL factor = 32
-            c[j] += A[k] * b[k][j];
+            c[j] += a[k] * b[k][j];
             C[j] = c[j];
         }
     }
@@ -73,7 +81,6 @@ void block_mmult(float A[N * N], float B[N * N], float C[N * N])
 
     for (int k = 0; k < N / S; k++)
     {
-
         for (int i = 0; i < N; i++)
         {
             for (int j = 0; j < S; j++)
@@ -86,11 +93,11 @@ void block_mmult(float A[N * N], float B[N * N], float C[N * N])
 
         for (int p = 0; p < N; p++)
         {
-            matxvec(A + p * N, C + p * N + k * S, b);
+#pragma HLS unroll factor = 32
+            matxvec(A + p * N, b, C + p * N + k * S);
         }
     }
 }
-
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

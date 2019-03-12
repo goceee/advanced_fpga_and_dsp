@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="lab_2" location="C:/Xilinx/workspace_sdx/lab_2" platform="C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" systemProject="lab_2_system" sysConfig="standalone" runtime="C/C++" cpu="standalone" cpuInstance="ps7_cortexa9_0" os="standalone" ConfigType="Debug">
   <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.1283680014" dirty="true">
-    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false"/>
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/block_mmult.cpp"/>
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/madd.cpp"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/block_mmult.cpp"/>
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/madd.cpp"/>
+    </lastBuildOptions>
   </configuration>
   <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1785048982" dirty="true">
     <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/madd.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>
       </accelerator>
-      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/lab_2/src/block_mmult.cpp">
-        <args name="A"/>
-        <args name="B"/>
-        <args name="C"/>
-      </accelerator>
+      <accelerator name="matxvec" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/block_mmult.cpp"/>
     </configBuildOptions>
     <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/lab_2/src/madd.cpp">
-        <args name="A"/>
-        <args name="B"/>
-        <args name="C"/>
-      </accelerator>
-      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Xilinx/workspace_sdx/lab_2/src/block_mmult.cpp">
-        <args name="A"/>
-        <args name="B"/>
-        <args name="C"/>
-      </accelerator>
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/madd.cpp"/>
+      <accelerator name="matxvec" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/block_mmult.cpp"/>
     </lastBuildOptions>
   </configuration>
 </sdsproject:SDSProject>

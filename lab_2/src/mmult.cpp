@@ -82,36 +82,4 @@ void mmult(float A[N * N], float B[N * N], float C[N * N])
     }
 }
 
-void mmult(float A[], float B[], float C[], int size)
-{
-    float Abuf[N][N], Bbuf[N][N];
-#pragma HLS array_partition variable = Abuf block factor = 16 dim = 2
-#pragma HLS array_partition variable = Bbuf block factor = 16 dim = 1
-
-    int i, j;
-    for (i = 0; i < size; i++)
-    {
-        for (j = 0; j < size; j++)
-        {
-#pragma HLS PIPELINE
-            Abuf[i][j] = A[i * size + j];
-            Bbuf[i][j] = B[i * size + j];
-        }
-    }
-
-    for (i = 0; i < size; i++)
-    {
-        for (j = 0; j < size; j++)
-        {
-#pragma HLS PIPELINE
-            float result = 0;
-            for (int k = 0; k < size; k++)
-            {
-                result += Abuf[i][k] * Bbuf[k][j];
-                C[i * size + j] = result;
-            }
-        }
-    }
-}
-
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

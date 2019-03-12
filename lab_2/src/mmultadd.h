@@ -41,7 +41,7 @@ ALL TIMES.
 #define _MMULTADD_H_
 
 #define N 1024
-#define S 32
+#define S 64
 
 /**
  * Design principles to achieve best performance
@@ -55,6 +55,9 @@ void madd(float A[N * N], float B[N * N], float C[N * N]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
 void mmult(float A[N * N], float B[N * N], float C[N * N]);
+
+#pragma SDS data access_pattern(A:SEQUENTIAL, b:SEQUENTIAL, C:RANDOM)
+void matxvec(float A[N], float b[N][S], float C[S]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
 void block_mmult(float A[N * N], float B[N * N], float C[N * N]);
