@@ -44,7 +44,7 @@ ALL TIMES.
 #include "sds_lib.h"
 #include "mmultadd.h"
 
-#define NUM_TESTS 3
+#define NUM_TESTS 1
 
 class perf_counter
 {
