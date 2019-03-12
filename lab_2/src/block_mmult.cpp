@@ -41,55 +41,56 @@ ALL TIMES.
 #include <stdlib.h>
 #include "mmultadd.h"
 
-void block_matrix_mul_full(float A[N*N], float B[N*N], float C[N*N])
+void matxvec(float A[N], float C[S], float b[N][S])
 {
-	float Abuf[S][S], Bbuf[S][S];
-#pragma HLS array_partition variable = Abuf block factor = 8 dim = 2
-#pragma HLS array_partition variable = Bbuf block factor = 8 dim = 1
+    float c[S];
+#pragma HLS ARRAY_PARTITION variable = c complete dim = 1
 
-	int i, j, k, ii, jj, kk;
-	float term, result;
+    for (int j = 0; j < S; j++)
+    {
+    	//Initialise block buffer to zero
+#pragma HLS UNROLL
+        c[j] = 0;
+    }
 
-	for (ii = 0; ii < N; ii += S)
-	{
-		for (jj = 0; jj < N; jj += S)
-		{
-			for (i = ii; i < ((ii + S) > N ? N : ii + S); i++)
-			{
-#pragma HLS loop_tripcount max=32
-				for (j = jj; j < ((jj + S) > N ? N : jj + S); j++)
-				{
-#pragma HLS loop_tripcount max=32
+    for (int k = 0; k < N; k += 1)
+    {
+        for (int j = 0; j < S; j++)
+        {
 #pragma HLS PIPELINE
-					Abuf[i - ii][j - jj] = A[i * N + j];
-					Bbuf[i - ii][j - jj] = B[i * N + j];
-				}
-			}
-
-			for (i = ii; i < ((ii + S) > N ? N : ii + S); i++)
-			{
-#pragma HLS loop_tripcount max=32
-				for (j = jj; j < ((jj + S) > N ? N : jj + S); j++)
-				{
-#pragma HLS loop_tripcount max=32
-#pragma HLS PIPELINE
-					result = 0.0f;
-
-					for (kk = 0; kk < N; kk += S)
-					{
-						term = 0.0f;
-						for (k = kk; k < ((kk + S) > N ? N : kk + S); k++)
-						{
-#pragma HLS loop_tripcount max=32
-							term += Abuf[i - ii][k - kk] * Bbuf[k - kk][j - jj];
-						}
-						result += term;
-					}
-					C[i * N + j] = result;
-				}
-			}
-		}
-	}
+#pragma HLS UNROLL factor = 32
+            c[j] += A[k] * b[k][j];
+            C[j] = c[j];
+        }
+    }
 }
+
+void block_mmult(float A[N * N], float B[N * N], float C[N * N])
+{
+	//Create vector block
+    float b[N][S];
+#pragma HLS ARRAY_PARTITION variable = b complete dim = 2
+
+    for (int k = 0; k < N / S; k++)
+    {
+
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < S; j++)
+            {
+            	//Load vector block
+#pragma HLS PIPELINE
+                b[i][j] = B[i * N + j + k * S];
+            }
+        }
+
+        for (int p = 0; p < N; p++)
+        {
+            matxvec(A + p * N, C + p * N + k * S, b);
+        }
+    }
+}
+
+
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689

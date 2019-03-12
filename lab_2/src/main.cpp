@@ -44,7 +44,7 @@ ALL TIMES.
 #include "sds_lib.h"
 #include "mmultadd.h"
 
-#define NUM_TESTS 1024
+#define NUM_TESTS 3
 
 class perf_counter
 {
@@ -135,7 +135,7 @@ int mmult_test(float *A, float *B, float *C, float *D, float *D_sw)
         sw_ctr.stop();
 
         hw_ctr.start();
-        block_matrix_mul_full(A, B, tmp1);
+        block_mmult(A, B, tmp1);
         //mmult(A, B, tmp1);
         madd(tmp1, C, D);
         hw_ctr.stop();

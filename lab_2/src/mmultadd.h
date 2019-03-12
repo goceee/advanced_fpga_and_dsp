@@ -57,7 +57,7 @@ void madd(float A[N * N], float B[N * N], float C[N * N]);
 void mmult(float A[N * N], float B[N * N], float C[N * N]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
-void block_matrix_mul_full(float A[N * N], float B[N * N], float C[N * N]);
+void block_mmult(float A[N * N], float B[N * N], float C[N * N]);
 
 #endif /* _MMULTADD_H_ */
 

@@ -22,6 +22,7 @@ typedef hls::stream<data_t> data_stream_t;
 const unsigned int INI_VAL=1;
 
 void aes_enc_sw(uint8_t *state,uint8_t *cipher,uint8_t ekey[240],unsigned int block_size);
-void aes_enc(data_t *state,data_t *cipher,uint8_t ekey[240],unsigned int block_size);
+#pragma SDS data access_pattern(state:SEQUENTIAL, cipher:SEQUENTIAL)
+void aes_enc(uint8_t *state,uint8_t *cipher,uint8_t ekey[240],unsigned int block_size);
 
 #endif /* AES_ENC_H_ */
