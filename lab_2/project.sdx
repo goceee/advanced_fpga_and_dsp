@@ -11,17 +11,31 @@
     </lastBuildOptions>
   </configuration>
   <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1785048982" dirty="true">
-    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/madd.cpp">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>
       </accelerator>
-      <accelerator name="matxvec" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/block_mmult.cpp"/>
+      <accelerator name="matxvec" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp"/>
+      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="C"/>
+      </accelerator>
     </configBuildOptions>
-    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
-      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/madd.cpp"/>
-      <accelerator name="matxvec" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/nh15775/workspace/advanced_fpga_and_dsp/lab_2/src/block_mmult.cpp"/>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="false" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="madd" filepath="src/madd.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/madd.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="C"/>
+      </accelerator>
+      <accelerator name="matxvec" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp"/>
+      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="C"/>
+      </accelerator>
     </lastBuildOptions>
   </configuration>
 </sdsproject:SDSProject>

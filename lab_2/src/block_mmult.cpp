@@ -39,22 +39,27 @@ ALL TIMES.
 
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "mmultadd.h"
 
-void matxvec(float A[N], float b[N][S], float C[S])
+void matxvec(float A[N], float B[N][S], float C[S])
 {
+#pragma HLS INLINE
 	float a[N];
-    float c[S];
-#pragma HLS ARRAY_PARTITION variable = a block factor = 32 dim = 1
-#pragma HLS ARRAY_PARTITION variable = c complete dim = 1
+	float c[S];
+	#pragma HLS ARRAY_PARTITION variable = a block factor = 16 dim = 1
+	#pragma HLS ARRAY_PARTITION variable = c block factor = 16 dim = 1
 
-    for(int k = 0; k < N; k++)
-    {
+	int j;
+
+	for (j = 0; j < N; j++)
+	{
+		//Initialise block buffer to zero
 #pragma HLS UNROLL
-    	a[k] = A[k];
-    }
+		a[j] = A[j];
+	}
 
-    for (int j = 0; j < S; j++)
+    for (j = 0; j < S; j++)
     {
     	//Initialise block buffer to zero
 #pragma HLS UNROLL
@@ -63,40 +68,75 @@ void matxvec(float A[N], float b[N][S], float C[S])
 
     for (int k = 0; k < N; k++)
     {
-        for (int j = 0; j < S; j++)
+        for (j = 0; j < S; j++)
         {
 #pragma HLS PIPELINE
 #pragma HLS UNROLL factor = 32
-            c[j] += a[k] * b[k][j];
+            c[j] += a[k] * B[k][j];
             C[j] = c[j];
         }
     }
 }
 
+void load_block_A(float A[N * N], int p, float Abuf[N])
+{
+	for (int j = 0; j < N; j++)
+	{
+		//Load block
+#pragma HLS PIPELINE
+		Abuf[j] = A[j + p * N];
+	}
+}
+
+void load_block_B(float B[N * N], int k, float Bbuf[N][S])
+{
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < S; j++)
+		{
+			//Load block
+#pragma HLS PIPELINE
+			Bbuf[i][j] = B[i * N + j + k * S];
+		}
+	}
+}
+
+void store_buffer_C(float Cbuf[S], int p, int k, float C[N * N])
+{
+	for (int i = 0; i < S; i++)
+	{
+#pragma HLS UNROLL factor = 16
+		C[i + p * N + k * S] = Cbuf[i];
+	}
+}
+
 void block_mmult(float A[N * N], float B[N * N], float C[N * N])
 {
 	//Create vector block
+	float a[N];
     float b[N][S];
-#pragma HLS ARRAY_PARTITION variable = b complete dim = 2
+    float c[S];
+#pragma HLS ARRAY_PARTITION variable = a block factor = 16 dim = 1
+#pragma HLS ARRAY_PARTITION variable = b block factor = 16 dim = 2
+#pragma HLS ARRAY_PARTITION variable = c block factor = 16 dim = 1
 
     for (int k = 0; k < N / S; k++)
     {
-        for (int i = 0; i < N; i++)
-        {
-            for (int j = 0; j < S; j++)
-            {
-            	//Load vector block
-#pragma HLS PIPELINE
-                b[i][j] = B[i * N + j + k * S];
-            }
-        }
+        load_block_B(B, k, b);
 
         for (int p = 0; p < N; p++)
         {
-#pragma HLS unroll factor = 32
-            matxvec(A + p * N, b, C + p * N + k * S);
+#pragma HLS unroll factor = 16
+        	load_block_A(A, p, a);
+            matxvec(a, b, c);
+            store_buffer_C(c, p, k, C);
         }
     }
+}
+
+void hw_mmult(float A[N * N], float B[N * N], float C[N * N])
+{
+	block_mmult(A, B, C);
 }
 
 

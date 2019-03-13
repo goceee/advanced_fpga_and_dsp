@@ -41,7 +41,7 @@ ALL TIMES.
 #define _MMULTADD_H_
 
 #define N 1024
-#define S 64
+#define S 128
 
 /**
  * Design principles to achieve best performance
@@ -56,8 +56,17 @@ void madd(float A[N * N], float B[N * N], float C[N * N]);
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
 void mmult(float A[N * N], float B[N * N], float C[N * N]);
 
-#pragma SDS data access_pattern(A:SEQUENTIAL, b:SEQUENTIAL, C:RANDOM)
-void matxvec(float A[N], float b[N][S], float C[S]);
+#pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:RANDOM)
+void matxvec(float A[N], float B[N][S], float C[S]);
+
+#pragma SDS data access_pattern(A:SEQUENTIAL, Abuf:SEQUENTIAL)
+void load_block_A(float A[N * N], int row_offset, float Abuf[N]);
+
+#pragma SDS data access_pattern(B:SEQUENTIAL, Bbuf:SEQUENTIAL)
+void load_block_B(float B[N * N], int block_offset, float Bbuf[N][S]);
+
+#pragma SDS data access_pattern(Cbuf:SEQUENTIAL, C:SEQUENTIAL)
+void store_buffer_C(float Cbuf[S], int row_offset, int block_offset, float C[N * N]);
 
 #pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
 void block_mmult(float A[N * N], float B[N * N], float C[N * N]);
