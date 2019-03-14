@@ -1,0 +1,311 @@
+<ENTRY>
+{
+    "EntryID": "1",
+    "Type": "CmdStep",
+    "DateTimestamp": "2019-Mar-14 11:14:50.678000",
+    "TimestampMillis": "40490678",
+    "Payload": {
+        "CmdStepID": "78305c27-9d0f-4c33-a2f1-5dd473ee6096",
+        "Command": "vpl",
+        "LogFile": "C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/p0.steps.log",
+        "CommandLine": "C:\/Xilinx\/SDx\/2018.3\/bin\/unwrapped\/win64.o\/vpl.exe --iprepo C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/iprepo\/repo --iprepo C:\/Xilinx\/SDx\/2018.3\/data\/ip\/xilinx --platform C:\/Xilinx\/SDx\/2018.3\/platforms\/zed\/zed.xpfm --temp_dir C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0 --output_dir C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vpl --input_file C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/.xsd\/top.bd.tcl --target hw --save_temps --kernels block_mmult:madd:adapter --webtalk_flag SDSoC --remote_ip_cache C:\/Users\/Naimu\/workspace\/ip_cache --xp \"param:compiler.deleteDefaultReportConfigs=false\" ",
+        "OptionArgs": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "2",
+    "Type": "Status",
+    "DateTimestamp": "2019-Mar-14 11:14:50.678000",
+    "TimestampMillis": "40490678",
+    "Payload": {
+        "CmdStepID": "78305c27-9d0f-4c33-a2f1-5dd473ee6096",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "3",
+    "Type": "SubCmdStep",
+    "DateTimestamp": "2019-Mar-14 11:14:54.238000",
+    "TimestampMillis": "40494238",
+    "Payload": {
+        "CmdStepID": "f503af00-a21d-46b1-b0fb-76f4952edc20",
+        "Command": "vivado",
+        "LogFile": "$LOGDIR\\..\\vivado\\vivado.log",
+        "TransactionLogFile": "",
+        "CommandLine": "C:\/Xilinx\/Vivado\/2018.3\/bin\/vivado -mode batch -notrace -source C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vivado\/ipirun.tcl -messageDb C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vivado\/vivado.pb",
+        "OptionArgs": [
+            "-mode",
+            "batch",
+            "-notrace",
+            "-source",
+            "C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vivado\/ipirun.tcl",
+            "-messageDb",
+            "C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vivado\/vivado.pb"
+        ]
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "4",
+    "Type": "Status",
+    "DateTimestamp": "2019-Mar-14 11:14:54.240000",
+    "TimestampMillis": "40494240",
+    "Payload": {
+        "CmdStepID": "f503af00-a21d-46b1-b0fb-76f4952edc20",
+        "Status": "Start"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "5",
+    "Type": "Status",
+    "DateTimestamp": "2019-Mar-14 12:09:23.304000",
+    "TimestampMillis": "43763304",
+    "Payload": {
+        "CmdStepID": "f503af00-a21d-46b1-b0fb-76f4952edc20",
+        "Status": "Passed"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "6",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.399000",
+    "TimestampMillis": "43763399",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\synth_1\\zed_wrapper_utilization_synth.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_UTILIZATION",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "7",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.399000",
+    "TimestampMillis": "43763399",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\zed_block_mmult_1_0_synth_1\\zed_block_mmult_1_0_utilization_synth.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_UTILIZATION",
+        "KernelName": "block_mmult"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "8",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.399000",
+    "TimestampMillis": "43763399",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_drc_opted.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_DRC",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "9",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.399000",
+    "TimestampMillis": "43763399",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_io_placed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_IO",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "10",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.409000",
+    "TimestampMillis": "43763409",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_utilization_placed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_UTILIZATION",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "11",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_utilization_placed.rpt",
+        "Type": "TEXT",
+        "ReportType": "KERNEL_UTILIZATION_PLACEMENT",
+        "KernelName": "C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vivado\/prj\/prj.runs\/impl_1\/zed_wrapper"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "12",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_control_sets_placed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_CONTROL_SETS",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "13",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_drc_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_DRC",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "14",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_methodology_drc_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_METHODOLOGY",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "15",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_power_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_POWER",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "16",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_route_status.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_ROUTE_STATUS",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "17",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_timing_summary_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "18",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.410000",
+    "TimestampMillis": "43763410",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_incremental_reuse_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_INCREMENTAL_REUSE",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "19",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.425000",
+    "TimestampMillis": "43763425",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_clock_utilization_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_CLOCK_UTILIZATION",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "20",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.426000",
+    "TimestampMillis": "43763426",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_clock_utilization_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "KERNEL_UTILIZATION_ROUTE",
+        "KernelName": "C:\/Users\/Naimu\/workspace\/lab_2\/Release\/_sds\/p0\/vivado\/prj\/prj.runs\/impl_1\/zed_wrapper_clock"
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "21",
+    "Type": "Report",
+    "DateTimestamp": "2019-Mar-14 12:09:23.426000",
+    "TimestampMillis": "43763426",
+    "Payload": {
+        "File": "$LOGDIR\\..\\vivado\\prj\\prj.runs\\impl_1\\zed_wrapper_bus_skew_routed.rpt",
+        "Type": "TEXT",
+        "ReportType": "GLOBAL_REPORT_BUS_SKEW",
+        "KernelName": ""
+    }
+}
+</ENTRY>
+<ENTRY>
+{
+    "EntryID": "22",
+    "Type": "Status",
+    "DateTimestamp": "2019-Mar-14 12:09:23.968000",
+    "TimestampMillis": "43763968",
+    "Payload": {
+        "CmdStepID": "78305c27-9d0f-4c33-a2f1-5dd473ee6096",
+        "Status": "Passed"
+    }
+}
+</ENTRY>

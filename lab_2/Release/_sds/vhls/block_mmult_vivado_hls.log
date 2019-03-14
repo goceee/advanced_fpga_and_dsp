@@ -1,0 +1,164 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Naimu' on host 'desktop-6olia81' (Windows NT_amd64 version 6.2) on Thu Mar 14 11:10:28 +0000 2019
+INFO: [HLS 200-10] In directory 'C:/Users/Naimu/workspace/lab_2/Release/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/Naimu/workspace/lab_2/Release/_sds/vhls/block_mmult'.
+INFO: [HLS 200-10] Adding design file 'C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/Naimu/workspace/lab_2/Release/_sds/vhls/block_mmult/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xc7z020clg484-1 '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 104.363 ; gain = 20.598
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 104.363 ; gain = 20.598
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 105.477 ; gain = 21.711
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 105.496 ; gain = 21.730
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:55) in function 'matxvec' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:63) in function 'matxvec' completely with a factor of 64.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Loop-3.1' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:63) in function 'matxvec' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-101] Partitioning array 'b' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:78) in dimension 2 with a block factor 16.
+INFO: [XFORM 203-101] Partitioning array 'c' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 with a block factor 16.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.0' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.1' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.2' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.3' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.4' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.5' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.6' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.7' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.8' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.9' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.10' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.11' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.12' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.13' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.14' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'c.15' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'c.0' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.1' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.2' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.3' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.4' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.5' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.6' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.7' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.8' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.9' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.10' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.11' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.12' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.13' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.14' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'c.15' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:50) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 129.176 ; gain = 45.410
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:87:20) in function 'block_mmult'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:84:19) in function 'block_mmult' : 
+
+more than one sub loop.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 64 on port 'B' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:94:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 1024 on port 'A' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:53:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 64 on port 'C' (C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp:71:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 132.344 ; gain = 48.578
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'block_mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matxvec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.a.gep.A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.C.c.gep'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 21.519 seconds; current allocated memory: 91.287 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.113 seconds; current allocated memory: 93.916 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'block_mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+WARNING: [SCHED 204-71] Latency directive discarded for region block_mmult since it contains subloops.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.597 seconds; current allocated memory: 94.323 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.771 seconds; current allocated memory: 94.963 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matxvec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'block_mmult_fadd_32ns_32ns_32_5_full_dsp_1' to 'block_mmult_fadd_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'block_mmult_fmul_32ns_32ns_32_4_max_dsp_1' to 'block_mmult_fmul_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'block_mmult_mux_647_32_1_1' to 'block_mmult_mux_6dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'block_mmult_fadd_bkb': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'block_mmult_fmul_cud': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'block_mmult_mux_6dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matxvec'.
+INFO: [HLS 200-111]  Elapsed time: 1.729 seconds; current allocated memory: 98.081 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'block_mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_mmult/A' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_mmult/B' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_mmult/C' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_mmult/A_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_mmult/B_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'block_mmult/C_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'block_mmult' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'block_mmult'.
+INFO: [HLS 200-111]  Elapsed time: 7.489 seconds; current allocated memory: 101.326 MB.
+INFO: [RTMG 210-278] Implementing memory 'a0_matxvec_a_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'a0_block_mmult_b_0_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:00:46 . Memory (MB): peak = 164.754 ; gain = 80.988
+INFO: [SYSC 207-301] Generating SystemC RTL for block_mmult with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for block_mmult with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for block_mmult with prefix a0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'a0_block_mmult_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 296.105 ; gain = 44.539
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_block_mmult_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_block_mmult_ap_fadd_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a0_block_mmult_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_block_mmult_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_block_mmult_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 14 11:11:58 2019...
+INFO: [HLS 200-112] Total elapsed time: 91.844 seconds; peak allocated memory: 101.326 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Thu Mar 14 11:11:58 2019...

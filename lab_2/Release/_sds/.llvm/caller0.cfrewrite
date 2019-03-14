@@ -1,0 +1,22 @@
+{
+	"file":	"C:/Users/Naimu/workspace/lab_2/src/main.cpp",
+	"callers":	[{
+			"call":	"block_mmult",
+			"line":	138,
+			"col":	9,
+			"repl":	"p_0_block_mmult_1_noasync"
+		}, {
+			"call":	"madd",
+			"line":	140,
+			"col":	9,
+			"repl":	"p_0_madd_1_noasync"
+		}],
+	"parents":	[{
+			"function":	"mmult_test",
+			"proto":	"void p_0_block_mmult_1_noasync(float A[1048576], float B[1048576], float C[1048576]);\n"
+		}, {
+			"function":	"mmult_test",
+			"proto":	"void p_0_madd_1_noasync(float A[1048576], float B[1048576], float C[1048576]);\n"
+		}],
+	"waits":	[]
+}

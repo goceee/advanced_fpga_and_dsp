@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# hsi v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Thu Mar 14 10:44:28 2019
+# Process ID: 12552
+# Current directory: C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp
+# Command line: hsi.exe -mode batch -notrace -quiet -source C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Log file: C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/hsi.log
+# Journal file: C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp\hsi.jou
+#-----------------------------------------------------------
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds

@@ -1,0 +1,126 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Thu Mar 14 11:12:02 +0000 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/Naimu/workspace/ip_cache -o lab_2.elf ./src/block_mmult.o ./src/madd.o ./src/main.o ./src/mmult.o -dmclkid 2 -mno-boot-files -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Users/Naimu/workspace/lab_2/Release/_sds/reports/sds.log
+# Journal file  : C:/Users/Naimu/workspace/lab_2/Release/_sds/reports/sds.jou
+# Report file   : C:/Users/Naimu/workspace/lab_2/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Removing implementation files from previous run
+# Analyzing object files
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.rtlx/block_mmult.rtlx
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/block_mmult.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.pp/block_mmult.ii
+arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/block_mmult.block_mmult.fcnmap.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_block_mmult_1_0/xilinx_com_hls_block_mmult_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_block_mmult_1_0/xilinx_com_hls_block_mmult_1_0.zip -d C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_block_mmult_1_0
+arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/Naimu/workspace/lab_2/Release/src/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/block_mmult_if.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.rtlx/madd.rtlx
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/madd.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.pp/madd.ii
+arm-none-eabi-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/madd.madd.fcnmap.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0/xilinx_com_hls_madd_1_0.zip -d C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0
+arm-none-eabi-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/Naimu/workspace/lab_2/Release/src/madd.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/madd_if.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/Naimu/workspace/lab_2/Release/src/main.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/Naimu/workspace/lab_2/Release/src/main.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/Naimu/workspace/lab_2/Release/src/main.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/main.o.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/Naimu/workspace/lab_2/Release/src/mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/Naimu/workspace/lab_2/Release/src/mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/Naimu/workspace/lab_2/Release/src/mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/mmult.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/Naimu/workspace/lab_2/Release/.Xil/zed.hpfm  -ip C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_block_mmult_1_0 -ip C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo/xilinx_com_hls_madd_1_0  -o C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/sds_all.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/./src/block_mmult.s C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/./src/madd.s C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/./src/main.s C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/./src/mmult.s
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os standalone -processor cortex-a9 -partition 0  
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Removing implementation files from previous run C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado
+# Removing implementation files from previous run C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vpl
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Creating block diagram (BD)
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/.xsd
+C:/Xilinx/SDx/2018.3/bin/sdx_link  -cf-system C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/apsys_0.xml  -cf-db  C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -xpfm C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm   -multi-clks -trace-buffer 1024 -os baremetal -quiet
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd _sds/p0/.cf_work
+C:/Xilinx/SDx/2018.3/bin/cf2sw  -i C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/apsys_0.xml  -r C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -pollMode 0 -mc
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Rewrite caller functions
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+arm-none-eabi-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/Naimu/workspace/lab_2/Release/src/main.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xdinfo.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/Naimu/workspace/lab_2/Release/src/main.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/xddata.xml
+arm-none-eabi-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/Naimu/workspace/lab_2/Release/src/main.o C:/Users/Naimu/workspace/lab_2/Release/_sds/.data/main.o.xml
+C:/Xilinx/SDx/2018.3/bin/caller_rewrite  -rewrite C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/caller0.cfrewrite  -o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/main.cpp  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/unix_main.cpp  --  -c  -IC:/Users/Naimu/workspace/lab_2/src -IC:/Users/Naimu/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+# Compile caller rewrite file C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/main.cpp
+arm-none-eabi-g++  -c C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/main.cpp  -IC:/Users/Naimu/workspace/lab_2/src -IC:/Users/Naimu/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include  -o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/main.o
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Prepare hardware access API functions
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Create accelerator stub functions
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+C:/Xilinx/SDx/2018.3/bin/stub_gen  -func "block_mmult" -stub C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/block_mmult.cfrewrite  -o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/block_mmult.cpp  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/unix_block_mmult.cpp  --  -c  -IC:/Users/Naimu/workspace/lab_2/src -IC:/Users/Naimu/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+C:/Xilinx/SDx/2018.3/bin/stub_gen  -func "madd" -stub C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/madd.cfrewrite  -o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/madd.cpp  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/unix_madd.cpp  --  -c  -IC:/Users/Naimu/workspace/lab_2/src -IC:/Users/Naimu/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-none-eabi -mcpu=cortex-a9 -mfpu=vfpv3 -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/arm-none-eabi -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/lib/gcc/arm-none-eabi/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/arm-none-eabi/libc/usr/include  -std=c++11
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+# Compile hardware access API functions
+arm-none-eabi-gcc   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/cf_stub.c
+arm-none-eabi-ar crs C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/portinfo.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/cf_stub.o
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+# Compile accelerator stub functions
+arm-none-eabi-g++ -c block_mmult.cpp  -IC:/Users/Naimu/workspace/lab_2/src -IC:/Users/Naimu/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -o block_mmult.o
+arm-none-eabi-g++ -c madd.cpp  -IC:/Users/Naimu/workspace/lab_2/src -IC:/Users/Naimu/workspace/lab_2/src -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -o madd.o
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+arm-none-eabi-ar crs C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/liblab_2.a C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/portinfo.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/cf_stub.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/madd.o
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp
+C:/Xilinx/SDK/2018.3/bin/hsi  -mode batch -notrace -quiet -source C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Create board support package library
+C:/Xilinx/SDx/2018.3/bin/xsct  -sdx -quiet C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Preliminary link application ELF
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.3/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.3/platforms/zed/sw/standalone/standalone/lscript.ld  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/madd.o C:/Users/Naimu/workspace/lab_2/Release/src/mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/main.o   -L C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib   -LC:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs -Wl,--start-group -lstdc++ -Wl,--end-group -Wl,--start-group   -lsds_link  -LC:/Xilinx/SDx/2018.3/target/aarch32-none/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/lab_2.elf -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+
+arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/lab_2.elf
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Enable generation of hardware programming files
+# Calling VPL
+C:/Xilinx/SDx/2018.3/bin/vpl   --iprepo C:/Users/Naimu/workspace/lab_2/Release/_sds/iprepo/repo  --iprepo C:/Xilinx/SDx/2018.3/data/ip/xilinx  --platform C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm  --temp_dir C:/Users/Naimu/workspace/lab_2/Release/_sds/p0  --output_dir C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vpl  --input_file C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/.xsd/top.bd.tcl  --target hw   --save_temps  --kernels block_mmult:madd:adapter --webtalk_flag SDSoC  --remote_ip_cache C:/Users/Naimu/workspace/ip_cache --xp \"param:compiler.deleteDefaultReportConfigs=false\" 
+cd _sds/p0/.cf_work
+C:/Xilinx/SDx/2018.3/bin/cf2sw  -i C:/Users/Naimu/workspace/lab_2/Release/_sds/.llvm/apsys_0.xml  -r C:/Users/Naimu/workspace/lab_2/Release/_sds/.cdb/xd_ip_db.xml  -a address_map.xml  -pollMode 0 -mc
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Software tracing enabled
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+# Compile hardware access API functions
+arm-none-eabi-gcc   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/portinfo.c
+arm-none-eabi-g++  -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard      -I C:/Xilinx/SDx/2018.3/target/aarch32-none/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/cf_stub.c
+arm-none-eabi-ar crs C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/libxlnk_stub.a C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/portinfo.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/cf_stub.o
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+arm-none-eabi-ar crs C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/liblab_2.a C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/portinfo.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/cf_stub.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/madd.o
+cd C:/Users/Naimu/workspace/lab_2/Release
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs
+cd C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp
+C:/Xilinx/SDK/2018.3/bin/hsi  -mode batch -notrace -quiet -source C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp.tcl
+# Create board support package library
+C:/Xilinx/SDx/2018.3/bin/xsct  -sdx -quiet C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/create_bsp_post.tcl
+cd C:/Users/Naimu/workspace/lab_2/Release
+# Link application ELF file
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,--build-id=none -specs=C:/Xilinx/SDx/2018.3/data/toolchain/aarch32-none.spec -Wl,-T -Wl,C:/Xilinx/SDx/2018.3/platforms/zed/sw/standalone/standalone/lscript.ld  C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/block_mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/madd.o C:/Users/Naimu/workspace/lab_2/Release/src/mmult.o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/main.o   -L C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/standalone_bsp/ps7_cortexa9_0/lib   -LC:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs -Wl,--start-group -lstdc++ -Wl,--end-group -Wl,--start-group     -LC:/Xilinx/SDx/2018.3/target/aarch32-none/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/lab_2.elf -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+
+arm-none-eabi-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/Naimu/workspace/lab_2/Release/_sds/swstubs/lab_2.elf
+# All user specified timing constraints are met.
+# sds++ completed at Thu Mar 14 12:11:46 +0000 2019

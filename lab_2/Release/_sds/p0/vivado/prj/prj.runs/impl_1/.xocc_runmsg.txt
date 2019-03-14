@@ -1,0 +1,2 @@
+Compiling (bitstream) accelerator binary: 
+Log file: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/impl_1/runme.log

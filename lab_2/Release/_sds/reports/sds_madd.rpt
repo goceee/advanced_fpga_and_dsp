@@ -1,0 +1,171 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Thu Mar 14 09:41:03 +0000 2019
+# Command line  : sds++ -Wall -O3 -I../src -c -fmessage-length=0 -MTsrc/madd.o -MMD -MP -MFsrc/madd.d -MTsrc/madd.o -o src/madd.o ../src/madd.cpp -sds-hw madd madd.cpp -clkid 2 -sds-end -sds-hw block_mmult block_mmult.cpp -clkid 2 -sds-end -sds-sys-config standalone -sds-proc standalone -sds-pf zed
+# Log file      : C:/Users/Naimu/workspace/lab_2/Release/_sds/reports/sds_madd.log
+# Journal file  : C:/Users/Naimu/workspace/lab_2/Release/_sds/reports/sds_madd.jou
+# Report file   : C:/Users/Naimu/workspace/lab_2/Release/_sds/reports/sds_madd.rpt
+#-----------------------------------------------------------
+
+High-Level Synthesis
+--------------------
+
+  Vivado HLS Report : C:/Users/Naimu/workspace/lab_2/Release/_sds/vhls/madd/solution/syn/report/madd_csynth.rpt
+
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.256|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  1048584|  1048584|  1048584|  1048584|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+---------+----------+
+        |          |      Latency      | Iteration|  Initiation Interval  |   Trip  |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- Loop 1  |  1048582|  1048582|         8|          1|          1|  1048576|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     56|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      2|     205|    390|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     75|
+|Register         |        0|      -|     193|     32|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      2|     398|    553|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|   ~0  |   ~0   |      1|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |madd_fadd_32ns_32bkb_U1  |madd_fadd_32ns_32bkb  |        0|      2|  205|  390|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |Total                    |                      |        0|      2|  205|  390|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |indvar_flatten_next_fu_84_p2      |     +    |      0|  0|  28|          21|           1|
+    |ap_block_state9_pp0_stage0_iter7  |    and   |      0|  0|   2|           1|           1|
+    |exitcond_flatten_fu_78_p2         |   icmp   |      0|  0|  18|          21|          22|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter1  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  56|          48|          29|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |A_blk_n                  |   9|          2|    1|          2|
+    |B_blk_n                  |   9|          2|    1|          2|
+    |C_blk_n                  |   9|          2|    1|          2|
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter7  |   9|          2|    1|          2|
+    |indvar_flatten_reg_63    |   9|          2|   21|         42|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  75|         16|   27|         56|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |A_read_reg_99            |  32|   0|   32|          0|
+    |B_read_reg_104           |  32|   0|   32|          0|
+    |ap_CS_fsm                |   3|   0|    3|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7  |   1|   0|    1|          0|
+    |exitcond_flatten_reg_90  |   1|   0|    1|          0|
+    |indvar_flatten_reg_63    |  21|   0|   21|          0|
+    |tmp_3_reg_109            |  32|   0|   32|          0|
+    |exitcond_flatten_reg_90  |  64|  32|    1|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 193|  32|  130|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_clk     |  in |    1| ap_ctrl_hs |     madd     | return value |
+|ap_rst_n   |  in |    1| ap_ctrl_hs |     madd     | return value |
+|ap_start   |  in |    1| ap_ctrl_hs |     madd     | return value |
+|ap_done    | out |    1| ap_ctrl_hs |     madd     | return value |
+|ap_idle    | out |    1| ap_ctrl_hs |     madd     | return value |
+|ap_ready   | out |    1| ap_ctrl_hs |     madd     | return value |
+|A_dout     |  in |   32|   ap_fifo  |       A      |    pointer   |
+|A_empty_n  |  in |    1|   ap_fifo  |       A      |    pointer   |
+|A_read     | out |    1|   ap_fifo  |       A      |    pointer   |
+|B_dout     |  in |   32|   ap_fifo  |       B      |    pointer   |
+|B_empty_n  |  in |    1|   ap_fifo  |       B      |    pointer   |
+|B_read     | out |    1|   ap_fifo  |       B      |    pointer   |
+|C_din      | out |   32|   ap_fifo  |       C      |    pointer   |
+|C_full_n   |  in |    1|   ap_fifo  |       C      |    pointer   |
+|C_write    | out |    1|   ap_fifo  |       C      |    pointer   |
++-----------+-----+-----+------------+--------------+--------------+
+
