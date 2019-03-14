@@ -39,104 +39,88 @@ ALL TIMES.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "mmultadd.h"
 
 void matxvec(float A[N], float B[N][S], float C[S])
 {
-#pragma HLS INLINE
+	int j;
 	float a[N];
 	float c[S];
-	#pragma HLS ARRAY_PARTITION variable = a block factor = 16 dim = 1
-	#pragma HLS ARRAY_PARTITION variable = c block factor = 16 dim = 1
+#pragma HLS ARRAY_PARTITION variable = c block factor = 16 dim = 1
 
-	int j;
+	/*
+	 * However, using the zero_copy pragma result in very
+	 * high latency. Memory must be managed carefully then.
+	 * One method would involve a pipelined loop structure of
+	 * copying elements between stores. It turns out however
+	 * that memcpy can do this process very quickly anyway.
+	 */
+	memcpy(a, (float*)A, N * sizeof(float));
 
-	for (j = 0; j < N; j++)
+	for (j = 0; j < S; j++)
 	{
-		//Initialise block buffer to zero
+		/*
+		 * This buffer is to store the results of the multiplication.
+		 * This is necessary as you cannot read and write to a buffer
+		 * at the same time. For safety this is set to zero.
+		 */
 #pragma HLS UNROLL
-		a[j] = A[j];
+		c[j] = 0;
 	}
-
-    for (j = 0; j < S; j++)
-    {
-    	//Initialise block buffer to zero
-#pragma HLS UNROLL
-        c[j] = 0;
-    }
 
     for (int k = 0; k < N; k++)
     {
         for (j = 0; j < S; j++)
         {
+#pragma HLS UNROLL
 #pragma HLS PIPELINE
-#pragma HLS UNROLL factor = 32
             c[j] += a[k] * B[k][j];
-            C[j] = c[j];
         }
     }
-}
 
-void load_block_A(float A[N * N], int p, float Abuf[N])
-{
-	for (int j = 0; j < N; j++)
-	{
-		//Load block
-#pragma HLS PIPELINE
-		Abuf[j] = A[j + p * N];
-	}
-}
+	memcpy((float*)C, (float*)c, S * sizeof(float));
 
-void load_block_B(float B[N * N], int k, float Bbuf[N][S])
-{
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < S; j++)
-		{
-			//Load block
-#pragma HLS PIPELINE
-			Bbuf[i][j] = B[i * N + j + k * S];
-		}
-	}
-}
-
-void store_buffer_C(float Cbuf[S], int p, int k, float C[N * N])
-{
-	for (int i = 0; i < S; i++)
-	{
-#pragma HLS UNROLL factor = 16
-		C[i + p * N + k * S] = Cbuf[i];
-	}
 }
 
 void block_mmult(float A[N * N], float B[N * N], float C[N * N])
 {
-	//Create vector block
-	float a[N];
+	//Create buffers
     float b[N][S];
-    float c[S];
-#pragma HLS ARRAY_PARTITION variable = a block factor = 16 dim = 1
 #pragma HLS ARRAY_PARTITION variable = b block factor = 16 dim = 2
-#pragma HLS ARRAY_PARTITION variable = c block factor = 16 dim = 1
 
+    int block_offset;
+    int offset;
+
+    /*
+     * N / S is the block count. This allows us to sweep across
+     * an N x S region in B and store that in fast memory.
+     */
     for (int k = 0; k < N / S; k++)
     {
-        load_block_B(B, k, b);
+    	block_offset = k * S;
+    	for (int i = 0; i < N; i++)
+		{
+    		offset = i * N + block_offset;
+			for (int j = 0; j < S; j++)
+			{
+				//Load block
+#pragma HLS PIPELINE
+				b[i][j] = B[offset + j];
+			}
+		}
 
         for (int p = 0; p < N; p++)
         {
-#pragma HLS unroll factor = 16
-        	load_block_A(A, p, a);
-            matxvec(a, b, c);
-            store_buffer_C(c, p, k, C);
+        	/*
+        	 * Using pointers allows us to specify where exactly in A
+        	 * we should start reading from, and where in C we should
+        	 * start writing to.
+        	 */
+            matxvec(A + p * N, b, C + p * N + S * k);
         }
     }
-}
-
-void hw_mmult(float A[N * N], float B[N * N], float C[N * N])
-{
-	block_mmult(A, B, C);
 }
 
 
