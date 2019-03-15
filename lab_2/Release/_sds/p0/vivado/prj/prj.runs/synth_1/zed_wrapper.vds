@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Mar 14 11:44:19 2019
-# Process ID: 15004
+# Start of session at: Thu Mar 14 22:07:35 2019
+# Process ID: 14868
 # Current directory: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1
 # Command line: vivado.exe -log zed_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zed_wrapper.tcl
 # Log file: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/zed_wrapper.vds
@@ -17,16 +17,16 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/SDx/2018.3/data/cac
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/dsa/ipcache'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/SDx/2018.3/data/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 454.578 ; gain = 205.113
-add_files: Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 826.359 ; gain = 371.781
+update_ip_catalog: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 454.059 ; gain = 204.777
+add_files: Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 824.742 ; gain = 370.684
 Command: synth_design -top zed_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4400 
+INFO: Helper process launched with PID 11928 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 826.359 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 824.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'zed_wrapper' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/imports/hdl/zed_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'zed' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:4259]
@@ -38,92 +38,92 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant' (1#
 INFO: [Synth 8-6155] done synthesizing module 'zed_axcache_0xE_0' (2#1) [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_axcache_0xE_0/synth/zed_axcache_0xE_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'zed_axi_ic_ps7_M_AXI_GP0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5903]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_78ZREA' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:12]
-INFO: [Synth 8-6157] synthesizing module 'zed_m00_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m00_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m00_regslice_0' (3#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m00_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m00_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m00_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m00_regslice_0' (3#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m00_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_78ZREA' (4#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1JEV113' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:868]
-INFO: [Synth 8-6157] synthesizing module 'zed_m01_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m01_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m01_regslice_0' (5#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m01_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m01_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m01_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m01_regslice_0' (5#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m01_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1JEV113' (6#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:868]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_XZH261' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1078]
-INFO: [Synth 8-6157] synthesizing module 'zed_m02_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m02_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m02_regslice_0' (7#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m02_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m02_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m02_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m02_regslice_0' (7#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m02_regslice_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'm02_regslice' of module 'zed_m02_regslice_0' requires 40 connections, but only 37 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1233]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_XZH261' (8#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1078]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1AL9PDO' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1273]
-INFO: [Synth 8-6157] synthesizing module 'zed_m03_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m03_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m03_regslice_0' (9#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m03_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m03_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m03_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m03_regslice_0' (9#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m03_regslice_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'm03_regslice' of module 'zed_m03_regslice_0' requires 40 connections, but only 37 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1428]
 INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1AL9PDO' (10#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1273]
 INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1ONJ7J8' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1468]
-INFO: [Synth 8-6157] synthesizing module 'zed_m04_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m04_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m04_regslice_0' (11#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m04_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m04_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m04_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m04_regslice_0' (11#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m04_regslice_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'm04_regslice' of module 'zed_m04_regslice_0' requires 40 connections, but only 37 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1623]
 INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1ONJ7J8' (12#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1468]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1DPWUA0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:2135]
-INFO: [Synth 8-6157] synthesizing module 'zed_auto_pc_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_auto_pc_0' (13#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_s00_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s00_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s00_data_fifo_0' (14#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s00_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_s00_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s00_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s00_regslice_0' (15#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s00_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_auto_pc_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_auto_pc_0' (13#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s00_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s00_data_fifo_0' (14#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s00_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s00_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s00_regslice_0' (15#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s00_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1DPWUA0' (16#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:2135]
-INFO: [Synth 8-6157] synthesizing module 'zed_xbar_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_xbar_0' (17#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_xbar_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_xbar_0' (17#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_xbar_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'zed_axi_ic_ps7_M_AXI_GP0_0' (18#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5903]
 INFO: [Synth 8-6157] synthesizing module 'zed_axi_ic_ps7_S_AXI_ACP_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:6859]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_DBAVE2' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:222]
-INFO: [Synth 8-6157] synthesizing module 'zed_auto_pc_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_auto_pc_1' (19#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_m00_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m00_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m00_data_fifo_0' (20#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m00_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_m00_regslice_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m00_regslice_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_m00_regslice_1' (21#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_m00_regslice_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_auto_pc_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_auto_pc_1' (19#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m00_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m00_data_fifo_0' (20#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m00_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_m00_regslice_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m00_regslice_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_m00_regslice_1' (21#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_m00_regslice_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_DBAVE2' (22#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:222]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11FMYJ4' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1663]
-INFO: [Synth 8-6157] synthesizing module 'zed_auto_us_df_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_us_df_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_auto_us_df_0' (23#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_us_df_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_auto_us_df_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_us_df_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_auto_us_df_0' (23#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_us_df_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_us_df' of module 'zed_auto_us_df_0' requires 72 connections, but only 70 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1989]
-INFO: [Synth 8-6157] synthesizing module 'zed_s00_regslice_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s00_regslice_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s00_regslice_1' (24#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s00_regslice_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s00_regslice_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s00_regslice_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s00_regslice_1' (24#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s00_regslice_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11FMYJ4' (25#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:1663]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_PDU4ET' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:2621]
-INFO: [Synth 8-6157] synthesizing module 'zed_auto_us_df_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_us_df_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_auto_us_df_1' (26#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_us_df_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_auto_us_df_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_us_df_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_auto_us_df_1' (26#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_us_df_1_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_us_df' of module 'zed_auto_us_df_1' requires 72 connections, but only 70 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:2947]
-INFO: [Synth 8-6157] synthesizing module 'zed_s01_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s01_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s01_regslice_0' (27#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s01_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s01_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s01_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s01_regslice_0' (27#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s01_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_PDU4ET' (28#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:2621]
 INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_1S0JE3F' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3093]
-INFO: [Synth 8-6157] synthesizing module 'zed_auto_us_df_2' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_us_df_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_auto_us_df_2' (29#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_auto_us_df_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_auto_us_df_2' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_us_df_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_auto_us_df_2' (29#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_auto_us_df_2_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_us_df' of module 'zed_auto_us_df_2' requires 72 connections, but only 70 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3419]
-INFO: [Synth 8-6157] synthesizing module 'zed_s02_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s02_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s02_regslice_0' (30#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s02_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s02_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s02_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s02_regslice_0' (30#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s02_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_1S0JE3F' (31#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3093]
 INFO: [Synth 8-6157] synthesizing module 's03_couplers_imp_GEL4F2' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3565]
-INFO: [Synth 8-6157] synthesizing module 'zed_s03_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s03_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s03_data_fifo_0' (32#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s03_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s03_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s03_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s03_data_fifo_0' (32#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s03_data_fifo_0_stub.v:6]
 WARNING: [Synth 8-350] instance 's03_data_fifo' of module 'zed_s03_data_fifo_0' requires 34 connections, but only 33 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3712]
-INFO: [Synth 8-6157] synthesizing module 'zed_s03_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s03_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s03_regslice_0' (33#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s03_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s03_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s03_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s03_regslice_0' (33#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s03_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's03_couplers_imp_GEL4F2' (34#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3565]
 INFO: [Synth 8-6157] synthesizing module 's04_couplers_imp_JIG9FQ' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3783]
-INFO: [Synth 8-6157] synthesizing module 'zed_s04_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s04_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s04_data_fifo_0' (35#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s04_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s04_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s04_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s04_data_fifo_0' (35#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s04_data_fifo_0_stub.v:6]
 WARNING: [Synth 8-350] instance 's04_data_fifo' of module 'zed_s04_data_fifo_0' requires 34 connections, but only 33 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3930]
-INFO: [Synth 8-6157] synthesizing module 'zed_s04_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s04_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s04_regslice_0' (36#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s04_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s04_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s04_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s04_regslice_0' (36#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s04_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's04_couplers_imp_JIG9FQ' (37#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:3783]
 INFO: [Synth 8-6157] synthesizing module 's05_couplers_imp_177YVR7' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:4001]
-INFO: [Synth 8-6157] synthesizing module 'zed_s05_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s05_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s05_data_fifo_0' (38#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s05_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s05_data_fifo_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s05_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s05_data_fifo_0' (38#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s05_data_fifo_0_stub.v:6]
 WARNING: [Synth 8-350] instance 's05_data_fifo' of module 'zed_s05_data_fifo_0' requires 40 connections, but only 39 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:4175]
-INFO: [Synth 8-6157] synthesizing module 'zed_s05_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s05_regslice_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_s05_regslice_0' (39#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_s05_regslice_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_s05_regslice_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s05_regslice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_s05_regslice_0' (39#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_s05_regslice_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's05_couplers_imp_177YVR7' (40#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:4001]
-INFO: [Synth 8-6157] synthesizing module 'zed_xbar_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_xbar_1' (41#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_xbar_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_xbar_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_xbar_1' (41#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_xbar_1_stub.v:6]
 WARNING: [Synth 8-689] width (5) of port connection 's_axi_arready' does not match port width (6) of module 'zed_xbar_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:8284]
 WARNING: [Synth 8-689] width (320) of port connection 's_axi_rdata' does not match port width (384) of module 'zed_xbar_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:8301]
 WARNING: [Synth 8-689] width (5) of port connection 's_axi_rlast' does not match port width (6) of module 'zed_xbar_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:8302]
@@ -131,66 +131,66 @@ WARNING: [Synth 8-689] width (10) of port connection 's_axi_rresp' does not matc
 WARNING: [Synth 8-689] width (5) of port connection 's_axi_rvalid' does not match port width (6) of module 'zed_xbar_1' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:8305]
 WARNING: [Synth 8-350] instance 'xbar' of module 'zed_xbar_1' requires 78 connections, but only 76 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:8234]
 INFO: [Synth 8-6155] done synthesizing module 'zed_axi_ic_ps7_S_AXI_ACP_0' (42#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:6859]
-INFO: [Synth 8-6157] synthesizing module 'zed_axis_dwc_dm_0_tx_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_0_tx_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_axis_dwc_dm_0_tx_0_0' (43#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_0_tx_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_axis_dwc_dm_1_tx_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_1_tx_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_axis_dwc_dm_1_tx_0_0' (44#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_1_tx_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_axis_dwc_dm_2_rx_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_2_rx_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_axis_dwc_dm_2_rx_0_0' (45#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_2_rx_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_axis_dwc_dm_0_tx_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_0_tx_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_axis_dwc_dm_0_tx_0_0' (43#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_0_tx_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_axis_dwc_dm_1_tx_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_1_tx_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_axis_dwc_dm_1_tx_0_0' (44#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_1_tx_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_axis_dwc_dm_2_rx_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_2_rx_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_axis_dwc_dm_2_rx_0_0' (45#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_axis_dwc_dm_2_rx_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axis_dwc_dm_2_rx_0' of module 'zed_axis_dwc_dm_2_rx_0_0' requires 14 connections, but only 13 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5168]
-INFO: [Synth 8-6157] synthesizing module 'zed_block_mmult_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_block_mmult_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_block_mmult_1_0' (46#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_block_mmult_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_block_mmult_1_if_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_block_mmult_1_if_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_block_mmult_1_if_0' (47#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_block_mmult_1_if_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'block_mmult_1_if' of module 'zed_block_mmult_1_if_0' requires 244 connections, but only 236 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5297]
-INFO: [Synth 8-6157] synthesizing module 'zed_clk_wiz_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'zed_clk_wiz_0_0' (48#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'zed_dm_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_dm_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_dm_0_0' (49#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_dm_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dm_0' of module 'zed_dm_0_0' requires 40 connections, but only 36 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5544]
-INFO: [Synth 8-6157] synthesizing module 'zed_dm_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_dm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_dm_1_0' (50#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_dm_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dm_1' of module 'zed_dm_1_0' requires 40 connections, but only 36 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5581]
-INFO: [Synth 8-6157] synthesizing module 'zed_dm_2_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_dm_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_dm_2_0' (51#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_dm_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dm_2' of module 'zed_dm_2_0' requires 43 connections, but only 39 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5618]
-INFO: [Synth 8-6157] synthesizing module 'zed_madd_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_madd_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_madd_1_0' (52#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_madd_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zed_madd_1_if_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_madd_1_if_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_madd_1_if_0' (53#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_madd_1_if_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'madd_1_if' of module 'zed_madd_1_if_0' requires 64 connections, but only 62 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5674]
-INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_0_0' (54#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'zed_proc_sys_reset_0_0' requires 10 connections, but only 7 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5737]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5745]
-INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_1_0' (55#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_1' of module 'zed_proc_sys_reset_1_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5745]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5751]
-INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_2_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_2_0' (56#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_2' of module 'zed_proc_sys_reset_2_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5751]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5757]
-INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_3_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_3_0' (57#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_3_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_3' of module 'zed_proc_sys_reset_3_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5757]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5763]
-INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_4_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_4_0' (58#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_4_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_4' of module 'zed_proc_sys_reset_4_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5763]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5769]
-INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_5_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_5_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_5_0' (59#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_5_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_5' of module 'zed_proc_sys_reset_5_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5769]
-INFO: [Synth 8-6157] synthesizing module 'zed_ps7_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_ps7_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zed_ps7_0' (60#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-15004-DESKTOP-6OLIA81/realtime/zed_ps7_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ps7' of module 'zed_ps7_0' requires 110 connections, but only 105 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5775]
+INFO: [Synth 8-6157] synthesizing module 'zed_clk_wiz_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'zed_clk_wiz_0_0' (46#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'zed_dm_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_dm_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_dm_0_0' (47#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_dm_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dm_0' of module 'zed_dm_0_0' requires 40 connections, but only 36 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5192]
+INFO: [Synth 8-6157] synthesizing module 'zed_dm_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_dm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_dm_1_0' (48#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_dm_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dm_1' of module 'zed_dm_1_0' requires 40 connections, but only 36 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5229]
+INFO: [Synth 8-6157] synthesizing module 'zed_dm_2_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_dm_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_dm_2_0' (49#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_dm_2_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dm_2' of module 'zed_dm_2_0' requires 43 connections, but only 39 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5266]
+INFO: [Synth 8-6157] synthesizing module 'zed_madd_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_madd_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_madd_1_0' (50#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_madd_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_madd_1_if_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_madd_1_if_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_madd_1_if_0' (51#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_madd_1_if_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'madd_1_if' of module 'zed_madd_1_if_0' requires 64 connections, but only 62 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5322]
+INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_0_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_0_0' (52#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'zed_proc_sys_reset_0_0' requires 10 connections, but only 7 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5385]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5393]
+INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_1_0' (53#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_1' of module 'zed_proc_sys_reset_1_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5393]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5399]
+INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_2_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_2_0' (54#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_2_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_2' of module 'zed_proc_sys_reset_2_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5399]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5405]
+INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_3_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_3_0' (55#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_3_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_3' of module 'zed_proc_sys_reset_3_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5405]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5411]
+INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_4_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_4_0' (56#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_4_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_4' of module 'zed_proc_sys_reset_4_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5411]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5417]
+INFO: [Synth 8-6157] synthesizing module 'zed_proc_sys_reset_5_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_proc_sys_reset_5_0' (57#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_proc_sys_reset_5_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_5' of module 'zed_proc_sys_reset_5_0' requires 10 connections, but only 5 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5417]
+INFO: [Synth 8-6157] synthesizing module 'zed_ps7_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_ps7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_ps7_0' (58#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_ps7_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ps7' of module 'zed_ps7_0' requires 110 connections, but only 105 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5423]
 INFO: [Synth 8-6157] synthesizing module 'zed_sds_irq_const_0' [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_sds_irq_const_0/synth/zed_sds_irq_const_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (60#1) [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'zed_sds_irq_const_0' (61#1) [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_sds_irq_const_0/synth/zed_sds_irq_const_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__parameterized0' (58#1) [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'zed_sds_irq_const_0' (59#1) [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_sds_irq_const_0/synth/zed_sds_irq_const_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'zed_vecmat_mmult_1_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_vecmat_mmult_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_vecmat_mmult_1_0' (60#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_vecmat_mmult_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zed_vecmat_mmult_1_if_0' [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_vecmat_mmult_1_if_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zed_vecmat_mmult_1_if_0' (61#1) [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/.Xil/Vivado-14868-DESKTOP-6OLIA81/realtime/zed_vecmat_mmult_1_if_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'vecmat_mmult_1_if' of module 'zed_vecmat_mmult_1_if_0' requires 244 connections, but only 236 given [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/synth/zed.v:5646]
 INFO: [Synth 8-6157] synthesizing module 'zed_xlconcat_0_0' [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_xlconcat_0_0/synth/zed_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -333,7 +333,7 @@ WARNING: [Synth 8-3331] design m03_couplers_imp_1AL9PDO has unconnected port S_A
 WARNING: [Synth 8-3331] design m03_couplers_imp_1AL9PDO has unconnected port S_AXI_araddr[22]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 826.359 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 824.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -346,10 +346,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 826.359 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 824.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 826.359 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 824.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -378,14 +378,14 @@ Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.
 Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_dm_1_0/zed_dm_1_0/zc702_dm_0_0_in_context.xdc] for cell 'zed_i/dm_1'
 Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_dm_2_0/zed_dm_2_0/zc702_dm_1_0_in_context.xdc] for cell 'zed_i/dm_2'
 Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_dm_2_0/zed_dm_2_0/zc702_dm_1_0_in_context.xdc] for cell 'zed_i/dm_2'
-Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_block_mmult_1_0/zed_block_mmult_1_0/zed_block_mmult_1_0_in_context.xdc] for cell 'zed_i/block_mmult_1'
-Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_block_mmult_1_0/zed_block_mmult_1_0/zed_block_mmult_1_0_in_context.xdc] for cell 'zed_i/block_mmult_1'
 Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_madd_1_0/zed_madd_1_0/zed_madd_1_0_in_context.xdc] for cell 'zed_i/madd_1'
 Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_madd_1_0/zed_madd_1_0/zed_madd_1_0_in_context.xdc] for cell 'zed_i/madd_1'
-Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_block_mmult_1_if_0/zed_block_mmult_1_if_0/zc702_mmult_accel2_if_0_in_context.xdc] for cell 'zed_i/block_mmult_1_if'
-Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_block_mmult_1_if_0/zed_block_mmult_1_if_0/zc702_mmult_accel2_if_0_in_context.xdc] for cell 'zed_i/block_mmult_1_if'
+Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_vecmat_mmult_1_0/zed_vecmat_mmult_1_0/zed_vecmat_mmult_1_0_in_context.xdc] for cell 'zed_i/vecmat_mmult_1'
+Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_vecmat_mmult_1_0/zed_vecmat_mmult_1_0/zed_vecmat_mmult_1_0_in_context.xdc] for cell 'zed_i/vecmat_mmult_1'
 Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_madd_1_if_0/zed_madd_1_if_0/zc702_mmult_accel_1_if_0_in_context.xdc] for cell 'zed_i/madd_1_if'
 Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_madd_1_if_0/zed_madd_1_if_0/zc702_mmult_accel_1_if_0_in_context.xdc] for cell 'zed_i/madd_1_if'
+Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_vecmat_mmult_1_if_0/zed_vecmat_mmult_1_if_0/zc702_mmult_accel2_if_0_in_context.xdc] for cell 'zed_i/vecmat_mmult_1_if'
+Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_vecmat_mmult_1_if_0/zed_vecmat_mmult_1_if_0/zc702_mmult_accel2_if_0_in_context.xdc] for cell 'zed_i/vecmat_mmult_1_if'
 Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_xbar_0/zed_xbar_0/zed_xbar_0_in_context.xdc] for cell 'zed_i/axi_ic_ps7_M_AXI_GP0/xbar'
 Finished Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_xbar_0/zed_xbar_0/zed_xbar_0_in_context.xdc] for cell 'zed_i/axi_ic_ps7_M_AXI_GP0/xbar'
 Parsing XDC File [c:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.srcs/sources_1/bd/zed/ip/zed_xbar_1/zed_xbar_1/zed_xbar_1_in_context.xdc] for cell 'zed_i/axi_ic_ps7_S_AXI_ACP/xbar'
@@ -446,21 +446,21 @@ Parsing XDC File [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.
 Finished Parsing XDC File [C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1138.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1134.203 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1138.363 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.773 . Memory (MB): peak = 1138.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1134.203 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.409 . Memory (MB): peak = 1134.203 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -738,10 +738,10 @@ Applied set_property DONT_TOUCH = true for zed_i/proc_sys_reset_5. (constraint f
 Applied set_property DONT_TOUCH = true for zed_i/dm_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/dm_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/dm_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for zed_i/block_mmult_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/madd_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for zed_i/block_mmult_1_if. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zed_i/vecmat_mmult_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/madd_1_if. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zed_i/vecmat_mmult_1_if. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/axi_ic_ps7_M_AXI_GP0/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/axi_ic_ps7_M_AXI_GP0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/axi_ic_ps7_S_AXI_ACP/xbar. (constraint file  auto generated constraint, line ).
@@ -775,10 +775,10 @@ Applied set_property DONT_TOUCH = true for zed_i/axi_ic_ps7_S_AXI_ACP/m00_couple
 Applied set_property DONT_TOUCH = true for zed_i/axi_ic_ps7_S_AXI_ACP/m00_couplers/m00_regslice. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for zed_i/axi_ic_ps7_S_AXI_ACP/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -814,7 +814,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -841,13 +841,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'zed_i/clk_wiz_0/clk_out6'
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'zed_i/clk_wiz_0/clk_in1' to 'zed_i/ps7/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 8 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:04 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -859,7 +859,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -883,7 +883,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -896,7 +896,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -908,25 +908,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -964,21 +964,21 @@ Report BlackBoxes:
 |26    |zed_axis_dwc_dm_0_tx_0_0 |         1|
 |27    |zed_axis_dwc_dm_1_tx_0_0 |         1|
 |28    |zed_axis_dwc_dm_2_rx_0_0 |         1|
-|29    |zed_block_mmult_1_0      |         1|
-|30    |zed_block_mmult_1_if_0   |         1|
-|31    |zed_clk_wiz_0_0          |         1|
-|32    |zed_dm_0_0               |         1|
-|33    |zed_dm_1_0               |         1|
-|34    |zed_dm_2_0               |         1|
-|35    |zed_madd_1_0             |         1|
-|36    |zed_madd_1_if_0          |         1|
-|37    |zed_proc_sys_reset_0_0   |         1|
-|38    |zed_proc_sys_reset_1_0   |         1|
-|39    |zed_proc_sys_reset_2_0   |         1|
-|40    |zed_proc_sys_reset_3_0   |         1|
-|41    |zed_proc_sys_reset_4_0   |         1|
-|42    |zed_proc_sys_reset_5_0   |         1|
-|43    |zed_ps7_0                |         1|
+|29    |zed_clk_wiz_0_0          |         1|
+|30    |zed_dm_0_0               |         1|
+|31    |zed_dm_1_0               |         1|
+|32    |zed_dm_2_0               |         1|
+|33    |zed_madd_1_0             |         1|
+|34    |zed_madd_1_if_0          |         1|
+|35    |zed_proc_sys_reset_0_0   |         1|
+|36    |zed_proc_sys_reset_1_0   |         1|
+|37    |zed_proc_sys_reset_2_0   |         1|
+|38    |zed_proc_sys_reset_3_0   |         1|
+|39    |zed_proc_sys_reset_4_0   |         1|
+|40    |zed_proc_sys_reset_5_0   |         1|
+|41    |zed_ps7_0                |         1|
+|42    |zed_vecmat_mmult_1_0     |         1|
+|43    |zed_vecmat_mmult_1_if_0  |         1|
 +------+-------------------------+----------+
 
 Report Cell Usage: 
@@ -993,39 +993,39 @@ Report Cell Usage:
 |6     |zed_axis_dwc_dm_0_tx_0_0 |     1|
 |7     |zed_axis_dwc_dm_1_tx_0_0 |     1|
 |8     |zed_axis_dwc_dm_2_rx_0_0 |     1|
-|9     |zed_block_mmult_1_0      |     1|
-|10    |zed_block_mmult_1_if_0   |     1|
-|11    |zed_clk_wiz_0_0          |     1|
-|12    |zed_dm_0_0               |     1|
-|13    |zed_dm_1_0               |     1|
-|14    |zed_dm_2_0               |     1|
-|15    |zed_m00_data_fifo_0      |     1|
-|16    |zed_m00_regslice_0       |     1|
-|17    |zed_m00_regslice_1       |     1|
-|18    |zed_m01_regslice_0       |     1|
-|19    |zed_m02_regslice_0       |     1|
-|20    |zed_m03_regslice_0       |     1|
-|21    |zed_m04_regslice_0       |     1|
-|22    |zed_madd_1_0             |     1|
-|23    |zed_madd_1_if_0          |     1|
-|24    |zed_proc_sys_reset_0_0   |     1|
-|25    |zed_proc_sys_reset_1_0   |     1|
-|26    |zed_proc_sys_reset_2_0   |     1|
-|27    |zed_proc_sys_reset_3_0   |     1|
-|28    |zed_proc_sys_reset_4_0   |     1|
-|29    |zed_proc_sys_reset_5_0   |     1|
-|30    |zed_ps7_0                |     1|
-|31    |zed_s00_data_fifo_0      |     1|
-|32    |zed_s00_regslice_0       |     1|
-|33    |zed_s00_regslice_1       |     1|
-|34    |zed_s01_regslice_0       |     1|
-|35    |zed_s02_regslice_0       |     1|
-|36    |zed_s03_data_fifo_0      |     1|
-|37    |zed_s03_regslice_0       |     1|
-|38    |zed_s04_data_fifo_0      |     1|
-|39    |zed_s04_regslice_0       |     1|
-|40    |zed_s05_data_fifo_0      |     1|
-|41    |zed_s05_regslice_0       |     1|
+|9     |zed_clk_wiz_0_0          |     1|
+|10    |zed_dm_0_0               |     1|
+|11    |zed_dm_1_0               |     1|
+|12    |zed_dm_2_0               |     1|
+|13    |zed_m00_data_fifo_0      |     1|
+|14    |zed_m00_regslice_0       |     1|
+|15    |zed_m00_regslice_1       |     1|
+|16    |zed_m01_regslice_0       |     1|
+|17    |zed_m02_regslice_0       |     1|
+|18    |zed_m03_regslice_0       |     1|
+|19    |zed_m04_regslice_0       |     1|
+|20    |zed_madd_1_0             |     1|
+|21    |zed_madd_1_if_0          |     1|
+|22    |zed_proc_sys_reset_0_0   |     1|
+|23    |zed_proc_sys_reset_1_0   |     1|
+|24    |zed_proc_sys_reset_2_0   |     1|
+|25    |zed_proc_sys_reset_3_0   |     1|
+|26    |zed_proc_sys_reset_4_0   |     1|
+|27    |zed_proc_sys_reset_5_0   |     1|
+|28    |zed_ps7_0                |     1|
+|29    |zed_s00_data_fifo_0      |     1|
+|30    |zed_s00_regslice_0       |     1|
+|31    |zed_s00_regslice_1       |     1|
+|32    |zed_s01_regslice_0       |     1|
+|33    |zed_s02_regslice_0       |     1|
+|34    |zed_s03_data_fifo_0      |     1|
+|35    |zed_s03_regslice_0       |     1|
+|36    |zed_s04_data_fifo_0      |     1|
+|37    |zed_s04_regslice_0       |     1|
+|38    |zed_s05_data_fifo_0      |     1|
+|39    |zed_s05_regslice_0       |     1|
+|40    |zed_vecmat_mmult_1_0     |     1|
+|41    |zed_vecmat_mmult_1_if_0  |     1|
 |42    |zed_xbar_0               |     1|
 |43    |zed_xbar_1               |     1|
 +------+-------------------------+------+
@@ -1056,27 +1056,27 @@ Report Instance Areas:
 |20    |    xlconcat_0           |zed_xlconcat_0_0           |     0|
 +------+-------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:08 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 1138.363 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 1138.363 ; gain = 312.004
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1134.207 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1134.207 ; gain = 309.465
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.172 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1145.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 163 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:17 . Memory (MB): peak = 1157.559 ; gain = 331.199
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1150.043 ; gain = 325.301
 INFO: [Common 17-600] The following parameters have non-default value.
 general.maxThreads
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1157.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1150.043 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.runs/synth_1/zed_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file zed_wrapper_utilization_synth.rpt -pb zed_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 14 11:47:05 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 14 22:09:17 2019...

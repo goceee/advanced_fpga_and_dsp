@@ -260,14 +260,9 @@
 /******************************************************************/
 
 
-/* Definitions for peripheral BLOCK_MMULT_1_IF */
-#define XPAR_BLOCK_MMULT_1_IF_BASEADDR 0x43C00000
-#define XPAR_BLOCK_MMULT_1_IF_HIGHADDR 0x43C0FFFF
-
-
 /* Definitions for peripheral MADD_1_IF */
-#define XPAR_MADD_1_IF_BASEADDR 0x43C10000
-#define XPAR_MADD_1_IF_HIGHADDR 0x43C1FFFF
+#define XPAR_MADD_1_IF_BASEADDR 0x43C00000
+#define XPAR_MADD_1_IF_HIGHADDR 0x43C0FFFF
 
 
 /* Definitions for peripheral PS7_AFI_0 */
@@ -360,6 +355,11 @@
 /* Definitions for peripheral PS7_SLCR_0 */
 #define XPAR_PS7_SLCR_0_S_AXI_BASEADDR 0xF8000000
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
+
+
+/* Definitions for peripheral VECMAT_MMULT_1_IF */
+#define XPAR_VECMAT_MMULT_1_IF_BASEADDR 0x00000000
+#define XPAR_VECMAT_MMULT_1_IF_HIGHADDR 0xFFFFFFFF
 
 
 /******************************************************************/

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1552564034">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1552601362">
   <File Type="BITSTR-BMM" Name="zed_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="zed_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="zed_wrapper_timing_summary_init.rpt"/>
@@ -195,5 +195,5 @@
     <Step Id="post_route_phys_opt_design" PostStepTclHook="$PPRDIR/../scripts/_full_post_route_phys_opt_post.tcl"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="zed_block_mmult_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zed_vecmat_mmult_1_0"/>
 </GenRun>

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu Mar 14 12:07:12 2019
+| Date             : Thu Mar 14 22:20:43 2019
 | Host             : DESKTOP-6OLIA81 running 64-bit major release  (build 9200)
 | Command          : report_power -file zed_wrapper_power_routed.rpt -pb zed_wrapper_power_summary_routed.pb -rpx zed_wrapper_power_routed.rpx
 | Design           : zed_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.492        |
+| Total On-Chip Power (W)  | 2.413        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.314        |
-| Device Static (W)        | 0.177        |
+| Dynamic (W)              | 2.239        |
+| Device Static (W)        | 0.174        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 56.3         |
-| Junction Temperature (C) | 53.7         |
+| Max Ambient (C)          | 57.2         |
+| Junction Temperature (C) | 52.8         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.103 |        6 |       --- |             --- |
-| Slice Logic              |     0.100 |    66612 |       --- |             --- |
-|   LUT as Logic           |     0.090 |    21369 |     53200 |           40.17 |
-|   Register               |     0.007 |    31176 |    106400 |           29.30 |
+| Clocks                   |     0.102 |        6 |       --- |             --- |
+| Slice Logic              |     0.087 |    66633 |       --- |             --- |
+|   LUT as Logic           |     0.078 |    21401 |     53200 |           40.23 |
+|   Register               |     0.005 |    31186 |    106400 |           29.31 |
 |   CARRY4                 |     0.003 |     1162 |     13300 |            8.74 |
 |   LUT as Distributed RAM |    <0.001 |      738 |     17400 |            4.24 |
 |   F7/F8 Muxes            |    <0.001 |      536 |     53200 |            1.01 |
 |   LUT as Shift Register  |    <0.001 |      307 |     17400 |            1.76 |
 |   Others                 |     0.000 |     5052 |       --- |             --- |
-| Signals                  |     0.193 |    55747 |       --- |             --- |
-| Block RAM                |     0.170 |       85 |       140 |           60.71 |
+| Signals                  |     0.162 |    55761 |       --- |             --- |
+| Block RAM                |     0.141 |       85 |       140 |           60.71 |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
-| DSPs                     |     0.111 |      162 |       220 |           73.64 |
+| DSPs                     |     0.109 |      162 |       220 |           73.64 |
 | PS7                      |     1.531 |        1 |       --- |             --- |
-| Static Power             |     0.177 |          |           |                 |
-| Total                    |     2.492 |          |           |                 |
+| Static Power             |     0.174 |          |           |                 |
+| Total                    |     2.413 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.692 |       0.666 |      0.026 |
-| Vccaux    |       1.800 |     0.077 |       0.059 |      0.019 |
+| Vccint    |       1.000 |     0.617 |       0.592 |      0.025 |
+| Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -86,11 +86,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.021 |       0.012 |      0.009 |
+| Vccbram   |       1.000 |     0.018 |       0.010 |      0.008 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.761 |       0.720 |      0.041 |
+| Vccpint   |       1.000 |     0.760 |       0.720 |      0.040 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
@@ -156,8 +156,8 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| zed_wrapper              |     2.314 |
-|   zed_i                  |     2.314 |
+| zed_wrapper              |     2.239 |
+|   zed_i                  |     2.239 |
 |     axi_ic_ps7_M_AXI_GP0 |     0.008 |
 |       s00_couplers       |     0.005 |
 |     axi_ic_ps7_S_AXI_ACP |     0.052 |
@@ -169,14 +169,10 @@ Table of Contents
 |       s04_couplers       |     0.003 |
 |       s05_couplers       |     0.002 |
 |       xbar               |     0.004 |
-|     block_mmult_1        |     0.581 |
-|       inst               |     0.581 |
-|     block_mmult_1_if     |     0.005 |
-|       inst               |     0.005 |
 |     clk_wiz_0            |     0.107 |
 |       inst               |     0.107 |
-|     dm_0                 |     0.004 |
-|       U0                 |     0.004 |
+|     dm_0                 |     0.005 |
+|       U0                 |     0.005 |
 |     dm_1                 |     0.005 |
 |       U0                 |     0.005 |
 |     dm_2                 |     0.007 |
@@ -187,6 +183,10 @@ Table of Contents
 |       inst               |     0.009 |
 |     ps7                  |     1.532 |
 |       inst               |     1.532 |
+|     vecmat_mmult_1       |     0.504 |
+|       inst               |     0.504 |
+|     vecmat_mmult_1_if    |     0.005 |
+|       inst               |     0.005 |
 +--------------------------+-----------+
 
 

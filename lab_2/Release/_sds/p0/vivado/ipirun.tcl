@@ -136,7 +136,7 @@ set config_info [dict create \
   generate_script_only      false \
   run_script_map_file      "" \
   clbinary_name            "" \
-  kernels                  "block_mmult madd adapter" \
+  kernels                  "madd vecmat_mmult adapter" \
   steps_log                 $steps_log \
   num_jobs                  2 \
   lsf_string               {} \

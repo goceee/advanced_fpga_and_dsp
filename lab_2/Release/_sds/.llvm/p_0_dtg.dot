@@ -2,29 +2,29 @@ digraph dm_graph {
 v0 [label = "v0:mmult_test" ,style=filled];
 v1 [label = "v1:XFER(IN)\nA @138\nARRAY\n" ,style=filled,fillcolor = green];
 v2 [label = "v2:XFER(IN)\nB @138\nARRAY\n" ,style=filled,fillcolor = green];
-v3 [label = "v3:call 'block_mmult' in 'main.cpp' @138 (async_id:-1) (resource id:-1)\n" ,style=filled,fillcolor = red];
+v3 [label = "v3:call 'vecmat_mmult' in 'main.cpp' @138 (async_id:-1) (resource id:-1)\n" ,style=filled,fillcolor = red];
 v4 [label = "v4:XFER(OUT)\nC @138\nARRAY\n" ,style=filled,fillcolor = yellow];
 v5 [label = "v5:cf_wait(): \nXFER(OUT)\nC @138\nARRAY\n\n" ,style=filled,fillcolor = cyan];
-v6 [label = "v6:XFER(IN)\nA @140\nARRAY\n" ,style=filled,fillcolor = green];
-v7 [label = "v7:XFER(IN)\nB @140\nARRAY\n" ,style=filled,fillcolor = green];
-v8 [label = "v8:call 'madd' in 'main.cpp' @140 (async_id:-1) (resource id:-1)\n" ,style=filled,fillcolor = red];
-v9 [label = "v9:XFER(OUT)\nC @140\nARRAY\n" ,style=filled,fillcolor = yellow];
-v10 [label = "v10:cf_wait(): \nXFER(OUT)\nC @140\nARRAY\nXFER(IN)\nA @140\nARRAY\nXFER(IN)\nA @138\nARRAY\nXFER(IN)\nB @140\nARRAY\nXFER(IN)\nB @138\nARRAY\n\n" ,style=filled,fillcolor = cyan];
+v6 [label = "v6:XFER(IN)\nA @139\nARRAY\n" ,style=filled,fillcolor = green];
+v7 [label = "v7:XFER(IN)\nB @139\nARRAY\n" ,style=filled,fillcolor = green];
+v8 [label = "v8:call 'madd' in 'main.cpp' @139 (async_id:-1) (resource id:-1)\n" ,style=filled,fillcolor = red];
+v9 [label = "v9:XFER(OUT)\nC @139\nARRAY\n" ,style=filled,fillcolor = yellow];
+v10 [label = "v10:cf_wait(): \nXFER(IN)\nB @139\nARRAY\nXFER(IN)\nA @138\nARRAY\nXFER(IN)\nB @138\nARRAY\nXFER(IN)\nA @139\nARRAY\nXFER(OUT)\nC @139\nARRAY\n\n" ,style=filled,fillcolor = cyan];
 subgraph cluster0 {
-v1;
-v2;
-v3;
-v4;
-v5;
-label = "call 'block_mmult' in 'main.cpp' @138 (async_id:-1) (resource id:-1)\n";
-}
-subgraph cluster1 {
 v6;
 v7;
 v8;
 v9;
 v10;
-label = "call 'madd' in 'main.cpp' @140 (async_id:-1) (resource id:-1)\n";
+label = "call 'madd' in 'main.cpp' @139 (async_id:-1) (resource id:-1)\n";
+}
+subgraph cluster1 {
+v1;
+v2;
+v3;
+v4;
+v5;
+label = "call 'vecmat_mmult' in 'main.cpp' @138 (async_id:-1) (resource id:-1)\n";
 }
 v1 -> v3 [label = "RAW/0"];
 v2 -> v3 [label = "RAW/0"];

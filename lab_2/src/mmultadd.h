@@ -64,7 +64,8 @@ void mmult(float A[N * N], float B[N * N], float C[N * N]);
  * instead, whereby data is read from a shared region.
  */
 #pragma SDS data zero_copy(A[0:N * N], B[0:N * N], C[0:N * N])
-void block_mmult(float A[N * N], float B[N * N], float C[N * N]);
+#pragma SDS data access_pattern(A:SEQUENTIAL, B:SEQUENTIAL, C:SEQUENTIAL)
+void vecmat_mmult(float A[N * N], float B[N * N], float C[N * N]);
 
 #endif /* _MMULTADD_H_ */
 

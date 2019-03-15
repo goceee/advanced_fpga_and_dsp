@@ -510,3 +510,128 @@ cmd: C:/Xilinx/Vivado/2018.3/bin/vivado -mode batch -notrace -source C:/Users/Na
    File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:540
    timestamp: 14 March 2019 12:09:21
 status: success
+------------------------------------------
+VPL internal step: generating ipirun.tcl for vivado
+timestamp: 14 Mar 2019 21:51:00
+------------------------------------------
+step: running vivado to generate bitstream
+timestamp: 14 Mar 2019 21:51:00
+launch dir: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado
+cmd: C:/Xilinx/Vivado/2018.3/bin/vivado -mode batch -notrace -source C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/ipirun.tcl -messageDb C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/vivado.pb
+   -----------------------
+   VPL internal step: creating sdx tcl hooks for implementation run
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1705
+   timestamp: 14 March 2019 21:51:06
+   -----------------------
+   VPL internal step: source .local/dsa/prj/rebuild.tcl to create prj project
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:229
+   timestamp: 14 March 2019 21:51:06
+   -----------------------
+   VPL internal step: update_ip_catalog
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1087
+   timestamp: 14 March 2019 21:51:15
+   -----------------------
+   VPL internal step: config_ip_cache -use_cache_location C:/Users/Naimu/workspace/ip_cache
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1097
+   timestamp: 14 March 2019 21:51:24
+   -----------------------
+   VPL internal step: open_bd_design -auto_upgrade [get_files zed.bd]
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:873
+   timestamp: 14 March 2019 21:51:24
+   -----------------------
+   VPL internal step: source .local/top.bd.tcl
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:890
+   timestamp: 14 March 2019 21:51:26
+   -----------------------
+   VPL internal step: save_bd_design
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:893
+   timestamp: 14 March 2019 21:55:17
+   -----------------------
+   VPL internal step: inserting profiling and debug cores
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:660
+   timestamp: 14 March 2019 21:55:36
+   -----------------------
+   VPL internal step: assign_bd_address
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:666
+   timestamp: 14 March 2019 21:55:36
+   -----------------------
+   VPL internal step: bd::util_cmd set_bd_source SDSoC [current_bd_design]
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:677
+   timestamp: 14 March 2019 21:55:40
+   -----------------------
+   VPL internal step: save_bd_design
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:683
+   timestamp: 14 March 2019 21:55:40
+   -----------------------
+   VPL internal step: writing address_map.xml
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:690
+   timestamp: 14 March 2019 21:55:43
+   -----------------------
+   VPL internal step: writing debug ip layout
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:695
+   timestamp: 14 March 2019 21:55:43
+   -----------------------
+   VPL internal step: generate_target all [get_files zed.bd]
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:709
+   timestamp: 14 March 2019 21:55:43
+   -----------------------
+   VPL internal step: config_ip_cache -export [get_ips -all -of_object [get_files zed.bd]]
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:976
+   timestamp: 14 March 2019 21:58:14
+   -----------------------
+   VPL internal step: write_hwdef -force -file output/system.hdf
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:717
+   timestamp: 14 March 2019 22:00:15
+   -----------------------
+   VPL internal step: add_files -norecurse [make_wrapper -top -files [get_files zed.bd]]
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:721
+   timestamp: 14 March 2019 22:00:18
+   -----------------------
+   VPL internal step: writing user synth clock constraints in output/zed_ooc_copy.xdc
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1133
+   timestamp: 14 March 2019 22:00:18
+   -----------------------
+   VPL internal step: add_files output/zed_ooc_copy.xdc -fileset [current_fileset -constrset]
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1137
+   timestamp: 14 March 2019 22:00:18
+   -----------------------
+   VPL internal step: source scripts/_vivado_report_commands.tcl
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:263
+   timestamp: 14 March 2019 22:00:18
+   -----------------------
+   VPL internal step: source scripts/_vivado_synth_props.tcl
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:271
+   timestamp: 14 March 2019 22:00:18
+   -----------------------
+   VPL internal step: source scripts/_vivado_impl_props.tcl
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:281
+   timestamp: 14 March 2019 22:00:24
+   -----------------------
+   VPL internal step: launch_runs synth_1 -jobs 2  
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:465
+   timestamp: 14 March 2019 22:00:25
+   -----------------------
+   VPL internal step: generating resource usage report 'output/resource.json'
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:2812
+   timestamp: 14 March 2019 22:09:19
+   -----------------------
+   VPL internal step: log_generated_reports for synthesis 'output/generated_reports.log'
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:485
+   timestamp: 14 March 2019 22:09:19
+   -----------------------
+   VPL internal step: launched run synth_1
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1365
+   timestamp: 14 March 2019 22:09:19
+   -----------------------
+   VPL internal step: launched run zed_vecmat_mmult_1_0_synth_1
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:1365
+   timestamp: 14 March 2019 22:09:19
+   -----------------------
+   VPL internal step: launch_runs impl_1 -to_step write_bitstream 
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:527
+   timestamp: 14 March 2019 22:09:19
+   -----------------------
+   VPL internal step: log_generated_reports for implementation 'output/generated_reports.log'
+   File: C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/.local/ocl_util.tcl:540
+   timestamp: 14 March 2019 22:21:54
+status: success

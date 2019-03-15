@@ -60,16 +60,16 @@ void p_0_madd_1_noasync(float A[1048576], float B[1048576], float C[1048576])
   cf_send_i(&(p_0_hwinst_madd_1.cmd_madd), start_seq, 1 * sizeof(int), &p_0_hwinst_madd_1_cmd);
   cf_wait(p_0_hwinst_madd_1_cmd);
 
-  cf_send_i(&(p_0_hwinst_madd_1.A), A, 4194304, &p_0_request_3);
-  cf_send_i(&(p_0_hwinst_madd_1.B), B, 4194304, &p_0_request_4);
+  cf_send_i(&(p_0_hwinst_madd_1.A), A, 4194304, &p_0_request_0);
+  cf_send_i(&(p_0_hwinst_madd_1.B), B, 4194304, &p_0_request_1);
 
-  cf_receive_i(&(p_0_hwinst_madd_1.C), C, 4194304, &p_0_madd_1_noasync_num_C, &p_0_request_5);
+  cf_receive_i(&(p_0_hwinst_madd_1.C), C, 4194304, &p_0_madd_1_noasync_num_C, &p_0_request_2);
 
   cf_wait(p_0_request_0);
   cf_wait(p_0_request_1);
+  cf_wait(p_0_request_2);
   cf_wait(p_0_request_3);
   cf_wait(p_0_request_4);
-  cf_wait(p_0_request_5);
 }
 
 

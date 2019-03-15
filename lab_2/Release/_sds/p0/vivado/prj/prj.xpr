@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="C:/Users/Naimu/workspace/lab_2/Release/_sds/p0/vivado/prj/prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="2e98015652f844c6bb0814c83eb7afd6"/>
+    <Option Name="Id" Val="dda907bfa1ee47d89ae8c053d6aa7b77"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -77,8 +77,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_block_mmult_1_0/zed_block_mmult_1_0.xci">
-          <Proxy FileSetName="zed_block_mmult_1_0"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_vecmat_mmult_1_0/zed_vecmat_mmult_1_0.xci">
+          <Proxy FileSetName="zed_vecmat_mmult_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/zed_wrapper.v">
@@ -197,9 +197,9 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="zed_block_mmult_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zed_block_mmult_1_0">
+    <FileSet Name="zed_vecmat_mmult_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/zed_vecmat_mmult_1_0">
       <Config>
-        <Option Name="TopModule" Val="zed_block_mmult_1_0"/>
+        <Option Name="TopModule" Val="zed_vecmat_mmult_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -242,7 +242,7 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="zed_block_mmult_1_0_synth_1" Type="Ft3:Synth" SrcSet="zed_block_mmult_1_0" Part="xc7z020clg484-1" ConstrsSet="zed_block_mmult_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zed_block_mmult_1_0_synth_1" IncludeInArchive="true">
+    <Run Id="zed_vecmat_mmult_1_0_synth_1" Type="Ft3:Synth" SrcSet="zed_vecmat_mmult_1_0" Part="xc7z020clg484-1" ConstrsSet="zed_vecmat_mmult_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/zed_vecmat_mmult_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -258,10 +258,10 @@
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>
         </StratHandle>
-        <Step Id="init_design" PostStepTclHook="$PPRDIR/../scripts/_full_init_post.tcl" PreStepTclHook="$PPRDIR/../scripts/_full_init_pre.tcl"/>
+        <Step Id="init_design" PreStepTclHook="$PPRDIR/../scripts/_full_init_pre.tcl" PostStepTclHook="$PPRDIR/../scripts/_full_init_post.tcl"/>
         <Step Id="opt_design" PostStepTclHook="$PPRDIR/../scripts/_full_opt_post.tcl" PreStepTclHook="$PPRDIR/../scripts/_full_opt_pre.tcl"/>
         <Step Id="power_opt_design"/>
-        <Step Id="place_design" PostStepTclHook="$PPRDIR/../scripts/_full_place_post.tcl" PreStepTclHook="$PPRDIR/../scripts/_full_place_pre.tcl"/>
+        <Step Id="place_design" PreStepTclHook="$PPRDIR/../scripts/_full_place_pre.tcl" PostStepTclHook="$PPRDIR/../scripts/_full_place_post.tcl"/>
         <Step Id="post_place_power_opt_design"/>
         <Step Id="phys_opt_design"/>
         <Step Id="route_design" PostStepTclHook="$PPRDIR/../scripts/_full_route_post.tcl"/>
@@ -378,7 +378,7 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="zed_block_mmult_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="zed_block_mmult_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="zed_block_mmult_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="zed_vecmat_mmult_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="zed_vecmat_mmult_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="zed_vecmat_mmult_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
           <Desc>Default settings for Implementation.</Desc>

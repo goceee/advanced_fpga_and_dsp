@@ -19,19 +19,19 @@ sysport_info_t _sds_sysportp_0_ps7_S_AXI_ACP = {
   .cmd_type = sysport_commands_type_no_action,
 };
 
-accel_info_t _sds_p_0_block_mmult_1 = {
+accel_info_t _sds_p_0_madd_1 = {
   .device_id = 3,
   .phys_base_addr = 0x43c00000,
   .addr_range = 0x10000,
-  .func_name = "block_mmult_1",
+  .func_name = "madd_1",
   .ip_type = "axis_acc_adapter",
 };
 
-accel_info_t _sds_p_0_madd_1 = {
+accel_info_t _sds_p_0_vecmat_mmult_1 = {
   .device_id = 4,
   .phys_base_addr = 0x43c10000,
   .addr_range = 0x10000,
-  .func_name = "madd_1",
+  .func_name = "vecmat_mmult_1",
   .ip_type = "axis_acc_adapter",
 };
 
@@ -68,60 +68,10 @@ axi_dma_simple_info_t p_0_dm_2 = {
   .data_width = 64,
 };
 
-int p_0_hwinst_block_mmult_1_cmd_block_mmult_sg_list[] = {0x8};
-
-axi_lite_info_t p_0_hwinst_block_mmult_1_cmd_block_mmult_info = {
-  .phys_base_addr = 0x43c00000,
-  .data_reg_offset = p_0_hwinst_block_mmult_1_cmd_block_mmult_sg_list,
-  .data_reg_sg_size = 1,
-  .write_status_reg_offset = 0x0,
-  .read_status_reg_offset = 0x0,
-  .config = XLNK_AXI_LITE_SG |
-    XLNK_AXI_LITE_STAT_REG_READ(XLNK_AXI_LITE_STAT_REG_NOCHECK) |
-    XLNK_AXI_LITE_STAT_REG_WRITE(XLNK_AXI_LITE_STAT_REG_NOCHECK),
-  .acc_info = &_sds_p_0_block_mmult_1,
-};
-
-zero_copy_info_t p_0_hwinst_block_mmult_1_A_offset_info = {
-  .phys_base_addr = 0x43c00000,
-  .data_reg_offset = 0xc,
-  .status_reg_offset = 0x40c,
-  .config = XLNK_ZERO_COPY_KEYHOLE |
-    XLNK_ZERO_COPY_STAT_REG_WRITE(XLNK_ZERO_COPY_STAT_REG_QUEUING),
-  .data_sysport = &_sds_sysportp_0_ps7_S_AXI_ACP,
-  .dir = XLNK_BI_DIRECTIONAL,
-  .cache = 0,
-  .acc_info = &_sds_p_0_block_mmult_1,
-};
-
-zero_copy_info_t p_0_hwinst_block_mmult_1_B_offset_info = {
-  .phys_base_addr = 0x43c00000,
-  .data_reg_offset = 0x10,
-  .status_reg_offset = 0x410,
-  .config = XLNK_ZERO_COPY_KEYHOLE |
-    XLNK_ZERO_COPY_STAT_REG_WRITE(XLNK_ZERO_COPY_STAT_REG_QUEUING),
-  .data_sysport = &_sds_sysportp_0_ps7_S_AXI_ACP,
-  .dir = XLNK_BI_DIRECTIONAL,
-  .cache = 0,
-  .acc_info = &_sds_p_0_block_mmult_1,
-};
-
-zero_copy_info_t p_0_hwinst_block_mmult_1_C_offset_info = {
-  .phys_base_addr = 0x43c00000,
-  .data_reg_offset = 0x14,
-  .status_reg_offset = 0x414,
-  .config = XLNK_ZERO_COPY_KEYHOLE |
-    XLNK_ZERO_COPY_STAT_REG_WRITE(XLNK_ZERO_COPY_STAT_REG_QUEUING),
-  .data_sysport = &_sds_sysportp_0_ps7_S_AXI_ACP,
-  .dir = XLNK_BI_DIRECTIONAL,
-  .cache = 0,
-  .acc_info = &_sds_p_0_block_mmult_1,
-};
-
 int p_0_hwinst_madd_1_cmd_madd_sg_list[] = {0x8};
 
 axi_lite_info_t p_0_hwinst_madd_1_cmd_madd_info = {
-  .phys_base_addr = 0x43c10000,
+  .phys_base_addr = 0x43c00000,
   .data_reg_offset = p_0_hwinst_madd_1_cmd_madd_sg_list,
   .data_reg_sg_size = 1,
   .write_status_reg_offset = 0x0,
@@ -132,15 +82,54 @@ axi_lite_info_t p_0_hwinst_madd_1_cmd_madd_info = {
   .acc_info = &_sds_p_0_madd_1,
 };
 
-struct p_0_hwblk_block_mmult p_0_hwinst_block_mmult_1 = {
-  .cmd_block_mmult = { .base = { .channel_info = &p_0_hwinst_block_mmult_1_cmd_block_mmult_info}, 
-    .send_i = &axi_lite_send },
-  .A_offset = { .base = { .channel_info = &p_0_hwinst_block_mmult_1_A_offset_info}, 
-    .send_ref_i = &zero_copy_send_ref_i },
-  .B_offset = { .base = { .channel_info = &p_0_hwinst_block_mmult_1_B_offset_info}, 
-    .send_ref_i = &zero_copy_send_ref_i },
-  .C_offset = { .base = { .channel_info = &p_0_hwinst_block_mmult_1_C_offset_info}, 
-    .send_ref_i = &zero_copy_send_ref_i },
+int p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_sg_list[] = {0x8};
+
+axi_lite_info_t p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_info = {
+  .phys_base_addr = 0x43c10000,
+  .data_reg_offset = p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_sg_list,
+  .data_reg_sg_size = 1,
+  .write_status_reg_offset = 0x0,
+  .read_status_reg_offset = 0x0,
+  .config = XLNK_AXI_LITE_SG |
+    XLNK_AXI_LITE_STAT_REG_READ(XLNK_AXI_LITE_STAT_REG_NOCHECK) |
+    XLNK_AXI_LITE_STAT_REG_WRITE(XLNK_AXI_LITE_STAT_REG_NOCHECK),
+  .acc_info = &_sds_p_0_vecmat_mmult_1,
+};
+
+zero_copy_info_t p_0_hwinst_vecmat_mmult_1_A_offset_info = {
+  .phys_base_addr = 0x43c10000,
+  .data_reg_offset = 0xc,
+  .status_reg_offset = 0x40c,
+  .config = XLNK_ZERO_COPY_KEYHOLE |
+    XLNK_ZERO_COPY_STAT_REG_WRITE(XLNK_ZERO_COPY_STAT_REG_QUEUING),
+  .data_sysport = &_sds_sysportp_0_ps7_S_AXI_ACP,
+  .dir = XLNK_BI_DIRECTIONAL,
+  .cache = 0,
+  .acc_info = &_sds_p_0_vecmat_mmult_1,
+};
+
+zero_copy_info_t p_0_hwinst_vecmat_mmult_1_B_offset_info = {
+  .phys_base_addr = 0x43c10000,
+  .data_reg_offset = 0x10,
+  .status_reg_offset = 0x410,
+  .config = XLNK_ZERO_COPY_KEYHOLE |
+    XLNK_ZERO_COPY_STAT_REG_WRITE(XLNK_ZERO_COPY_STAT_REG_QUEUING),
+  .data_sysport = &_sds_sysportp_0_ps7_S_AXI_ACP,
+  .dir = XLNK_BI_DIRECTIONAL,
+  .cache = 0,
+  .acc_info = &_sds_p_0_vecmat_mmult_1,
+};
+
+zero_copy_info_t p_0_hwinst_vecmat_mmult_1_C_offset_info = {
+  .phys_base_addr = 0x43c10000,
+  .data_reg_offset = 0x14,
+  .status_reg_offset = 0x414,
+  .config = XLNK_ZERO_COPY_KEYHOLE |
+    XLNK_ZERO_COPY_STAT_REG_WRITE(XLNK_ZERO_COPY_STAT_REG_QUEUING),
+  .data_sysport = &_sds_sysportp_0_ps7_S_AXI_ACP,
+  .dir = XLNK_BI_DIRECTIONAL,
+  .cache = 0,
+  .acc_info = &_sds_p_0_vecmat_mmult_1,
 };
 
 struct p_0_hwblk_madd p_0_hwinst_madd_1 = {
@@ -155,6 +144,17 @@ struct p_0_hwblk_madd p_0_hwinst_madd_1 = {
     .receive_i = &axi_dma_simple_recv_i },
 };
 
+struct p_0_hwblk_vecmat_mmult p_0_hwinst_vecmat_mmult_1 = {
+  .cmd_vecmat_mmult = { .base = { .channel_info = &p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_info}, 
+    .send_i = &axi_lite_send },
+  .A_offset = { .base = { .channel_info = &p_0_hwinst_vecmat_mmult_1_A_offset_info}, 
+    .send_ref_i = &zero_copy_send_ref_i },
+  .B_offset = { .base = { .channel_info = &p_0_hwinst_vecmat_mmult_1_B_offset_info}, 
+    .send_ref_i = &zero_copy_send_ref_i },
+  .C_offset = { .base = { .channel_info = &p_0_hwinst_vecmat_mmult_1_C_offset_info}, 
+    .send_ref_i = &zero_copy_send_ref_i },
+};
+
 extern void pfm_hook_init(void);
 extern void pfm_hook_shutdown(void);
 void p_0_init_pl(void)
@@ -163,37 +163,37 @@ void p_0_init_pl(void)
   axi_dma_simple_open(&p_0_dm_0);
   axi_dma_simple_open(&p_0_dm_1);
   axi_dma_simple_open(&p_0_dm_2);
-  axi_lite_open(&p_0_hwinst_block_mmult_1_cmd_block_mmult_info);
-  zero_copy_open(&p_0_hwinst_block_mmult_1_A_offset_info);
-  zero_copy_open(&p_0_hwinst_block_mmult_1_B_offset_info);
-  zero_copy_open(&p_0_hwinst_block_mmult_1_C_offset_info);
   axi_lite_open(&p_0_hwinst_madd_1_cmd_madd_info);
-  _sds_p_0_block_mmult_1.arg_dm_id[0] = p_0_hwinst_block_mmult_1_cmd_block_mmult_info.dm_id;
-  _sds_p_0_block_mmult_1.arg_dm_id[1] = p_0_hwinst_block_mmult_1_A_offset_info.dm_id;
-  _sds_p_0_block_mmult_1.arg_dm_id[2] = p_0_hwinst_block_mmult_1_B_offset_info.dm_id;
-  _sds_p_0_block_mmult_1.arg_dm_id[3] = p_0_hwinst_block_mmult_1_C_offset_info.dm_id;
-  _sds_p_0_block_mmult_1.arg_dm_id_count = 4;
-  accel_open(&_sds_p_0_block_mmult_1);
+  axi_lite_open(&p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_info);
+  zero_copy_open(&p_0_hwinst_vecmat_mmult_1_A_offset_info);
+  zero_copy_open(&p_0_hwinst_vecmat_mmult_1_B_offset_info);
+  zero_copy_open(&p_0_hwinst_vecmat_mmult_1_C_offset_info);
   _sds_p_0_madd_1.arg_dm_id[0] = p_0_hwinst_madd_1_cmd_madd_info.dm_id;
   _sds_p_0_madd_1.arg_dm_id[1] = p_0_dm_0.dm_id;
   _sds_p_0_madd_1.arg_dm_id[2] = p_0_dm_1.dm_id;
   _sds_p_0_madd_1.arg_dm_id[3] = p_0_dm_2.dm_id;
   _sds_p_0_madd_1.arg_dm_id_count = 4;
   accel_open(&_sds_p_0_madd_1);
+  _sds_p_0_vecmat_mmult_1.arg_dm_id[0] = p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_info.dm_id;
+  _sds_p_0_vecmat_mmult_1.arg_dm_id[1] = p_0_hwinst_vecmat_mmult_1_A_offset_info.dm_id;
+  _sds_p_0_vecmat_mmult_1.arg_dm_id[2] = p_0_hwinst_vecmat_mmult_1_B_offset_info.dm_id;
+  _sds_p_0_vecmat_mmult_1.arg_dm_id[3] = p_0_hwinst_vecmat_mmult_1_C_offset_info.dm_id;
+  _sds_p_0_vecmat_mmult_1.arg_dm_id_count = 4;
+  accel_open(&_sds_p_0_vecmat_mmult_1);
 }
 
 void p_0_shutdown_pl()
 {
-  accel_close(&_sds_p_0_block_mmult_1);
   accel_close(&_sds_p_0_madd_1);
+  accel_close(&_sds_p_0_vecmat_mmult_1);
   axi_dma_simple_close(&p_0_dm_0);
   axi_dma_simple_close(&p_0_dm_1);
   axi_dma_simple_close(&p_0_dm_2);
-  axi_lite_close(&p_0_hwinst_block_mmult_1_cmd_block_mmult_info);
-  zero_copy_close(&p_0_hwinst_block_mmult_1_A_offset_info);
-  zero_copy_close(&p_0_hwinst_block_mmult_1_B_offset_info);
-  zero_copy_close(&p_0_hwinst_block_mmult_1_C_offset_info);
   axi_lite_close(&p_0_hwinst_madd_1_cmd_madd_info);
+  axi_lite_close(&p_0_hwinst_vecmat_mmult_1_cmd_vecmat_mmult_info);
+  zero_copy_close(&p_0_hwinst_vecmat_mmult_1_A_offset_info);
+  zero_copy_close(&p_0_hwinst_vecmat_mmult_1_B_offset_info);
+  zero_copy_close(&p_0_hwinst_vecmat_mmult_1_C_offset_info);
   sysport_close(&_sds_sysportp_0_ps7_S_AXI_ACP);
 }
 

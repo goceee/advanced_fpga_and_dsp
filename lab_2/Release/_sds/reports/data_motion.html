@@ -33,7 +33,38 @@
 <th>Connection</th>
 </tr>
 <tr>
-<td>block_mmult_1</td>
+<td>madd_1</td>
+<td>A</td>
+<td>A</td>
+<td>IN</td>
+<td>1048576*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+<td></td>
+<td>B</td>
+<td>B</td>
+<td>IN</td>
+<td>1048576*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+<td></td>
+<td>C</td>
+<td>C</td>
+<td>OUT</td>
+<td>1048576*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+<tr>
+<td>vecmat_mmult_1</td>
 <td>A</td>
 <td>A_offset</td>
 <td>IN</td>
@@ -69,37 +100,6 @@
 </td>
 <td>ps7_S_AXI_ACP:AXIMM:0x14</td>
 </tr>
-<tr>
-<td>madd_1</td>
-<td>A</td>
-<td>A</td>
-<td>IN</td>
-<td>1048576*4</td>
-<td><ul>
-</ul>
-</td>
-<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
-</tr>
-<td></td>
-<td>B</td>
-<td>B</td>
-<td>IN</td>
-<td>1048576*4</td>
-<td><ul>
-</ul>
-</td>
-<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
-</tr>
-<td></td>
-<td>C</td>
-<td>C</td>
-<td>OUT</td>
-<td>1048576*4</td>
-<td><ul>
-</ul>
-</td>
-<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
-</tr>
 </table>
 
 <table>
@@ -114,7 +114,32 @@
 <th>Transfer Time(CPU cycles)</th>
 </tr>
 <tr>
-<td>block_mmult_1</td>
+<td>madd_1</td>
+<td>main.cpp:139:9</td>
+<td>A</td>
+<td>4194304</td>
+<td>contiguous</td>
+<td>1014</td>
+<td>6991662</td>
+</tr>
+<td></td>
+<td></td>
+<td>B</td>
+<td>4194304</td>
+<td>contiguous</td>
+<td>1014</td>
+<td>6991662</td>
+</tr>
+<td></td>
+<td></td>
+<td>C</td>
+<td>4194304</td>
+<td>contiguous</td>
+<td>1014</td>
+<td>6991662</td>
+</tr>
+<tr>
+<td>vecmat_mmult_1</td>
 <td>main.cpp:138:9</td>
 <td>A_offset</td>
 <td>(1024*1024) * 4</td>
@@ -138,53 +163,28 @@
 <td>412</td>
 <td>7001944</td>
 </tr>
-<tr>
-<td>madd_1</td>
-<td>main.cpp:140:9</td>
-<td>A</td>
-<td>4194304</td>
-<td>contiguous</td>
-<td>1014</td>
-<td>6991662</td>
-</tr>
-<td></td>
-<td></td>
-<td>B</td>
-<td>4194304</td>
-<td>contiguous</td>
-<td>1014</td>
-<td>6991662</td>
-</tr>
-<td></td>
-<td></td>
-<td>C</td>
-<td>4194304</td>
-<td>contiguous</td>
-<td>1014</td>
-<td>6991662</td>
-</tr>
 </table>
 </body>
 <dmn>
-	<accel name="block_mmult_1">
-		<arg name="A" ipPort="A_offset" direction="IN" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
-		<arg name="B" ipPort="B_offset" direction="IN" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
-		<arg name="C" ipPort="C_offset" direction="OUT" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
-	</accel>
 	<accel name="madd_1">
 		<arg name="A" ipPort="A" direction="IN" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SIMPLE"\>
 		<arg name="B" ipPort="B" direction="IN" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SIMPLE"\>
 		<arg name="C" ipPort="C" direction="OUT" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SIMPLE"\>
 	</accel>
-	<call accel="block_mmult_1" site="main.cpp:138:9">
-		<arg ipPort="A_offset" size="(1024*1024) * 4" memType="contiguous" setup="412" transfer="7001944"/>
-		<arg ipPort="B_offset" size="(1024*1024) * 4" memType="contiguous" setup="412" transfer="7001944"/>
-		<arg ipPort="C_offset" size="(1024*1024) * 4" memType="contiguous" setup="412" transfer="7001944"/>
-	</call>
-	<call accel="madd_1" site="main.cpp:140:9">
+	<accel name="vecmat_mmult_1">
+		<arg name="A" ipPort="A_offset" direction="IN" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
+		<arg name="B" ipPort="B_offset" direction="IN" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
+		<arg name="C" ipPort="C_offset" direction="OUT" size="1048576*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIMM"\>
+	</accel>
+	<call accel="madd_1" site="main.cpp:139:9">
 		<arg ipPort="A" size="4194304" memType="contiguous" setup="1014" transfer="6991662"/>
 		<arg ipPort="B" size="4194304" memType="contiguous" setup="1014" transfer="6991662"/>
 		<arg ipPort="C" size="4194304" memType="contiguous" setup="1014" transfer="6991662"/>
+	</call>
+	<call accel="vecmat_mmult_1" site="main.cpp:138:9">
+		<arg ipPort="A_offset" size="(1024*1024) * 4" memType="contiguous" setup="412" transfer="7001944"/>
+		<arg ipPort="B_offset" size="(1024*1024) * 4" memType="contiguous" setup="412" transfer="7001944"/>
+		<arg ipPort="C_offset" size="(1024*1024) * 4" memType="contiguous" setup="412" transfer="7001944"/>
 	</call>
 </dmn>
 </html>

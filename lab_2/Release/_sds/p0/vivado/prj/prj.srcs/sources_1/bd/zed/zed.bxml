@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="zed" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1552562924"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1552562924"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1552562924"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1552562924"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1552600693"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1552600693"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1552600693"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1552600693"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\zed.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -114,14 +114,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\zed_block_mmult_1_0\zed_block_mmult_1_0.xci" Type="IP">
-        <Instance HierarchyPath="block_mmult_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\zed_madd_1_0\zed_madd_1_0.xci" Type="IP">
         <Instance HierarchyPath="madd_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -130,8 +122,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\zed_block_mmult_1_if_0\zed_block_mmult_1_if_0.xci" Type="IP">
-        <Instance HierarchyPath="block_mmult_1_if"/>
+      <File Name="ip\zed_vecmat_mmult_1_0\zed_vecmat_mmult_1_0.xci" Type="IP">
+        <Instance HierarchyPath="vecmat_mmult_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -140,6 +132,14 @@
       </File>
       <File Name="ip\zed_madd_1_if_0\zed_madd_1_if_0.xci" Type="IP">
         <Instance HierarchyPath="madd_1_if"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\zed_vecmat_mmult_1_if_0\zed_vecmat_mmult_1_if_0.xci" Type="IP">
+        <Instance HierarchyPath="vecmat_mmult_1_if"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

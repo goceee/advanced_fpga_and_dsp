@@ -4,10 +4,10 @@
   <TR ALIGN='CENTER' BGCOLOR='#A7BFDE'><TD COLSPAN='4'><B>software_version_and_target_device</B></TD></TR>
 <TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>beta</B></TD><TD>FALSE</TD>
   <TD BGCOLOR='#DBE5F1'><B>build_version</B></TD><TD>2405991</TD>
-</TR><TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>date_generated</B></TD><TD>Thu Mar 14 12:09:05 2019</TD>
+</TR><TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>date_generated</B></TD><TD>Thu Mar 14 22:21:43 2019</TD>
   <TD BGCOLOR='#DBE5F1'><B>os_platform</B></TD><TD>WIN64</TD>
 </TR><TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>product_version</B></TD><TD>Vivado v2018.3 (64-bit)</TD>
-  <TD BGCOLOR='#DBE5F1'><B>project_id</B></TD><TD>2e98015652f844c6bb0814c83eb7afd6</TD>
+  <TD BGCOLOR='#DBE5F1'><B>project_id</B></TD><TD>dda907bfa1ee47d89ae8c053d6aa7b77</TD>
 </TR><TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>project_iteration</B></TD><TD>1</TD>
   <TD BGCOLOR='#DBE5F1'><B>random_id</B></TD><TD>5bb779e1e359516dbf7b67ff9b386eb6</TD>
 </TR><TR ALIGN='LEFT'>  <TD BGCOLOR='#DBE5F1'><B>registration_id</B></TD><TD>211681794_0_0_920</TD>
@@ -76,15 +76,15 @@
     <TD>dsp48e1=162</TD>
 </TR><TR ALIGN='LEFT'>    <TD>fdce=327</TD>
     <TD>fdpe=263</TD>
-    <TD>fdre=33448</TD>
+    <TD>fdre=33458</TD>
     <TD>fdse=417</TD>
 </TR><TR ALIGN='LEFT'>    <TD>gnd=3309</TD>
-    <TD>lut1=833</TD>
-    <TD>lut2=3085</TD>
-    <TD>lut3=9648</TD>
-</TR><TR ALIGN='LEFT'>    <TD>lut4=4316</TD>
-    <TD>lut5=4770</TD>
-    <TD>lut6=6441</TD>
+    <TD>lut1=834</TD>
+    <TD>lut2=3089</TD>
+    <TD>lut3=9650</TD>
+</TR><TR ALIGN='LEFT'>    <TD>lut4=4320</TD>
+    <TD>lut5=4763</TD>
+    <TD>lut6=6448</TD>
     <TD>mmcme2_adv=1</TD>
 </TR><TR ALIGN='LEFT'>    <TD>muxf7=409</TD>
     <TD>muxf8=129</TD>
@@ -108,16 +108,16 @@
     <TD>dsp48e1=162</TD>
 </TR><TR ALIGN='LEFT'>    <TD>fdce=327</TD>
     <TD>fdpe=263</TD>
-    <TD>fdre=33448</TD>
+    <TD>fdre=33458</TD>
     <TD>fdse=417</TD>
 </TR><TR ALIGN='LEFT'>    <TD>gnd=3309</TD>
     <TD>ibuf=1</TD>
-    <TD>lut1=833</TD>
-    <TD>lut2=3085</TD>
-</TR><TR ALIGN='LEFT'>    <TD>lut3=9648</TD>
-    <TD>lut4=4316</TD>
-    <TD>lut5=4770</TD>
-    <TD>lut6=6441</TD>
+    <TD>lut1=834</TD>
+    <TD>lut2=3089</TD>
+</TR><TR ALIGN='LEFT'>    <TD>lut3=9650</TD>
+    <TD>lut4=4320</TD>
+    <TD>lut5=4763</TD>
+    <TD>lut6=6448</TD>
 </TR><TR ALIGN='LEFT'>    <TD>mmcme2_adv=1</TD>
     <TD>muxf7=409</TD>
     <TD>muxf8=129</TD>
@@ -153,7 +153,7 @@
     <TD>flow_state=default</TD>
 </TR><TR ALIGN='LEFT'>    <TD>slice_registers_augmented=0</TD>
     <TD>slice_registers_newly_gated=0</TD>
-    <TD>slice_registers_total=31176</TD>
+    <TD>slice_registers_total=31186</TD>
     <TD>srls_augmented=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>srls_newly_gated=0</TD>
     <TD>srls_total=474</TD>
@@ -187,7 +187,22 @@
    </TD></TR>
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
-    <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>a0_block_mmult/1</B></TD></TR>
+    <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>a1_madd/1</B></TD></TR>
+<TR ALIGN='LEFT'>    <TD>core_container=NA</TD>
+    <TD>iptotal=1</TD>
+    <TD>x_ipcorerevision=1903140941</TD>
+    <TD>x_iplanguage=VERILOG</TD>
+</TR><TR ALIGN='LEFT'>    <TD>x_iplibrary=hls</TD>
+    <TD>x_ipname=madd</TD>
+    <TD>x_ipproduct=Vivado 2018.3</TD>
+    <TD>x_ipsimlanguage=MIXED</TD>
+</TR><TR ALIGN='LEFT'>    <TD>x_ipvendor=xilinx.com</TD>
+    <TD>x_ipversion=1.0</TD>
+</TR>   </TABLE>
+   </TD></TR>
+   <TR><TD>
+   <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
+    <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>a2_vecmat_mmult/1</B></TD></TR>
 <TR ALIGN='LEFT'>    <TD>c_m_axi_a_addr_width=32</TD>
     <TD>c_m_axi_a_aruser_width=1</TD>
     <TD>c_m_axi_a_awuser_width=1</TD>
@@ -223,28 +238,13 @@
 </TR><TR ALIGN='LEFT'>    <TD>c_m_axi_c_wuser_width=1</TD>
     <TD>core_container=NA</TD>
     <TD>iptotal=1</TD>
-    <TD>x_ipcorerevision=1903141111</TD>
+    <TD>x_ipcorerevision=1903142149</TD>
 </TR><TR ALIGN='LEFT'>    <TD>x_iplanguage=VERILOG</TD>
     <TD>x_iplibrary=hls</TD>
-    <TD>x_ipname=block_mmult</TD>
+    <TD>x_ipname=vecmat_mmult</TD>
     <TD>x_ipproduct=Vivado 2018.3</TD>
 </TR><TR ALIGN='LEFT'>    <TD>x_ipsimlanguage=MIXED</TD>
     <TD>x_ipvendor=xilinx.com</TD>
-    <TD>x_ipversion=1.0</TD>
-</TR>   </TABLE>
-   </TD></TR>
-   <TR><TD>
-   <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
-    <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>a1_madd/1</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>core_container=NA</TD>
-    <TD>iptotal=1</TD>
-    <TD>x_ipcorerevision=1903140941</TD>
-    <TD>x_iplanguage=VERILOG</TD>
-</TR><TR ALIGN='LEFT'>    <TD>x_iplibrary=hls</TD>
-    <TD>x_ipname=madd</TD>
-    <TD>x_ipproduct=Vivado 2018.3</TD>
-    <TD>x_ipsimlanguage=MIXED</TD>
-</TR><TR ALIGN='LEFT'>    <TD>x_ipvendor=xilinx.com</TD>
     <TD>x_ipversion=1.0</TD>
 </TR>   </TABLE>
    </TD></TR>
@@ -1016,12 +1016,12 @@
 </TR><TR ALIGN='LEFT'>    <TD>hls_input_float=1</TD>
     <TD>hls_input_part=xc7z020clg484-1</TD>
     <TD>hls_input_type=cxx</TD>
-    <TD>hls_syn_clock=7.300000</TD>
-</TR><TR ALIGN='LEFT'>    <TD>hls_syn_dsp=160</TD>
-    <TD>hls_syn_ff=20897</TD>
-    <TD>hls_syn_lat=220512449</TD>
-    <TD>hls_syn_lut=28904</TD>
-</TR><TR ALIGN='LEFT'>    <TD>hls_syn_mem=136</TD>
+    <TD>hls_syn_clock=7.256000</TD>
+</TR><TR ALIGN='LEFT'>    <TD>hls_syn_dsp=2</TD>
+    <TD>hls_syn_ff=398</TD>
+    <TD>hls_syn_lat=1048584</TD>
+    <TD>hls_syn_lut=553</TD>
+</TR><TR ALIGN='LEFT'>    <TD>hls_syn_mem=0</TD>
     <TD>hls_syn_tpt=none</TD>
     <TD>hls_version=2018_3</TD>
     <TD>iptotal=1</TD>
@@ -1037,12 +1037,12 @@
 </TR><TR ALIGN='LEFT'>    <TD>hls_input_float=1</TD>
     <TD>hls_input_part=xc7z020clg484-1</TD>
     <TD>hls_input_type=cxx</TD>
-    <TD>hls_syn_clock=7.256000</TD>
-</TR><TR ALIGN='LEFT'>    <TD>hls_syn_dsp=2</TD>
-    <TD>hls_syn_ff=398</TD>
-    <TD>hls_syn_lat=1048584</TD>
-    <TD>hls_syn_lut=553</TD>
-</TR><TR ALIGN='LEFT'>    <TD>hls_syn_mem=0</TD>
+    <TD>hls_syn_clock=7.300000</TD>
+</TR><TR ALIGN='LEFT'>    <TD>hls_syn_dsp=160</TD>
+    <TD>hls_syn_ff=22959</TD>
+    <TD>hls_syn_lat=222609601</TD>
+    <TD>hls_syn_lut=29523</TD>
+</TR><TR ALIGN='LEFT'>    <TD>hls_syn_mem=136</TD>
     <TD>hls_syn_tpt=none</TD>
     <TD>hls_version=2018_3</TD>
     <TD>iptotal=1</TD>
@@ -16209,7 +16209,7 @@
     <TD>sim_assert_chk=0</TD>
     <TD>sim_lossless_gray_chk=0</TD>
     <TD>version=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>width=10</TD>
+</TR><TR ALIGN='LEFT'>    <TD>width=4</TD>
 </TR>   </TABLE>
    </TD></TR>
    <TR><TD>
@@ -16233,26 +16233,26 @@
     <TD>dout_reset_value=0</TD>
     <TD>ecc_mode=no_ecc</TD>
 </TR><TR ALIGN='LEFT'>    <TD>en_adv_feature_async=16&apos;b0000011100000111</TD>
-    <TD>fifo_memory_type=block</TD>
+    <TD>fifo_memory_type=distributed</TD>
     <TD>fifo_read_latency=1</TD>
-    <TD>fifo_write_depth=1024</TD>
+    <TD>fifo_write_depth=16</TD>
 </TR><TR ALIGN='LEFT'>    <TD>full_reset_value=0</TD>
     <TD>iptotal=10</TD>
     <TD>p_common_clock=0</TD>
     <TD>p_ecc_mode=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>p_fifo_memory_type=2</TD>
+</TR><TR ALIGN='LEFT'>    <TD>p_fifo_memory_type=1</TD>
     <TD>p_read_mode=1</TD>
     <TD>p_wakeup_time=2</TD>
     <TD>prog_empty_thresh=10</TD>
 </TR><TR ALIGN='LEFT'>    <TD>prog_full_thresh=10</TD>
-    <TD>rd_data_count_width=10</TD>
-    <TD>read_data_width=33</TD>
+    <TD>rd_data_count_width=4</TD>
+    <TD>read_data_width=32</TD>
     <TD>read_mode=fwft</TD>
 </TR><TR ALIGN='LEFT'>    <TD>related_clocks=0</TD>
     <TD>use_adv_features=0707</TD>
     <TD>wakeup_time=0</TD>
-    <TD>wr_data_count_width=10</TD>
-</TR><TR ALIGN='LEFT'>    <TD>write_data_width=33</TD>
+    <TD>wr_data_count_width=4</TD>
+</TR><TR ALIGN='LEFT'>    <TD>write_data_width=32</TD>
 </TR>   </TABLE>
    </TD></TR>
    <TR><TD>
@@ -16277,30 +16277,30 @@
 </TR><TR ALIGN='LEFT'>    <TD>en_wdc=1&apos;b1</TD>
     <TD>enable_ecc=0</TD>
     <TD>fg_eq_asym_dout=1&apos;b0</TD>
-    <TD>fifo_mem_type=2</TD>
-</TR><TR ALIGN='LEFT'>    <TD>fifo_memory_type=2</TD>
-    <TD>fifo_read_depth=1024</TD>
+    <TD>fifo_mem_type=1</TD>
+</TR><TR ALIGN='LEFT'>    <TD>fifo_memory_type=1</TD>
+    <TD>fifo_read_depth=16</TD>
     <TD>fifo_read_latency=1</TD>
-    <TD>fifo_size=33792</TD>
-</TR><TR ALIGN='LEFT'>    <TD>fifo_write_depth=1024</TD>
+    <TD>fifo_size=512</TD>
+</TR><TR ALIGN='LEFT'>    <TD>fifo_write_depth=16</TD>
     <TD>full_reset_value=0</TD>
     <TD>full_rst_val=1&apos;b0</TD>
     <TD>invalid=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>iptotal=14</TD>
     <TD>pe_thresh_adj=8</TD>
-    <TD>pe_thresh_max=1019</TD>
+    <TD>pe_thresh_max=11</TD>
     <TD>pe_thresh_min=5</TD>
 </TR><TR ALIGN='LEFT'>    <TD>pf_thresh_adj=8</TD>
-    <TD>pf_thresh_max=1019</TD>
+    <TD>pf_thresh_max=11</TD>
     <TD>pf_thresh_min=7</TD>
     <TD>prog_empty_thresh=10</TD>
 </TR><TR ALIGN='LEFT'>    <TD>prog_full_thresh=10</TD>
-    <TD>rd_data_count_width=10</TD>
-    <TD>rd_dc_width_ext=11</TD>
+    <TD>rd_data_count_width=4</TD>
+    <TD>rd_dc_width_ext=5</TD>
     <TD>rd_latency=2</TD>
 </TR><TR ALIGN='LEFT'>    <TD>rd_mode=1</TD>
-    <TD>rd_pntr_width=10</TD>
-    <TD>read_data_width=33</TD>
+    <TD>rd_pntr_width=4</TD>
+    <TD>read_data_width=32</TD>
     <TD>read_mode=1</TD>
 </TR><TR ALIGN='LEFT'>    <TD>related_clocks=0</TD>
     <TD>remove_wr_rd_prot_logic=0</TD>
@@ -16311,13 +16311,13 @@
     <TD>version=0</TD>
     <TD>wakeup_time=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>width_ratio=1</TD>
-    <TD>wr_data_count_width=10</TD>
-    <TD>wr_dc_width_ext=11</TD>
-    <TD>wr_depth_log=10</TD>
-</TR><TR ALIGN='LEFT'>    <TD>wr_pntr_width=10</TD>
+    <TD>wr_data_count_width=4</TD>
+    <TD>wr_dc_width_ext=5</TD>
+    <TD>wr_depth_log=4</TD>
+</TR><TR ALIGN='LEFT'>    <TD>wr_pntr_width=4</TD>
     <TD>wr_rd_ratio=0</TD>
-    <TD>wr_width_log=6</TD>
-    <TD>write_data_width=33</TD>
+    <TD>wr_width_log=5</TD>
+    <TD>write_data_width=32</TD>
 </TR>   </TABLE>
    </TD></TR>
    <TR><TD>
@@ -16352,67 +16352,67 @@
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>xpm_memory_base/1</B></TD></TR>
 <TR ALIGN='LEFT'>    <TD>write_data_width=12</TD>
-    <TD>addr_width_a=10</TD>
-    <TD>addr_width_b=10</TD>
+    <TD>addr_width_a=4</TD>
+    <TD>addr_width_b=4</TD>
     <TD>auto_sleep_time=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>byte_write_width_a=33</TD>
-    <TD>byte_write_width_b=33</TD>
+</TR><TR ALIGN='LEFT'>    <TD>byte_write_width_a=32</TD>
+    <TD>byte_write_width_b=32</TD>
     <TD>clocking_mode=1</TD>
     <TD>core_container=NA</TD>
 </TR><TR ALIGN='LEFT'>    <TD>ecc_mode=0</TD>
     <TD>iptotal=12</TD>
     <TD>max_num_char=0</TD>
     <TD>memory_optimization=true</TD>
-</TR><TR ALIGN='LEFT'>    <TD>memory_primitive=2</TD>
-    <TD>memory_size=33792</TD>
+</TR><TR ALIGN='LEFT'>    <TD>memory_primitive=1</TD>
+    <TD>memory_size=512</TD>
     <TD>memory_type=1</TD>
     <TD>message_control=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>num_char_loc=0</TD>
     <TD>p_ecc_mode=no_ecc</TD>
     <TD>p_enable_byte_write_a=0</TD>
     <TD>p_enable_byte_write_b=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>p_max_depth_data=1024</TD>
+</TR><TR ALIGN='LEFT'>    <TD>p_max_depth_data=16</TD>
     <TD>p_memory_opt=yes</TD>
-    <TD>p_memory_primitive=block</TD>
-    <TD>p_min_width_data=33</TD>
-</TR><TR ALIGN='LEFT'>    <TD>p_min_width_data_a=33</TD>
-    <TD>p_min_width_data_b=33</TD>
-    <TD>p_min_width_data_ecc=33</TD>
+    <TD>p_memory_primitive=distributed</TD>
+    <TD>p_min_width_data=32</TD>
+</TR><TR ALIGN='LEFT'>    <TD>p_min_width_data_a=32</TD>
+    <TD>p_min_width_data_b=32</TD>
+    <TD>p_min_width_data_ecc=32</TD>
     <TD>p_min_width_data_ldw=4</TD>
-</TR><TR ALIGN='LEFT'>    <TD>p_min_width_data_shft=33</TD>
+</TR><TR ALIGN='LEFT'>    <TD>p_min_width_data_shft=32</TD>
     <TD>p_num_cols_write_a=1</TD>
     <TD>p_num_cols_write_b=1</TD>
     <TD>p_num_rows_read_a=1</TD>
 </TR><TR ALIGN='LEFT'>    <TD>p_num_rows_read_b=1</TD>
     <TD>p_num_rows_write_a=1</TD>
     <TD>p_num_rows_write_b=1</TD>
-    <TD>p_sdp_write_mode=no</TD>
+    <TD>p_sdp_write_mode=yes</TD>
 </TR><TR ALIGN='LEFT'>    <TD>p_width_addr_lsb_read_a=0</TD>
     <TD>p_width_addr_lsb_read_b=0</TD>
     <TD>p_width_addr_lsb_write_a=0</TD>
     <TD>p_width_addr_lsb_write_b=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>p_width_addr_read_a=10</TD>
-    <TD>p_width_addr_read_b=10</TD>
-    <TD>p_width_addr_write_a=10</TD>
-    <TD>p_width_addr_write_b=10</TD>
-</TR><TR ALIGN='LEFT'>    <TD>p_width_col_write_a=33</TD>
-    <TD>p_width_col_write_b=33</TD>
-    <TD>read_data_width_a=33</TD>
-    <TD>read_data_width_b=33</TD>
+</TR><TR ALIGN='LEFT'>    <TD>p_width_addr_read_a=4</TD>
+    <TD>p_width_addr_read_b=4</TD>
+    <TD>p_width_addr_write_a=4</TD>
+    <TD>p_width_addr_write_b=4</TD>
+</TR><TR ALIGN='LEFT'>    <TD>p_width_col_write_a=32</TD>
+    <TD>p_width_col_write_b=32</TD>
+    <TD>read_data_width_a=32</TD>
+    <TD>read_data_width_b=32</TD>
 </TR><TR ALIGN='LEFT'>    <TD>read_latency_a=2</TD>
     <TD>read_latency_b=2</TD>
     <TD>read_reset_value_a=0</TD>
     <TD>read_reset_value_b=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>rst_mode_a=SYNC</TD>
     <TD>rst_mode_b=SYNC</TD>
-    <TD>use_embedded_constraint=0</TD>
+    <TD>use_embedded_constraint=1</TD>
     <TD>use_mem_init=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>version=0</TD>
     <TD>wakeup_time=0</TD>
-    <TD>write_data_width_a=33</TD>
-    <TD>write_data_width_b=33</TD>
+    <TD>write_data_width_a=32</TD>
+    <TD>write_data_width_b=32</TD>
 </TR><TR ALIGN='LEFT'>    <TD>write_mode_a=2</TD>
-    <TD>write_mode_b=2</TD>
+    <TD>write_mode_b=1</TD>
 </TR>   </TABLE>
    </TD></TR>
   </TABLE><BR>
@@ -16523,8 +16523,8 @@
     <TD>bidir_output_enable=1.000000</TD>
 </TR><TR ALIGN='LEFT'>    <TD>board_layers=8to11 (8 to 11 Layers)</TD>
     <TD>board_selection=medium (10&quot;x10&quot;)</TD>
-    <TD>bram=0.170323</TD>
-    <TD>clocks=0.103111</TD>
+    <TD>bram=0.141436</TD>
+    <TD>clocks=0.101648</TD>
 </TR><TR ALIGN='LEFT'>    <TD>confidence_level_clock_activity=High</TD>
     <TD>confidence_level_design_state=High</TD>
     <TD>confidence_level_device_models=High</TD>
@@ -16533,11 +16533,11 @@
     <TD>confidence_level_overall=Medium</TD>
     <TD>customer=TBD</TD>
     <TD>customer_class=TBD</TD>
-</TR><TR ALIGN='LEFT'>    <TD>devstatic=0.177252</TD>
+</TR><TR ALIGN='LEFT'>    <TD>devstatic=0.174141</TD>
     <TD>die=xc7z020clg484-1</TD>
-    <TD>dsp=0.110654</TD>
+    <TD>dsp=0.109145</TD>
     <TD>dsp_output_toggle=12.500000</TD>
-</TR><TR ALIGN='LEFT'>    <TD>dynamic=2.314285</TD>
+</TR><TR ALIGN='LEFT'>    <TD>dynamic=2.238587</TD>
     <TD>effective_thetaja=11.5</TD>
     <TD>enable_probability=0.990000</TD>
     <TD>family=zynq</TD>
@@ -16545,8 +16545,8 @@
     <TD>flow_state=routed</TD>
     <TD>heatsink=none</TD>
     <TD>input_toggle=12.500000</TD>
-</TR><TR ALIGN='LEFT'>    <TD>junction_temp=53.7 (C)</TD>
-    <TD>logic=0.100278</TD>
+</TR><TR ALIGN='LEFT'>    <TD>junction_temp=52.8 (C)</TD>
+    <TD>logic=0.086850</TD>
     <TD>mgtavcc_dynamic_current=0.000000</TD>
     <TD>mgtavcc_static_current=0.000000</TD>
 </TR><TR ALIGN='LEFT'>    <TD>mgtavcc_total_current=0.000000</TD>
@@ -16562,12 +16562,12 @@
     <TD>mmcm=0.105861</TD>
     <TD>netlist_net_matched=NA</TD>
 </TR><TR ALIGN='LEFT'>    <TD>off-chip_power=0.000000</TD>
-    <TD>on-chip_power=2.491538</TD>
+    <TD>on-chip_power=2.412728</TD>
     <TD>output_enable=1.000000</TD>
     <TD>output_load=5.000000</TD>
 </TR><TR ALIGN='LEFT'>    <TD>output_toggle=12.500000</TD>
     <TD>package=clg484</TD>
-    <TD>pct_clock_constrained=65.000000</TD>
+    <TD>pct_clock_constrained=41.000000</TD>
     <TD>pct_inputs_defined=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>platform=nt64</TD>
     <TD>process=typical</TD>
@@ -16577,7 +16577,7 @@
     <TD>read_saif=False</TD>
     <TD>set/reset_probability=0.000000</TD>
     <TD>signal_rate=False</TD>
-</TR><TR ALIGN='LEFT'>    <TD>signals=0.192811</TD>
+</TR><TR ALIGN='LEFT'>    <TD>signals=0.162399</TD>
     <TD>simulation_file=None</TD>
     <TD>speedgrade=-1</TD>
     <TD>static_prob=False</TD>
@@ -16587,7 +16587,7 @@
     <TD>toggle_rate=False</TD>
 </TR><TR ALIGN='LEFT'>    <TD>user_board_temp=25.0 (C)</TD>
     <TD>user_effective_thetaja=11.5</TD>
-    <TD>user_junc_temp=53.7 (C)</TD>
+    <TD>user_junc_temp=52.8 (C)</TD>
     <TD>user_thetajb=7.4 (C/W)</TD>
 </TR><TR ALIGN='LEFT'>    <TD>user_thetasa=0.0 (C/W)</TD>
     <TD>vccadc_dynamic_current=0.000000</TD>
@@ -16599,16 +16599,16 @@
     <TD>vccaux_io_static_current=0.000000</TD>
 </TR><TR ALIGN='LEFT'>    <TD>vccaux_io_total_current=0.000000</TD>
     <TD>vccaux_io_voltage=1.800000</TD>
-    <TD>vccaux_static_current=0.018596</TD>
-    <TD>vccaux_total_current=0.077175</TD>
+    <TD>vccaux_static_current=0.018225</TD>
+    <TD>vccaux_total_current=0.076805</TD>
 </TR><TR ALIGN='LEFT'>    <TD>vccaux_voltage=1.800000</TD>
-    <TD>vccbram_dynamic_current=0.011780</TD>
-    <TD>vccbram_static_current=0.008783</TD>
-    <TD>vccbram_total_current=0.020563</TD>
+    <TD>vccbram_dynamic_current=0.009530</TD>
+    <TD>vccbram_static_current=0.008499</TD>
+    <TD>vccbram_total_current=0.018029</TD>
 </TR><TR ALIGN='LEFT'>    <TD>vccbram_voltage=1.000000</TD>
-    <TD>vccint_dynamic_current=0.665815</TD>
-    <TD>vccint_static_current=0.025781</TD>
-    <TD>vccint_total_current=0.691596</TD>
+    <TD>vccint_dynamic_current=0.592366</TD>
+    <TD>vccint_static_current=0.024863</TD>
+    <TD>vccint_total_current=0.617229</TD>
 </TR><TR ALIGN='LEFT'>    <TD>vccint_voltage=1.000000</TD>
     <TD>vcco12_dynamic_current=0.000000</TD>
     <TD>vcco12_static_current=0.000000</TD>
@@ -16651,8 +16651,8 @@
     <TD>vccpaux_total_current=0.061399</TD>
 </TR><TR ALIGN='LEFT'>    <TD>vccpaux_voltage=1.800000</TD>
     <TD>vccpint_dynamic_current=0.720101</TD>
-    <TD>vccpint_static_current=0.041121</TD>
-    <TD>vccpint_total_current=0.761222</TD>
+    <TD>vccpint_static_current=0.039880</TD>
+    <TD>vccpint_total_current=0.759981</TD>
 </TR><TR ALIGN='LEFT'>    <TD>vccpint_voltage=1.000000</TD>
     <TD>vccpll_dynamic_current=0.013878</TD>
     <TD>vccpll_static_current=0.003000</TD>
@@ -16784,21 +16784,21 @@
     <TD>fdpe_functional_category=Flop &amp; Latch</TD>
     <TD>fdpe_used=244</TD>
 </TR><TR ALIGN='LEFT'>    <TD>fdre_functional_category=Flop &amp; Latch</TD>
-    <TD>fdre_used=30234</TD>
+    <TD>fdre_used=30244</TD>
     <TD>fdse_functional_category=Flop &amp; Latch</TD>
     <TD>fdse_used=371</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut1_functional_category=LUT</TD>
-    <TD>lut1_used=479</TD>
+    <TD>lut1_used=480</TD>
     <TD>lut2_functional_category=LUT</TD>
-    <TD>lut2_used=2809</TD>
+    <TD>lut2_used=2813</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut3_functional_category=LUT</TD>
-    <TD>lut3_used=9604</TD>
+    <TD>lut3_used=9606</TD>
     <TD>lut4_functional_category=LUT</TD>
-    <TD>lut4_used=4356</TD>
+    <TD>lut4_used=4360</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut5_functional_category=LUT</TD>
-    <TD>lut5_used=3596</TD>
+    <TD>lut5_used=3589</TD>
     <TD>lut6_functional_category=LUT</TD>
-    <TD>lut6_used=5962</TD>
+    <TD>lut6_used=5969</TD>
 </TR><TR ALIGN='LEFT'>    <TD>mmcme2_adv_functional_category=Clock</TD>
     <TD>mmcme2_adv_used=1</TD>
     <TD>muxf7_functional_category=MuxFx</TD>
@@ -16838,8 +16838,8 @@
     <TD>lut_as_distributed_ram_used=738</TD>
     <TD>lut_as_logic_available=53200</TD>
     <TD>lut_as_logic_fixed=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>lut_as_logic_used=21369</TD>
-    <TD>lut_as_logic_util_percentage=40.17</TD>
+</TR><TR ALIGN='LEFT'>    <TD>lut_as_logic_used=21401</TD>
+    <TD>lut_as_logic_util_percentage=40.23</TD>
     <TD>lut_as_memory_available=17400</TD>
     <TD>lut_as_memory_fixed=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut_as_memory_used=1045</TD>
@@ -16848,26 +16848,26 @@
     <TD>lut_as_shift_register_used=307</TD>
 </TR><TR ALIGN='LEFT'>    <TD>register_as_flip_flop_available=106400</TD>
     <TD>register_as_flip_flop_fixed=0</TD>
-    <TD>register_as_flip_flop_used=31176</TD>
-    <TD>register_as_flip_flop_util_percentage=29.30</TD>
+    <TD>register_as_flip_flop_used=31186</TD>
+    <TD>register_as_flip_flop_util_percentage=29.31</TD>
 </TR><TR ALIGN='LEFT'>    <TD>register_as_latch_available=106400</TD>
     <TD>register_as_latch_fixed=0</TD>
     <TD>register_as_latch_used=0</TD>
     <TD>register_as_latch_util_percentage=0.00</TD>
 </TR><TR ALIGN='LEFT'>    <TD>slice_luts_available=53200</TD>
     <TD>slice_luts_fixed=0</TD>
-    <TD>slice_luts_used=22414</TD>
-    <TD>slice_luts_util_percentage=42.13</TD>
+    <TD>slice_luts_used=22446</TD>
+    <TD>slice_luts_util_percentage=42.19</TD>
 </TR><TR ALIGN='LEFT'>    <TD>slice_registers_available=106400</TD>
     <TD>slice_registers_fixed=0</TD>
-    <TD>slice_registers_used=31176</TD>
-    <TD>slice_registers_util_percentage=29.30</TD>
+    <TD>slice_registers_used=31186</TD>
+    <TD>slice_registers_util_percentage=29.31</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut_as_distributed_ram_fixed=0</TD>
     <TD>lut_as_distributed_ram_used=738</TD>
     <TD>lut_as_logic_available=53200</TD>
     <TD>lut_as_logic_fixed=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>lut_as_logic_used=21369</TD>
-    <TD>lut_as_logic_util_percentage=40.17</TD>
+</TR><TR ALIGN='LEFT'>    <TD>lut_as_logic_used=21401</TD>
+    <TD>lut_as_logic_util_percentage=40.23</TD>
     <TD>lut_as_memory_available=17400</TD>
     <TD>lut_as_memory_fixed=0</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut_as_memory_used=1045</TD>
@@ -16875,30 +16875,30 @@
     <TD>lut_as_shift_register_fixed=0</TD>
     <TD>lut_as_shift_register_used=307</TD>
 </TR><TR ALIGN='LEFT'>    <TD>lut_in_front_of_the_register_is_unused_fixed=307</TD>
-    <TD>lut_in_front_of_the_register_is_unused_used=11383</TD>
-    <TD>lut_in_front_of_the_register_is_used_fixed=11383</TD>
-    <TD>lut_in_front_of_the_register_is_used_used=5682</TD>
-</TR><TR ALIGN='LEFT'>    <TD>register_driven_from_outside_the_slice_fixed=5682</TD>
-    <TD>register_driven_from_outside_the_slice_used=17065</TD>
-    <TD>register_driven_from_within_the_slice_fixed=17065</TD>
-    <TD>register_driven_from_within_the_slice_used=14111</TD>
+    <TD>lut_in_front_of_the_register_is_unused_used=11960</TD>
+    <TD>lut_in_front_of_the_register_is_used_fixed=11960</TD>
+    <TD>lut_in_front_of_the_register_is_used_used=5174</TD>
+</TR><TR ALIGN='LEFT'>    <TD>register_driven_from_outside_the_slice_fixed=5174</TD>
+    <TD>register_driven_from_outside_the_slice_used=17134</TD>
+    <TD>register_driven_from_within_the_slice_fixed=17134</TD>
+    <TD>register_driven_from_within_the_slice_used=14052</TD>
 </TR><TR ALIGN='LEFT'>    <TD>slice_available=13300</TD>
     <TD>slice_fixed=0</TD>
     <TD>slice_registers_available=106400</TD>
     <TD>slice_registers_fixed=0</TD>
-</TR><TR ALIGN='LEFT'>    <TD>slice_registers_used=31176</TD>
-    <TD>slice_registers_util_percentage=29.30</TD>
-    <TD>slice_used=9780</TD>
-    <TD>slice_util_percentage=73.53</TD>
+</TR><TR ALIGN='LEFT'>    <TD>slice_registers_used=31186</TD>
+    <TD>slice_registers_util_percentage=29.31</TD>
+    <TD>slice_used=10117</TD>
+    <TD>slice_util_percentage=76.07</TD>
 </TR><TR ALIGN='LEFT'>    <TD>slicel_fixed=0</TD>
-    <TD>slicel_used=6452</TD>
+    <TD>slicel_used=6700</TD>
     <TD>slicem_fixed=0</TD>
-    <TD>slicem_used=3328</TD>
+    <TD>slicem_used=3417</TD>
 </TR><TR ALIGN='LEFT'>    <TD>unique_control_sets_available=13300</TD>
     <TD>unique_control_sets_fixed=13300</TD>
-    <TD>unique_control_sets_used=880</TD>
-    <TD>unique_control_sets_util_percentage=6.62</TD>
-</TR><TR ALIGN='LEFT'>    <TD>using_o5_and_o6_fixed=6.62</TD>
+    <TD>unique_control_sets_used=883</TD>
+    <TD>unique_control_sets_util_percentage=6.64</TD>
+</TR><TR ALIGN='LEFT'>    <TD>using_o5_and_o6_fixed=6.64</TD>
     <TD>using_o5_and_o6_used=167</TD>
     <TD>using_o5_output_only_fixed=167</TD>
     <TD>using_o5_output_only_used=8</TD>
@@ -16988,10 +16988,10 @@
    <TR><TD>
    <TABLE BORDER='1' CELLSPACING='0' WIDTH='100%'>
     <TR ALIGN='CENTER' BGCOLOR='#DBE5F1'><TD COLSPAN='4'><B>usage</B></TD></TR>
-<TR ALIGN='LEFT'>    <TD>elapsed=00:01:13s</TD>
+<TR ALIGN='LEFT'>    <TD>elapsed=00:00:42s</TD>
     <TD>hls_ip=0</TD>
-    <TD>memory_gain=312.004MB</TD>
-    <TD>memory_peak=1138.363MB</TD>
+    <TD>memory_gain=309.465MB</TD>
+    <TD>memory_peak=1134.207MB</TD>
 </TR>   </TABLE>
    </TD></TR>
   </TABLE><BR>

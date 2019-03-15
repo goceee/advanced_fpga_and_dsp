@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Mar 14 11:25:39 2019
+//Date        : Thu Mar 14 21:56:37 2019
 //Host        : DESKTOP-6OLIA81 running 64-bit major release  (build 9200)
 //Command     : generate_target zed.bd
 //Design      : zed
@@ -4440,219 +4440,6 @@ module zed
   wire axis_dwc_dm_2_rx_0_M_AXIS_TLAST;
   wire axis_dwc_dm_2_rx_0_M_AXIS_TREADY;
   wire axis_dwc_dm_2_rx_0_M_AXIS_TVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_0_ARADDR;
-  wire [1:0]block_mmult_1_if_M_AXIMM_0_ARBURST;
-  wire [7:0]block_mmult_1_if_M_AXIMM_0_ARLEN;
-  wire [1:0]block_mmult_1_if_M_AXIMM_0_ARLOCK;
-  wire [2:0]block_mmult_1_if_M_AXIMM_0_ARPROT;
-  wire [3:0]block_mmult_1_if_M_AXIMM_0_ARQOS;
-  wire block_mmult_1_if_M_AXIMM_0_ARREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_0_ARREGION;
-  wire [2:0]block_mmult_1_if_M_AXIMM_0_ARSIZE;
-  wire block_mmult_1_if_M_AXIMM_0_ARVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_0_AWADDR;
-  wire [1:0]block_mmult_1_if_M_AXIMM_0_AWBURST;
-  wire [7:0]block_mmult_1_if_M_AXIMM_0_AWLEN;
-  wire [1:0]block_mmult_1_if_M_AXIMM_0_AWLOCK;
-  wire [2:0]block_mmult_1_if_M_AXIMM_0_AWPROT;
-  wire [3:0]block_mmult_1_if_M_AXIMM_0_AWQOS;
-  wire block_mmult_1_if_M_AXIMM_0_AWREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_0_AWREGION;
-  wire [2:0]block_mmult_1_if_M_AXIMM_0_AWSIZE;
-  wire block_mmult_1_if_M_AXIMM_0_AWVALID;
-  wire block_mmult_1_if_M_AXIMM_0_BREADY;
-  wire [1:0]block_mmult_1_if_M_AXIMM_0_BRESP;
-  wire block_mmult_1_if_M_AXIMM_0_BVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_0_RDATA;
-  wire block_mmult_1_if_M_AXIMM_0_RLAST;
-  wire block_mmult_1_if_M_AXIMM_0_RREADY;
-  wire [1:0]block_mmult_1_if_M_AXIMM_0_RRESP;
-  wire block_mmult_1_if_M_AXIMM_0_RVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_0_WDATA;
-  wire block_mmult_1_if_M_AXIMM_0_WLAST;
-  wire block_mmult_1_if_M_AXIMM_0_WREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_0_WSTRB;
-  wire block_mmult_1_if_M_AXIMM_0_WVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_1_ARADDR;
-  wire [1:0]block_mmult_1_if_M_AXIMM_1_ARBURST;
-  wire [7:0]block_mmult_1_if_M_AXIMM_1_ARLEN;
-  wire [1:0]block_mmult_1_if_M_AXIMM_1_ARLOCK;
-  wire [2:0]block_mmult_1_if_M_AXIMM_1_ARPROT;
-  wire [3:0]block_mmult_1_if_M_AXIMM_1_ARQOS;
-  wire block_mmult_1_if_M_AXIMM_1_ARREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_1_ARREGION;
-  wire [2:0]block_mmult_1_if_M_AXIMM_1_ARSIZE;
-  wire block_mmult_1_if_M_AXIMM_1_ARVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_1_AWADDR;
-  wire [1:0]block_mmult_1_if_M_AXIMM_1_AWBURST;
-  wire [7:0]block_mmult_1_if_M_AXIMM_1_AWLEN;
-  wire [1:0]block_mmult_1_if_M_AXIMM_1_AWLOCK;
-  wire [2:0]block_mmult_1_if_M_AXIMM_1_AWPROT;
-  wire [3:0]block_mmult_1_if_M_AXIMM_1_AWQOS;
-  wire block_mmult_1_if_M_AXIMM_1_AWREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_1_AWREGION;
-  wire [2:0]block_mmult_1_if_M_AXIMM_1_AWSIZE;
-  wire block_mmult_1_if_M_AXIMM_1_AWVALID;
-  wire block_mmult_1_if_M_AXIMM_1_BREADY;
-  wire [1:0]block_mmult_1_if_M_AXIMM_1_BRESP;
-  wire block_mmult_1_if_M_AXIMM_1_BVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_1_RDATA;
-  wire block_mmult_1_if_M_AXIMM_1_RLAST;
-  wire block_mmult_1_if_M_AXIMM_1_RREADY;
-  wire [1:0]block_mmult_1_if_M_AXIMM_1_RRESP;
-  wire block_mmult_1_if_M_AXIMM_1_RVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_1_WDATA;
-  wire block_mmult_1_if_M_AXIMM_1_WLAST;
-  wire block_mmult_1_if_M_AXIMM_1_WREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_1_WSTRB;
-  wire block_mmult_1_if_M_AXIMM_1_WVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_2_ARADDR;
-  wire [1:0]block_mmult_1_if_M_AXIMM_2_ARBURST;
-  wire [7:0]block_mmult_1_if_M_AXIMM_2_ARLEN;
-  wire [1:0]block_mmult_1_if_M_AXIMM_2_ARLOCK;
-  wire [2:0]block_mmult_1_if_M_AXIMM_2_ARPROT;
-  wire [3:0]block_mmult_1_if_M_AXIMM_2_ARQOS;
-  wire block_mmult_1_if_M_AXIMM_2_ARREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_2_ARREGION;
-  wire [2:0]block_mmult_1_if_M_AXIMM_2_ARSIZE;
-  wire block_mmult_1_if_M_AXIMM_2_ARVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_2_AWADDR;
-  wire [1:0]block_mmult_1_if_M_AXIMM_2_AWBURST;
-  wire [7:0]block_mmult_1_if_M_AXIMM_2_AWLEN;
-  wire [1:0]block_mmult_1_if_M_AXIMM_2_AWLOCK;
-  wire [2:0]block_mmult_1_if_M_AXIMM_2_AWPROT;
-  wire [3:0]block_mmult_1_if_M_AXIMM_2_AWQOS;
-  wire block_mmult_1_if_M_AXIMM_2_AWREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_2_AWREGION;
-  wire [2:0]block_mmult_1_if_M_AXIMM_2_AWSIZE;
-  wire block_mmult_1_if_M_AXIMM_2_AWVALID;
-  wire block_mmult_1_if_M_AXIMM_2_BREADY;
-  wire [1:0]block_mmult_1_if_M_AXIMM_2_BRESP;
-  wire block_mmult_1_if_M_AXIMM_2_BVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_2_RDATA;
-  wire block_mmult_1_if_M_AXIMM_2_RLAST;
-  wire block_mmult_1_if_M_AXIMM_2_RREADY;
-  wire [1:0]block_mmult_1_if_M_AXIMM_2_RRESP;
-  wire block_mmult_1_if_M_AXIMM_2_RVALID;
-  wire [31:0]block_mmult_1_if_M_AXIMM_2_WDATA;
-  wire block_mmult_1_if_M_AXIMM_2_WLAST;
-  wire block_mmult_1_if_M_AXIMM_2_WREADY;
-  wire [3:0]block_mmult_1_if_M_AXIMM_2_WSTRB;
-  wire block_mmult_1_if_M_AXIMM_2_WVALID;
-  wire block_mmult_1_if_ap_clk;
-  wire block_mmult_1_if_ap_ctrl_done;
-  wire block_mmult_1_if_ap_ctrl_idle;
-  wire block_mmult_1_if_ap_ctrl_ready;
-  wire block_mmult_1_if_ap_ctrl_start;
-  wire [31:0]block_mmult_1_if_ap_iscalar_0_dout;
-  wire [31:0]block_mmult_1_if_ap_iscalar_1_dout;
-  wire [31:0]block_mmult_1_if_ap_iscalar_2_dout;
-  wire block_mmult_1_if_ap_resetn;
-  wire [31:0]block_mmult_1_m_axi_A_ARADDR;
-  wire [1:0]block_mmult_1_m_axi_A_ARBURST;
-  wire [3:0]block_mmult_1_m_axi_A_ARCACHE;
-  wire [7:0]block_mmult_1_m_axi_A_ARLEN;
-  wire [1:0]block_mmult_1_m_axi_A_ARLOCK;
-  wire [2:0]block_mmult_1_m_axi_A_ARPROT;
-  wire [3:0]block_mmult_1_m_axi_A_ARQOS;
-  wire block_mmult_1_m_axi_A_ARREADY;
-  wire [3:0]block_mmult_1_m_axi_A_ARREGION;
-  wire [2:0]block_mmult_1_m_axi_A_ARSIZE;
-  wire block_mmult_1_m_axi_A_ARVALID;
-  wire [31:0]block_mmult_1_m_axi_A_AWADDR;
-  wire [1:0]block_mmult_1_m_axi_A_AWBURST;
-  wire [3:0]block_mmult_1_m_axi_A_AWCACHE;
-  wire [7:0]block_mmult_1_m_axi_A_AWLEN;
-  wire [1:0]block_mmult_1_m_axi_A_AWLOCK;
-  wire [2:0]block_mmult_1_m_axi_A_AWPROT;
-  wire [3:0]block_mmult_1_m_axi_A_AWQOS;
-  wire block_mmult_1_m_axi_A_AWREADY;
-  wire [3:0]block_mmult_1_m_axi_A_AWREGION;
-  wire [2:0]block_mmult_1_m_axi_A_AWSIZE;
-  wire block_mmult_1_m_axi_A_AWVALID;
-  wire block_mmult_1_m_axi_A_BREADY;
-  wire [1:0]block_mmult_1_m_axi_A_BRESP;
-  wire block_mmult_1_m_axi_A_BVALID;
-  wire [31:0]block_mmult_1_m_axi_A_RDATA;
-  wire block_mmult_1_m_axi_A_RLAST;
-  wire block_mmult_1_m_axi_A_RREADY;
-  wire [1:0]block_mmult_1_m_axi_A_RRESP;
-  wire block_mmult_1_m_axi_A_RVALID;
-  wire [31:0]block_mmult_1_m_axi_A_WDATA;
-  wire block_mmult_1_m_axi_A_WLAST;
-  wire block_mmult_1_m_axi_A_WREADY;
-  wire [3:0]block_mmult_1_m_axi_A_WSTRB;
-  wire block_mmult_1_m_axi_A_WVALID;
-  wire [31:0]block_mmult_1_m_axi_B_ARADDR;
-  wire [1:0]block_mmult_1_m_axi_B_ARBURST;
-  wire [3:0]block_mmult_1_m_axi_B_ARCACHE;
-  wire [7:0]block_mmult_1_m_axi_B_ARLEN;
-  wire [1:0]block_mmult_1_m_axi_B_ARLOCK;
-  wire [2:0]block_mmult_1_m_axi_B_ARPROT;
-  wire [3:0]block_mmult_1_m_axi_B_ARQOS;
-  wire block_mmult_1_m_axi_B_ARREADY;
-  wire [3:0]block_mmult_1_m_axi_B_ARREGION;
-  wire [2:0]block_mmult_1_m_axi_B_ARSIZE;
-  wire block_mmult_1_m_axi_B_ARVALID;
-  wire [31:0]block_mmult_1_m_axi_B_AWADDR;
-  wire [1:0]block_mmult_1_m_axi_B_AWBURST;
-  wire [3:0]block_mmult_1_m_axi_B_AWCACHE;
-  wire [7:0]block_mmult_1_m_axi_B_AWLEN;
-  wire [1:0]block_mmult_1_m_axi_B_AWLOCK;
-  wire [2:0]block_mmult_1_m_axi_B_AWPROT;
-  wire [3:0]block_mmult_1_m_axi_B_AWQOS;
-  wire block_mmult_1_m_axi_B_AWREADY;
-  wire [3:0]block_mmult_1_m_axi_B_AWREGION;
-  wire [2:0]block_mmult_1_m_axi_B_AWSIZE;
-  wire block_mmult_1_m_axi_B_AWVALID;
-  wire block_mmult_1_m_axi_B_BREADY;
-  wire [1:0]block_mmult_1_m_axi_B_BRESP;
-  wire block_mmult_1_m_axi_B_BVALID;
-  wire [31:0]block_mmult_1_m_axi_B_RDATA;
-  wire block_mmult_1_m_axi_B_RLAST;
-  wire block_mmult_1_m_axi_B_RREADY;
-  wire [1:0]block_mmult_1_m_axi_B_RRESP;
-  wire block_mmult_1_m_axi_B_RVALID;
-  wire [31:0]block_mmult_1_m_axi_B_WDATA;
-  wire block_mmult_1_m_axi_B_WLAST;
-  wire block_mmult_1_m_axi_B_WREADY;
-  wire [3:0]block_mmult_1_m_axi_B_WSTRB;
-  wire block_mmult_1_m_axi_B_WVALID;
-  wire [31:0]block_mmult_1_m_axi_C_ARADDR;
-  wire [1:0]block_mmult_1_m_axi_C_ARBURST;
-  wire [3:0]block_mmult_1_m_axi_C_ARCACHE;
-  wire [7:0]block_mmult_1_m_axi_C_ARLEN;
-  wire [1:0]block_mmult_1_m_axi_C_ARLOCK;
-  wire [2:0]block_mmult_1_m_axi_C_ARPROT;
-  wire [3:0]block_mmult_1_m_axi_C_ARQOS;
-  wire block_mmult_1_m_axi_C_ARREADY;
-  wire [3:0]block_mmult_1_m_axi_C_ARREGION;
-  wire [2:0]block_mmult_1_m_axi_C_ARSIZE;
-  wire block_mmult_1_m_axi_C_ARVALID;
-  wire [31:0]block_mmult_1_m_axi_C_AWADDR;
-  wire [1:0]block_mmult_1_m_axi_C_AWBURST;
-  wire [3:0]block_mmult_1_m_axi_C_AWCACHE;
-  wire [7:0]block_mmult_1_m_axi_C_AWLEN;
-  wire [1:0]block_mmult_1_m_axi_C_AWLOCK;
-  wire [2:0]block_mmult_1_m_axi_C_AWPROT;
-  wire [3:0]block_mmult_1_m_axi_C_AWQOS;
-  wire block_mmult_1_m_axi_C_AWREADY;
-  wire [3:0]block_mmult_1_m_axi_C_AWREGION;
-  wire [2:0]block_mmult_1_m_axi_C_AWSIZE;
-  wire block_mmult_1_m_axi_C_AWVALID;
-  wire block_mmult_1_m_axi_C_BREADY;
-  wire [1:0]block_mmult_1_m_axi_C_BRESP;
-  wire block_mmult_1_m_axi_C_BVALID;
-  wire [31:0]block_mmult_1_m_axi_C_RDATA;
-  wire block_mmult_1_m_axi_C_RLAST;
-  wire block_mmult_1_m_axi_C_RREADY;
-  wire [1:0]block_mmult_1_m_axi_C_RRESP;
-  wire block_mmult_1_m_axi_C_RVALID;
-  wire [31:0]block_mmult_1_m_axi_C_WDATA;
-  wire block_mmult_1_m_axi_C_WLAST;
-  wire block_mmult_1_m_axi_C_WREADY;
-  wire [3:0]block_mmult_1_m_axi_C_WSTRB;
-  wire block_mmult_1_m_axi_C_WVALID;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
   wire clk_wiz_0_clk_out3;
@@ -4794,6 +4581,219 @@ module zed
   wire [3:0]ps7_M_AXI_GP0_WSTRB;
   wire ps7_M_AXI_GP0_WVALID;
   wire [0:0]sds_irq_const_dout;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_0_ARADDR;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_0_ARBURST;
+  wire [7:0]vecmat_mmult_1_if_M_AXIMM_0_ARLEN;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_0_ARLOCK;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_0_ARPROT;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_0_ARQOS;
+  wire vecmat_mmult_1_if_M_AXIMM_0_ARREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_0_ARREGION;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_0_ARSIZE;
+  wire vecmat_mmult_1_if_M_AXIMM_0_ARVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_0_AWADDR;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_0_AWBURST;
+  wire [7:0]vecmat_mmult_1_if_M_AXIMM_0_AWLEN;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_0_AWLOCK;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_0_AWPROT;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_0_AWQOS;
+  wire vecmat_mmult_1_if_M_AXIMM_0_AWREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_0_AWREGION;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_0_AWSIZE;
+  wire vecmat_mmult_1_if_M_AXIMM_0_AWVALID;
+  wire vecmat_mmult_1_if_M_AXIMM_0_BREADY;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_0_BRESP;
+  wire vecmat_mmult_1_if_M_AXIMM_0_BVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_0_RDATA;
+  wire vecmat_mmult_1_if_M_AXIMM_0_RLAST;
+  wire vecmat_mmult_1_if_M_AXIMM_0_RREADY;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_0_RRESP;
+  wire vecmat_mmult_1_if_M_AXIMM_0_RVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_0_WDATA;
+  wire vecmat_mmult_1_if_M_AXIMM_0_WLAST;
+  wire vecmat_mmult_1_if_M_AXIMM_0_WREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_0_WSTRB;
+  wire vecmat_mmult_1_if_M_AXIMM_0_WVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_1_ARADDR;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_1_ARBURST;
+  wire [7:0]vecmat_mmult_1_if_M_AXIMM_1_ARLEN;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_1_ARLOCK;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_1_ARPROT;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_1_ARQOS;
+  wire vecmat_mmult_1_if_M_AXIMM_1_ARREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_1_ARREGION;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_1_ARSIZE;
+  wire vecmat_mmult_1_if_M_AXIMM_1_ARVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_1_AWADDR;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_1_AWBURST;
+  wire [7:0]vecmat_mmult_1_if_M_AXIMM_1_AWLEN;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_1_AWLOCK;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_1_AWPROT;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_1_AWQOS;
+  wire vecmat_mmult_1_if_M_AXIMM_1_AWREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_1_AWREGION;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_1_AWSIZE;
+  wire vecmat_mmult_1_if_M_AXIMM_1_AWVALID;
+  wire vecmat_mmult_1_if_M_AXIMM_1_BREADY;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_1_BRESP;
+  wire vecmat_mmult_1_if_M_AXIMM_1_BVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_1_RDATA;
+  wire vecmat_mmult_1_if_M_AXIMM_1_RLAST;
+  wire vecmat_mmult_1_if_M_AXIMM_1_RREADY;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_1_RRESP;
+  wire vecmat_mmult_1_if_M_AXIMM_1_RVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_1_WDATA;
+  wire vecmat_mmult_1_if_M_AXIMM_1_WLAST;
+  wire vecmat_mmult_1_if_M_AXIMM_1_WREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_1_WSTRB;
+  wire vecmat_mmult_1_if_M_AXIMM_1_WVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_2_ARADDR;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_2_ARBURST;
+  wire [7:0]vecmat_mmult_1_if_M_AXIMM_2_ARLEN;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_2_ARLOCK;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_2_ARPROT;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_2_ARQOS;
+  wire vecmat_mmult_1_if_M_AXIMM_2_ARREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_2_ARREGION;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_2_ARSIZE;
+  wire vecmat_mmult_1_if_M_AXIMM_2_ARVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_2_AWADDR;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_2_AWBURST;
+  wire [7:0]vecmat_mmult_1_if_M_AXIMM_2_AWLEN;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_2_AWLOCK;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_2_AWPROT;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_2_AWQOS;
+  wire vecmat_mmult_1_if_M_AXIMM_2_AWREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_2_AWREGION;
+  wire [2:0]vecmat_mmult_1_if_M_AXIMM_2_AWSIZE;
+  wire vecmat_mmult_1_if_M_AXIMM_2_AWVALID;
+  wire vecmat_mmult_1_if_M_AXIMM_2_BREADY;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_2_BRESP;
+  wire vecmat_mmult_1_if_M_AXIMM_2_BVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_2_RDATA;
+  wire vecmat_mmult_1_if_M_AXIMM_2_RLAST;
+  wire vecmat_mmult_1_if_M_AXIMM_2_RREADY;
+  wire [1:0]vecmat_mmult_1_if_M_AXIMM_2_RRESP;
+  wire vecmat_mmult_1_if_M_AXIMM_2_RVALID;
+  wire [31:0]vecmat_mmult_1_if_M_AXIMM_2_WDATA;
+  wire vecmat_mmult_1_if_M_AXIMM_2_WLAST;
+  wire vecmat_mmult_1_if_M_AXIMM_2_WREADY;
+  wire [3:0]vecmat_mmult_1_if_M_AXIMM_2_WSTRB;
+  wire vecmat_mmult_1_if_M_AXIMM_2_WVALID;
+  wire vecmat_mmult_1_if_ap_clk;
+  wire vecmat_mmult_1_if_ap_ctrl_done;
+  wire vecmat_mmult_1_if_ap_ctrl_idle;
+  wire vecmat_mmult_1_if_ap_ctrl_ready;
+  wire vecmat_mmult_1_if_ap_ctrl_start;
+  wire [31:0]vecmat_mmult_1_if_ap_iscalar_0_dout;
+  wire [31:0]vecmat_mmult_1_if_ap_iscalar_1_dout;
+  wire [31:0]vecmat_mmult_1_if_ap_iscalar_2_dout;
+  wire vecmat_mmult_1_if_ap_resetn;
+  wire [31:0]vecmat_mmult_1_m_axi_A_ARADDR;
+  wire [1:0]vecmat_mmult_1_m_axi_A_ARBURST;
+  wire [3:0]vecmat_mmult_1_m_axi_A_ARCACHE;
+  wire [7:0]vecmat_mmult_1_m_axi_A_ARLEN;
+  wire [1:0]vecmat_mmult_1_m_axi_A_ARLOCK;
+  wire [2:0]vecmat_mmult_1_m_axi_A_ARPROT;
+  wire [3:0]vecmat_mmult_1_m_axi_A_ARQOS;
+  wire vecmat_mmult_1_m_axi_A_ARREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_A_ARREGION;
+  wire [2:0]vecmat_mmult_1_m_axi_A_ARSIZE;
+  wire vecmat_mmult_1_m_axi_A_ARVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_A_AWADDR;
+  wire [1:0]vecmat_mmult_1_m_axi_A_AWBURST;
+  wire [3:0]vecmat_mmult_1_m_axi_A_AWCACHE;
+  wire [7:0]vecmat_mmult_1_m_axi_A_AWLEN;
+  wire [1:0]vecmat_mmult_1_m_axi_A_AWLOCK;
+  wire [2:0]vecmat_mmult_1_m_axi_A_AWPROT;
+  wire [3:0]vecmat_mmult_1_m_axi_A_AWQOS;
+  wire vecmat_mmult_1_m_axi_A_AWREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_A_AWREGION;
+  wire [2:0]vecmat_mmult_1_m_axi_A_AWSIZE;
+  wire vecmat_mmult_1_m_axi_A_AWVALID;
+  wire vecmat_mmult_1_m_axi_A_BREADY;
+  wire [1:0]vecmat_mmult_1_m_axi_A_BRESP;
+  wire vecmat_mmult_1_m_axi_A_BVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_A_RDATA;
+  wire vecmat_mmult_1_m_axi_A_RLAST;
+  wire vecmat_mmult_1_m_axi_A_RREADY;
+  wire [1:0]vecmat_mmult_1_m_axi_A_RRESP;
+  wire vecmat_mmult_1_m_axi_A_RVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_A_WDATA;
+  wire vecmat_mmult_1_m_axi_A_WLAST;
+  wire vecmat_mmult_1_m_axi_A_WREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_A_WSTRB;
+  wire vecmat_mmult_1_m_axi_A_WVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_B_ARADDR;
+  wire [1:0]vecmat_mmult_1_m_axi_B_ARBURST;
+  wire [3:0]vecmat_mmult_1_m_axi_B_ARCACHE;
+  wire [7:0]vecmat_mmult_1_m_axi_B_ARLEN;
+  wire [1:0]vecmat_mmult_1_m_axi_B_ARLOCK;
+  wire [2:0]vecmat_mmult_1_m_axi_B_ARPROT;
+  wire [3:0]vecmat_mmult_1_m_axi_B_ARQOS;
+  wire vecmat_mmult_1_m_axi_B_ARREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_B_ARREGION;
+  wire [2:0]vecmat_mmult_1_m_axi_B_ARSIZE;
+  wire vecmat_mmult_1_m_axi_B_ARVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_B_AWADDR;
+  wire [1:0]vecmat_mmult_1_m_axi_B_AWBURST;
+  wire [3:0]vecmat_mmult_1_m_axi_B_AWCACHE;
+  wire [7:0]vecmat_mmult_1_m_axi_B_AWLEN;
+  wire [1:0]vecmat_mmult_1_m_axi_B_AWLOCK;
+  wire [2:0]vecmat_mmult_1_m_axi_B_AWPROT;
+  wire [3:0]vecmat_mmult_1_m_axi_B_AWQOS;
+  wire vecmat_mmult_1_m_axi_B_AWREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_B_AWREGION;
+  wire [2:0]vecmat_mmult_1_m_axi_B_AWSIZE;
+  wire vecmat_mmult_1_m_axi_B_AWVALID;
+  wire vecmat_mmult_1_m_axi_B_BREADY;
+  wire [1:0]vecmat_mmult_1_m_axi_B_BRESP;
+  wire vecmat_mmult_1_m_axi_B_BVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_B_RDATA;
+  wire vecmat_mmult_1_m_axi_B_RLAST;
+  wire vecmat_mmult_1_m_axi_B_RREADY;
+  wire [1:0]vecmat_mmult_1_m_axi_B_RRESP;
+  wire vecmat_mmult_1_m_axi_B_RVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_B_WDATA;
+  wire vecmat_mmult_1_m_axi_B_WLAST;
+  wire vecmat_mmult_1_m_axi_B_WREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_B_WSTRB;
+  wire vecmat_mmult_1_m_axi_B_WVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_C_ARADDR;
+  wire [1:0]vecmat_mmult_1_m_axi_C_ARBURST;
+  wire [3:0]vecmat_mmult_1_m_axi_C_ARCACHE;
+  wire [7:0]vecmat_mmult_1_m_axi_C_ARLEN;
+  wire [1:0]vecmat_mmult_1_m_axi_C_ARLOCK;
+  wire [2:0]vecmat_mmult_1_m_axi_C_ARPROT;
+  wire [3:0]vecmat_mmult_1_m_axi_C_ARQOS;
+  wire vecmat_mmult_1_m_axi_C_ARREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_C_ARREGION;
+  wire [2:0]vecmat_mmult_1_m_axi_C_ARSIZE;
+  wire vecmat_mmult_1_m_axi_C_ARVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_C_AWADDR;
+  wire [1:0]vecmat_mmult_1_m_axi_C_AWBURST;
+  wire [3:0]vecmat_mmult_1_m_axi_C_AWCACHE;
+  wire [7:0]vecmat_mmult_1_m_axi_C_AWLEN;
+  wire [1:0]vecmat_mmult_1_m_axi_C_AWLOCK;
+  wire [2:0]vecmat_mmult_1_m_axi_C_AWPROT;
+  wire [3:0]vecmat_mmult_1_m_axi_C_AWQOS;
+  wire vecmat_mmult_1_m_axi_C_AWREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_C_AWREGION;
+  wire [2:0]vecmat_mmult_1_m_axi_C_AWSIZE;
+  wire vecmat_mmult_1_m_axi_C_AWVALID;
+  wire vecmat_mmult_1_m_axi_C_BREADY;
+  wire [1:0]vecmat_mmult_1_m_axi_C_BRESP;
+  wire vecmat_mmult_1_m_axi_C_BVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_C_RDATA;
+  wire vecmat_mmult_1_m_axi_C_RLAST;
+  wire vecmat_mmult_1_m_axi_C_RREADY;
+  wire [1:0]vecmat_mmult_1_m_axi_C_RRESP;
+  wire vecmat_mmult_1_m_axi_C_RVALID;
+  wire [31:0]vecmat_mmult_1_m_axi_C_WDATA;
+  wire vecmat_mmult_1_m_axi_C_WLAST;
+  wire vecmat_mmult_1_m_axi_C_WREADY;
+  wire [3:0]vecmat_mmult_1_m_axi_C_WSTRB;
+  wire vecmat_mmult_1_m_axi_C_WVALID;
   wire [15:0]xlconcat_0_dout;
 
   zed_axcache_0xE_0 axcache_0xE
@@ -4982,115 +4982,115 @@ module zed
         .M00_AXI_wvalid(axi_ic_ps7_S_AXI_ACP_M00_AXI_WVALID),
         .S00_ACLK(clk_wiz_0_clk_out1),
         .S00_ARESETN(proc_sys_reset_0_interconnect_aresetn),
-        .S00_AXI_araddr(block_mmult_1_if_M_AXIMM_0_ARADDR),
-        .S00_AXI_arburst(block_mmult_1_if_M_AXIMM_0_ARBURST),
+        .S00_AXI_araddr(vecmat_mmult_1_if_M_AXIMM_0_ARADDR),
+        .S00_AXI_arburst(vecmat_mmult_1_if_M_AXIMM_0_ARBURST),
         .S00_AXI_arcache(axcache_0xE_dout),
-        .S00_AXI_arlen(block_mmult_1_if_M_AXIMM_0_ARLEN),
-        .S00_AXI_arlock(block_mmult_1_if_M_AXIMM_0_ARLOCK),
-        .S00_AXI_arprot(block_mmult_1_if_M_AXIMM_0_ARPROT),
-        .S00_AXI_arqos(block_mmult_1_if_M_AXIMM_0_ARQOS),
-        .S00_AXI_arready(block_mmult_1_if_M_AXIMM_0_ARREADY),
-        .S00_AXI_arregion(block_mmult_1_if_M_AXIMM_0_ARREGION),
-        .S00_AXI_arsize(block_mmult_1_if_M_AXIMM_0_ARSIZE),
-        .S00_AXI_arvalid(block_mmult_1_if_M_AXIMM_0_ARVALID),
-        .S00_AXI_awaddr(block_mmult_1_if_M_AXIMM_0_AWADDR),
-        .S00_AXI_awburst(block_mmult_1_if_M_AXIMM_0_AWBURST),
+        .S00_AXI_arlen(vecmat_mmult_1_if_M_AXIMM_0_ARLEN),
+        .S00_AXI_arlock(vecmat_mmult_1_if_M_AXIMM_0_ARLOCK),
+        .S00_AXI_arprot(vecmat_mmult_1_if_M_AXIMM_0_ARPROT),
+        .S00_AXI_arqos(vecmat_mmult_1_if_M_AXIMM_0_ARQOS),
+        .S00_AXI_arready(vecmat_mmult_1_if_M_AXIMM_0_ARREADY),
+        .S00_AXI_arregion(vecmat_mmult_1_if_M_AXIMM_0_ARREGION),
+        .S00_AXI_arsize(vecmat_mmult_1_if_M_AXIMM_0_ARSIZE),
+        .S00_AXI_arvalid(vecmat_mmult_1_if_M_AXIMM_0_ARVALID),
+        .S00_AXI_awaddr(vecmat_mmult_1_if_M_AXIMM_0_AWADDR),
+        .S00_AXI_awburst(vecmat_mmult_1_if_M_AXIMM_0_AWBURST),
         .S00_AXI_awcache(axcache_0xE_dout),
-        .S00_AXI_awlen(block_mmult_1_if_M_AXIMM_0_AWLEN),
-        .S00_AXI_awlock(block_mmult_1_if_M_AXIMM_0_AWLOCK),
-        .S00_AXI_awprot(block_mmult_1_if_M_AXIMM_0_AWPROT),
-        .S00_AXI_awqos(block_mmult_1_if_M_AXIMM_0_AWQOS),
-        .S00_AXI_awready(block_mmult_1_if_M_AXIMM_0_AWREADY),
-        .S00_AXI_awregion(block_mmult_1_if_M_AXIMM_0_AWREGION),
-        .S00_AXI_awsize(block_mmult_1_if_M_AXIMM_0_AWSIZE),
-        .S00_AXI_awvalid(block_mmult_1_if_M_AXIMM_0_AWVALID),
-        .S00_AXI_bready(block_mmult_1_if_M_AXIMM_0_BREADY),
-        .S00_AXI_bresp(block_mmult_1_if_M_AXIMM_0_BRESP),
-        .S00_AXI_bvalid(block_mmult_1_if_M_AXIMM_0_BVALID),
-        .S00_AXI_rdata(block_mmult_1_if_M_AXIMM_0_RDATA),
-        .S00_AXI_rlast(block_mmult_1_if_M_AXIMM_0_RLAST),
-        .S00_AXI_rready(block_mmult_1_if_M_AXIMM_0_RREADY),
-        .S00_AXI_rresp(block_mmult_1_if_M_AXIMM_0_RRESP),
-        .S00_AXI_rvalid(block_mmult_1_if_M_AXIMM_0_RVALID),
-        .S00_AXI_wdata(block_mmult_1_if_M_AXIMM_0_WDATA),
-        .S00_AXI_wlast(block_mmult_1_if_M_AXIMM_0_WLAST),
-        .S00_AXI_wready(block_mmult_1_if_M_AXIMM_0_WREADY),
-        .S00_AXI_wstrb(block_mmult_1_if_M_AXIMM_0_WSTRB),
-        .S00_AXI_wvalid(block_mmult_1_if_M_AXIMM_0_WVALID),
+        .S00_AXI_awlen(vecmat_mmult_1_if_M_AXIMM_0_AWLEN),
+        .S00_AXI_awlock(vecmat_mmult_1_if_M_AXIMM_0_AWLOCK),
+        .S00_AXI_awprot(vecmat_mmult_1_if_M_AXIMM_0_AWPROT),
+        .S00_AXI_awqos(vecmat_mmult_1_if_M_AXIMM_0_AWQOS),
+        .S00_AXI_awready(vecmat_mmult_1_if_M_AXIMM_0_AWREADY),
+        .S00_AXI_awregion(vecmat_mmult_1_if_M_AXIMM_0_AWREGION),
+        .S00_AXI_awsize(vecmat_mmult_1_if_M_AXIMM_0_AWSIZE),
+        .S00_AXI_awvalid(vecmat_mmult_1_if_M_AXIMM_0_AWVALID),
+        .S00_AXI_bready(vecmat_mmult_1_if_M_AXIMM_0_BREADY),
+        .S00_AXI_bresp(vecmat_mmult_1_if_M_AXIMM_0_BRESP),
+        .S00_AXI_bvalid(vecmat_mmult_1_if_M_AXIMM_0_BVALID),
+        .S00_AXI_rdata(vecmat_mmult_1_if_M_AXIMM_0_RDATA),
+        .S00_AXI_rlast(vecmat_mmult_1_if_M_AXIMM_0_RLAST),
+        .S00_AXI_rready(vecmat_mmult_1_if_M_AXIMM_0_RREADY),
+        .S00_AXI_rresp(vecmat_mmult_1_if_M_AXIMM_0_RRESP),
+        .S00_AXI_rvalid(vecmat_mmult_1_if_M_AXIMM_0_RVALID),
+        .S00_AXI_wdata(vecmat_mmult_1_if_M_AXIMM_0_WDATA),
+        .S00_AXI_wlast(vecmat_mmult_1_if_M_AXIMM_0_WLAST),
+        .S00_AXI_wready(vecmat_mmult_1_if_M_AXIMM_0_WREADY),
+        .S00_AXI_wstrb(vecmat_mmult_1_if_M_AXIMM_0_WSTRB),
+        .S00_AXI_wvalid(vecmat_mmult_1_if_M_AXIMM_0_WVALID),
         .S01_ACLK(clk_wiz_0_clk_out1),
         .S01_ARESETN(proc_sys_reset_0_interconnect_aresetn),
-        .S01_AXI_araddr(block_mmult_1_if_M_AXIMM_1_ARADDR),
-        .S01_AXI_arburst(block_mmult_1_if_M_AXIMM_1_ARBURST),
+        .S01_AXI_araddr(vecmat_mmult_1_if_M_AXIMM_1_ARADDR),
+        .S01_AXI_arburst(vecmat_mmult_1_if_M_AXIMM_1_ARBURST),
         .S01_AXI_arcache(axcache_0xE_dout),
-        .S01_AXI_arlen(block_mmult_1_if_M_AXIMM_1_ARLEN),
-        .S01_AXI_arlock(block_mmult_1_if_M_AXIMM_1_ARLOCK),
-        .S01_AXI_arprot(block_mmult_1_if_M_AXIMM_1_ARPROT),
-        .S01_AXI_arqos(block_mmult_1_if_M_AXIMM_1_ARQOS),
-        .S01_AXI_arready(block_mmult_1_if_M_AXIMM_1_ARREADY),
-        .S01_AXI_arregion(block_mmult_1_if_M_AXIMM_1_ARREGION),
-        .S01_AXI_arsize(block_mmult_1_if_M_AXIMM_1_ARSIZE),
-        .S01_AXI_arvalid(block_mmult_1_if_M_AXIMM_1_ARVALID),
-        .S01_AXI_awaddr(block_mmult_1_if_M_AXIMM_1_AWADDR),
-        .S01_AXI_awburst(block_mmult_1_if_M_AXIMM_1_AWBURST),
+        .S01_AXI_arlen(vecmat_mmult_1_if_M_AXIMM_1_ARLEN),
+        .S01_AXI_arlock(vecmat_mmult_1_if_M_AXIMM_1_ARLOCK),
+        .S01_AXI_arprot(vecmat_mmult_1_if_M_AXIMM_1_ARPROT),
+        .S01_AXI_arqos(vecmat_mmult_1_if_M_AXIMM_1_ARQOS),
+        .S01_AXI_arready(vecmat_mmult_1_if_M_AXIMM_1_ARREADY),
+        .S01_AXI_arregion(vecmat_mmult_1_if_M_AXIMM_1_ARREGION),
+        .S01_AXI_arsize(vecmat_mmult_1_if_M_AXIMM_1_ARSIZE),
+        .S01_AXI_arvalid(vecmat_mmult_1_if_M_AXIMM_1_ARVALID),
+        .S01_AXI_awaddr(vecmat_mmult_1_if_M_AXIMM_1_AWADDR),
+        .S01_AXI_awburst(vecmat_mmult_1_if_M_AXIMM_1_AWBURST),
         .S01_AXI_awcache(axcache_0xE_dout),
-        .S01_AXI_awlen(block_mmult_1_if_M_AXIMM_1_AWLEN),
-        .S01_AXI_awlock(block_mmult_1_if_M_AXIMM_1_AWLOCK),
-        .S01_AXI_awprot(block_mmult_1_if_M_AXIMM_1_AWPROT),
-        .S01_AXI_awqos(block_mmult_1_if_M_AXIMM_1_AWQOS),
-        .S01_AXI_awready(block_mmult_1_if_M_AXIMM_1_AWREADY),
-        .S01_AXI_awregion(block_mmult_1_if_M_AXIMM_1_AWREGION),
-        .S01_AXI_awsize(block_mmult_1_if_M_AXIMM_1_AWSIZE),
-        .S01_AXI_awvalid(block_mmult_1_if_M_AXIMM_1_AWVALID),
-        .S01_AXI_bready(block_mmult_1_if_M_AXIMM_1_BREADY),
-        .S01_AXI_bresp(block_mmult_1_if_M_AXIMM_1_BRESP),
-        .S01_AXI_bvalid(block_mmult_1_if_M_AXIMM_1_BVALID),
-        .S01_AXI_rdata(block_mmult_1_if_M_AXIMM_1_RDATA),
-        .S01_AXI_rlast(block_mmult_1_if_M_AXIMM_1_RLAST),
-        .S01_AXI_rready(block_mmult_1_if_M_AXIMM_1_RREADY),
-        .S01_AXI_rresp(block_mmult_1_if_M_AXIMM_1_RRESP),
-        .S01_AXI_rvalid(block_mmult_1_if_M_AXIMM_1_RVALID),
-        .S01_AXI_wdata(block_mmult_1_if_M_AXIMM_1_WDATA),
-        .S01_AXI_wlast(block_mmult_1_if_M_AXIMM_1_WLAST),
-        .S01_AXI_wready(block_mmult_1_if_M_AXIMM_1_WREADY),
-        .S01_AXI_wstrb(block_mmult_1_if_M_AXIMM_1_WSTRB),
-        .S01_AXI_wvalid(block_mmult_1_if_M_AXIMM_1_WVALID),
+        .S01_AXI_awlen(vecmat_mmult_1_if_M_AXIMM_1_AWLEN),
+        .S01_AXI_awlock(vecmat_mmult_1_if_M_AXIMM_1_AWLOCK),
+        .S01_AXI_awprot(vecmat_mmult_1_if_M_AXIMM_1_AWPROT),
+        .S01_AXI_awqos(vecmat_mmult_1_if_M_AXIMM_1_AWQOS),
+        .S01_AXI_awready(vecmat_mmult_1_if_M_AXIMM_1_AWREADY),
+        .S01_AXI_awregion(vecmat_mmult_1_if_M_AXIMM_1_AWREGION),
+        .S01_AXI_awsize(vecmat_mmult_1_if_M_AXIMM_1_AWSIZE),
+        .S01_AXI_awvalid(vecmat_mmult_1_if_M_AXIMM_1_AWVALID),
+        .S01_AXI_bready(vecmat_mmult_1_if_M_AXIMM_1_BREADY),
+        .S01_AXI_bresp(vecmat_mmult_1_if_M_AXIMM_1_BRESP),
+        .S01_AXI_bvalid(vecmat_mmult_1_if_M_AXIMM_1_BVALID),
+        .S01_AXI_rdata(vecmat_mmult_1_if_M_AXIMM_1_RDATA),
+        .S01_AXI_rlast(vecmat_mmult_1_if_M_AXIMM_1_RLAST),
+        .S01_AXI_rready(vecmat_mmult_1_if_M_AXIMM_1_RREADY),
+        .S01_AXI_rresp(vecmat_mmult_1_if_M_AXIMM_1_RRESP),
+        .S01_AXI_rvalid(vecmat_mmult_1_if_M_AXIMM_1_RVALID),
+        .S01_AXI_wdata(vecmat_mmult_1_if_M_AXIMM_1_WDATA),
+        .S01_AXI_wlast(vecmat_mmult_1_if_M_AXIMM_1_WLAST),
+        .S01_AXI_wready(vecmat_mmult_1_if_M_AXIMM_1_WREADY),
+        .S01_AXI_wstrb(vecmat_mmult_1_if_M_AXIMM_1_WSTRB),
+        .S01_AXI_wvalid(vecmat_mmult_1_if_M_AXIMM_1_WVALID),
         .S02_ACLK(clk_wiz_0_clk_out1),
         .S02_ARESETN(proc_sys_reset_0_interconnect_aresetn),
-        .S02_AXI_araddr(block_mmult_1_if_M_AXIMM_2_ARADDR),
-        .S02_AXI_arburst(block_mmult_1_if_M_AXIMM_2_ARBURST),
+        .S02_AXI_araddr(vecmat_mmult_1_if_M_AXIMM_2_ARADDR),
+        .S02_AXI_arburst(vecmat_mmult_1_if_M_AXIMM_2_ARBURST),
         .S02_AXI_arcache(axcache_0xE_dout),
-        .S02_AXI_arlen(block_mmult_1_if_M_AXIMM_2_ARLEN),
-        .S02_AXI_arlock(block_mmult_1_if_M_AXIMM_2_ARLOCK),
-        .S02_AXI_arprot(block_mmult_1_if_M_AXIMM_2_ARPROT),
-        .S02_AXI_arqos(block_mmult_1_if_M_AXIMM_2_ARQOS),
-        .S02_AXI_arready(block_mmult_1_if_M_AXIMM_2_ARREADY),
-        .S02_AXI_arregion(block_mmult_1_if_M_AXIMM_2_ARREGION),
-        .S02_AXI_arsize(block_mmult_1_if_M_AXIMM_2_ARSIZE),
-        .S02_AXI_arvalid(block_mmult_1_if_M_AXIMM_2_ARVALID),
-        .S02_AXI_awaddr(block_mmult_1_if_M_AXIMM_2_AWADDR),
-        .S02_AXI_awburst(block_mmult_1_if_M_AXIMM_2_AWBURST),
+        .S02_AXI_arlen(vecmat_mmult_1_if_M_AXIMM_2_ARLEN),
+        .S02_AXI_arlock(vecmat_mmult_1_if_M_AXIMM_2_ARLOCK),
+        .S02_AXI_arprot(vecmat_mmult_1_if_M_AXIMM_2_ARPROT),
+        .S02_AXI_arqos(vecmat_mmult_1_if_M_AXIMM_2_ARQOS),
+        .S02_AXI_arready(vecmat_mmult_1_if_M_AXIMM_2_ARREADY),
+        .S02_AXI_arregion(vecmat_mmult_1_if_M_AXIMM_2_ARREGION),
+        .S02_AXI_arsize(vecmat_mmult_1_if_M_AXIMM_2_ARSIZE),
+        .S02_AXI_arvalid(vecmat_mmult_1_if_M_AXIMM_2_ARVALID),
+        .S02_AXI_awaddr(vecmat_mmult_1_if_M_AXIMM_2_AWADDR),
+        .S02_AXI_awburst(vecmat_mmult_1_if_M_AXIMM_2_AWBURST),
         .S02_AXI_awcache(axcache_0xE_dout),
-        .S02_AXI_awlen(block_mmult_1_if_M_AXIMM_2_AWLEN),
-        .S02_AXI_awlock(block_mmult_1_if_M_AXIMM_2_AWLOCK),
-        .S02_AXI_awprot(block_mmult_1_if_M_AXIMM_2_AWPROT),
-        .S02_AXI_awqos(block_mmult_1_if_M_AXIMM_2_AWQOS),
-        .S02_AXI_awready(block_mmult_1_if_M_AXIMM_2_AWREADY),
-        .S02_AXI_awregion(block_mmult_1_if_M_AXIMM_2_AWREGION),
-        .S02_AXI_awsize(block_mmult_1_if_M_AXIMM_2_AWSIZE),
-        .S02_AXI_awvalid(block_mmult_1_if_M_AXIMM_2_AWVALID),
-        .S02_AXI_bready(block_mmult_1_if_M_AXIMM_2_BREADY),
-        .S02_AXI_bresp(block_mmult_1_if_M_AXIMM_2_BRESP),
-        .S02_AXI_bvalid(block_mmult_1_if_M_AXIMM_2_BVALID),
-        .S02_AXI_rdata(block_mmult_1_if_M_AXIMM_2_RDATA),
-        .S02_AXI_rlast(block_mmult_1_if_M_AXIMM_2_RLAST),
-        .S02_AXI_rready(block_mmult_1_if_M_AXIMM_2_RREADY),
-        .S02_AXI_rresp(block_mmult_1_if_M_AXIMM_2_RRESP),
-        .S02_AXI_rvalid(block_mmult_1_if_M_AXIMM_2_RVALID),
-        .S02_AXI_wdata(block_mmult_1_if_M_AXIMM_2_WDATA),
-        .S02_AXI_wlast(block_mmult_1_if_M_AXIMM_2_WLAST),
-        .S02_AXI_wready(block_mmult_1_if_M_AXIMM_2_WREADY),
-        .S02_AXI_wstrb(block_mmult_1_if_M_AXIMM_2_WSTRB),
-        .S02_AXI_wvalid(block_mmult_1_if_M_AXIMM_2_WVALID),
+        .S02_AXI_awlen(vecmat_mmult_1_if_M_AXIMM_2_AWLEN),
+        .S02_AXI_awlock(vecmat_mmult_1_if_M_AXIMM_2_AWLOCK),
+        .S02_AXI_awprot(vecmat_mmult_1_if_M_AXIMM_2_AWPROT),
+        .S02_AXI_awqos(vecmat_mmult_1_if_M_AXIMM_2_AWQOS),
+        .S02_AXI_awready(vecmat_mmult_1_if_M_AXIMM_2_AWREADY),
+        .S02_AXI_awregion(vecmat_mmult_1_if_M_AXIMM_2_AWREGION),
+        .S02_AXI_awsize(vecmat_mmult_1_if_M_AXIMM_2_AWSIZE),
+        .S02_AXI_awvalid(vecmat_mmult_1_if_M_AXIMM_2_AWVALID),
+        .S02_AXI_bready(vecmat_mmult_1_if_M_AXIMM_2_BREADY),
+        .S02_AXI_bresp(vecmat_mmult_1_if_M_AXIMM_2_BRESP),
+        .S02_AXI_bvalid(vecmat_mmult_1_if_M_AXIMM_2_BVALID),
+        .S02_AXI_rdata(vecmat_mmult_1_if_M_AXIMM_2_RDATA),
+        .S02_AXI_rlast(vecmat_mmult_1_if_M_AXIMM_2_RLAST),
+        .S02_AXI_rready(vecmat_mmult_1_if_M_AXIMM_2_RREADY),
+        .S02_AXI_rresp(vecmat_mmult_1_if_M_AXIMM_2_RRESP),
+        .S02_AXI_rvalid(vecmat_mmult_1_if_M_AXIMM_2_RVALID),
+        .S02_AXI_wdata(vecmat_mmult_1_if_M_AXIMM_2_WDATA),
+        .S02_AXI_wlast(vecmat_mmult_1_if_M_AXIMM_2_WLAST),
+        .S02_AXI_wready(vecmat_mmult_1_if_M_AXIMM_2_WREADY),
+        .S02_AXI_wstrb(vecmat_mmult_1_if_M_AXIMM_2_WSTRB),
+        .S02_AXI_wvalid(vecmat_mmult_1_if_M_AXIMM_2_WVALID),
         .S03_ACLK(clk_wiz_0_clk_out1),
         .S03_ARESETN(proc_sys_reset_0_interconnect_aresetn),
         .S03_AXI_araddr(dm_0_M_AXI_MM2S_ARADDR),
@@ -5179,358 +5179,6 @@ module zed
         .s_axis_tready(madd_1_if_M_AXIS_FIFO_0_TREADY),
         .s_axis_tstrb(madd_1_if_M_AXIS_FIFO_0_TSTRB),
         .s_axis_tvalid(madd_1_if_M_AXIS_FIFO_0_TVALID));
-  zed_block_mmult_1_0 block_mmult_1
-       (.A_offset(block_mmult_1_if_ap_iscalar_0_dout),
-        .B_offset(block_mmult_1_if_ap_iscalar_1_dout),
-        .C_offset(block_mmult_1_if_ap_iscalar_2_dout),
-        .ap_clk(block_mmult_1_if_ap_clk),
-        .ap_done(block_mmult_1_if_ap_ctrl_done),
-        .ap_idle(block_mmult_1_if_ap_ctrl_idle),
-        .ap_ready(block_mmult_1_if_ap_ctrl_ready),
-        .ap_rst_n(block_mmult_1_if_ap_resetn),
-        .ap_start(block_mmult_1_if_ap_ctrl_start),
-        .m_axi_A_ARADDR(block_mmult_1_m_axi_A_ARADDR),
-        .m_axi_A_ARBURST(block_mmult_1_m_axi_A_ARBURST),
-        .m_axi_A_ARCACHE(block_mmult_1_m_axi_A_ARCACHE),
-        .m_axi_A_ARLEN(block_mmult_1_m_axi_A_ARLEN),
-        .m_axi_A_ARLOCK(block_mmult_1_m_axi_A_ARLOCK),
-        .m_axi_A_ARPROT(block_mmult_1_m_axi_A_ARPROT),
-        .m_axi_A_ARQOS(block_mmult_1_m_axi_A_ARQOS),
-        .m_axi_A_ARREADY(block_mmult_1_m_axi_A_ARREADY),
-        .m_axi_A_ARREGION(block_mmult_1_m_axi_A_ARREGION),
-        .m_axi_A_ARSIZE(block_mmult_1_m_axi_A_ARSIZE),
-        .m_axi_A_ARVALID(block_mmult_1_m_axi_A_ARVALID),
-        .m_axi_A_AWADDR(block_mmult_1_m_axi_A_AWADDR),
-        .m_axi_A_AWBURST(block_mmult_1_m_axi_A_AWBURST),
-        .m_axi_A_AWCACHE(block_mmult_1_m_axi_A_AWCACHE),
-        .m_axi_A_AWLEN(block_mmult_1_m_axi_A_AWLEN),
-        .m_axi_A_AWLOCK(block_mmult_1_m_axi_A_AWLOCK),
-        .m_axi_A_AWPROT(block_mmult_1_m_axi_A_AWPROT),
-        .m_axi_A_AWQOS(block_mmult_1_m_axi_A_AWQOS),
-        .m_axi_A_AWREADY(block_mmult_1_m_axi_A_AWREADY),
-        .m_axi_A_AWREGION(block_mmult_1_m_axi_A_AWREGION),
-        .m_axi_A_AWSIZE(block_mmult_1_m_axi_A_AWSIZE),
-        .m_axi_A_AWVALID(block_mmult_1_m_axi_A_AWVALID),
-        .m_axi_A_BREADY(block_mmult_1_m_axi_A_BREADY),
-        .m_axi_A_BRESP(block_mmult_1_m_axi_A_BRESP),
-        .m_axi_A_BVALID(block_mmult_1_m_axi_A_BVALID),
-        .m_axi_A_RDATA(block_mmult_1_m_axi_A_RDATA),
-        .m_axi_A_RLAST(block_mmult_1_m_axi_A_RLAST),
-        .m_axi_A_RREADY(block_mmult_1_m_axi_A_RREADY),
-        .m_axi_A_RRESP(block_mmult_1_m_axi_A_RRESP),
-        .m_axi_A_RVALID(block_mmult_1_m_axi_A_RVALID),
-        .m_axi_A_WDATA(block_mmult_1_m_axi_A_WDATA),
-        .m_axi_A_WLAST(block_mmult_1_m_axi_A_WLAST),
-        .m_axi_A_WREADY(block_mmult_1_m_axi_A_WREADY),
-        .m_axi_A_WSTRB(block_mmult_1_m_axi_A_WSTRB),
-        .m_axi_A_WVALID(block_mmult_1_m_axi_A_WVALID),
-        .m_axi_B_ARADDR(block_mmult_1_m_axi_B_ARADDR),
-        .m_axi_B_ARBURST(block_mmult_1_m_axi_B_ARBURST),
-        .m_axi_B_ARCACHE(block_mmult_1_m_axi_B_ARCACHE),
-        .m_axi_B_ARLEN(block_mmult_1_m_axi_B_ARLEN),
-        .m_axi_B_ARLOCK(block_mmult_1_m_axi_B_ARLOCK),
-        .m_axi_B_ARPROT(block_mmult_1_m_axi_B_ARPROT),
-        .m_axi_B_ARQOS(block_mmult_1_m_axi_B_ARQOS),
-        .m_axi_B_ARREADY(block_mmult_1_m_axi_B_ARREADY),
-        .m_axi_B_ARREGION(block_mmult_1_m_axi_B_ARREGION),
-        .m_axi_B_ARSIZE(block_mmult_1_m_axi_B_ARSIZE),
-        .m_axi_B_ARVALID(block_mmult_1_m_axi_B_ARVALID),
-        .m_axi_B_AWADDR(block_mmult_1_m_axi_B_AWADDR),
-        .m_axi_B_AWBURST(block_mmult_1_m_axi_B_AWBURST),
-        .m_axi_B_AWCACHE(block_mmult_1_m_axi_B_AWCACHE),
-        .m_axi_B_AWLEN(block_mmult_1_m_axi_B_AWLEN),
-        .m_axi_B_AWLOCK(block_mmult_1_m_axi_B_AWLOCK),
-        .m_axi_B_AWPROT(block_mmult_1_m_axi_B_AWPROT),
-        .m_axi_B_AWQOS(block_mmult_1_m_axi_B_AWQOS),
-        .m_axi_B_AWREADY(block_mmult_1_m_axi_B_AWREADY),
-        .m_axi_B_AWREGION(block_mmult_1_m_axi_B_AWREGION),
-        .m_axi_B_AWSIZE(block_mmult_1_m_axi_B_AWSIZE),
-        .m_axi_B_AWVALID(block_mmult_1_m_axi_B_AWVALID),
-        .m_axi_B_BREADY(block_mmult_1_m_axi_B_BREADY),
-        .m_axi_B_BRESP(block_mmult_1_m_axi_B_BRESP),
-        .m_axi_B_BVALID(block_mmult_1_m_axi_B_BVALID),
-        .m_axi_B_RDATA(block_mmult_1_m_axi_B_RDATA),
-        .m_axi_B_RLAST(block_mmult_1_m_axi_B_RLAST),
-        .m_axi_B_RREADY(block_mmult_1_m_axi_B_RREADY),
-        .m_axi_B_RRESP(block_mmult_1_m_axi_B_RRESP),
-        .m_axi_B_RVALID(block_mmult_1_m_axi_B_RVALID),
-        .m_axi_B_WDATA(block_mmult_1_m_axi_B_WDATA),
-        .m_axi_B_WLAST(block_mmult_1_m_axi_B_WLAST),
-        .m_axi_B_WREADY(block_mmult_1_m_axi_B_WREADY),
-        .m_axi_B_WSTRB(block_mmult_1_m_axi_B_WSTRB),
-        .m_axi_B_WVALID(block_mmult_1_m_axi_B_WVALID),
-        .m_axi_C_ARADDR(block_mmult_1_m_axi_C_ARADDR),
-        .m_axi_C_ARBURST(block_mmult_1_m_axi_C_ARBURST),
-        .m_axi_C_ARCACHE(block_mmult_1_m_axi_C_ARCACHE),
-        .m_axi_C_ARLEN(block_mmult_1_m_axi_C_ARLEN),
-        .m_axi_C_ARLOCK(block_mmult_1_m_axi_C_ARLOCK),
-        .m_axi_C_ARPROT(block_mmult_1_m_axi_C_ARPROT),
-        .m_axi_C_ARQOS(block_mmult_1_m_axi_C_ARQOS),
-        .m_axi_C_ARREADY(block_mmult_1_m_axi_C_ARREADY),
-        .m_axi_C_ARREGION(block_mmult_1_m_axi_C_ARREGION),
-        .m_axi_C_ARSIZE(block_mmult_1_m_axi_C_ARSIZE),
-        .m_axi_C_ARVALID(block_mmult_1_m_axi_C_ARVALID),
-        .m_axi_C_AWADDR(block_mmult_1_m_axi_C_AWADDR),
-        .m_axi_C_AWBURST(block_mmult_1_m_axi_C_AWBURST),
-        .m_axi_C_AWCACHE(block_mmult_1_m_axi_C_AWCACHE),
-        .m_axi_C_AWLEN(block_mmult_1_m_axi_C_AWLEN),
-        .m_axi_C_AWLOCK(block_mmult_1_m_axi_C_AWLOCK),
-        .m_axi_C_AWPROT(block_mmult_1_m_axi_C_AWPROT),
-        .m_axi_C_AWQOS(block_mmult_1_m_axi_C_AWQOS),
-        .m_axi_C_AWREADY(block_mmult_1_m_axi_C_AWREADY),
-        .m_axi_C_AWREGION(block_mmult_1_m_axi_C_AWREGION),
-        .m_axi_C_AWSIZE(block_mmult_1_m_axi_C_AWSIZE),
-        .m_axi_C_AWVALID(block_mmult_1_m_axi_C_AWVALID),
-        .m_axi_C_BREADY(block_mmult_1_m_axi_C_BREADY),
-        .m_axi_C_BRESP(block_mmult_1_m_axi_C_BRESP),
-        .m_axi_C_BVALID(block_mmult_1_m_axi_C_BVALID),
-        .m_axi_C_RDATA(block_mmult_1_m_axi_C_RDATA),
-        .m_axi_C_RLAST(block_mmult_1_m_axi_C_RLAST),
-        .m_axi_C_RREADY(block_mmult_1_m_axi_C_RREADY),
-        .m_axi_C_RRESP(block_mmult_1_m_axi_C_RRESP),
-        .m_axi_C_RVALID(block_mmult_1_m_axi_C_RVALID),
-        .m_axi_C_WDATA(block_mmult_1_m_axi_C_WDATA),
-        .m_axi_C_WLAST(block_mmult_1_m_axi_C_WLAST),
-        .m_axi_C_WREADY(block_mmult_1_m_axi_C_WREADY),
-        .m_axi_C_WSTRB(block_mmult_1_m_axi_C_WSTRB),
-        .m_axi_C_WVALID(block_mmult_1_m_axi_C_WVALID));
-  zed_block_mmult_1_if_0 block_mmult_1_if
-       (.AP_AXIMM_0_ARADDR(block_mmult_1_m_axi_A_ARADDR),
-        .AP_AXIMM_0_ARBURST(block_mmult_1_m_axi_A_ARBURST),
-        .AP_AXIMM_0_ARCACHE(block_mmult_1_m_axi_A_ARCACHE),
-        .AP_AXIMM_0_ARLEN(block_mmult_1_m_axi_A_ARLEN),
-        .AP_AXIMM_0_ARLOCK(block_mmult_1_m_axi_A_ARLOCK),
-        .AP_AXIMM_0_ARPROT(block_mmult_1_m_axi_A_ARPROT),
-        .AP_AXIMM_0_ARQOS(block_mmult_1_m_axi_A_ARQOS),
-        .AP_AXIMM_0_ARREADY(block_mmult_1_m_axi_A_ARREADY),
-        .AP_AXIMM_0_ARREGION(block_mmult_1_m_axi_A_ARREGION),
-        .AP_AXIMM_0_ARSIZE(block_mmult_1_m_axi_A_ARSIZE),
-        .AP_AXIMM_0_ARVALID(block_mmult_1_m_axi_A_ARVALID),
-        .AP_AXIMM_0_AWADDR(block_mmult_1_m_axi_A_AWADDR),
-        .AP_AXIMM_0_AWBURST(block_mmult_1_m_axi_A_AWBURST),
-        .AP_AXIMM_0_AWCACHE(block_mmult_1_m_axi_A_AWCACHE),
-        .AP_AXIMM_0_AWLEN(block_mmult_1_m_axi_A_AWLEN),
-        .AP_AXIMM_0_AWLOCK(block_mmult_1_m_axi_A_AWLOCK),
-        .AP_AXIMM_0_AWPROT(block_mmult_1_m_axi_A_AWPROT),
-        .AP_AXIMM_0_AWQOS(block_mmult_1_m_axi_A_AWQOS),
-        .AP_AXIMM_0_AWREADY(block_mmult_1_m_axi_A_AWREADY),
-        .AP_AXIMM_0_AWREGION(block_mmult_1_m_axi_A_AWREGION),
-        .AP_AXIMM_0_AWSIZE(block_mmult_1_m_axi_A_AWSIZE),
-        .AP_AXIMM_0_AWVALID(block_mmult_1_m_axi_A_AWVALID),
-        .AP_AXIMM_0_BREADY(block_mmult_1_m_axi_A_BREADY),
-        .AP_AXIMM_0_BRESP(block_mmult_1_m_axi_A_BRESP),
-        .AP_AXIMM_0_BVALID(block_mmult_1_m_axi_A_BVALID),
-        .AP_AXIMM_0_RDATA(block_mmult_1_m_axi_A_RDATA),
-        .AP_AXIMM_0_RLAST(block_mmult_1_m_axi_A_RLAST),
-        .AP_AXIMM_0_RREADY(block_mmult_1_m_axi_A_RREADY),
-        .AP_AXIMM_0_RRESP(block_mmult_1_m_axi_A_RRESP),
-        .AP_AXIMM_0_RVALID(block_mmult_1_m_axi_A_RVALID),
-        .AP_AXIMM_0_WDATA(block_mmult_1_m_axi_A_WDATA),
-        .AP_AXIMM_0_WLAST(block_mmult_1_m_axi_A_WLAST),
-        .AP_AXIMM_0_WREADY(block_mmult_1_m_axi_A_WREADY),
-        .AP_AXIMM_0_WSTRB(block_mmult_1_m_axi_A_WSTRB),
-        .AP_AXIMM_0_WVALID(block_mmult_1_m_axi_A_WVALID),
-        .AP_AXIMM_1_ARADDR(block_mmult_1_m_axi_B_ARADDR),
-        .AP_AXIMM_1_ARBURST(block_mmult_1_m_axi_B_ARBURST),
-        .AP_AXIMM_1_ARCACHE(block_mmult_1_m_axi_B_ARCACHE),
-        .AP_AXIMM_1_ARLEN(block_mmult_1_m_axi_B_ARLEN),
-        .AP_AXIMM_1_ARLOCK(block_mmult_1_m_axi_B_ARLOCK),
-        .AP_AXIMM_1_ARPROT(block_mmult_1_m_axi_B_ARPROT),
-        .AP_AXIMM_1_ARQOS(block_mmult_1_m_axi_B_ARQOS),
-        .AP_AXIMM_1_ARREADY(block_mmult_1_m_axi_B_ARREADY),
-        .AP_AXIMM_1_ARREGION(block_mmult_1_m_axi_B_ARREGION),
-        .AP_AXIMM_1_ARSIZE(block_mmult_1_m_axi_B_ARSIZE),
-        .AP_AXIMM_1_ARVALID(block_mmult_1_m_axi_B_ARVALID),
-        .AP_AXIMM_1_AWADDR(block_mmult_1_m_axi_B_AWADDR),
-        .AP_AXIMM_1_AWBURST(block_mmult_1_m_axi_B_AWBURST),
-        .AP_AXIMM_1_AWCACHE(block_mmult_1_m_axi_B_AWCACHE),
-        .AP_AXIMM_1_AWLEN(block_mmult_1_m_axi_B_AWLEN),
-        .AP_AXIMM_1_AWLOCK(block_mmult_1_m_axi_B_AWLOCK),
-        .AP_AXIMM_1_AWPROT(block_mmult_1_m_axi_B_AWPROT),
-        .AP_AXIMM_1_AWQOS(block_mmult_1_m_axi_B_AWQOS),
-        .AP_AXIMM_1_AWREADY(block_mmult_1_m_axi_B_AWREADY),
-        .AP_AXIMM_1_AWREGION(block_mmult_1_m_axi_B_AWREGION),
-        .AP_AXIMM_1_AWSIZE(block_mmult_1_m_axi_B_AWSIZE),
-        .AP_AXIMM_1_AWVALID(block_mmult_1_m_axi_B_AWVALID),
-        .AP_AXIMM_1_BREADY(block_mmult_1_m_axi_B_BREADY),
-        .AP_AXIMM_1_BRESP(block_mmult_1_m_axi_B_BRESP),
-        .AP_AXIMM_1_BVALID(block_mmult_1_m_axi_B_BVALID),
-        .AP_AXIMM_1_RDATA(block_mmult_1_m_axi_B_RDATA),
-        .AP_AXIMM_1_RLAST(block_mmult_1_m_axi_B_RLAST),
-        .AP_AXIMM_1_RREADY(block_mmult_1_m_axi_B_RREADY),
-        .AP_AXIMM_1_RRESP(block_mmult_1_m_axi_B_RRESP),
-        .AP_AXIMM_1_RVALID(block_mmult_1_m_axi_B_RVALID),
-        .AP_AXIMM_1_WDATA(block_mmult_1_m_axi_B_WDATA),
-        .AP_AXIMM_1_WLAST(block_mmult_1_m_axi_B_WLAST),
-        .AP_AXIMM_1_WREADY(block_mmult_1_m_axi_B_WREADY),
-        .AP_AXIMM_1_WSTRB(block_mmult_1_m_axi_B_WSTRB),
-        .AP_AXIMM_1_WVALID(block_mmult_1_m_axi_B_WVALID),
-        .AP_AXIMM_2_ARADDR(block_mmult_1_m_axi_C_ARADDR),
-        .AP_AXIMM_2_ARBURST(block_mmult_1_m_axi_C_ARBURST),
-        .AP_AXIMM_2_ARCACHE(block_mmult_1_m_axi_C_ARCACHE),
-        .AP_AXIMM_2_ARLEN(block_mmult_1_m_axi_C_ARLEN),
-        .AP_AXIMM_2_ARLOCK(block_mmult_1_m_axi_C_ARLOCK),
-        .AP_AXIMM_2_ARPROT(block_mmult_1_m_axi_C_ARPROT),
-        .AP_AXIMM_2_ARQOS(block_mmult_1_m_axi_C_ARQOS),
-        .AP_AXIMM_2_ARREADY(block_mmult_1_m_axi_C_ARREADY),
-        .AP_AXIMM_2_ARREGION(block_mmult_1_m_axi_C_ARREGION),
-        .AP_AXIMM_2_ARSIZE(block_mmult_1_m_axi_C_ARSIZE),
-        .AP_AXIMM_2_ARVALID(block_mmult_1_m_axi_C_ARVALID),
-        .AP_AXIMM_2_AWADDR(block_mmult_1_m_axi_C_AWADDR),
-        .AP_AXIMM_2_AWBURST(block_mmult_1_m_axi_C_AWBURST),
-        .AP_AXIMM_2_AWCACHE(block_mmult_1_m_axi_C_AWCACHE),
-        .AP_AXIMM_2_AWLEN(block_mmult_1_m_axi_C_AWLEN),
-        .AP_AXIMM_2_AWLOCK(block_mmult_1_m_axi_C_AWLOCK),
-        .AP_AXIMM_2_AWPROT(block_mmult_1_m_axi_C_AWPROT),
-        .AP_AXIMM_2_AWQOS(block_mmult_1_m_axi_C_AWQOS),
-        .AP_AXIMM_2_AWREADY(block_mmult_1_m_axi_C_AWREADY),
-        .AP_AXIMM_2_AWREGION(block_mmult_1_m_axi_C_AWREGION),
-        .AP_AXIMM_2_AWSIZE(block_mmult_1_m_axi_C_AWSIZE),
-        .AP_AXIMM_2_AWVALID(block_mmult_1_m_axi_C_AWVALID),
-        .AP_AXIMM_2_BREADY(block_mmult_1_m_axi_C_BREADY),
-        .AP_AXIMM_2_BRESP(block_mmult_1_m_axi_C_BRESP),
-        .AP_AXIMM_2_BVALID(block_mmult_1_m_axi_C_BVALID),
-        .AP_AXIMM_2_RDATA(block_mmult_1_m_axi_C_RDATA),
-        .AP_AXIMM_2_RLAST(block_mmult_1_m_axi_C_RLAST),
-        .AP_AXIMM_2_RREADY(block_mmult_1_m_axi_C_RREADY),
-        .AP_AXIMM_2_RRESP(block_mmult_1_m_axi_C_RRESP),
-        .AP_AXIMM_2_RVALID(block_mmult_1_m_axi_C_RVALID),
-        .AP_AXIMM_2_WDATA(block_mmult_1_m_axi_C_WDATA),
-        .AP_AXIMM_2_WLAST(block_mmult_1_m_axi_C_WLAST),
-        .AP_AXIMM_2_WREADY(block_mmult_1_m_axi_C_WREADY),
-        .AP_AXIMM_2_WSTRB(block_mmult_1_m_axi_C_WSTRB),
-        .AP_AXIMM_2_WVALID(block_mmult_1_m_axi_C_WVALID),
-        .M_AXIMM_0_ARADDR(block_mmult_1_if_M_AXIMM_0_ARADDR),
-        .M_AXIMM_0_ARBURST(block_mmult_1_if_M_AXIMM_0_ARBURST),
-        .M_AXIMM_0_ARLEN(block_mmult_1_if_M_AXIMM_0_ARLEN),
-        .M_AXIMM_0_ARLOCK(block_mmult_1_if_M_AXIMM_0_ARLOCK),
-        .M_AXIMM_0_ARPROT(block_mmult_1_if_M_AXIMM_0_ARPROT),
-        .M_AXIMM_0_ARQOS(block_mmult_1_if_M_AXIMM_0_ARQOS),
-        .M_AXIMM_0_ARREADY(block_mmult_1_if_M_AXIMM_0_ARREADY),
-        .M_AXIMM_0_ARREGION(block_mmult_1_if_M_AXIMM_0_ARREGION),
-        .M_AXIMM_0_ARSIZE(block_mmult_1_if_M_AXIMM_0_ARSIZE),
-        .M_AXIMM_0_ARVALID(block_mmult_1_if_M_AXIMM_0_ARVALID),
-        .M_AXIMM_0_AWADDR(block_mmult_1_if_M_AXIMM_0_AWADDR),
-        .M_AXIMM_0_AWBURST(block_mmult_1_if_M_AXIMM_0_AWBURST),
-        .M_AXIMM_0_AWLEN(block_mmult_1_if_M_AXIMM_0_AWLEN),
-        .M_AXIMM_0_AWLOCK(block_mmult_1_if_M_AXIMM_0_AWLOCK),
-        .M_AXIMM_0_AWPROT(block_mmult_1_if_M_AXIMM_0_AWPROT),
-        .M_AXIMM_0_AWQOS(block_mmult_1_if_M_AXIMM_0_AWQOS),
-        .M_AXIMM_0_AWREADY(block_mmult_1_if_M_AXIMM_0_AWREADY),
-        .M_AXIMM_0_AWREGION(block_mmult_1_if_M_AXIMM_0_AWREGION),
-        .M_AXIMM_0_AWSIZE(block_mmult_1_if_M_AXIMM_0_AWSIZE),
-        .M_AXIMM_0_AWVALID(block_mmult_1_if_M_AXIMM_0_AWVALID),
-        .M_AXIMM_0_BREADY(block_mmult_1_if_M_AXIMM_0_BREADY),
-        .M_AXIMM_0_BRESP(block_mmult_1_if_M_AXIMM_0_BRESP),
-        .M_AXIMM_0_BVALID(block_mmult_1_if_M_AXIMM_0_BVALID),
-        .M_AXIMM_0_RDATA(block_mmult_1_if_M_AXIMM_0_RDATA),
-        .M_AXIMM_0_RLAST(block_mmult_1_if_M_AXIMM_0_RLAST),
-        .M_AXIMM_0_RREADY(block_mmult_1_if_M_AXIMM_0_RREADY),
-        .M_AXIMM_0_RRESP(block_mmult_1_if_M_AXIMM_0_RRESP),
-        .M_AXIMM_0_RVALID(block_mmult_1_if_M_AXIMM_0_RVALID),
-        .M_AXIMM_0_WDATA(block_mmult_1_if_M_AXIMM_0_WDATA),
-        .M_AXIMM_0_WLAST(block_mmult_1_if_M_AXIMM_0_WLAST),
-        .M_AXIMM_0_WREADY(block_mmult_1_if_M_AXIMM_0_WREADY),
-        .M_AXIMM_0_WSTRB(block_mmult_1_if_M_AXIMM_0_WSTRB),
-        .M_AXIMM_0_WVALID(block_mmult_1_if_M_AXIMM_0_WVALID),
-        .M_AXIMM_1_ARADDR(block_mmult_1_if_M_AXIMM_1_ARADDR),
-        .M_AXIMM_1_ARBURST(block_mmult_1_if_M_AXIMM_1_ARBURST),
-        .M_AXIMM_1_ARLEN(block_mmult_1_if_M_AXIMM_1_ARLEN),
-        .M_AXIMM_1_ARLOCK(block_mmult_1_if_M_AXIMM_1_ARLOCK),
-        .M_AXIMM_1_ARPROT(block_mmult_1_if_M_AXIMM_1_ARPROT),
-        .M_AXIMM_1_ARQOS(block_mmult_1_if_M_AXIMM_1_ARQOS),
-        .M_AXIMM_1_ARREADY(block_mmult_1_if_M_AXIMM_1_ARREADY),
-        .M_AXIMM_1_ARREGION(block_mmult_1_if_M_AXIMM_1_ARREGION),
-        .M_AXIMM_1_ARSIZE(block_mmult_1_if_M_AXIMM_1_ARSIZE),
-        .M_AXIMM_1_ARVALID(block_mmult_1_if_M_AXIMM_1_ARVALID),
-        .M_AXIMM_1_AWADDR(block_mmult_1_if_M_AXIMM_1_AWADDR),
-        .M_AXIMM_1_AWBURST(block_mmult_1_if_M_AXIMM_1_AWBURST),
-        .M_AXIMM_1_AWLEN(block_mmult_1_if_M_AXIMM_1_AWLEN),
-        .M_AXIMM_1_AWLOCK(block_mmult_1_if_M_AXIMM_1_AWLOCK),
-        .M_AXIMM_1_AWPROT(block_mmult_1_if_M_AXIMM_1_AWPROT),
-        .M_AXIMM_1_AWQOS(block_mmult_1_if_M_AXIMM_1_AWQOS),
-        .M_AXIMM_1_AWREADY(block_mmult_1_if_M_AXIMM_1_AWREADY),
-        .M_AXIMM_1_AWREGION(block_mmult_1_if_M_AXIMM_1_AWREGION),
-        .M_AXIMM_1_AWSIZE(block_mmult_1_if_M_AXIMM_1_AWSIZE),
-        .M_AXIMM_1_AWVALID(block_mmult_1_if_M_AXIMM_1_AWVALID),
-        .M_AXIMM_1_BREADY(block_mmult_1_if_M_AXIMM_1_BREADY),
-        .M_AXIMM_1_BRESP(block_mmult_1_if_M_AXIMM_1_BRESP),
-        .M_AXIMM_1_BVALID(block_mmult_1_if_M_AXIMM_1_BVALID),
-        .M_AXIMM_1_RDATA(block_mmult_1_if_M_AXIMM_1_RDATA),
-        .M_AXIMM_1_RLAST(block_mmult_1_if_M_AXIMM_1_RLAST),
-        .M_AXIMM_1_RREADY(block_mmult_1_if_M_AXIMM_1_RREADY),
-        .M_AXIMM_1_RRESP(block_mmult_1_if_M_AXIMM_1_RRESP),
-        .M_AXIMM_1_RVALID(block_mmult_1_if_M_AXIMM_1_RVALID),
-        .M_AXIMM_1_WDATA(block_mmult_1_if_M_AXIMM_1_WDATA),
-        .M_AXIMM_1_WLAST(block_mmult_1_if_M_AXIMM_1_WLAST),
-        .M_AXIMM_1_WREADY(block_mmult_1_if_M_AXIMM_1_WREADY),
-        .M_AXIMM_1_WSTRB(block_mmult_1_if_M_AXIMM_1_WSTRB),
-        .M_AXIMM_1_WVALID(block_mmult_1_if_M_AXIMM_1_WVALID),
-        .M_AXIMM_2_ARADDR(block_mmult_1_if_M_AXIMM_2_ARADDR),
-        .M_AXIMM_2_ARBURST(block_mmult_1_if_M_AXIMM_2_ARBURST),
-        .M_AXIMM_2_ARLEN(block_mmult_1_if_M_AXIMM_2_ARLEN),
-        .M_AXIMM_2_ARLOCK(block_mmult_1_if_M_AXIMM_2_ARLOCK),
-        .M_AXIMM_2_ARPROT(block_mmult_1_if_M_AXIMM_2_ARPROT),
-        .M_AXIMM_2_ARQOS(block_mmult_1_if_M_AXIMM_2_ARQOS),
-        .M_AXIMM_2_ARREADY(block_mmult_1_if_M_AXIMM_2_ARREADY),
-        .M_AXIMM_2_ARREGION(block_mmult_1_if_M_AXIMM_2_ARREGION),
-        .M_AXIMM_2_ARSIZE(block_mmult_1_if_M_AXIMM_2_ARSIZE),
-        .M_AXIMM_2_ARVALID(block_mmult_1_if_M_AXIMM_2_ARVALID),
-        .M_AXIMM_2_AWADDR(block_mmult_1_if_M_AXIMM_2_AWADDR),
-        .M_AXIMM_2_AWBURST(block_mmult_1_if_M_AXIMM_2_AWBURST),
-        .M_AXIMM_2_AWLEN(block_mmult_1_if_M_AXIMM_2_AWLEN),
-        .M_AXIMM_2_AWLOCK(block_mmult_1_if_M_AXIMM_2_AWLOCK),
-        .M_AXIMM_2_AWPROT(block_mmult_1_if_M_AXIMM_2_AWPROT),
-        .M_AXIMM_2_AWQOS(block_mmult_1_if_M_AXIMM_2_AWQOS),
-        .M_AXIMM_2_AWREADY(block_mmult_1_if_M_AXIMM_2_AWREADY),
-        .M_AXIMM_2_AWREGION(block_mmult_1_if_M_AXIMM_2_AWREGION),
-        .M_AXIMM_2_AWSIZE(block_mmult_1_if_M_AXIMM_2_AWSIZE),
-        .M_AXIMM_2_AWVALID(block_mmult_1_if_M_AXIMM_2_AWVALID),
-        .M_AXIMM_2_BREADY(block_mmult_1_if_M_AXIMM_2_BREADY),
-        .M_AXIMM_2_BRESP(block_mmult_1_if_M_AXIMM_2_BRESP),
-        .M_AXIMM_2_BVALID(block_mmult_1_if_M_AXIMM_2_BVALID),
-        .M_AXIMM_2_RDATA(block_mmult_1_if_M_AXIMM_2_RDATA),
-        .M_AXIMM_2_RLAST(block_mmult_1_if_M_AXIMM_2_RLAST),
-        .M_AXIMM_2_RREADY(block_mmult_1_if_M_AXIMM_2_RREADY),
-        .M_AXIMM_2_RRESP(block_mmult_1_if_M_AXIMM_2_RRESP),
-        .M_AXIMM_2_RVALID(block_mmult_1_if_M_AXIMM_2_RVALID),
-        .M_AXIMM_2_WDATA(block_mmult_1_if_M_AXIMM_2_WDATA),
-        .M_AXIMM_2_WLAST(block_mmult_1_if_M_AXIMM_2_WLAST),
-        .M_AXIMM_2_WREADY(block_mmult_1_if_M_AXIMM_2_WREADY),
-        .M_AXIMM_2_WSTRB(block_mmult_1_if_M_AXIMM_2_WSTRB),
-        .M_AXIMM_2_WVALID(block_mmult_1_if_M_AXIMM_2_WVALID),
-        .S_AXI_ARADDR(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARADDR),
-        .S_AXI_ARPROT(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARPROT),
-        .S_AXI_ARREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARREADY),
-        .S_AXI_ARVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARVALID),
-        .S_AXI_AWADDR(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWADDR),
-        .S_AXI_AWPROT(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWPROT),
-        .S_AXI_AWREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWREADY),
-        .S_AXI_AWVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWVALID),
-        .S_AXI_BREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_BREADY),
-        .S_AXI_BRESP(axi_ic_ps7_M_AXI_GP0_M00_AXI_BRESP),
-        .S_AXI_BVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_BVALID),
-        .S_AXI_RDATA(axi_ic_ps7_M_AXI_GP0_M00_AXI_RDATA),
-        .S_AXI_RREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_RREADY),
-        .S_AXI_RRESP(axi_ic_ps7_M_AXI_GP0_M00_AXI_RRESP),
-        .S_AXI_RVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_RVALID),
-        .S_AXI_WDATA(axi_ic_ps7_M_AXI_GP0_M00_AXI_WDATA),
-        .S_AXI_WREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_WREADY),
-        .S_AXI_WSTRB(axi_ic_ps7_M_AXI_GP0_M00_AXI_WSTRB),
-        .S_AXI_WVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_WVALID),
-        .acc_aclk(clk_wiz_0_clk_out1),
-        .acc_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .ap_clk(block_mmult_1_if_ap_clk),
-        .ap_done(block_mmult_1_if_ap_ctrl_done),
-        .ap_idle(block_mmult_1_if_ap_ctrl_idle),
-        .ap_iscalar_0_dout(block_mmult_1_if_ap_iscalar_0_dout),
-        .ap_iscalar_1_dout(block_mmult_1_if_ap_iscalar_1_dout),
-        .ap_iscalar_2_dout(block_mmult_1_if_ap_iscalar_2_dout),
-        .ap_ready(block_mmult_1_if_ap_ctrl_ready),
-        .ap_resetn(block_mmult_1_if_ap_resetn),
-        .ap_start(block_mmult_1_if_ap_ctrl_start),
-        .s_axi_aclk(clk_wiz_0_clk_out1),
-        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn));
   zed_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(ps7_FCLK_CLK0),
         .clk_out1(clk_wiz_0_clk_out1),
@@ -5672,25 +5320,25 @@ module zed
         .ap_rst_n(madd_1_if_ap_resetn),
         .ap_start(madd_1_if_ap_ctrl_start));
   zed_madd_1_if_0 madd_1_if
-       (.S_AXI_ARADDR(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARADDR),
-        .S_AXI_ARPROT(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARPROT),
-        .S_AXI_ARREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARREADY),
-        .S_AXI_ARVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARVALID),
-        .S_AXI_AWADDR(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWADDR),
-        .S_AXI_AWPROT(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWPROT),
-        .S_AXI_AWREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWREADY),
-        .S_AXI_AWVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWVALID),
-        .S_AXI_BREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_BREADY),
-        .S_AXI_BRESP(axi_ic_ps7_M_AXI_GP0_M01_AXI_BRESP),
-        .S_AXI_BVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_BVALID),
-        .S_AXI_RDATA(axi_ic_ps7_M_AXI_GP0_M01_AXI_RDATA),
-        .S_AXI_RREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_RREADY),
-        .S_AXI_RRESP(axi_ic_ps7_M_AXI_GP0_M01_AXI_RRESP),
-        .S_AXI_RVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_RVALID),
-        .S_AXI_WDATA(axi_ic_ps7_M_AXI_GP0_M01_AXI_WDATA),
-        .S_AXI_WREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_WREADY),
-        .S_AXI_WSTRB(axi_ic_ps7_M_AXI_GP0_M01_AXI_WSTRB),
-        .S_AXI_WVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_WVALID),
+       (.S_AXI_ARADDR(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARADDR),
+        .S_AXI_ARPROT(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARPROT),
+        .S_AXI_ARREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARREADY),
+        .S_AXI_ARVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_ARVALID),
+        .S_AXI_AWADDR(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWADDR),
+        .S_AXI_AWPROT(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWPROT),
+        .S_AXI_AWREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWREADY),
+        .S_AXI_AWVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_AWVALID),
+        .S_AXI_BREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_BREADY),
+        .S_AXI_BRESP(axi_ic_ps7_M_AXI_GP0_M00_AXI_BRESP),
+        .S_AXI_BVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_BVALID),
+        .S_AXI_RDATA(axi_ic_ps7_M_AXI_GP0_M00_AXI_RDATA),
+        .S_AXI_RREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_RREADY),
+        .S_AXI_RRESP(axi_ic_ps7_M_AXI_GP0_M00_AXI_RRESP),
+        .S_AXI_RVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_RVALID),
+        .S_AXI_WDATA(axi_ic_ps7_M_AXI_GP0_M00_AXI_WDATA),
+        .S_AXI_WREADY(axi_ic_ps7_M_AXI_GP0_M00_AXI_WREADY),
+        .S_AXI_WSTRB(axi_ic_ps7_M_AXI_GP0_M00_AXI_WSTRB),
+        .S_AXI_WVALID(axi_ic_ps7_M_AXI_GP0_M00_AXI_WVALID),
         .acc_aclk(clk_wiz_0_clk_out1),
         .acc_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .ap_clk(madd_1_if_ap_clk),
@@ -5880,6 +5528,358 @@ module zed
         .USB0_VBUS_PWRFAULT(1'b0));
   zed_sds_irq_const_0 sds_irq_const
        (.dout(sds_irq_const_dout));
+  zed_vecmat_mmult_1_0 vecmat_mmult_1
+       (.A_offset(vecmat_mmult_1_if_ap_iscalar_0_dout),
+        .B_offset(vecmat_mmult_1_if_ap_iscalar_1_dout),
+        .C_offset(vecmat_mmult_1_if_ap_iscalar_2_dout),
+        .ap_clk(vecmat_mmult_1_if_ap_clk),
+        .ap_done(vecmat_mmult_1_if_ap_ctrl_done),
+        .ap_idle(vecmat_mmult_1_if_ap_ctrl_idle),
+        .ap_ready(vecmat_mmult_1_if_ap_ctrl_ready),
+        .ap_rst_n(vecmat_mmult_1_if_ap_resetn),
+        .ap_start(vecmat_mmult_1_if_ap_ctrl_start),
+        .m_axi_A_ARADDR(vecmat_mmult_1_m_axi_A_ARADDR),
+        .m_axi_A_ARBURST(vecmat_mmult_1_m_axi_A_ARBURST),
+        .m_axi_A_ARCACHE(vecmat_mmult_1_m_axi_A_ARCACHE),
+        .m_axi_A_ARLEN(vecmat_mmult_1_m_axi_A_ARLEN),
+        .m_axi_A_ARLOCK(vecmat_mmult_1_m_axi_A_ARLOCK),
+        .m_axi_A_ARPROT(vecmat_mmult_1_m_axi_A_ARPROT),
+        .m_axi_A_ARQOS(vecmat_mmult_1_m_axi_A_ARQOS),
+        .m_axi_A_ARREADY(vecmat_mmult_1_m_axi_A_ARREADY),
+        .m_axi_A_ARREGION(vecmat_mmult_1_m_axi_A_ARREGION),
+        .m_axi_A_ARSIZE(vecmat_mmult_1_m_axi_A_ARSIZE),
+        .m_axi_A_ARVALID(vecmat_mmult_1_m_axi_A_ARVALID),
+        .m_axi_A_AWADDR(vecmat_mmult_1_m_axi_A_AWADDR),
+        .m_axi_A_AWBURST(vecmat_mmult_1_m_axi_A_AWBURST),
+        .m_axi_A_AWCACHE(vecmat_mmult_1_m_axi_A_AWCACHE),
+        .m_axi_A_AWLEN(vecmat_mmult_1_m_axi_A_AWLEN),
+        .m_axi_A_AWLOCK(vecmat_mmult_1_m_axi_A_AWLOCK),
+        .m_axi_A_AWPROT(vecmat_mmult_1_m_axi_A_AWPROT),
+        .m_axi_A_AWQOS(vecmat_mmult_1_m_axi_A_AWQOS),
+        .m_axi_A_AWREADY(vecmat_mmult_1_m_axi_A_AWREADY),
+        .m_axi_A_AWREGION(vecmat_mmult_1_m_axi_A_AWREGION),
+        .m_axi_A_AWSIZE(vecmat_mmult_1_m_axi_A_AWSIZE),
+        .m_axi_A_AWVALID(vecmat_mmult_1_m_axi_A_AWVALID),
+        .m_axi_A_BREADY(vecmat_mmult_1_m_axi_A_BREADY),
+        .m_axi_A_BRESP(vecmat_mmult_1_m_axi_A_BRESP),
+        .m_axi_A_BVALID(vecmat_mmult_1_m_axi_A_BVALID),
+        .m_axi_A_RDATA(vecmat_mmult_1_m_axi_A_RDATA),
+        .m_axi_A_RLAST(vecmat_mmult_1_m_axi_A_RLAST),
+        .m_axi_A_RREADY(vecmat_mmult_1_m_axi_A_RREADY),
+        .m_axi_A_RRESP(vecmat_mmult_1_m_axi_A_RRESP),
+        .m_axi_A_RVALID(vecmat_mmult_1_m_axi_A_RVALID),
+        .m_axi_A_WDATA(vecmat_mmult_1_m_axi_A_WDATA),
+        .m_axi_A_WLAST(vecmat_mmult_1_m_axi_A_WLAST),
+        .m_axi_A_WREADY(vecmat_mmult_1_m_axi_A_WREADY),
+        .m_axi_A_WSTRB(vecmat_mmult_1_m_axi_A_WSTRB),
+        .m_axi_A_WVALID(vecmat_mmult_1_m_axi_A_WVALID),
+        .m_axi_B_ARADDR(vecmat_mmult_1_m_axi_B_ARADDR),
+        .m_axi_B_ARBURST(vecmat_mmult_1_m_axi_B_ARBURST),
+        .m_axi_B_ARCACHE(vecmat_mmult_1_m_axi_B_ARCACHE),
+        .m_axi_B_ARLEN(vecmat_mmult_1_m_axi_B_ARLEN),
+        .m_axi_B_ARLOCK(vecmat_mmult_1_m_axi_B_ARLOCK),
+        .m_axi_B_ARPROT(vecmat_mmult_1_m_axi_B_ARPROT),
+        .m_axi_B_ARQOS(vecmat_mmult_1_m_axi_B_ARQOS),
+        .m_axi_B_ARREADY(vecmat_mmult_1_m_axi_B_ARREADY),
+        .m_axi_B_ARREGION(vecmat_mmult_1_m_axi_B_ARREGION),
+        .m_axi_B_ARSIZE(vecmat_mmult_1_m_axi_B_ARSIZE),
+        .m_axi_B_ARVALID(vecmat_mmult_1_m_axi_B_ARVALID),
+        .m_axi_B_AWADDR(vecmat_mmult_1_m_axi_B_AWADDR),
+        .m_axi_B_AWBURST(vecmat_mmult_1_m_axi_B_AWBURST),
+        .m_axi_B_AWCACHE(vecmat_mmult_1_m_axi_B_AWCACHE),
+        .m_axi_B_AWLEN(vecmat_mmult_1_m_axi_B_AWLEN),
+        .m_axi_B_AWLOCK(vecmat_mmult_1_m_axi_B_AWLOCK),
+        .m_axi_B_AWPROT(vecmat_mmult_1_m_axi_B_AWPROT),
+        .m_axi_B_AWQOS(vecmat_mmult_1_m_axi_B_AWQOS),
+        .m_axi_B_AWREADY(vecmat_mmult_1_m_axi_B_AWREADY),
+        .m_axi_B_AWREGION(vecmat_mmult_1_m_axi_B_AWREGION),
+        .m_axi_B_AWSIZE(vecmat_mmult_1_m_axi_B_AWSIZE),
+        .m_axi_B_AWVALID(vecmat_mmult_1_m_axi_B_AWVALID),
+        .m_axi_B_BREADY(vecmat_mmult_1_m_axi_B_BREADY),
+        .m_axi_B_BRESP(vecmat_mmult_1_m_axi_B_BRESP),
+        .m_axi_B_BVALID(vecmat_mmult_1_m_axi_B_BVALID),
+        .m_axi_B_RDATA(vecmat_mmult_1_m_axi_B_RDATA),
+        .m_axi_B_RLAST(vecmat_mmult_1_m_axi_B_RLAST),
+        .m_axi_B_RREADY(vecmat_mmult_1_m_axi_B_RREADY),
+        .m_axi_B_RRESP(vecmat_mmult_1_m_axi_B_RRESP),
+        .m_axi_B_RVALID(vecmat_mmult_1_m_axi_B_RVALID),
+        .m_axi_B_WDATA(vecmat_mmult_1_m_axi_B_WDATA),
+        .m_axi_B_WLAST(vecmat_mmult_1_m_axi_B_WLAST),
+        .m_axi_B_WREADY(vecmat_mmult_1_m_axi_B_WREADY),
+        .m_axi_B_WSTRB(vecmat_mmult_1_m_axi_B_WSTRB),
+        .m_axi_B_WVALID(vecmat_mmult_1_m_axi_B_WVALID),
+        .m_axi_C_ARADDR(vecmat_mmult_1_m_axi_C_ARADDR),
+        .m_axi_C_ARBURST(vecmat_mmult_1_m_axi_C_ARBURST),
+        .m_axi_C_ARCACHE(vecmat_mmult_1_m_axi_C_ARCACHE),
+        .m_axi_C_ARLEN(vecmat_mmult_1_m_axi_C_ARLEN),
+        .m_axi_C_ARLOCK(vecmat_mmult_1_m_axi_C_ARLOCK),
+        .m_axi_C_ARPROT(vecmat_mmult_1_m_axi_C_ARPROT),
+        .m_axi_C_ARQOS(vecmat_mmult_1_m_axi_C_ARQOS),
+        .m_axi_C_ARREADY(vecmat_mmult_1_m_axi_C_ARREADY),
+        .m_axi_C_ARREGION(vecmat_mmult_1_m_axi_C_ARREGION),
+        .m_axi_C_ARSIZE(vecmat_mmult_1_m_axi_C_ARSIZE),
+        .m_axi_C_ARVALID(vecmat_mmult_1_m_axi_C_ARVALID),
+        .m_axi_C_AWADDR(vecmat_mmult_1_m_axi_C_AWADDR),
+        .m_axi_C_AWBURST(vecmat_mmult_1_m_axi_C_AWBURST),
+        .m_axi_C_AWCACHE(vecmat_mmult_1_m_axi_C_AWCACHE),
+        .m_axi_C_AWLEN(vecmat_mmult_1_m_axi_C_AWLEN),
+        .m_axi_C_AWLOCK(vecmat_mmult_1_m_axi_C_AWLOCK),
+        .m_axi_C_AWPROT(vecmat_mmult_1_m_axi_C_AWPROT),
+        .m_axi_C_AWQOS(vecmat_mmult_1_m_axi_C_AWQOS),
+        .m_axi_C_AWREADY(vecmat_mmult_1_m_axi_C_AWREADY),
+        .m_axi_C_AWREGION(vecmat_mmult_1_m_axi_C_AWREGION),
+        .m_axi_C_AWSIZE(vecmat_mmult_1_m_axi_C_AWSIZE),
+        .m_axi_C_AWVALID(vecmat_mmult_1_m_axi_C_AWVALID),
+        .m_axi_C_BREADY(vecmat_mmult_1_m_axi_C_BREADY),
+        .m_axi_C_BRESP(vecmat_mmult_1_m_axi_C_BRESP),
+        .m_axi_C_BVALID(vecmat_mmult_1_m_axi_C_BVALID),
+        .m_axi_C_RDATA(vecmat_mmult_1_m_axi_C_RDATA),
+        .m_axi_C_RLAST(vecmat_mmult_1_m_axi_C_RLAST),
+        .m_axi_C_RREADY(vecmat_mmult_1_m_axi_C_RREADY),
+        .m_axi_C_RRESP(vecmat_mmult_1_m_axi_C_RRESP),
+        .m_axi_C_RVALID(vecmat_mmult_1_m_axi_C_RVALID),
+        .m_axi_C_WDATA(vecmat_mmult_1_m_axi_C_WDATA),
+        .m_axi_C_WLAST(vecmat_mmult_1_m_axi_C_WLAST),
+        .m_axi_C_WREADY(vecmat_mmult_1_m_axi_C_WREADY),
+        .m_axi_C_WSTRB(vecmat_mmult_1_m_axi_C_WSTRB),
+        .m_axi_C_WVALID(vecmat_mmult_1_m_axi_C_WVALID));
+  zed_vecmat_mmult_1_if_0 vecmat_mmult_1_if
+       (.AP_AXIMM_0_ARADDR(vecmat_mmult_1_m_axi_A_ARADDR),
+        .AP_AXIMM_0_ARBURST(vecmat_mmult_1_m_axi_A_ARBURST),
+        .AP_AXIMM_0_ARCACHE(vecmat_mmult_1_m_axi_A_ARCACHE),
+        .AP_AXIMM_0_ARLEN(vecmat_mmult_1_m_axi_A_ARLEN),
+        .AP_AXIMM_0_ARLOCK(vecmat_mmult_1_m_axi_A_ARLOCK),
+        .AP_AXIMM_0_ARPROT(vecmat_mmult_1_m_axi_A_ARPROT),
+        .AP_AXIMM_0_ARQOS(vecmat_mmult_1_m_axi_A_ARQOS),
+        .AP_AXIMM_0_ARREADY(vecmat_mmult_1_m_axi_A_ARREADY),
+        .AP_AXIMM_0_ARREGION(vecmat_mmult_1_m_axi_A_ARREGION),
+        .AP_AXIMM_0_ARSIZE(vecmat_mmult_1_m_axi_A_ARSIZE),
+        .AP_AXIMM_0_ARVALID(vecmat_mmult_1_m_axi_A_ARVALID),
+        .AP_AXIMM_0_AWADDR(vecmat_mmult_1_m_axi_A_AWADDR),
+        .AP_AXIMM_0_AWBURST(vecmat_mmult_1_m_axi_A_AWBURST),
+        .AP_AXIMM_0_AWCACHE(vecmat_mmult_1_m_axi_A_AWCACHE),
+        .AP_AXIMM_0_AWLEN(vecmat_mmult_1_m_axi_A_AWLEN),
+        .AP_AXIMM_0_AWLOCK(vecmat_mmult_1_m_axi_A_AWLOCK),
+        .AP_AXIMM_0_AWPROT(vecmat_mmult_1_m_axi_A_AWPROT),
+        .AP_AXIMM_0_AWQOS(vecmat_mmult_1_m_axi_A_AWQOS),
+        .AP_AXIMM_0_AWREADY(vecmat_mmult_1_m_axi_A_AWREADY),
+        .AP_AXIMM_0_AWREGION(vecmat_mmult_1_m_axi_A_AWREGION),
+        .AP_AXIMM_0_AWSIZE(vecmat_mmult_1_m_axi_A_AWSIZE),
+        .AP_AXIMM_0_AWVALID(vecmat_mmult_1_m_axi_A_AWVALID),
+        .AP_AXIMM_0_BREADY(vecmat_mmult_1_m_axi_A_BREADY),
+        .AP_AXIMM_0_BRESP(vecmat_mmult_1_m_axi_A_BRESP),
+        .AP_AXIMM_0_BVALID(vecmat_mmult_1_m_axi_A_BVALID),
+        .AP_AXIMM_0_RDATA(vecmat_mmult_1_m_axi_A_RDATA),
+        .AP_AXIMM_0_RLAST(vecmat_mmult_1_m_axi_A_RLAST),
+        .AP_AXIMM_0_RREADY(vecmat_mmult_1_m_axi_A_RREADY),
+        .AP_AXIMM_0_RRESP(vecmat_mmult_1_m_axi_A_RRESP),
+        .AP_AXIMM_0_RVALID(vecmat_mmult_1_m_axi_A_RVALID),
+        .AP_AXIMM_0_WDATA(vecmat_mmult_1_m_axi_A_WDATA),
+        .AP_AXIMM_0_WLAST(vecmat_mmult_1_m_axi_A_WLAST),
+        .AP_AXIMM_0_WREADY(vecmat_mmult_1_m_axi_A_WREADY),
+        .AP_AXIMM_0_WSTRB(vecmat_mmult_1_m_axi_A_WSTRB),
+        .AP_AXIMM_0_WVALID(vecmat_mmult_1_m_axi_A_WVALID),
+        .AP_AXIMM_1_ARADDR(vecmat_mmult_1_m_axi_B_ARADDR),
+        .AP_AXIMM_1_ARBURST(vecmat_mmult_1_m_axi_B_ARBURST),
+        .AP_AXIMM_1_ARCACHE(vecmat_mmult_1_m_axi_B_ARCACHE),
+        .AP_AXIMM_1_ARLEN(vecmat_mmult_1_m_axi_B_ARLEN),
+        .AP_AXIMM_1_ARLOCK(vecmat_mmult_1_m_axi_B_ARLOCK),
+        .AP_AXIMM_1_ARPROT(vecmat_mmult_1_m_axi_B_ARPROT),
+        .AP_AXIMM_1_ARQOS(vecmat_mmult_1_m_axi_B_ARQOS),
+        .AP_AXIMM_1_ARREADY(vecmat_mmult_1_m_axi_B_ARREADY),
+        .AP_AXIMM_1_ARREGION(vecmat_mmult_1_m_axi_B_ARREGION),
+        .AP_AXIMM_1_ARSIZE(vecmat_mmult_1_m_axi_B_ARSIZE),
+        .AP_AXIMM_1_ARVALID(vecmat_mmult_1_m_axi_B_ARVALID),
+        .AP_AXIMM_1_AWADDR(vecmat_mmult_1_m_axi_B_AWADDR),
+        .AP_AXIMM_1_AWBURST(vecmat_mmult_1_m_axi_B_AWBURST),
+        .AP_AXIMM_1_AWCACHE(vecmat_mmult_1_m_axi_B_AWCACHE),
+        .AP_AXIMM_1_AWLEN(vecmat_mmult_1_m_axi_B_AWLEN),
+        .AP_AXIMM_1_AWLOCK(vecmat_mmult_1_m_axi_B_AWLOCK),
+        .AP_AXIMM_1_AWPROT(vecmat_mmult_1_m_axi_B_AWPROT),
+        .AP_AXIMM_1_AWQOS(vecmat_mmult_1_m_axi_B_AWQOS),
+        .AP_AXIMM_1_AWREADY(vecmat_mmult_1_m_axi_B_AWREADY),
+        .AP_AXIMM_1_AWREGION(vecmat_mmult_1_m_axi_B_AWREGION),
+        .AP_AXIMM_1_AWSIZE(vecmat_mmult_1_m_axi_B_AWSIZE),
+        .AP_AXIMM_1_AWVALID(vecmat_mmult_1_m_axi_B_AWVALID),
+        .AP_AXIMM_1_BREADY(vecmat_mmult_1_m_axi_B_BREADY),
+        .AP_AXIMM_1_BRESP(vecmat_mmult_1_m_axi_B_BRESP),
+        .AP_AXIMM_1_BVALID(vecmat_mmult_1_m_axi_B_BVALID),
+        .AP_AXIMM_1_RDATA(vecmat_mmult_1_m_axi_B_RDATA),
+        .AP_AXIMM_1_RLAST(vecmat_mmult_1_m_axi_B_RLAST),
+        .AP_AXIMM_1_RREADY(vecmat_mmult_1_m_axi_B_RREADY),
+        .AP_AXIMM_1_RRESP(vecmat_mmult_1_m_axi_B_RRESP),
+        .AP_AXIMM_1_RVALID(vecmat_mmult_1_m_axi_B_RVALID),
+        .AP_AXIMM_1_WDATA(vecmat_mmult_1_m_axi_B_WDATA),
+        .AP_AXIMM_1_WLAST(vecmat_mmult_1_m_axi_B_WLAST),
+        .AP_AXIMM_1_WREADY(vecmat_mmult_1_m_axi_B_WREADY),
+        .AP_AXIMM_1_WSTRB(vecmat_mmult_1_m_axi_B_WSTRB),
+        .AP_AXIMM_1_WVALID(vecmat_mmult_1_m_axi_B_WVALID),
+        .AP_AXIMM_2_ARADDR(vecmat_mmult_1_m_axi_C_ARADDR),
+        .AP_AXIMM_2_ARBURST(vecmat_mmult_1_m_axi_C_ARBURST),
+        .AP_AXIMM_2_ARCACHE(vecmat_mmult_1_m_axi_C_ARCACHE),
+        .AP_AXIMM_2_ARLEN(vecmat_mmult_1_m_axi_C_ARLEN),
+        .AP_AXIMM_2_ARLOCK(vecmat_mmult_1_m_axi_C_ARLOCK),
+        .AP_AXIMM_2_ARPROT(vecmat_mmult_1_m_axi_C_ARPROT),
+        .AP_AXIMM_2_ARQOS(vecmat_mmult_1_m_axi_C_ARQOS),
+        .AP_AXIMM_2_ARREADY(vecmat_mmult_1_m_axi_C_ARREADY),
+        .AP_AXIMM_2_ARREGION(vecmat_mmult_1_m_axi_C_ARREGION),
+        .AP_AXIMM_2_ARSIZE(vecmat_mmult_1_m_axi_C_ARSIZE),
+        .AP_AXIMM_2_ARVALID(vecmat_mmult_1_m_axi_C_ARVALID),
+        .AP_AXIMM_2_AWADDR(vecmat_mmult_1_m_axi_C_AWADDR),
+        .AP_AXIMM_2_AWBURST(vecmat_mmult_1_m_axi_C_AWBURST),
+        .AP_AXIMM_2_AWCACHE(vecmat_mmult_1_m_axi_C_AWCACHE),
+        .AP_AXIMM_2_AWLEN(vecmat_mmult_1_m_axi_C_AWLEN),
+        .AP_AXIMM_2_AWLOCK(vecmat_mmult_1_m_axi_C_AWLOCK),
+        .AP_AXIMM_2_AWPROT(vecmat_mmult_1_m_axi_C_AWPROT),
+        .AP_AXIMM_2_AWQOS(vecmat_mmult_1_m_axi_C_AWQOS),
+        .AP_AXIMM_2_AWREADY(vecmat_mmult_1_m_axi_C_AWREADY),
+        .AP_AXIMM_2_AWREGION(vecmat_mmult_1_m_axi_C_AWREGION),
+        .AP_AXIMM_2_AWSIZE(vecmat_mmult_1_m_axi_C_AWSIZE),
+        .AP_AXIMM_2_AWVALID(vecmat_mmult_1_m_axi_C_AWVALID),
+        .AP_AXIMM_2_BREADY(vecmat_mmult_1_m_axi_C_BREADY),
+        .AP_AXIMM_2_BRESP(vecmat_mmult_1_m_axi_C_BRESP),
+        .AP_AXIMM_2_BVALID(vecmat_mmult_1_m_axi_C_BVALID),
+        .AP_AXIMM_2_RDATA(vecmat_mmult_1_m_axi_C_RDATA),
+        .AP_AXIMM_2_RLAST(vecmat_mmult_1_m_axi_C_RLAST),
+        .AP_AXIMM_2_RREADY(vecmat_mmult_1_m_axi_C_RREADY),
+        .AP_AXIMM_2_RRESP(vecmat_mmult_1_m_axi_C_RRESP),
+        .AP_AXIMM_2_RVALID(vecmat_mmult_1_m_axi_C_RVALID),
+        .AP_AXIMM_2_WDATA(vecmat_mmult_1_m_axi_C_WDATA),
+        .AP_AXIMM_2_WLAST(vecmat_mmult_1_m_axi_C_WLAST),
+        .AP_AXIMM_2_WREADY(vecmat_mmult_1_m_axi_C_WREADY),
+        .AP_AXIMM_2_WSTRB(vecmat_mmult_1_m_axi_C_WSTRB),
+        .AP_AXIMM_2_WVALID(vecmat_mmult_1_m_axi_C_WVALID),
+        .M_AXIMM_0_ARADDR(vecmat_mmult_1_if_M_AXIMM_0_ARADDR),
+        .M_AXIMM_0_ARBURST(vecmat_mmult_1_if_M_AXIMM_0_ARBURST),
+        .M_AXIMM_0_ARLEN(vecmat_mmult_1_if_M_AXIMM_0_ARLEN),
+        .M_AXIMM_0_ARLOCK(vecmat_mmult_1_if_M_AXIMM_0_ARLOCK),
+        .M_AXIMM_0_ARPROT(vecmat_mmult_1_if_M_AXIMM_0_ARPROT),
+        .M_AXIMM_0_ARQOS(vecmat_mmult_1_if_M_AXIMM_0_ARQOS),
+        .M_AXIMM_0_ARREADY(vecmat_mmult_1_if_M_AXIMM_0_ARREADY),
+        .M_AXIMM_0_ARREGION(vecmat_mmult_1_if_M_AXIMM_0_ARREGION),
+        .M_AXIMM_0_ARSIZE(vecmat_mmult_1_if_M_AXIMM_0_ARSIZE),
+        .M_AXIMM_0_ARVALID(vecmat_mmult_1_if_M_AXIMM_0_ARVALID),
+        .M_AXIMM_0_AWADDR(vecmat_mmult_1_if_M_AXIMM_0_AWADDR),
+        .M_AXIMM_0_AWBURST(vecmat_mmult_1_if_M_AXIMM_0_AWBURST),
+        .M_AXIMM_0_AWLEN(vecmat_mmult_1_if_M_AXIMM_0_AWLEN),
+        .M_AXIMM_0_AWLOCK(vecmat_mmult_1_if_M_AXIMM_0_AWLOCK),
+        .M_AXIMM_0_AWPROT(vecmat_mmult_1_if_M_AXIMM_0_AWPROT),
+        .M_AXIMM_0_AWQOS(vecmat_mmult_1_if_M_AXIMM_0_AWQOS),
+        .M_AXIMM_0_AWREADY(vecmat_mmult_1_if_M_AXIMM_0_AWREADY),
+        .M_AXIMM_0_AWREGION(vecmat_mmult_1_if_M_AXIMM_0_AWREGION),
+        .M_AXIMM_0_AWSIZE(vecmat_mmult_1_if_M_AXIMM_0_AWSIZE),
+        .M_AXIMM_0_AWVALID(vecmat_mmult_1_if_M_AXIMM_0_AWVALID),
+        .M_AXIMM_0_BREADY(vecmat_mmult_1_if_M_AXIMM_0_BREADY),
+        .M_AXIMM_0_BRESP(vecmat_mmult_1_if_M_AXIMM_0_BRESP),
+        .M_AXIMM_0_BVALID(vecmat_mmult_1_if_M_AXIMM_0_BVALID),
+        .M_AXIMM_0_RDATA(vecmat_mmult_1_if_M_AXIMM_0_RDATA),
+        .M_AXIMM_0_RLAST(vecmat_mmult_1_if_M_AXIMM_0_RLAST),
+        .M_AXIMM_0_RREADY(vecmat_mmult_1_if_M_AXIMM_0_RREADY),
+        .M_AXIMM_0_RRESP(vecmat_mmult_1_if_M_AXIMM_0_RRESP),
+        .M_AXIMM_0_RVALID(vecmat_mmult_1_if_M_AXIMM_0_RVALID),
+        .M_AXIMM_0_WDATA(vecmat_mmult_1_if_M_AXIMM_0_WDATA),
+        .M_AXIMM_0_WLAST(vecmat_mmult_1_if_M_AXIMM_0_WLAST),
+        .M_AXIMM_0_WREADY(vecmat_mmult_1_if_M_AXIMM_0_WREADY),
+        .M_AXIMM_0_WSTRB(vecmat_mmult_1_if_M_AXIMM_0_WSTRB),
+        .M_AXIMM_0_WVALID(vecmat_mmult_1_if_M_AXIMM_0_WVALID),
+        .M_AXIMM_1_ARADDR(vecmat_mmult_1_if_M_AXIMM_1_ARADDR),
+        .M_AXIMM_1_ARBURST(vecmat_mmult_1_if_M_AXIMM_1_ARBURST),
+        .M_AXIMM_1_ARLEN(vecmat_mmult_1_if_M_AXIMM_1_ARLEN),
+        .M_AXIMM_1_ARLOCK(vecmat_mmult_1_if_M_AXIMM_1_ARLOCK),
+        .M_AXIMM_1_ARPROT(vecmat_mmult_1_if_M_AXIMM_1_ARPROT),
+        .M_AXIMM_1_ARQOS(vecmat_mmult_1_if_M_AXIMM_1_ARQOS),
+        .M_AXIMM_1_ARREADY(vecmat_mmult_1_if_M_AXIMM_1_ARREADY),
+        .M_AXIMM_1_ARREGION(vecmat_mmult_1_if_M_AXIMM_1_ARREGION),
+        .M_AXIMM_1_ARSIZE(vecmat_mmult_1_if_M_AXIMM_1_ARSIZE),
+        .M_AXIMM_1_ARVALID(vecmat_mmult_1_if_M_AXIMM_1_ARVALID),
+        .M_AXIMM_1_AWADDR(vecmat_mmult_1_if_M_AXIMM_1_AWADDR),
+        .M_AXIMM_1_AWBURST(vecmat_mmult_1_if_M_AXIMM_1_AWBURST),
+        .M_AXIMM_1_AWLEN(vecmat_mmult_1_if_M_AXIMM_1_AWLEN),
+        .M_AXIMM_1_AWLOCK(vecmat_mmult_1_if_M_AXIMM_1_AWLOCK),
+        .M_AXIMM_1_AWPROT(vecmat_mmult_1_if_M_AXIMM_1_AWPROT),
+        .M_AXIMM_1_AWQOS(vecmat_mmult_1_if_M_AXIMM_1_AWQOS),
+        .M_AXIMM_1_AWREADY(vecmat_mmult_1_if_M_AXIMM_1_AWREADY),
+        .M_AXIMM_1_AWREGION(vecmat_mmult_1_if_M_AXIMM_1_AWREGION),
+        .M_AXIMM_1_AWSIZE(vecmat_mmult_1_if_M_AXIMM_1_AWSIZE),
+        .M_AXIMM_1_AWVALID(vecmat_mmult_1_if_M_AXIMM_1_AWVALID),
+        .M_AXIMM_1_BREADY(vecmat_mmult_1_if_M_AXIMM_1_BREADY),
+        .M_AXIMM_1_BRESP(vecmat_mmult_1_if_M_AXIMM_1_BRESP),
+        .M_AXIMM_1_BVALID(vecmat_mmult_1_if_M_AXIMM_1_BVALID),
+        .M_AXIMM_1_RDATA(vecmat_mmult_1_if_M_AXIMM_1_RDATA),
+        .M_AXIMM_1_RLAST(vecmat_mmult_1_if_M_AXIMM_1_RLAST),
+        .M_AXIMM_1_RREADY(vecmat_mmult_1_if_M_AXIMM_1_RREADY),
+        .M_AXIMM_1_RRESP(vecmat_mmult_1_if_M_AXIMM_1_RRESP),
+        .M_AXIMM_1_RVALID(vecmat_mmult_1_if_M_AXIMM_1_RVALID),
+        .M_AXIMM_1_WDATA(vecmat_mmult_1_if_M_AXIMM_1_WDATA),
+        .M_AXIMM_1_WLAST(vecmat_mmult_1_if_M_AXIMM_1_WLAST),
+        .M_AXIMM_1_WREADY(vecmat_mmult_1_if_M_AXIMM_1_WREADY),
+        .M_AXIMM_1_WSTRB(vecmat_mmult_1_if_M_AXIMM_1_WSTRB),
+        .M_AXIMM_1_WVALID(vecmat_mmult_1_if_M_AXIMM_1_WVALID),
+        .M_AXIMM_2_ARADDR(vecmat_mmult_1_if_M_AXIMM_2_ARADDR),
+        .M_AXIMM_2_ARBURST(vecmat_mmult_1_if_M_AXIMM_2_ARBURST),
+        .M_AXIMM_2_ARLEN(vecmat_mmult_1_if_M_AXIMM_2_ARLEN),
+        .M_AXIMM_2_ARLOCK(vecmat_mmult_1_if_M_AXIMM_2_ARLOCK),
+        .M_AXIMM_2_ARPROT(vecmat_mmult_1_if_M_AXIMM_2_ARPROT),
+        .M_AXIMM_2_ARQOS(vecmat_mmult_1_if_M_AXIMM_2_ARQOS),
+        .M_AXIMM_2_ARREADY(vecmat_mmult_1_if_M_AXIMM_2_ARREADY),
+        .M_AXIMM_2_ARREGION(vecmat_mmult_1_if_M_AXIMM_2_ARREGION),
+        .M_AXIMM_2_ARSIZE(vecmat_mmult_1_if_M_AXIMM_2_ARSIZE),
+        .M_AXIMM_2_ARVALID(vecmat_mmult_1_if_M_AXIMM_2_ARVALID),
+        .M_AXIMM_2_AWADDR(vecmat_mmult_1_if_M_AXIMM_2_AWADDR),
+        .M_AXIMM_2_AWBURST(vecmat_mmult_1_if_M_AXIMM_2_AWBURST),
+        .M_AXIMM_2_AWLEN(vecmat_mmult_1_if_M_AXIMM_2_AWLEN),
+        .M_AXIMM_2_AWLOCK(vecmat_mmult_1_if_M_AXIMM_2_AWLOCK),
+        .M_AXIMM_2_AWPROT(vecmat_mmult_1_if_M_AXIMM_2_AWPROT),
+        .M_AXIMM_2_AWQOS(vecmat_mmult_1_if_M_AXIMM_2_AWQOS),
+        .M_AXIMM_2_AWREADY(vecmat_mmult_1_if_M_AXIMM_2_AWREADY),
+        .M_AXIMM_2_AWREGION(vecmat_mmult_1_if_M_AXIMM_2_AWREGION),
+        .M_AXIMM_2_AWSIZE(vecmat_mmult_1_if_M_AXIMM_2_AWSIZE),
+        .M_AXIMM_2_AWVALID(vecmat_mmult_1_if_M_AXIMM_2_AWVALID),
+        .M_AXIMM_2_BREADY(vecmat_mmult_1_if_M_AXIMM_2_BREADY),
+        .M_AXIMM_2_BRESP(vecmat_mmult_1_if_M_AXIMM_2_BRESP),
+        .M_AXIMM_2_BVALID(vecmat_mmult_1_if_M_AXIMM_2_BVALID),
+        .M_AXIMM_2_RDATA(vecmat_mmult_1_if_M_AXIMM_2_RDATA),
+        .M_AXIMM_2_RLAST(vecmat_mmult_1_if_M_AXIMM_2_RLAST),
+        .M_AXIMM_2_RREADY(vecmat_mmult_1_if_M_AXIMM_2_RREADY),
+        .M_AXIMM_2_RRESP(vecmat_mmult_1_if_M_AXIMM_2_RRESP),
+        .M_AXIMM_2_RVALID(vecmat_mmult_1_if_M_AXIMM_2_RVALID),
+        .M_AXIMM_2_WDATA(vecmat_mmult_1_if_M_AXIMM_2_WDATA),
+        .M_AXIMM_2_WLAST(vecmat_mmult_1_if_M_AXIMM_2_WLAST),
+        .M_AXIMM_2_WREADY(vecmat_mmult_1_if_M_AXIMM_2_WREADY),
+        .M_AXIMM_2_WSTRB(vecmat_mmult_1_if_M_AXIMM_2_WSTRB),
+        .M_AXIMM_2_WVALID(vecmat_mmult_1_if_M_AXIMM_2_WVALID),
+        .S_AXI_ARADDR(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARADDR),
+        .S_AXI_ARPROT(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARPROT),
+        .S_AXI_ARREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARREADY),
+        .S_AXI_ARVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_ARVALID),
+        .S_AXI_AWADDR(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWADDR),
+        .S_AXI_AWPROT(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWPROT),
+        .S_AXI_AWREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWREADY),
+        .S_AXI_AWVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_AWVALID),
+        .S_AXI_BREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_BREADY),
+        .S_AXI_BRESP(axi_ic_ps7_M_AXI_GP0_M01_AXI_BRESP),
+        .S_AXI_BVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_BVALID),
+        .S_AXI_RDATA(axi_ic_ps7_M_AXI_GP0_M01_AXI_RDATA),
+        .S_AXI_RREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_RREADY),
+        .S_AXI_RRESP(axi_ic_ps7_M_AXI_GP0_M01_AXI_RRESP),
+        .S_AXI_RVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_RVALID),
+        .S_AXI_WDATA(axi_ic_ps7_M_AXI_GP0_M01_AXI_WDATA),
+        .S_AXI_WREADY(axi_ic_ps7_M_AXI_GP0_M01_AXI_WREADY),
+        .S_AXI_WSTRB(axi_ic_ps7_M_AXI_GP0_M01_AXI_WSTRB),
+        .S_AXI_WVALID(axi_ic_ps7_M_AXI_GP0_M01_AXI_WVALID),
+        .acc_aclk(clk_wiz_0_clk_out1),
+        .acc_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .ap_clk(vecmat_mmult_1_if_ap_clk),
+        .ap_done(vecmat_mmult_1_if_ap_ctrl_done),
+        .ap_idle(vecmat_mmult_1_if_ap_ctrl_idle),
+        .ap_iscalar_0_dout(vecmat_mmult_1_if_ap_iscalar_0_dout),
+        .ap_iscalar_1_dout(vecmat_mmult_1_if_ap_iscalar_1_dout),
+        .ap_iscalar_2_dout(vecmat_mmult_1_if_ap_iscalar_2_dout),
+        .ap_ready(vecmat_mmult_1_if_ap_ctrl_ready),
+        .ap_resetn(vecmat_mmult_1_if_ap_resetn),
+        .ap_start(vecmat_mmult_1_if_ap_ctrl_start),
+        .s_axi_aclk(clk_wiz_0_clk_out1),
+        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn));
   zed_xlconcat_0_0 xlconcat_0
        (.In0(sds_irq_const_dout),
         .In1(sds_irq_const_dout),

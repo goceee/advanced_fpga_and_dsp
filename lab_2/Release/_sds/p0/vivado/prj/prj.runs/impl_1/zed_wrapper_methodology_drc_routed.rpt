@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Mar 14 12:06:32 2019
+| Date         : Thu Mar 14 22:20:20 2019
 | Host         : DESKTOP-6OLIA81 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file zed_wrapper_methodology_drc_routed.rpt -pb zed_wrapper_methodology_drc_routed.pb -rpx zed_wrapper_methodology_drc_routed.rpx
 | Design       : zed_wrapper
@@ -122,12 +122,12 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell zed_i/axi_ic_ps7_S_AXI_ACP/s03_couplers/s03_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X94Y115 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell zed_i/axi_ic_ps7_S_AXI_ACP/s03_couplers/s03_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+The FDRE cell zed_i/axi_ic_ps7_S_AXI_ACP/s03_couplers/s03_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X110Y116 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell zed_i/axi_ic_ps7_S_AXI_ACP/s03_couplers/s03_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell zed_i/axi_ic_ps7_S_AXI_ACP/s04_couplers/s04_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X110Y115 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell zed_i/axi_ic_ps7_S_AXI_ACP/s04_couplers/s04_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+The FDRE cell zed_i/axi_ic_ps7_S_AXI_ACP/s04_couplers/s04_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X107Y118 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell zed_i/axi_ic_ps7_S_AXI_ACP/s04_couplers/s04_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-2#1 Warning

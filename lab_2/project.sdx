@@ -17,7 +17,7 @@
         <args name="B"/>
         <args name="C"/>
       </accelerator>
-      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp">
+      <accelerator name="vecmat_mmult" filepath="src/vecmat_mult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/vecmat_mult.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>
@@ -29,7 +29,7 @@
         <args name="B"/>
         <args name="C"/>
       </accelerator>
-      <accelerator name="block_mmult" filepath="src/block_mmult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/block_mmult.cpp">
+      <accelerator name="vecmat_mmult" filepath="src/vecmat_mult.cpp" clkid="2" location="C:/Users/Naimu/workspace/lab_2/src/vecmat_mult.cpp">
         <args name="A"/>
         <args name="B"/>
         <args name="C"/>

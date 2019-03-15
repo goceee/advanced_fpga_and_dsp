@@ -40,16 +40,8 @@
     <xd:parameter xd:name="C_M_AXI_S2MM_DATA_WIDTH" xd:value="64"/>
     <xd:parameter xd:name="C_S_AXIS_S2MM_TDATA_WIDTH" xd:value="64"/>
   </xd:instance>
-  <xd:instance xd:name="block_mmult_1" xd:componentRef="block_mmult"/>
   <xd:instance xd:name="madd_1" xd:componentRef="madd"/>
-  <xd:instance xd:name="block_mmult_1_if" xd:componentRef="adapter_v3_0">
-    <xd:parameter xd:name="M_AXIMM_ADDR_WIDTH" xd:value="32"/>
-    <xd:parameter xd:name="C_INPUT_SCALAR_0_WIDTH" xd:value="32"/>
-    <xd:parameter xd:name="C_INPUT_SCALAR_1_WIDTH" xd:value="32"/>
-    <xd:parameter xd:name="C_INPUT_SCALAR_2_WIDTH" xd:value="32"/>
-    <xd:parameter xd:name="C_N_INPUT_SCALARS" xd:value="3"/>
-    <xd:parameter xd:name="C_NUM_AXIMMs" xd:value="3"/>
-  </xd:instance>
+  <xd:instance xd:name="vecmat_mmult_1" xd:componentRef="vecmat_mmult"/>
   <xd:instance xd:name="madd_1_if" xd:componentRef="adapter_v3_0">
     <xd:parameter xd:name="S_AXIS_FIFO_0_WIDTH" xd:value="32"/>
     <xd:parameter xd:name="S_AXIS_FIFO_0_BYTE_WIDTH" xd:value="32"/>
@@ -65,6 +57,14 @@
     <xd:parameter xd:name="M_AXIS_FIFO_0_DEPTH" xd:value="1024"/>
     <xd:parameter xd:name="C_NUM_INPUT_FIFOs" xd:value="2"/>
     <xd:parameter xd:name="C_NUM_OUTPUT_FIFOs" xd:value="1"/>
+  </xd:instance>
+  <xd:instance xd:name="vecmat_mmult_1_if" xd:componentRef="adapter_v3_0">
+    <xd:parameter xd:name="M_AXIMM_ADDR_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_0_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_1_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_INPUT_SCALAR_2_WIDTH" xd:value="32"/>
+    <xd:parameter xd:name="C_N_INPUT_SCALARS" xd:value="3"/>
+    <xd:parameter xd:name="C_NUM_AXIMMs" xd:value="3"/>
   </xd:instance>
   <xd:instance xd:name="axi_ic_ps7_M_AXI_GP0" xd:componentRef="axi_interconnect">
     <xd:parameter xd:name="NUM_MI" xd:value="5"/>
@@ -117,42 +117,6 @@
     <xd:parameter xd:name="CONST_VAL" xd:value="14"/>
   </xd:instance>
   <xd:connection>
-    <xd:port xd:name="ap_clk" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="ap_clk" xd:instanceRef="block_mmult_1"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:port xd:name="ap_resetn" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="ap_rst_n" xd:instanceRef="block_mmult_1"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:busInterface xd:name="ap_ctrl" xd:instanceRef="block_mmult_1_if"/>
-    <xd:busInterface xd:name="ap_ctrl" xd:instanceRef="block_mmult_1"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:busInterface xd:name="m_axi_A" xd:instanceRef="block_mmult_1"/>
-    <xd:busInterface xd:name="AP_AXIMM_0" xd:instanceRef="block_mmult_1_if"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:busInterface xd:name="m_axi_B" xd:instanceRef="block_mmult_1"/>
-    <xd:busInterface xd:name="AP_AXIMM_1" xd:instanceRef="block_mmult_1_if"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:busInterface xd:name="m_axi_C" xd:instanceRef="block_mmult_1"/>
-    <xd:busInterface xd:name="AP_AXIMM_2" xd:instanceRef="block_mmult_1_if"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:port xd:name="ap_iscalar_0_dout" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="A_offset" xd:instanceRef="block_mmult_1"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:port xd:name="ap_iscalar_1_dout" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="B_offset" xd:instanceRef="block_mmult_1"/>
-  </xd:connection>
-  <xd:connection>
-    <xd:port xd:name="ap_iscalar_2_dout" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="C_offset" xd:instanceRef="block_mmult_1"/>
-  </xd:connection>
-  <xd:connection>
     <xd:port xd:name="ap_clk" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="ap_clk" xd:instanceRef="madd_1"/>
   </xd:connection>
@@ -177,6 +141,42 @@
     <xd:busInterface xd:name="AP_FIFO_OARG_0" xd:instanceRef="madd_1_if"/>
   </xd:connection>
   <xd:connection>
+    <xd:port xd:name="ap_clk" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="vecmat_mmult_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="ap_resetn" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="vecmat_mmult_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="ap_ctrl" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:busInterface xd:name="ap_ctrl" xd:instanceRef="vecmat_mmult_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_A" xd:instanceRef="vecmat_mmult_1"/>
+    <xd:busInterface xd:name="AP_AXIMM_0" xd:instanceRef="vecmat_mmult_1_if"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_B" xd:instanceRef="vecmat_mmult_1"/>
+    <xd:busInterface xd:name="AP_AXIMM_1" xd:instanceRef="vecmat_mmult_1_if"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_C" xd:instanceRef="vecmat_mmult_1"/>
+    <xd:busInterface xd:name="AP_AXIMM_2" xd:instanceRef="vecmat_mmult_1_if"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="ap_iscalar_0_dout" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="A_offset" xd:instanceRef="vecmat_mmult_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="ap_iscalar_1_dout" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="B_offset" xd:instanceRef="vecmat_mmult_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="ap_iscalar_2_dout" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="C_offset" xd:instanceRef="vecmat_mmult_1"/>
+  </xd:connection>
+  <xd:connection>
     <xd:busInterface xd:name="ps7_M_AXI_GP0" xd:instanceRef="zed"/>
     <xd:busInterface xd:name="S00_AXI" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
   </xd:connection>
@@ -185,24 +185,24 @@
     <xd:busInterface xd:name="ps7_S_AXI_ACP" xd:instanceRef="zed"/>
   </xd:connection>
   <xd:connection>
-    <xd:busInterface xd:name="M_AXIMM_0" xd:instanceRef="block_mmult_1_if"/>
+    <xd:busInterface xd:name="M_AXIMM_0" xd:instanceRef="vecmat_mmult_1_if"/>
     <xd:busInterface xd:name="S00_AXI" xd:instanceRef="axi_ic_ps7_S_AXI_ACP"/>
   </xd:connection>
   <xd:connection>
-    <xd:busInterface xd:name="M_AXIMM_1" xd:instanceRef="block_mmult_1_if"/>
+    <xd:busInterface xd:name="M_AXIMM_1" xd:instanceRef="vecmat_mmult_1_if"/>
     <xd:busInterface xd:name="S01_AXI" xd:instanceRef="axi_ic_ps7_S_AXI_ACP"/>
   </xd:connection>
   <xd:connection>
-    <xd:busInterface xd:name="M_AXIMM_2" xd:instanceRef="block_mmult_1_if"/>
+    <xd:busInterface xd:name="M_AXIMM_2" xd:instanceRef="vecmat_mmult_1_if"/>
     <xd:busInterface xd:name="S02_AXI" xd:instanceRef="axi_ic_ps7_S_AXI_ACP"/>
   </xd:connection>
   <xd:connection>
     <xd:busInterface xd:name="M00_AXI" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
-    <xd:busInterface xd:name="S_AXI" xd:instanceRef="block_mmult_1_if"/>
+    <xd:busInterface xd:name="S_AXI" xd:instanceRef="madd_1_if"/>
   </xd:connection>
   <xd:connection>
     <xd:busInterface xd:name="M01_AXI" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
-    <xd:busInterface xd:name="S_AXI" xd:instanceRef="madd_1_if"/>
+    <xd:busInterface xd:name="S_AXI" xd:instanceRef="vecmat_mmult_1_if"/>
   </xd:connection>
   <xd:connection>
     <xd:busInterface xd:name="M02_AXI" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
@@ -262,13 +262,13 @@
     <xd:port xd:name="m_axi_mm2s_aclk" xd:instanceRef="dm_1"/>
     <xd:port xd:name="s_axi_lite_aclk" xd:instanceRef="dm_2"/>
     <xd:port xd:name="m_axi_s2mm_aclk" xd:instanceRef="dm_2"/>
-    <xd:port xd:name="s_axi_aclk" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="acc_aclk" xd:instanceRef="block_mmult_1_if"/>
     <xd:port xd:name="s_axi_aclk" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="s_axis_fifo_0_aclk" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="s_axis_fifo_1_aclk" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="m_axis_fifo_0_aclk" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="acc_aclk" xd:instanceRef="madd_1_if"/>
+    <xd:port xd:name="s_axi_aclk" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="acc_aclk" xd:instanceRef="vecmat_mmult_1_if"/>
     <xd:port xd:name="S00_ACLK" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
     <xd:port xd:name="M00_ACLK" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
     <xd:port xd:name="M01_ACLK" xd:instanceRef="axi_ic_ps7_M_AXI_GP0"/>
@@ -314,13 +314,13 @@
     <xd:port xd:name="mm2s_prmry_resetn_out_n" xd:instanceRef="dm_1"/>
     <xd:port xd:name="axi_resetn" xd:instanceRef="dm_2"/>
     <xd:port xd:name="s2mm_prmry_resetn_out_n" xd:instanceRef="dm_2"/>
-    <xd:port xd:name="s_axi_aresetn" xd:instanceRef="block_mmult_1_if"/>
-    <xd:port xd:name="acc_aresetn" xd:instanceRef="block_mmult_1_if"/>
     <xd:port xd:name="s_axi_aresetn" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="s_axis_fifo_0_aresetn" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="s_axis_fifo_1_aresetn" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="m_axis_fifo_0_aresetn" xd:instanceRef="madd_1_if"/>
     <xd:port xd:name="acc_aresetn" xd:instanceRef="madd_1_if"/>
+    <xd:port xd:name="s_axi_aresetn" xd:instanceRef="vecmat_mmult_1_if"/>
+    <xd:port xd:name="acc_aresetn" xd:instanceRef="vecmat_mmult_1_if"/>
     <xd:port xd:name="aresetn" xd:instanceRef="axis_dwc_dm_0_tx_0"/>
     <xd:port xd:name="aresetn" xd:instanceRef="axis_dwc_dm_1_tx_0"/>
     <xd:port xd:name="aresetn" xd:instanceRef="axis_dwc_dm_2_rx_0"/>

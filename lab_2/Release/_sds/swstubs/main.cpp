@@ -117,8 +117,8 @@ static int result_check(float *D, float *D_sw)
     return 0;
 }
 
-void p_0_block_mmult_1_noasync(float A[1048576], float B[1048576], float C[1048576]);
 void p_0_madd_1_noasync(float A[1048576], float B[1048576], float C[1048576]);
+void p_0_vecmat_mmult_1_noasync(float A[1048576], float B[1048576], float C[1048576]);
 int mmult_test(float *A, float *B, float *C, float *D, float *D_sw)
 {
     std::cout << "Testing " << NUM_TESTS << " iterations of " << N << "x" << N
@@ -137,8 +137,7 @@ int mmult_test(float *A, float *B, float *C, float *D, float *D_sw)
         sw_ctr.stop();
 
         hw_ctr.start();
-        p_0_block_mmult_1_noasync(A, B, tmp1);
-        //mmult(A, B, tmp1);
+        p_0_vecmat_mmult_1_noasync(A, B, tmp1);
         p_0_madd_1_noasync(tmp1, C, D);
         hw_ctr.stop();
 

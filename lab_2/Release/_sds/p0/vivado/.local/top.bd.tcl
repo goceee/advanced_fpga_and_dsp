@@ -75,30 +75,16 @@ set_property -dict [ list \
   ] $dm_2
 
 #---------------------------
-# Instantiating block_mmult_1
-#---------------------------
-set block_mmult_1 [create_bd_cell -type ip -vlnv xilinx.com:hls:block_mmult:1.0 block_mmult_1]
-  
-
-#---------------------------
 # Instantiating madd_1
 #---------------------------
 set madd_1 [create_bd_cell -type ip -vlnv xilinx.com:hls:madd:1.0 madd_1]
   
 
 #---------------------------
-# Instantiating block_mmult_1_if
+# Instantiating vecmat_mmult_1
 #---------------------------
-set block_mmult_1_if [create_bd_cell -type ip -vlnv xilinx.com:ip:adapter_v3_0:1.0 block_mmult_1_if]
+set vecmat_mmult_1 [create_bd_cell -type ip -vlnv xilinx.com:hls:vecmat_mmult:1.0 vecmat_mmult_1]
   
-set_property -dict [ list \
-  CONFIG.M_AXIMM_ADDR_WIDTH {32} \
-  CONFIG.C_INPUT_SCALAR_0_WIDTH {32} \
-  CONFIG.C_INPUT_SCALAR_1_WIDTH {32} \
-  CONFIG.C_INPUT_SCALAR_2_WIDTH {32} \
-  CONFIG.C_N_INPUT_SCALARS {3} \
-  CONFIG.C_NUM_AXIMMs {3} \
-  ] $block_mmult_1_if
 
 #---------------------------
 # Instantiating madd_1_if
@@ -121,6 +107,20 @@ set_property -dict [ list \
   CONFIG.C_NUM_INPUT_FIFOs {2} \
   CONFIG.C_NUM_OUTPUT_FIFOs {1} \
   ] $madd_1_if
+
+#---------------------------
+# Instantiating vecmat_mmult_1_if
+#---------------------------
+set vecmat_mmult_1_if [create_bd_cell -type ip -vlnv xilinx.com:ip:adapter_v3_0:1.0 vecmat_mmult_1_if]
+  
+set_property -dict [ list \
+  CONFIG.M_AXIMM_ADDR_WIDTH {32} \
+  CONFIG.C_INPUT_SCALAR_0_WIDTH {32} \
+  CONFIG.C_INPUT_SCALAR_1_WIDTH {32} \
+  CONFIG.C_INPUT_SCALAR_2_WIDTH {32} \
+  CONFIG.C_N_INPUT_SCALARS {3} \
+  CONFIG.C_NUM_AXIMMs {3} \
+  ] $vecmat_mmult_1_if
 
 #---------------------------
 # Instantiating axi_ic_ps7_M_AXI_GP0
@@ -218,32 +218,32 @@ set_property -dict [ list \
 # Connectivity
 #---------------------------
 connect_bd_net  \
-  [get_bd_pins -auto_enable /block_mmult_1_if/ap_clk] \
-  [get_bd_pins -auto_enable /block_mmult_1/ap_clk] \
-
-connect_bd_net  \
-  [get_bd_pins -auto_enable /block_mmult_1_if/ap_resetn] \
-  [get_bd_pins -auto_enable /block_mmult_1/ap_rst_n] \
-
-connect_bd_net  \
-  [get_bd_pins -auto_enable /block_mmult_1_if/ap_iscalar_0_dout] \
-  [get_bd_pins -auto_enable /block_mmult_1/A_offset] \
-
-connect_bd_net  \
-  [get_bd_pins -auto_enable /block_mmult_1_if/ap_iscalar_1_dout] \
-  [get_bd_pins -auto_enable /block_mmult_1/B_offset] \
-
-connect_bd_net  \
-  [get_bd_pins -auto_enable /block_mmult_1_if/ap_iscalar_2_dout] \
-  [get_bd_pins -auto_enable /block_mmult_1/C_offset] \
-
-connect_bd_net  \
   [get_bd_pins -auto_enable /madd_1_if/ap_clk] \
   [get_bd_pins -auto_enable /madd_1/ap_clk] \
 
 connect_bd_net  \
   [get_bd_pins -auto_enable /madd_1_if/ap_resetn] \
   [get_bd_pins -auto_enable /madd_1/ap_rst_n] \
+
+connect_bd_net  \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/ap_clk] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1/ap_clk] \
+
+connect_bd_net  \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/ap_resetn] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1/ap_rst_n] \
+
+connect_bd_net  \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/ap_iscalar_0_dout] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1/A_offset] \
+
+connect_bd_net  \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/ap_iscalar_1_dout] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1/B_offset] \
+
+connect_bd_net  \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/ap_iscalar_2_dout] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1/C_offset] \
 
 connect_bd_net  \
   [get_bd_pins -auto_enable /clk_wiz_0/clk_out1] \
@@ -255,13 +255,13 @@ connect_bd_net  \
   [get_bd_pins -auto_enable /dm_1/m_axi_mm2s_aclk] \
   [get_bd_pins -auto_enable /dm_2/s_axi_lite_aclk] \
   [get_bd_pins -auto_enable /dm_2/m_axi_s2mm_aclk] \
-  [get_bd_pins -auto_enable /block_mmult_1_if/s_axi_aclk] \
-  [get_bd_pins -auto_enable /block_mmult_1_if/acc_aclk] \
   [get_bd_pins -auto_enable /madd_1_if/s_axi_aclk] \
   [get_bd_pins -auto_enable /madd_1_if/s_axis_fifo_0_aclk] \
   [get_bd_pins -auto_enable /madd_1_if/s_axis_fifo_1_aclk] \
   [get_bd_pins -auto_enable /madd_1_if/m_axis_fifo_0_aclk] \
   [get_bd_pins -auto_enable /madd_1_if/acc_aclk] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/s_axi_aclk] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/acc_aclk] \
   [get_bd_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/S00_ACLK] \
   [get_bd_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/M00_ACLK] \
   [get_bd_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/M01_ACLK] \
@@ -307,13 +307,13 @@ connect_bd_net  \
   [get_bd_pins -auto_enable /dm_1/mm2s_prmry_resetn_out_n] \
   [get_bd_pins -auto_enable /dm_2/axi_resetn] \
   [get_bd_pins -auto_enable /dm_2/s2mm_prmry_resetn_out_n] \
-  [get_bd_pins -auto_enable /block_mmult_1_if/s_axi_aresetn] \
-  [get_bd_pins -auto_enable /block_mmult_1_if/acc_aresetn] \
   [get_bd_pins -auto_enable /madd_1_if/s_axi_aresetn] \
   [get_bd_pins -auto_enable /madd_1_if/s_axis_fifo_0_aresetn] \
   [get_bd_pins -auto_enable /madd_1_if/s_axis_fifo_1_aresetn] \
   [get_bd_pins -auto_enable /madd_1_if/m_axis_fifo_0_aresetn] \
   [get_bd_pins -auto_enable /madd_1_if/acc_aresetn] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/s_axi_aresetn] \
+  [get_bd_pins -auto_enable /vecmat_mmult_1_if/acc_aresetn] \
   [get_bd_pins -auto_enable /axis_dwc_dm_0_tx_0/aresetn] \
   [get_bd_pins -auto_enable /axis_dwc_dm_1_tx_0/aresetn] \
   [get_bd_pins -auto_enable /axis_dwc_dm_2_rx_0/aresetn] \
@@ -350,22 +350,6 @@ connect_bd_net  \
   [get_bd_pins -auto_enable /axi_ic_ps7_S_AXI_ACP/S02_AXI_awcache] \
 
 connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/ap_ctrl] \
-  [get_bd_intf_pins -auto_enable /block_mmult_1/ap_ctrl] \
-
-connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1/m_axi_A] \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/AP_AXIMM_0] \
-
-connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1/m_axi_B] \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/AP_AXIMM_1] \
-
-connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1/m_axi_C] \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/AP_AXIMM_2] \
-
-connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /madd_1_if/ap_ctrl] \
   [get_bd_intf_pins -auto_enable /madd_1/ap_ctrl] \
 
@@ -382,6 +366,22 @@ connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /madd_1_if/AP_FIFO_OARG_0] \
 
 connect_bd_intf_net \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/ap_ctrl] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1/ap_ctrl] \
+
+connect_bd_intf_net \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1/m_axi_A] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/AP_AXIMM_0] \
+
+connect_bd_intf_net \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1/m_axi_B] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/AP_AXIMM_1] \
+
+connect_bd_intf_net \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1/m_axi_C] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/AP_AXIMM_2] \
+
+connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /ps7/M_AXI_GP0] \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/S00_AXI] \
 
@@ -390,24 +390,24 @@ connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /ps7/S_AXI_ACP] \
 
 connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/M_AXIMM_0] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/M_AXIMM_0] \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_S_AXI_ACP/S00_AXI] \
 
 connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/M_AXIMM_1] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/M_AXIMM_1] \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_S_AXI_ACP/S01_AXI] \
 
 connect_bd_intf_net \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/M_AXIMM_2] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/M_AXIMM_2] \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_S_AXI_ACP/S02_AXI] \
 
 connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/M00_AXI] \
-  [get_bd_intf_pins -auto_enable /block_mmult_1_if/S_AXI] \
+  [get_bd_intf_pins -auto_enable /madd_1_if/S_AXI] \
 
 connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/M01_AXI] \
-  [get_bd_intf_pins -auto_enable /madd_1_if/S_AXI] \
+  [get_bd_intf_pins -auto_enable /vecmat_mmult_1_if/S_AXI] \
 
 connect_bd_intf_net \
   [get_bd_intf_pins -auto_enable /axi_ic_ps7_M_AXI_GP0/M02_AXI] \

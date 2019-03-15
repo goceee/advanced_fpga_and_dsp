@@ -42,17 +42,17 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_dm_1_0 || O
 # IP: bd/zed/ip/zed_dm_2_0/zed_dm_2_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_dm_2_0 || ORIG_REF_NAME==zed_dm_2_0} -quiet] -quiet
 
-# IP: bd/zed/ip/zed_block_mmult_1_0/zed_block_mmult_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_block_mmult_1_0 || ORIG_REF_NAME==zed_block_mmult_1_0} -quiet] -quiet
-
 # IP: bd/zed/ip/zed_madd_1_0/zed_madd_1_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_madd_1_0 || ORIG_REF_NAME==zed_madd_1_0} -quiet] -quiet
 
-# IP: bd/zed/ip/zed_block_mmult_1_if_0/zed_block_mmult_1_if_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_block_mmult_1_if_0 || ORIG_REF_NAME==zed_block_mmult_1_if_0} -quiet] -quiet
+# IP: bd/zed/ip/zed_vecmat_mmult_1_0/zed_vecmat_mmult_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_vecmat_mmult_1_0 || ORIG_REF_NAME==zed_vecmat_mmult_1_0} -quiet] -quiet
 
 # IP: bd/zed/ip/zed_madd_1_if_0/zed_madd_1_if_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_madd_1_if_0 || ORIG_REF_NAME==zed_madd_1_if_0} -quiet] -quiet
+
+# IP: bd/zed/ip/zed_vecmat_mmult_1_if_0/zed_vecmat_mmult_1_if_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_vecmat_mmult_1_if_0 || ORIG_REF_NAME==zed_vecmat_mmult_1_if_0} -quiet] -quiet
 
 # IP: bd/zed/ip/zed_xbar_0/zed_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_xbar_0 || ORIG_REF_NAME==zed_xbar_0} -quiet] -quiet

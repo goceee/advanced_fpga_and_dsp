@@ -1,44 +1,6 @@
 {
     "Used Resources": [
         {
-            "ip_instance": "zed_block_mmult_1_0",
-            "resources": [
-                {
-                    "LUT": "13170"
-                },
-                {
-                    "LUTAsLogic": "12992"
-                },
-                {
-                    "LUTMem": "178"
-                },
-                {
-                    "REG": "17609"
-                },
-                {
-                    "F7MUX": "256"
-                },
-                {
-                    "F8MUX": "128"
-                },
-                {
-                    "BRAM": "66"
-                },
-                {
-                    "DSP": "160"
-                },
-                {
-                    "GLOBAL_CLOCK_BUFFERS": "0"
-                },
-                {
-                    "MMCM": "0"
-                },
-                {
-                    "PLL": "0"
-                }
-            ]
-        },
-        {
             "ip_instance": "zed_madd_1_0",
             "resources": [
                 {
@@ -64,6 +26,44 @@
                 },
                 {
                     "DSP": "2"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "PLL": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "zed_vecmat_mmult_1_0",
+            "resources": [
+                {
+                    "LUT": "13179"
+                },
+                {
+                    "LUTAsLogic": "13001"
+                },
+                {
+                    "LUTMem": "178"
+                },
+                {
+                    "REG": "17619"
+                },
+                {
+                    "F7MUX": "256"
+                },
+                {
+                    "F8MUX": "128"
+                },
+                {
+                    "BRAM": "66"
+                },
+                {
+                    "DSP": "160"
                 },
                 {
                     "GLOBAL_CLOCK_BUFFERS": "0"

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Mar 14 11:47:05 2019
+| Date         : Thu Mar 14 22:09:17 2019
 | Host         : DESKTOP-6OLIA81 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file zed_wrapper_utilization_synth.rpt -pb zed_wrapper_utilization_synth.pb
 | Design       : zed_wrapper
@@ -177,6 +177,8 @@ Table of Contents
 +--------------------------+------+
 | zed_xbar_1               |    1 |
 | zed_xbar_0               |    1 |
+| zed_vecmat_mmult_1_if_0  |    1 |
+| zed_vecmat_mmult_1_0     |    1 |
 | zed_s05_regslice_0       |    1 |
 | zed_s05_data_fifo_0      |    1 |
 | zed_s04_regslice_0       |    1 |
@@ -208,8 +210,6 @@ Table of Contents
 | zed_dm_1_0               |    1 |
 | zed_dm_0_0               |    1 |
 | zed_clk_wiz_0_0          |    1 |
-| zed_block_mmult_1_if_0   |    1 |
-| zed_block_mmult_1_0      |    1 |
 | zed_axis_dwc_dm_2_rx_0_0 |    1 |
 | zed_axis_dwc_dm_1_tx_0_0 |    1 |
 | zed_axis_dwc_dm_0_tx_0_0 |    1 |

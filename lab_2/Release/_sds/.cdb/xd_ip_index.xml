@@ -36,13 +36,13 @@
     <xd:file xd:name="xlconstant_v1_1.xml"/>
     <xd:file xd:name="xlslice_v1_0.xml"/>
     <xd:file xd:name="zed.hpfm"/>
-    <xd:file xd:name="block_mmult.xml"/>
-    <xd:file xd:name="block_mmult_if.xml"/>
-    <xd:file xd:name="block_mmult.block_mmult.fcnmap.xml"/>
-    <xd:file xd:name="madd.madd.fcnmap.xml"/>
     <xd:file xd:name="madd.xml"/>
     <xd:file xd:name="madd_if.xml"/>
-    <xd:file xd:name="block_mmult.block_mmult.fcnmap.xml"/>
     <xd:file xd:name="madd.madd.fcnmap.xml"/>
+    <xd:file xd:name="vecmat_mmult.vecmat_mmult.fcnmap.xml"/>
+    <xd:file xd:name="vecmat_mmult.xml"/>
+    <xd:file xd:name="vecmat_mmult_if.xml"/>
+    <xd:file xd:name="madd.madd.fcnmap.xml"/>
+    <xd:file xd:name="vecmat_mmult.vecmat_mmult.fcnmap.xml"/>
   </xd:repository>
 </xd:component>

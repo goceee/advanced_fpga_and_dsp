@@ -14,7 +14,7 @@ if { ![info exists _is_init_cmds] } {
 write_cookie_file_impl ""
 
 # utilization reports
-report_utilization_impl false "block_mmult madd adapter" "routed"
+report_utilization_impl false "madd vecmat_mmult adapter" "routed"
 
 
 # run timing analysis and frequency scaling
