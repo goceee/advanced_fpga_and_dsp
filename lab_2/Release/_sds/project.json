@@ -1,8 +1,0 @@
-{
-  "project" : {
-    "id" : "0",
-    "xpfmFile" : "C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm",
-    "sysConfig" : "standalone",
-    "accelerators" : "madd:vecmat_mmult"
-  }
-}

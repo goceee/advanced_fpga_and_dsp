@@ -1,8 +1,0 @@
-11:10:25 **** Build of configuration Release for project lab_2 ****
-make pre-build main-build 
-sdsoc_make_clean Release
-' '
-make: Nothing to be done for 'main-build'.
-
-11:10:25 Build Finished (took 279ms)
-

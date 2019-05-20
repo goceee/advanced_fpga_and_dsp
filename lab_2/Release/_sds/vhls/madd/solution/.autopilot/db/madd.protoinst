@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"a1_madd": {
-			"proto_instances": {
-			}
-		}
-	}
-}
