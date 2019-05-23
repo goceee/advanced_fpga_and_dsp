@@ -1,9 +1,12 @@
 Debug
+Release
 images
+src
 .settings
 .launches
+.vscode
 .ccsproject
-.cproject
 .project
 .xdchelp
+.cproject
 imageCfg.txt

@@ -2,15 +2,77 @@
              ; TODO: complete stereo vision function in linear assembly
 stereo_vision_sa  .cproc a_1,a_2,a_3,a_4,a_5
 
+            ; Provide symbolic names for registers
+            .reg a_i, a_j, a_k, a_ii, a_jj
+            .reg a_sum, a_distance, a_minimize
+            .reg a_pixel_index
 
+; Initialise loop variables i and j
+            MV 222, a_i
+            MV 279, a_j
+            SUB a_i, a_5, a_i
+            SUB a_j, a_5, a_j
 
+; Begin first loop: No initialisation occurs at the start of the first loop
+loop_i      
 
+; Begin second loop: Init distance, minimise and loop variable k
+loop_j      ZERO a_distance
+            MV 100000, a_minimize
+            ZERO a_k
 
+; Begin third loop: Init sum
+loop_k      ZERO a_sum
+            SUB a_j, a_k, A31
+            CMPGT A31, a_5, A31
+    [!A31]  B end_third ; If condition is false, jump to end of third loop
+            MV a_5, a_ii
 
+; Begin fourth loop
+loop_ii     MV a_5, a_jj  
+            ADD a_i, a_ii, A17
+            MPY A17, 279, A17
 
+; Begin fifth loop
+loop_jj     ADD A17, a_j, A22
+            ADD A22, a_jj, A22 
+            LDBU .D2 *a_1[A17], A18 ; Get val_L
+            SUB A17, a_k, A21
+            LDBU .D2 *a_2[A21], A19 ; Get val_R
+            SUBABS4 A18, A19, A20 ; Get difference
+            ADD .L1 a_sum, a_sum, A20 ; Add difference to sum
 
+; End fifth loop
+            ADD .L1 a_jj, 1, a_jj
+            CMPLT a_jj, a_5, A31
+    [A31]   B loop_jj 
 
+; End fourth loop
+            ADD .L1 a_ii, 1, a_ii
+            CMPLT a_ii, a_5, A31
+    [A31]   B loop_ii
+            CMPLT a_sum, a_minimize, A31
+    [A31]   B end_third
+            MV a_sum, a_minimize
+            MV a_distance, a_k
 
+; End third loop
+end_third   ADD a_k, 1, a_k
+            CMPLT a_k, a_4, A31
+    [A31]   B loop_k
+
+; End second loop
+            MPY .M1 a_i, 279, a_pixel_index
+            ADD .L1 a_pixel_index, a_j, a_pixel_index
+            ST a_distance, *+B14[a_pixel_index]
+            SUB a_j, 1, a_j
+            CMPGT a_j, a_5, A31
+    [A31]   B loop_j
+
+; End first loop
+            SUB a_i, 1, a_i
+            CMPGT a_i, a_5, A31
+    [A31]   B loop_i
 
              .return
              .endproc
