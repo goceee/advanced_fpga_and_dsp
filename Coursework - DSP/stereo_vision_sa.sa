@@ -2,85 +2,82 @@
              ; TODO: complete stereo vision function in linear assembly
 stereo_vision_sa  .cproc a_1,a_2,a_3,a_4,a_5
 
-        	; Provide symbolic names for registers
-            .reg a_i, a_j, a_k, a_ii, a_jj
-            .reg a_sum, a_distance, a_minimize
-            .reg a_pixel_index
-            .reg a_width, a_height
+                  MVKL 222, A0; Loop variable i
+                  MVKL 279, A1; Loop variable j
 
-            MVKL 280, a_width
-            MVKL 223, a_height
-
-			; Initialise loop variables i and j
-            MVKL 222, a_i
-            MVKL 279, a_j
-            SUB a_i, a_5, a_i
-            SUB a_j, a_5, a_j
-
-; Begin first loop: No initialisation occurs at the start of the first loop
+; Begin loop i
 loopi
 
-; Begin second loop: Init distance, minimise and loop variable k
-loopj      	ZERO a_distance
-            MVKL 100000, a_minimize
-            ZERO a_k
+; Begin loop j
+loopj
+                  ZERO A2; Variable distance
+                  MV 100000, A3; Variable minimize
+                  ZERO A4; Loop variable k
 
-; Begin third loop: Init sum
-loopk      	ZERO a_sum
-            SUB a_j, a_k, A31
-            CMPGT A31, a_5, A31
-	[!A31]  B endthird ; If condition is false, jump to end of third loop
-            MV a_5, a_ii
+; Begin loop k
+loopk
+                  ZERO A5; Variable sum
+                  SUB A1, A5, B2;
+                  CMPLT B2, 2, B3
+            [B3]  B loopk
+                  ; TODO: Set up load instructions properly
+                  LDNDW [], A7:A6; Variables lb0 - lb4
+                  LDNDW [], A9:A8
+                  LDNDW [], A11:A10
+                  LDNDW [], A13:A12
+                  LDNDW [], A15:A14
 
-; Begin fourth loop
-loopii     	MV a_5, a_jj
-            ADD a_i, a_ii, A17
-            MPY A17, a_width, A17
+                  LDNDW [], B7:B6; Variables rb0 - rb4
+                  LDNDW [], B9:B8
+                  LDNDW [], B11:B10
+                  LDNDW [], B13:B12
+                  LDNDW [], B15:B14
 
-; Begin fifth loop
-loopjj     	ADD A17, a_j, A22
-            ADD A22, a_jj, A22
-            LDBU .D2 *a_1[A17], A18 ; TODO: Get val_L
-            SUB A17, a_k, A21
-            LDBU .D2 *a_2[A21], A19 ; TODO: Get val_R
-            SUBABS4 A18, A19, A20 ; Get difference
-            ADD .L1 a_sum, a_sum, A20 ; Add difference to sum
+                  SUB A7, B7, A16
+                  SUB A9, B9, A17
+                  SUB A11, B11, A18
+                  SUB A13, B13, A19
+                  SUB A13, B13, A20
 
-; End fifth loop
-            ADD .L1 a_jj, 1, a_jj
-            CMPLT a_jj, a_5, A31
-    [A31]   B loopjj
+                  ABS A16
+                  ABS A17
+                  ABS A18
+                  ABS A19
+                  ABS A20
 
-; End fourth loop
-            ADD .L1 a_ii, 1, a_ii
-            CMPLT a_ii, a_5, A31
-    [A31]   B loopii
-            CMPLT a_sum, a_minimize, A31
-    [A31]   B endthird
-            MV a_sum, a_minimize
-            MV a_distance, a_k
+                  SUBABS4 A6, B6, B16
+                  SUBABS4 A8, B8, B17
+                  SUBABS4 A10, B10, B18
+                  SUBABS4 A12, B12, B19
+                  SUBABS4 A14, B14, B20
 
-; End third loop
-endthird   	ADD a_k, 1, a_k
-            CMPLT a_k, a_4, A31
-    [A31]   B loopk
+                  DOTPU4 B16, 0x01010101, B16
+                  DOTPU4 B17, 0x01010101, B17
+                  DOTPU4 B18, 0x01010101, B18
+                  DOTPU4 B19, 0x01010101, B19
+                  DOTPU4 B20, 0x01010101, B20
 
-; End second loop
-            MPY .M1 a_i, a_width, a_pixel_index
-            ADD .L1 a_pixel_index, a_j, a_pixel_index
-            STW a_distance, *+B14[a_pixel_index] ; TODO: Fix this
-            SUB a_j, 1, a_j
-            CMPGT a_j, a_5, A31
-    [A31]   B loopj
+                  ADD A16, B16, A5
+                  ADD A17, B17, A5
+                  ADD A18, B18, A5
+                  ADD A19, B19, A5
+                  ADD A20, B20, A5
+                  CMPLT A5, A3, B4
+            [B4]  B loopk
+                  MV A5, A3
+                  MV A4, A2 
+; End loop k
+                  ; TODO: Set up store instruction properly
+                  STW A5, []
+                  ADD A4, 1, A4
+                  CMPLT A4, 60, B1
+            [B1]  B loopj
+; End loop j
+                  SUB A0, 1, A0
+                  CMPLT A0, 222, B0
+            [B0]  B loopi  
+; End loop i
+        	
 
-; End first loop
-            SUB a_i, 1, a_i
-            CMPGT a_i, a_5, A31
-    [A31]   B loopi
-
-             .return
-             .endproc
-
-
-
-
+                  .return
+                  .endproc
