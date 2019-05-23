@@ -2,7 +2,6 @@
 #define Width 280
 #include <stdio.h>
 
-typedef long long ll;
 typedef const long long cll;
 
 // TODO: optimise this function for better performance

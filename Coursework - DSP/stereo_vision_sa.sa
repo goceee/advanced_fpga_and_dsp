@@ -19,7 +19,7 @@ loopk
                   ZERO A5; Variable sum
                   SUB A1, A5, B2;
                   CMPLT B2, 2, B3
-            [B3]  B loopk
+      [!B3]       B loopk
                   ; TODO: Set up load instructions properly
                   LDNDW [], A7:A6; Variables lb0 - lb4
                   LDNDW [], A9:A8
@@ -63,7 +63,7 @@ loopk
                   ADD A19, B19, A5
                   ADD A20, B20, A5
                   CMPLT A5, A3, B4
-            [B4]  B loopk
+      [B4]        B loopk
                   MV A5, A3
                   MV A4, A2 
 ; End loop k
@@ -71,11 +71,11 @@ loopk
                   STW A5, []
                   ADD A4, 1, A4
                   CMPLT A4, 60, B1
-            [B1]  B loopj
+      [B1]        B loopj
 ; End loop j
                   SUB A0, 1, A0
                   CMPLT A0, 222, B0
-            [B0]  B loopi  
+      [B0]        B loopi  
 ; End loop i
         	
 
