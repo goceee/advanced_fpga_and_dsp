@@ -112,10 +112,9 @@ loopk
 				  ADD absDiff4, dotprod4, dotprod4
 				  ADD absDiff5, dotprod5, dotprod5
 
-				  ADD dotprod1, sum, sum
-				  ADD dotprod2, sum, sum
-				  ADD dotprod3, sum, sum
-				  ADD dotprod4, sum, sum
+				  ADD dotprod1, dotprod2, sum
+				  ADD dotprod3, dotprod4, dotprod4
+				  ADD dotprod4, dotprod5, dotprod5
 				  ADD dotprod5, sum, sum
 
 				  CMPLT j, k, radius_check;
