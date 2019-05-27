@@ -1,28 +1,29 @@
             .global stereo_vision_sa
              ; TODO: complete stereo vision function in linear assembly
 stereo_vision_sa  .cproc a_1,a_2,a_3,a_4,a_5
-				  .reg i, j, k, sum, minimize, distance, g5, width, height
-				  .reg radius_check, sum_check, mult_one
+				  .reg i, j, k, sum, minimize, distance, width
+				  .reg radius_check, sum_check, mult_one, zeroConst, and_one
 				  .reg w1, w2, w3, w4, w5, w6, w7, w8, w9, w10
 				  .reg w11, w12, w13, w14, w15, w16, w17, w18, w19, w20
-				  .reg offsetL1, offsetL2, offsetL3
+				  .reg offsetL1, offsetL2, offsetL3, offsetL4, offsetL5
 				  .reg offsetR1, offsetR2, offsetR3, offsetR4, offsetR5
 				  .reg maxWidth, maxHeight
-				  .reg absDiff, dotprod, zeroConst
+				  ;.reg absDiff
+				  .reg dotprod1, dotprod2, dotprod3, dotprod4, dotprod5
+				  .reg absDiff1, absDiff2, absDiff3, absDiff4, absDiff5
 				  .reg index
 
 				  MVKL 276, maxWidth
 				  MVKL 219, maxHeight
-				  ADD a_4, 1, a_4
 				  ZERO zeroConst
-				  ;MVKL 0, g5
-				  MVKL 222, height
+				  MVKL 0x000000FF, and_one
 				  MVKL 280, width
-                  ZERO i; Loop variable i
-                  MVKL 0x01010101, mult_one
+				  MVKL 0x01010101, mult_one
                   MVKH 0x01010101, mult_one
+                  ZERO i; Loop variable i
 ; Begin loop i
 loopi
+				  ;ZERO
 				  ZERO j
 ; Begin loop j
 loopj
@@ -30,66 +31,89 @@ loopj
 				  MVKL 0x86A0, minimize;
 				  MVKH 1, minimize;
 				  ZERO k
-				  MPY width, 2, offsetL1
-				  MPY width, 3, offsetL2
-				  MPY width, 4, offsetL3
-				  LDNDW *a_1, w1:w2
-				  LDNDW *a_1(width), w3:w4
-				  LDNDW *a_1(offsetL1), w5:w6
-				  LDNDW *a_1(offsetL2), w7:w8
-                  LDNDW *a_1(offsetL3), w9:w10
+				  MV i, offsetL1
+				  ADD i, 1, offsetL2
+				  ADD i, 2, offsetL3
+				  ADD i, 3, offsetL4
+				  ADD i, 4, offsetL5
+				  MPY width, offsetL1, offsetL1
+				  MPY width, offsetL2, offsetL2
+				  MPY width, offsetL3, offsetL3
+				  MPY width, offsetL4, offsetL4
+				  MPY width, offsetL5, offsetL5
+				  ADD j, offsetL1, offsetL1
+				  ADD j, offsetL2, offsetL2
+				  ADD j, offsetL3, offsetL3
+				  ADD j, offsetL4, offsetL4
+				  ADD j, offsetL5, offsetL5
+				  LDNDW *a_1(offsetL1), w1:w2
+				  LDNDW *a_1(offsetL2), w3:w4
+				  LDNDW *a_1(offsetL3), w5:w6
+				  LDNDW *a_1(offsetL4), w7:w8
+                  LDNDW *a_1(offsetL5), w9:w10
+                  AND w1, and_one, w1
+                  AND w3, and_one, w3
+                  AND w5, and_one, w5
+                  AND w7, and_one, w7
+                  AND w9, and_one, w9
 ; Begin loop k
 loopk
 				  ZERO sum
 				  CMPLT j, k, radius_check;
-				  NOT radius_check, radius_check
+				  XOR radius_check, 1, radius_check
 
-				  NEG k, offsetR1
-				  SUB width, k, offsetR2
-				  SUB offsetL1, k, offsetR3
-				  SUB offsetL2, k, offsetR4
-				  SUB offsetL3, k, offsetR5
+				  SUB offsetL1, k, offsetR1
+				  SUB offsetL2, k, offsetR2
+				  SUB offsetL3, k, offsetR3
+				  SUB offsetL4, k, offsetR4
+				  SUB offsetL5, k, offsetR5
 				  ;TODO: Load values into registers
                   LDNDW *a_2(offsetR1), w11:w12
 				  LDNDW *a_2(offsetR2), w13:w14
 				  LDNDW *a_2(offsetR3), w15:w16
 				  LDNDW *a_2(offsetR4), w17:w18
                   LDNDW *a_2(offsetR5), w19:w20
+                  AND w11, and_one, w11
+                  AND w13, and_one, w13
+                  AND w15, and_one, w15
+                  AND w17, and_one, w17
+                  AND w19, and_one, w19
 
-				  SUB w1, w11, absDiff
-				  ABS absDiff, absDiff
-				  SUBABS4 w2, w12, dotprod
-				  DOTPU4 dotprod, mult_one, dotprod
-				  ADD absDiff, dotprod, dotprod
-				  ADD sum, dotprod, sum
+				  SUB w1, w11, absDiff1
+				  SUB w3, w13, absDiff2
+				  SUB w5, w15, absDiff3
+				  SUB w7, w17, absDiff4
+				  SUB w9, w19, absDiff5
 
-				  SUB w3, w13, absDiff
-				  ABS absDiff, absDiff
-				  SUBABS4 w4, w14, dotprod
-				  DOTPU4 dotprod, mult_one, dotprod
-				  ADD absDiff, dotprod, dotprod
-				  ADD sum, dotprod, sum
+				  ABS absDiff1, absDiff1
+				  ABS absDiff2, absDiff2
+				  ABS absDiff3, absDiff3
+				  ABS absDiff4, absDiff4
+				  ABS absDiff5, absDiff5
 
-				  SUB w5, w15, absDiff
-				  ABS absDiff, absDiff
-				  SUBABS4 w6, w16, dotprod
-				  DOTPU4 dotprod, mult_one, dotprod
-				  ADD absDiff, dotprod, dotprod
-				  ADD sum, dotprod, sum
+				  SUBABS4 w2, w12, dotprod1
+				  SUBABS4 w4, w14, dotprod2
+				  SUBABS4 w6, w16, dotprod3
+				  SUBABS4 w8, w18, dotprod4
+				  SUBABS4 w10, w20, dotprod5
 
-				  SUB w7, w17, absDiff
-				  ABS absDiff, absDiff
-				  SUBABS4 w8, w18, dotprod
-				  DOTPU4 dotprod, mult_one, dotprod
-				  ADD absDiff, dotprod, dotprod
-				  ADD sum, dotprod, sum
+				  DOTPU4 dotprod1, mult_one, dotprod1
+				  DOTPU4 dotprod2, mult_one, dotprod2
+				  DOTPU4 dotprod3, mult_one, dotprod3
+				  DOTPU4 dotprod4, mult_one, dotprod4
+				  DOTPU4 dotprod5, mult_one, dotprod5
 
-				  SUB w9, w19, absDiff
-				  ABS absDiff, absDiff
-				  SUBABS4 w10, w20, dotprod
-				  DOTPU4 dotprod, mult_one, dotprod
-				  ADD absDiff, dotprod, dotprod
-				  ADD sum, dotprod, sum
+				  ADD absDiff1, dotprod1, dotprod1
+				  ADD absDiff2, dotprod2, dotprod2
+				  ADD absDiff3, dotprod3, dotprod3
+				  ADD absDiff4, dotprod4, dotprod4
+				  ADD absDiff5, dotprod5, dotprod5
+
+				  ADD sum, dotprod1, sum
+				  ADD sum, dotprod2, sum
+				  ADD sum, dotprod3, sum
+				  ADD sum, dotprod4, sum
+				  ADD sum, dotprod5, sum
 
      [!radius_check]  AND sum, zeroConst, sum
 
@@ -110,14 +134,10 @@ loopk
 				  STB distance, *a_3[index]
 
 				  ADD j, 1, j
-				  LDNDW *a_1++(1), w9:w10
-				  LDNDW *a_2++(1), w19:w20
                   CMPLT j, maxWidth, A2
       [A2]        B loopj
 ; End loop j
                   ADD i, 1, i
-                  ADD a_1, 4, a_1
-                  ADD a_2, 4, a_2
                   CMPLT i, maxHeight, A2
       [A2]        B loopi
 ; End loop i
