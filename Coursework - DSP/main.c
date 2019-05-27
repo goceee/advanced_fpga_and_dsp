@@ -30,6 +30,7 @@
 #pragma DATA_ALIGN(R, 128);
 #pragma DATA_ALIGN(Disparity_Map, 128);
 
+
 unsigned char L[Height*Width] = {Left};
 unsigned char R[Height*Width] = {Right};
 unsigned char Disparity_Map[Height*Width];
@@ -78,7 +79,7 @@ int main()
     tdiff1 = ((TS64_TO_ULL(stop)) - (TS64_TO_ULL(start))) / FQ64_TO_FLOAT(freq);
 
     // TODO: when you start working on linear assembly, uncomment this line below to reset output buffer to zero
-    // memset(Disparity_Map, 0, Height*Width);
+    memset(Disparity_Map, 0, Height*Width);
 
     // linear assembly
     Timestamp_get64(&start);
