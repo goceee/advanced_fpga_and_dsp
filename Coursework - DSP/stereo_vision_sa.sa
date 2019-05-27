@@ -118,12 +118,11 @@ loopk
 				  ADD dotprod4, sum, sum
 				  ADD dotprod5, sum, sum
 
-				  CMPLT sum, minimize, sum_check
 				  CMPLT j, k, radius_check;
-				  XOR radius_check, 1, radius_check
-				  AND sum_check, radius_check, radius_check
-	 [radius_check]  MV sum, minimize
-	 [radius_check]  MV k, distance
+	 [!radius_check] CMPLT sum, minimize, sum_check
+	 [radius_check] ZERO sum_check
+	 [sum_check]  MV sum, minimize
+	 [sum_check]  MV k, distance
 				  ;----------------------------------
 				  ADD k, 1, k
 				  CMPLT k, a_4, radius_check
