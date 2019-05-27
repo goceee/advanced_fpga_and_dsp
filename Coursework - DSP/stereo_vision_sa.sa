@@ -1,54 +1,125 @@
             .global stereo_vision_sa
              ; TODO: complete stereo vision function in linear assembly
 stereo_vision_sa  .cproc a_1,a_2,a_3,a_4,a_5
-				  .reg i, j, k, sum, minimize, distance
+				  .reg i, j, k, sum, minimize, distance, g5, width, height
+				  .reg radius_check, sum_check, mult_one
+				  .reg w1, w2, w3, w4, w5, w6, w7, w8, w9, w10
+				  .reg w11, w12, w13, w14, w15, w16, w17, w18, w19, w20
+				  .reg offsetL1, offsetL2, offsetL3
+				  .reg offsetR1, offsetR2, offsetR3, offsetR4, offsetR5
+				  .reg maxWidth, maxHeight
+				  .reg absDiff, dotprod, zeroConst
+				  .reg index
 
-				  MVKL 222, A31
-				  MVKL 279, A30
-                  MVKL 222, A0; Loop variable i
-                  MVKL 279, A1; Loop variable j
-                  MVKL 0x0101, B31
-                  MVKH 0x0101, B31
-
+				  MVKL 276, maxWidth
+				  MVKL 219, maxHeight
+				  ADD a_4, 1, a_4
+				  ZERO zeroConst
+				  ;MVKL 0, g5
+				  MVKL 222, height
+				  MVKL 280, width
+                  ZERO i; Loop variable i
+                  MVKL 0x01010101, mult_one
+                  MVKH 0x01010101, mult_one
 ; Begin loop i
 loopi
+				  ZERO j
 ; Begin loop j
 loopj
 				  ZERO distance;
-				  MVKL x, minimize;
-				  MVKH y, minimize
+				  MVKL 0x86A0, minimize;
+				  MVKH 1, minimize;
 				  ZERO k
+				  MPY width, 2, offsetL1
+				  MPY width, 3, offsetL2
+				  MPY width, 4, offsetL3
+				  LDNDW *a_1, w1:w2
+				  LDNDW *a_1(width), w3:w4
+				  LDNDW *a_1(offsetL1), w5:w6
+				  LDNDW *a_1(offsetL2), w7:w8
+                  LDNDW *a_1(offsetL3), w9:w10
 ; Begin loop k
 loopk
 				  ZERO sum
-				  SUB j, k, A3
-				  CMPLT A3, a_5, A3;
-				  NOT A3, A3
+				  CMPLT j, k, radius_check;
+				  NOT radius_check, radius_check
 
+				  NEG k, offsetR1
+				  SUB width, k, offsetR2
+				  SUB offsetL1, k, offsetR3
+				  SUB offsetL2, k, offsetR4
+				  SUB offsetL3, k, offsetR5
 				  ;TODO: Load values into registers
-				  LDW *a_1++, A5
-				  LDW *a_1++, A6
-				  LDW *a_1++, A7
-				  LDW *a_1++, A8
-				  MVKL 100, A9
+                  LDNDW *a_2(offsetR1), w11:w12
+				  LDNDW *a_2(offsetR2), w13:w14
+				  LDNDW *a_2(offsetR3), w15:w16
+				  LDNDW *a_2(offsetR4), w17:w18
+                  LDNDW *a_2(offsetR5), w19:w20
 
-				  CMPLT sum, minimize, A4
-				  AND A3, A4, A4
+				  SUB w1, w11, absDiff
+				  ABS absDiff, absDiff
+				  SUBABS4 w2, w12, dotprod
+				  DOTPU4 dotprod, mult_one, dotprod
+				  ADD absDiff, dotprod, dotprod
+				  ADD sum, dotprod, sum
+
+				  SUB w3, w13, absDiff
+				  ABS absDiff, absDiff
+				  SUBABS4 w4, w14, dotprod
+				  DOTPU4 dotprod, mult_one, dotprod
+				  ADD absDiff, dotprod, dotprod
+				  ADD sum, dotprod, sum
+
+				  SUB w5, w15, absDiff
+				  ABS absDiff, absDiff
+				  SUBABS4 w6, w16, dotprod
+				  DOTPU4 dotprod, mult_one, dotprod
+				  ADD absDiff, dotprod, dotprod
+				  ADD sum, dotprod, sum
+
+				  SUB w7, w17, absDiff
+				  ABS absDiff, absDiff
+				  SUBABS4 w8, w18, dotprod
+				  DOTPU4 dotprod, mult_one, dotprod
+				  ADD absDiff, dotprod, dotprod
+				  ADD sum, dotprod, sum
+
+				  SUB w9, w19, absDiff
+				  ABS absDiff, absDiff
+				  SUBABS4 w10, w20, dotprod
+				  DOTPU4 dotprod, mult_one, dotprod
+				  ADD absDiff, dotprod, dotprod
+				  ADD sum, dotprod, sum
+
+     [!radius_check]  AND sum, zeroConst, sum
+
+				  CMPLT sum, minimize, sum_check
+				  AND radius_check, sum_check, sum_check
+	 [sum_check]  MV sum, minimize
+	 [sum_check]  MV k, distance
 				  ;----------------------------------
 				  ADD k, 1, k
 				  CMPLT k, a_4, A2
 	  [A2]        B loopk
 ; End loop k
 				  ;TODO: Store distance into disparity map
-				  SUB j, 1, j
-                  CMPLT j, a_5, A2
+				  ADD i, a_5, index
+				  MPY index, width, index
+				  ADD index, j, index
+				  ADD index, a_5, index
+				  STB distance, *a_3[index]
+
+				  ADD j, 1, j
+				  LDNDW *a_1++(1), w9:w10
+				  LDNDW *a_2++(1), w19:w20
+                  CMPLT j, maxWidth, A2
       [A2]        B loopj
 ; End loop j
-                  SUB i, 1, i
-                  CMPLT i, a_5, A2
+                  ADD i, 1, i
+                  ADD a_1, 4, a_1
+                  ADD a_2, 4, a_2
+                  CMPLT i, maxHeight, A2
       [A2]        B loopi
 ; End loop i
-
-
                   .return
                   .endproc
