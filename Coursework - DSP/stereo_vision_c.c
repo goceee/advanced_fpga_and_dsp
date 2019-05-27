@@ -18,7 +18,6 @@ void stereo_vision_c(const unsigned char *L, const unsigned char *R, unsigned ch
             for (k=0;k<Search_Range;k++)
             {
                 int Sum=0;
-                int radiusCheck = j >= k;
 
                 cll lb0 = _mem8_const(&L[(i)*Width+(j)]) & 0xFFFFFFFFFF;
                 cll lb1 = _mem8_const(&L[(i+1)*Width+(j)]) & 0xFFFFFFFFFF;
@@ -37,9 +36,8 @@ void stereo_vision_c(const unsigned char *L, const unsigned char *R, unsigned ch
                 Sum += _abs(_hill(lb2) - _hill(rb2)) + _dotpu4(_subabs4(_loll(lb2), _loll(rb2)), 0x01010101);
                 Sum += _abs(_hill(lb3) - _hill(rb3)) + _dotpu4(_subabs4(_loll(lb3), _loll(rb3)), 0x01010101);
                 Sum += _abs(_hill(lb4) - _hill(rb4)) + _dotpu4(_subabs4(_loll(lb4), _loll(rb4)), 0x01010101);
-                Sum &= radiusCheck ? 0xFFFFFFFF : 0;
 
-                int sumCheck = radiusCheck && (Sum < Minimize);
+                int sumCheck = !(j < k) && (Sum < Minimize);
 
                 Minimize = (sumCheck) ? Sum : Minimize;
                 Distance = (sumCheck) ? k : Distance;

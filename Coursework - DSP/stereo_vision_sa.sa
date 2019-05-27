@@ -1,21 +1,24 @@
             .global stereo_vision_sa
-             ; TODO: complete stereo vision function in linear assembly
+             ; DONE: Complete stereo vision function in linear assembly
+             ; TODO: Optimise linear assembly. Target: <0.04s, Current: 0.0492s
+             ; Ideas:
+             ; Balance functional units for both A and B sides.
+             ; Draw dependency graph to find areas to fix.
+             ; Optimise either the arithmetic part or the data parts.
 stereo_vision_sa  .cproc a_1,a_2,a_3,a_4,a_5
 				  .reg i, j, k, sum, minimize, distance, width
-				  .reg radius_check, sum_check, mult_one, zeroConst, and_one
+				  .reg radius_check, sum_check, mult_one, and_one
 				  .reg w1, w2, w3, w4, w5, w6, w7, w8, w9, w10
 				  .reg w11, w12, w13, w14, w15, w16, w17, w18, w19, w20
 				  .reg offsetL1, offsetL2, offsetL3, offsetL4, offsetL5
 				  .reg offsetR1, offsetR2, offsetR3, offsetR4, offsetR5
 				  .reg maxWidth, maxHeight
-				  ;.reg absDiff
 				  .reg dotprod1, dotprod2, dotprod3, dotprod4, dotprod5
 				  .reg absDiff1, absDiff2, absDiff3, absDiff4, absDiff5
 				  .reg index
 
 				  MVKL 276, maxWidth
 				  MVKL 219, maxHeight
-				  ZERO zeroConst
 				  MVKL 0x000000FF, and_one
 				  MVKL 280, width
 				  MVKL 0x01010101, mult_one
@@ -23,20 +26,20 @@ stereo_vision_sa  .cproc a_1,a_2,a_3,a_4,a_5
                   ZERO i; Loop variable i
 ; Begin loop i
 loopi
-				  ;ZERO
-				  ZERO j
+				  ZERO j; Loop variable j
 ; Begin loop j
 loopj
 				  ZERO distance;
 				  MVKL 0x86A0, minimize;
 				  MVKH 1, minimize;
+
 				  ZERO k
-				  MV i, offsetL1
+
 				  ADD i, 1, offsetL2
 				  ADD i, 2, offsetL3
 				  ADD i, 3, offsetL4
 				  ADD i, 4, offsetL5
-				  MPY width, offsetL1, offsetL1
+				  MPY i, width, offsetL1
 				  MPY width, offsetL2, offsetL2
 				  MPY width, offsetL3, offsetL3
 				  MPY width, offsetL4, offsetL4
@@ -46,6 +49,7 @@ loopj
 				  ADD j, offsetL3, offsetL3
 				  ADD j, offsetL4, offsetL4
 				  ADD j, offsetL5, offsetL5
+
 				  LDNDW *a_1(offsetL1), w1:w2
 				  LDNDW *a_1(offsetL2), w3:w4
 				  LDNDW *a_1(offsetL3), w5:w6
@@ -59,15 +63,14 @@ loopj
 ; Begin loop k
 loopk
 				  ZERO sum
-				  CMPLT j, k, radius_check;
-				  XOR radius_check, 1, radius_check
+
 
 				  SUB offsetL1, k, offsetR1
 				  SUB offsetL2, k, offsetR2
 				  SUB offsetL3, k, offsetR3
 				  SUB offsetL4, k, offsetR4
 				  SUB offsetL5, k, offsetR5
-				  ;TODO: Load values into registers
+
                   LDNDW *a_2(offsetR1), w11:w12
 				  LDNDW *a_2(offsetR2), w13:w14
 				  LDNDW *a_2(offsetR3), w15:w16
@@ -109,37 +112,37 @@ loopk
 				  ADD absDiff4, dotprod4, dotprod4
 				  ADD absDiff5, dotprod5, dotprod5
 
-				  ADD sum, dotprod1, sum
-				  ADD sum, dotprod2, sum
-				  ADD sum, dotprod3, sum
-				  ADD sum, dotprod4, sum
-				  ADD sum, dotprod5, sum
-
-     [!radius_check]  AND sum, zeroConst, sum
+				  ADD dotprod1, sum, sum
+				  ADD dotprod2, sum, sum
+				  ADD dotprod3, sum, sum
+				  ADD dotprod4, sum, sum
+				  ADD dotprod5, sum, sum
 
 				  CMPLT sum, minimize, sum_check
-				  AND radius_check, sum_check, sum_check
-	 [sum_check]  MV sum, minimize
-	 [sum_check]  MV k, distance
+				  CMPLT j, k, radius_check;
+				  XOR radius_check, 1, radius_check
+				  AND sum_check, radius_check, radius_check
+	 [radius_check]  MV sum, minimize
+	 [radius_check]  MV k, distance
 				  ;----------------------------------
 				  ADD k, 1, k
-				  CMPLT k, a_4, A2
-	  [A2]        B loopk
+				  CMPLT k, a_4, radius_check
+	  [radius_check]        B loopk
 ; End loop k
 				  ;TODO: Store distance into disparity map
 				  ADD i, a_5, index
-				  MPY index, width, index
-				  ADD index, j, index
-				  ADD index, a_5, index
+				  MPY width, index, index
+				  ADD j, index, index
+				  ADD a_5, index, index
 				  STB distance, *a_3[index]
 
 				  ADD j, 1, j
-                  CMPLT j, maxWidth, A2
-      [A2]        B loopj
+                  CMPLT j, maxWidth, radius_check
+      [radius_check]        B loopj
 ; End loop j
                   ADD i, 1, i
-                  CMPLT i, maxHeight, A2
-      [A2]        B loopi
+                  CMPLT i, maxHeight, radius_check
+      [radius_check]        B loopi
 ; End loop i
                   .return
                   .endproc
