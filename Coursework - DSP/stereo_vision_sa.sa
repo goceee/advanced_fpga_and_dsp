@@ -50,11 +50,11 @@ loopj
 				  ADD j, offsetL4, offsetL4
 				  ADD j, offsetL5, offsetL5
 
-				  LDNDW *a_1(offsetL1), w1:w2
-				  LDNDW *a_1(offsetL2), w3:w4
-				  LDNDW *a_1(offsetL3), w5:w6
-				  LDNDW *a_1(offsetL4), w7:w8
-                  LDNDW *a_1(offsetL5), w9:w10
+				  LDNDW .D1 *a_1(offsetL1), w1:w2
+				  LDNDW .D1 *a_1(offsetL2), w3:w4
+				  LDNDW .D1 *a_1(offsetL3), w5:w6
+				  LDNDW .D1 *a_1(offsetL4), w7:w8
+                  LDNDW .D1 *a_1(offsetL5), w9:w10
                   AND w1, and_one, w1
                   AND w3, and_one, w3
                   AND w5, and_one, w5
@@ -62,8 +62,6 @@ loopj
                   AND w9, and_one, w9
 ; Begin loop k
 loopk
-				  ZERO sum
-
 
 				  SUB offsetL1, k, offsetR1
 				  SUB offsetL2, k, offsetR2
